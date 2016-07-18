@@ -1,0 +1,6 @@
+1. save new users to a database
+2. make a nice user interface
+3. convert slide images to video
+4. introduce transitions
+5. serve videos?
+6. enable editing of stuff

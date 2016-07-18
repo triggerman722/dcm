@@ -6,17 +6,15 @@
   (:import [org.apache.activemq.broker.BrokerFactory])
   (:import [org.apache.activemq.broker.BrokerService])
   (:import [org.apache.poi.xslf.usermodel XMLSlideShow XSLFSlide])
-  (:import [java.util Properties])
   (:import [java.awt Image Graphics Dimension])
   (:import [java.awt.image BufferedImage])
   (:import [javax.imageio ImageIO])
   (:import [java.awt Color])
-  (:import [javax.mail.internet.MimeMessage])
-  (:import [javax.mail.internet MimeMessage InternetAddress])
-  (:import [javax.mail Session Transport Authenticator PasswordAuthentication Message$RecipientType])
 
   (:require [compojure.handler :as handler]
 			[clojure.java.io :as io]
+                        [clojure.tools.logging :as log]
+                        [clojure.data.json :as json]
 			[compojure.route :as route]
                         [cemerick.friend :as friend]
 			[clamq.protocol.connection :as connection]
@@ -24,6 +22,8 @@
 			[clamq.protocol.seqable :as seqable]
 			[clamq.protocol.producer :as producer]
 			[clamq.pipes :as pipes]
+                        [dcm.mail :as mail]
+                        [dcm.data :as data]
                         (cemerick.friend [workflows :as workflows]
                                          [credentials :as creds])))
 
@@ -36,71 +36,46 @@
 
 (derive ::admin ::user)
 
-(defn send-gmail [{:keys [from to subject text user password]}]
-  (let [auth (proxy [Authenticator] []
-               (getPasswordAuthentication []
-                 (PasswordAuthentication. user password)))
-        props (doto (Properties.)
-                (.putAll {"mail.smtp.user" user
-                          "mail.smtp.host" "smtp.gmail.com"
-                          "mail.smtp.starttls.enable" "true"
-                          "mail.smtp.auth" "true"
-                          "mail.smtp.port" "465"
-                          "mail.smtp.socketFactory.port" "465"
-                          "mail.smtp.socketFactory.class" "javax.net.ssl.SSLSocketFactory"}))
-        session (Session/getInstance props auth)
-        msg (doto (MimeMessage. session)
-              (.setText text)
-              (.setSubject subject)
-              (.setFrom (InternetAddress. from)))]
-        (.addRecipient msg Message$RecipientType/TO (InternetAddress. to))
-        (Transport/send msg)))
-
-(defn save-slide-image2 [slide]
-(println "I'm here")
-"success"
-)
 (defn save-slide-image [slide]
 (let [
        slideshow (.getSlideShow slide)
        dims (.getPageSize slideshow)
        img (new BufferedImage (.getWidth dims) (.getHeight dims) BufferedImage/TYPE_INT_RGB)
        gfx (.createGraphics img)
-       fileout (io/output-stream (io/file "resources" "public" (.toString (java.util.UUID/randomUUID))))
+       fileout (io/output-stream (io/file "resources" "private" "images" (.toString (java.util.UUID/randomUUID))))
      ] 
-(do
-(println "I'm in here")
-(.setPaint gfx Color/white)
-(.fillRect gfx 0 0 (.getWidth dims) (.getHeight dims))
-(.draw slide gfx)
-(println (.getSlideNumber slide))
-(ImageIO/write img "jpeg" fileout)
-))
-)
+        (.setPaint gfx Color/white)
+        (.fillRect gfx 0 0 (.getWidth dims) (.getHeight dims))
+        (.draw slide gfx)
+        (ImageIO/write img "jpeg" fileout)
+        (log/info "Successfully saved image for slide#: " (.getSlideNumber slide))))
+
 (defn make-slide-images [filepath]
 (let [
-       filein (io/input-stream (io/file "resources" "public" filepath))
+       filein (io/input-stream (io/file "resources" "private" "uploads" filepath))
        ppt (new XMLSlideShow filein)
        slides (into [] (.getSlides ppt))]
-       (map save-slide-image slides)))
+       (log/info "Begin processing " filepath)
+       (doall (map save-slide-image slides))
+       (log/info "Successfully processed " filepath))) ;map is a lazy function; doall forces it.
 
-; These are like message driven beans
-(defn upload-message-receiver [message] ;listening to "upload-queue"
-   ;(println (str "The message is: " message))
-   (try
-      (println (make-slide-images message))
-      (println "past it")
-      (catch Exception e (str "ex: " (.getMessage e))))
-)
+(defn upload-message-receiver [message]
+      (make-slide-images message))
 
-(defn join-message-receiver [message] ;listening to "join-queue"
-(send-gmail {:from "gemartin@gmail.com", :to "gemartin@gmail.com", :subject "Welcome to the club", :text "Please click the activation link to proceed", :user "gemartin@gmail.com", :password "hockey"} ))
+(defn join-message-receiver [message]
+          (log/info message)
+          (data/add-item "users" (read-string message))
+          (mail/send-gmail {:from "gemartin@gmail.com", 
+                            :to "gemartin@gmail.com",
+                            :subject "Welcome to the club",
+                            :text "Please click the activation link to proceed",
+                            :user "gemartin@gmail.com",
+                            :password "hockey"} ))
 
 (defn init-consumer [queue on-message-receiver]
 (with-open [connection (activemq-connection "tcp://localhost:61616")]
-    (let [
-		consumer (connection/consumer connection {:endpoint queue :on-message on-message-receiver :transacted false})]
-		(consumer/start consumer) )))
+    (let [consumer (connection/consumer connection {:endpoint queue :on-message on-message-receiver :transacted false})]
+	  (consumer/start consumer) )))
 
 (defn sendmessage [queue message]
     (with-open [connection (activemq-connection "tcp://localhost:61616")]
@@ -114,25 +89,24 @@
   (POST "/post" req "Notimpl")
   (POST "/comment" req "Notimpl")
   (POST "/feedback" req "Notimpl")
-  (POST "/people" req "Notimpl") ;;should replace /join?
+  (POST "/people" req "Notimpl")
+  (GET  "/people/:id" [id]
+          (data/json-writestr (data/get-single "users" id)))
   (POST "/profile" req "Notimpl")
   (POST "/join" req
-	(let [username (get (:params req) :username)
-          password (get (:params req) :password)
-          firstname (get (:params req) :firstname)
-          lastname  (get (:params req) :lastname)
-          tempfile  (get (get (:params req) :avatar) :tempfile)
-          filename  (get (get (:params req) :avatar) :filename)]
-          (sendmessage "join-queue" "ok")
-          ; Doing this vs. slurp because I may want to set the content-type in the future
+          (let [userinfo (select-keys (:params req)[:username :password :firstname :lastname])
+                userinfo-json (json/write-str userinfo)]
+          (log/info req)
+          (log/info userinfo)
+          (log/info userinfo-json)
+          (sendmessage "join-queue" (print-str userinfo)))
           (-> "activate.html"
                        (ring.util.response/file-response {:root "resources/public"})
-                       (ring.util.response/content-type "text/html"))))
+                       (ring.util.response/content-type "text/html")))
 
   (POST "/upload"
    {{{tempfile :tempfile filename :filename} :file} :params :as params}
-   (io/copy tempfile (io/file "resources" "public" filename))
-   ;(make-slide-images filename))
+   (io/copy tempfile (io/file "resources" "private" "uploads" filename))   
    (sendmessage "upload-queue" filename) ; I should send a map with other values like id, user, etc.
    "Success")
   (GET "/authorized" request
