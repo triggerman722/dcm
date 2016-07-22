@@ -131,7 +131,8 @@
                        (ring.util.response/file-response {:root "resources/public"})
                        (ring.util.response/content-type "text/html")))
   (friend/logout (ANY "/logout" request (ring.util.response/redirect "/")))
-  (route/not-found "Not Found"))
+ (route/resources "/") 
+ (route/not-found "Not Found"))
 
 (def app
   (-> (handler/site

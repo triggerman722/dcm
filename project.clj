@@ -4,7 +4,8 @@
   :min-lein-version "2.0.0"
   :source-paths ["src/clj"]
   :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.9.89"]
+                 [org.clojure/clojurescript "1.7.122"]
+                 [secretary "1.2.3"]
                  [cljs-ajax "0.5.1"]
                  [prismatic/dommy "1.1.0"]
                  [org.clojure/tools.logging "0.2.4"]
@@ -32,8 +33,10 @@
                         :id "dcmclient"
                         :source-paths ["src/cljs"]
                         :figwheel true
-                        :compiler {:output-dir "resources/public/js/out"
-                                   :output-to "resources/public/js/app.js"}}]}
+                        :compiler {:main "dcm.app"
+                                   :asset-path "js/out"
+                                   :output-dir "resources/public/js/out"
+                                   :output-to "resources/public/js/dcm.js"}}]}
 
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]
