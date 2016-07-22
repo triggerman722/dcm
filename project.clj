@@ -8,6 +8,7 @@
                  [secretary "1.2.3"]
                  [cljs-ajax "0.5.1"]
                  [prismatic/dommy "1.1.0"]
+                 [reagent "0.5.1"]
                  [org.clojure/tools.logging "0.2.4"]
                  [compojure "1.5.1"]
                  [com.cemerick/friend "0.2.3"]
@@ -25,6 +26,7 @@
                  [org.apache.poi/poi-ooxml "3.14"]
                  [org.apache.poi/poi-scratchpad "3.14"]]
   :plugins      [[lein-ring "0.9.7"]
+                 [lein-cljsbuild "1.1.3"]
                  [lein-figwheel "0.4.1"]]
 
   :ring {:handler dcm.handler/app}
