@@ -211,3 +211,274 @@ notifying browser that file changed:  /dcm/app.js
 [0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
 [32mSuccessfully compiled "resources/public/js/dcm.js" in 1.215 seconds.[0m
 notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+WARNING: Required namespace not provided for reagent.core
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.094 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/dcm.js" failed.[0m
+clojure.lang.ExceptionInfo: failed compiling file:src/cljs/dcm/app.cljs
+ at clojure.core$ex_info.invokeStatic (core.clj:4617)
+    clojure.core$ex_info.invoke (core.clj:4617)
+    cljs.compiler$compile_file$fn__3149.invoke (compiler.cljc:1344)
+    cljs.compiler$compile_file.invokeStatic (compiler.cljc:1306)
+    cljs.compiler$compile_file.invoke (compiler.cljc:1286)
+    cljs.compiler$compile_root.invokeStatic (compiler.cljc:1381)
+    cljs.compiler$compile_root.invoke (compiler.cljc:1360)
+    cljs.closure$compile_dir.invokeStatic (closure.clj:438)
+    cljs.closure$compile_dir.invoke (closure.clj:432)
+    cljs.closure$eval3596$fn__3597.invoke (closure.clj:478)
+    cljs.closure$eval3548$fn__3549$G__3539__3556.invoke (closure.clj:383)
+    cljs.closure$eval3609$fn__3610.invoke (closure.clj:492)
+    cljs.closure$eval3548$fn__3549$G__3539__3556.invoke (closure.clj:383)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:20)
+    clojure.lang.PersistentVector.reduce (PersistentVector.java:341)
+    clojure.core$reduce.invokeStatic (core.clj:6544)
+    clojure.core$reduce.invoke (core.clj:6527)
+    clojurescript_build.core.CompilableSourcePaths._compile (core.clj:19)
+    cljs.closure$build.invokeStatic (closure.clj:1674)
+    cljs.closure$build.invoke (closure.clj:1624)
+    clojurescript_build.core$build_source_paths_STAR_.invokeStatic (core.clj:160)
+    clojurescript_build.core$build_source_paths_STAR_.invoke (core.clj:147)
+    figwheel_sidecar.auto_builder$default_build_options$fn__16231.invoke (auto_builder.clj:61)
+    figwheel_sidecar.auto_builder$insert_figwheel_connect_script$fn__16277.invoke (auto_builder.clj:201)
+    figwheel_sidecar.auto_builder$warning$fn__16228.invoke (auto_builder.clj:57)
+    clojurescript_build.auto$time_build$fn__16031.invoke (auto.clj:56)
+    clojurescript_build.auto$after$fn__16037.invoke (auto.clj:65)
+    clojurescript_build.auto$after$fn__16037.invoke (auto.clj:65)
+    clojurescript_build.auto$error$fn__16040.invoke (auto.clj:72)
+    clojurescript_build.auto$before$fn__16034.invoke (auto.clj:61)
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/dcm.js" failed.[0m
+clojure.lang.ExceptionInfo: failed compiling file:src/cljs/dcm/app.cljs
+ at clojure.core$ex_info.invokeStatic (core.clj:4617)
+    clojure.core$ex_info.invoke (core.clj:4617)
+    cljs.compiler$compile_file$fn__3149.invoke (compiler.cljc:1344)
+    cljs.compiler$compile_file.invokeStatic (compiler.cljc:1306)
+    cljs.compiler$compile_file.invoke (compiler.cljc:1286)
+    cljs.compiler$compile_root.invokeStatic (compiler.cljc:1381)
+    cljs.compiler$compile_root.invoke (compiler.cljc:1360)
+    cljs.closure$compile_dir.invokeStatic (closure.clj:438)
+    cljs.closure$compile_dir.invoke (closure.clj:432)
+    cljs.closure$eval3596$fn__3597.invoke (closure.clj:478)
+    cljs.closure$eval3548$fn__3549$G__3539__3556.invoke (closure.clj:383)
+    cljs.closure$eval3609$fn__3610.invoke (closure.clj:492)
+    cljs.closure$eval3548$fn__3549$G__3539__3556.invoke (closure.clj:383)
+    clojurescript_build.core.CompilableSourcePaths/fn (core.clj:20)
+    clojure.lang.PersistentVector.reduce (PersistentVector.java:341)
+    clojure.core$reduce.invokeStatic (core.clj:6544)
+    clojure.core$reduce.invoke (core.clj:6527)
+    clojurescript_build.core.CompilableSourcePaths._compile (core.clj:19)
+    cljs.closure$build.invokeStatic (closure.clj:1674)
+    cljs.closure$build.invoke (closure.clj:1624)
+    clojurescript_build.core$build_source_paths_STAR_.invokeStatic (core.clj:160)
+    clojurescript_build.core$build_source_paths_STAR_.invoke (core.clj:147)
+    figwheel_sidecar.auto_builder$default_build_options$fn__16231.invoke (auto_builder.clj:61)
+    figwheel_sidecar.auto_builder$insert_figwheel_connect_script$fn__16277.invoke (auto_builder.clj:201)
+    figwheel_sidecar.auto_builder$warning$fn__16228.invoke (auto_builder.clj:57)
+    clojurescript_build.auto$time_build$fn__16031.invoke (auto.clj:56)
+    clojurescript_build.auto$after$fn__16037.invoke (auto.clj:65)
+    clojurescript_build.auto$after$fn__16037.invoke (auto.clj:65)
+    clojurescript_build.auto$error$fn__16040.invoke (auto.clj:72)
+    clojurescript_build.auto$before$fn__16034.invoke (auto.clj:61)
+Figwheel: focusing on build-ids (dcmclient)
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.041 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/greet.js
+notifying browser that file changed:  /dcm/app.js
+Figwheel: focusing on build-ids (dcmclient)
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.22 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/greet.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.69 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.402 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.214 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.096 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.249 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.165 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.062 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+Figwheel: focusing on build-ids (dcmclient)
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.623 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/greet.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.348 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.139 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/dcm.js" failed.[0m
+clojure.lang.ExceptionInfo: Unmatched delimiter )
+ at clojure.core$ex_info.invokeStatic (core.clj:4617)
+    clojure.core$ex_info.invoke (core.clj:4617)
+    clojure.tools.reader.reader_types$reader_error.invokeStatic (reader_types.clj:331)
+    clojure.tools.reader.reader_types$reader_error.doInvoke (reader_types.clj:327)
+    clojure.lang.RestFn.invoke (RestFn.java:439)
+    clojure.tools.reader$read_unmatched_delimiter.invokeStatic (reader.clj:76)
+    clojure.tools.reader$read_unmatched_delimiter.invoke (reader.clj:74)
+    clojure.tools.reader$read_STAR_.invokeStatic (reader.clj:889)
+    clojure.tools.reader$read_STAR_.invoke (reader.clj:870)
+    clojure.tools.reader$read_delimited.invokeStatic (reader.clj:195)
+    clojure.tools.reader$read_delimited.invoke (reader.clj:188)
+    clojure.tools.reader$read_vector.invokeStatic (reader.clj:226)
+    clojure.tools.reader$read_vector.invoke (reader.clj:222)
+    clojure.tools.reader$read_STAR_.invokeStatic (reader.clj:889)
+    clojure.tools.reader$read_STAR_.invoke (reader.clj:870)
+    clojure.tools.reader$read_delimited.invokeStatic (reader.clj:195)
+    clojure.tools.reader$read_delimited.invoke (reader.clj:188)
+    clojure.tools.reader$read_list.invokeStatic (reader.clj:208)
+    clojure.tools.reader$read_list.invoke (reader.clj:204)
+    clojure.tools.reader$read_STAR_.invokeStatic (reader.clj:889)
+    clojure.tools.reader$read_STAR_.invoke (reader.clj:870)
+    clojure.tools.reader$read_delimited.invokeStatic (reader.clj:195)
+    clojure.tools.reader$read_delimited.invoke (reader.clj:188)
+    clojure.tools.reader$read_list.invokeStatic (reader.clj:208)
+    clojure.tools.reader$read_list.invoke (reader.clj:204)
+    clojure.tools.reader$read_STAR_.invokeStatic (reader.clj:889)
+    clojure.tools.reader$read_STAR_.invoke (reader.clj:870)
+    clojure.tools.reader$read.invokeStatic (reader.clj:938)
+    clojure.tools.reader$read.invoke (reader.clj:915)
+    cljs.analyzer$forms_seq_STAR_$forms_seq___2108$fn__2109$fn__2110.invoke (analyzer.cljc:2619)
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/dcm.js" failed.[0m
+clojure.lang.ExceptionInfo: Unmatched delimiter )
+ at clojure.core$ex_info.invokeStatic (core.clj:4617)
+    clojure.core$ex_info.invoke (core.clj:4617)
+    clojure.tools.reader.reader_types$reader_error.invokeStatic (reader_types.clj:331)
+    clojure.tools.reader.reader_types$reader_error.doInvoke (reader_types.clj:327)
+    clojure.lang.RestFn.invoke (RestFn.java:439)
+    clojure.tools.reader$read_unmatched_delimiter.invokeStatic (reader.clj:76)
+    clojure.tools.reader$read_unmatched_delimiter.invoke (reader.clj:74)
+    clojure.tools.reader$read_STAR_.invokeStatic (reader.clj:889)
+    clojure.tools.reader$read_STAR_.invoke (reader.clj:870)
+    clojure.tools.reader$read_delimited.invokeStatic (reader.clj:195)
+    clojure.tools.reader$read_delimited.invoke (reader.clj:188)
+    clojure.tools.reader$read_vector.invokeStatic (reader.clj:226)
+    clojure.tools.reader$read_vector.invoke (reader.clj:222)
+    clojure.tools.reader$read_STAR_.invokeStatic (reader.clj:889)
+    clojure.tools.reader$read_STAR_.invoke (reader.clj:870)
+    clojure.tools.reader$read_delimited.invokeStatic (reader.clj:195)
+    clojure.tools.reader$read_delimited.invoke (reader.clj:188)
+    clojure.tools.reader$read_list.invokeStatic (reader.clj:208)
+    clojure.tools.reader$read_list.invoke (reader.clj:204)
+    clojure.tools.reader$read_STAR_.invokeStatic (reader.clj:889)
+    clojure.tools.reader$read_STAR_.invoke (reader.clj:870)
+    clojure.tools.reader$read_delimited.invokeStatic (reader.clj:195)
+    clojure.tools.reader$read_delimited.invoke (reader.clj:188)
+    clojure.tools.reader$read_list.invokeStatic (reader.clj:208)
+    clojure.tools.reader$read_list.invoke (reader.clj:204)
+    clojure.tools.reader$read_STAR_.invokeStatic (reader.clj:889)
+    clojure.tools.reader$read_STAR_.invoke (reader.clj:870)
+    clojure.tools.reader$read.invokeStatic (reader.clj:938)
+    clojure.tools.reader$read.invoke (reader.clj:915)
+    cljs.analyzer$forms_seq_STAR_$forms_seq___2108$fn__2109$fn__2110.invoke (analyzer.cljc:2619)
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/dcm.js" failed.[0m
+clojure.lang.ExceptionInfo: Unmatched delimiter )
+ at clojure.core$ex_info.invokeStatic (core.clj:4617)
+    clojure.core$ex_info.invoke (core.clj:4617)
+    clojure.tools.reader.reader_types$reader_error.invokeStatic (reader_types.clj:331)
+    clojure.tools.reader.reader_types$reader_error.doInvoke (reader_types.clj:327)
+    clojure.lang.RestFn.invoke (RestFn.java:439)
+    clojure.tools.reader$read_unmatched_delimiter.invokeStatic (reader.clj:76)
+    clojure.tools.reader$read_unmatched_delimiter.invoke (reader.clj:74)
+    clojure.tools.reader$read_STAR_.invokeStatic (reader.clj:889)
+    clojure.tools.reader$read_STAR_.invoke (reader.clj:870)
+    clojure.tools.reader$read_delimited.invokeStatic (reader.clj:195)
+    clojure.tools.reader$read_delimited.invoke (reader.clj:188)
+    clojure.tools.reader$read_vector.invokeStatic (reader.clj:226)
+    clojure.tools.reader$read_vector.invoke (reader.clj:222)
+    clojure.tools.reader$read_STAR_.invokeStatic (reader.clj:889)
+    clojure.tools.reader$read_STAR_.invoke (reader.clj:870)
+    clojure.tools.reader$read_delimited.invokeStatic (reader.clj:195)
+    clojure.tools.reader$read_delimited.invoke (reader.clj:188)
+    clojure.tools.reader$read_list.invokeStatic (reader.clj:208)
+    clojure.tools.reader$read_list.invoke (reader.clj:204)
+    clojure.tools.reader$read_STAR_.invokeStatic (reader.clj:889)
+    clojure.tools.reader$read_STAR_.invoke (reader.clj:870)
+    clojure.tools.reader$read_delimited.invokeStatic (reader.clj:195)
+    clojure.tools.reader$read_delimited.invoke (reader.clj:188)
+    clojure.tools.reader$read_list.invokeStatic (reader.clj:208)
+    clojure.tools.reader$read_list.invoke (reader.clj:204)
+    clojure.tools.reader$read_STAR_.invokeStatic (reader.clj:889)
+    clojure.tools.reader$read_STAR_.invoke (reader.clj:870)
+    clojure.tools.reader$read.invokeStatic (reader.clj:938)
+    clojure.tools.reader$read.invoke (reader.clj:915)
+    cljs.analyzer$forms_seq_STAR_$forms_seq___2108$fn__2109$fn__2110.invoke (analyzer.cljc:2619)
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var dcm.app/loginaction at line 56 src/cljs/dcm/app.cljs
+WARNING: Use of undeclared Var dcm.app/loginsuccess at line 64 src/cljs/dcm/app.cljs
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.822 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var dcm.app/loginsuccess at line 29 src/cljs/dcm/app.cljs
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.596 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.192 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.299 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.119 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.136 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.244 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.278 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.133 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.086 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.194 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.056 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
