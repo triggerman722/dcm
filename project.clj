@@ -9,6 +9,8 @@
                  [cljs-ajax "0.5.1"]
                  [prismatic/dommy "1.1.0"]
                  [reagent "0.5.1"]
+                 [reagent-forms "0.5.1"]
+                 [reagent-utils "0.1.4"]
                  [org.clojure/tools.logging "0.2.4"]
                  [compojure "1.5.1"]
                  [com.cemerick/friend "0.2.3"]

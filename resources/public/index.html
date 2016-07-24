@@ -1,22 +1,110 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Example</title>
-  </head>
-  <body>
-    <div id="application">
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>{$scope['title']}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Everflair: The place for people to let their fans subscribe the to awesome things they do.">
+	<meta name="author" content="Greg Martin">
+	
+	<link href='http://fonts.googleapis.com/css?family=Lilita+One' rel='stylesheet' type='text/css'>
+	<link href="ref/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="ref/openspection/css/openspection.min.css" rel="stylesheet">
+	<link href="ref/bootstrap/css/bootstrap.icon-large.min.css" rel="stylesheet">
+	<script src="ref/jquery/js/jquery-2.1.0.min.js"></script>
+
+</head>
+
+<body>
+   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/#/" style="font-family: 'Lilita One', cursive;font-size:32px">everflair</a>
     </div>
-    <p><a href="#/users">Users</a></p>
-    <ul>
-      <li>
-	<a href="#/users/bob">Bob</a>
-	<a href="#/users/jim">Jim</a>
-	<a href="#/users/tom">Tom</a>
-      </li>
-    </ul>
-    <p><a href="#/777">Click here to <strong>win!</strong></a></p>
-    <p><a href="#/loser">Click here to <strong>lose!</strong></a></p>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+        <li class="active"><a href="/#/"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+        <li><a href="/#/about"><i class="glyphicon glyphicon-info-sign"></i> About</a></li>
+		
+      </ul>
+        <form class="navbar-form navbar-right" role="search" action="/search" method="POST">
+                <div class="left-inner-addon ">
+	                <i class="glyphicon glyphicon-search"></i>
+                	<input type="text" name="query" class="form-control" placeholder="Search" value="">
+                </div>
+        </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container">	
+	<div class="row">
+		<div class="col-sm-12">	
+			<div id="application"></div>
+		</div>
+        </div>
+</div>
+
+<div class="fooster" style="margin-bottom:0px">
+	<div class="container">
+	<div class="row">
+		<div class="col-sm-4">	
+			<h3  class="text-left">About Everflair</h3>
+			<p>Everflair lets artists, craftspeople and visionaries share their flair for ever!</p>
+		</div>
+		<div class="col-sm-2">	
+			<h3 class="text-left">Categories</h3>
+			<a href="{$scope['FQDN']}/category/business">Business</a><br />
+			<a href="{$scope['FQDN']}/category/sports">Sports</a><br />
+			<a href="{$scope['FQDN']}/category/Weather">Weather</a><br />
+			<a href="{$scope['FQDN']}/category/World">World</a><br />
+			<a href="{$scope['FQDN']}/category/Religion">Religion</a><br />
+			<a href="{$scope['FQDN']}/category/Gaming">Gaming</a><br />
+			<a href="{$scope['FQDN']}/category/Technology">Technology</a><br />
+			<a href="{$scope['FQDN']}/category/Events">Events</a><br />
+			<a href="{$scope['FQDN']}/category/Corporate">Corporate</a><br />
+			<a href="{$scope['FQDN']}/category/people">People</a><br />
+		</div>
+		<div class="col-sm-2">	
+			<h3 class="text-left">Everflair</h3>
+			<a href="{$scope['FQDN']}/about">About Everflair</a><br />
+			<hr />
+			<a href="{$scope['FQDN']}/privacy">Privacy Policy</a><br />
+			<a href="{$scope['FQDN']}/terms">Terms of Service</a><br />
+			<a href="{$scope['FQDN']}/terms">Contact Us</a><br />
+		</div>
+		<div class="col-sm-4">	
+			<h3 class="text-left">Social</h3>
+			<p>Connect to us with social media!</p>
+			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			<br />
+			<script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
+			<script type="IN/Share" data-counter="right" data-showzero="true"></script>
+			<br />
+			<!-- Place this tag in your head or just before your close body tag. -->
+			<script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
+
+			<!-- Place this tag where you want the +1 button to render. -->
+			<div class="g-plusone"></div>
+		</div>
+        </div>
+        <div class="row">
+        	<hr />
+        	<small>All digital content on this site is copyrighted by its original authors. &copy;2014 Everflair Ltd. 
+        </div>
+	</div>
+</div><script src="ref/bootstrap/js/bootstrap.min.js"></script>
     <script src="js/dcm.js"></script>
     <script>dcm.app.main();</script>
-</html>
 
+</body>
+</html>
