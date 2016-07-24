@@ -73,7 +73,7 @@
 (defmethod current-page :about [] 
   [about])
 (defmethod current-page :default [] 
-  [:div ])
+  [:div])
 
 (defn ^:export main []
   (app-routes)
