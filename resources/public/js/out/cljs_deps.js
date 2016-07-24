@@ -43,7 +43,8 @@ goog.addDependency("../reagent/impl/template.js", ['reagent.impl.template'], ['r
 goog.addDependency("../reagent/core.js", ['reagent.core'], ['reagent.impl.util', 'reagent.interop', 'reagent.ratom', 'cljs.core', 'cljsjs.react', 'reagent.impl.template', 'reagent.impl.batching', 'reagent.impl.component', 'reagent.debug']);
 goog.addDependency("../clojure/walk.js", ['clojure.walk'], ['cljs.core']);
 goog.addDependency("../secretary/core.js", ['secretary.core'], ['cljs.core', 'clojure.string', 'clojure.walk']);
+goog.addDependency("../reagent/session.js", ['reagent.session'], ['reagent.core', 'cljs.core']);
 goog.addDependency("../cljs/repl.js", ['cljs.repl'], ['cljs.core']);
-goog.addDependency("../dcm/app.js", ['dcm.app'], ['ajax.core', 'reagent.core', 'cljs.core', 'goog.history.EventType', 'goog.History', 'dcm.greet', 'secretary.core', 'goog.events']);
+goog.addDependency("../dcm/app.js", ['dcm.app'], ['goog.net.IframeIo', 'ajax.core', 'reagent.session', 'reagent.core', 'cljs.core', 'goog.history.EventType', 'goog.History', 'dcm.greet', 'secretary.core', 'goog.events']);
 goog.addDependency("../figwheel/client.js", ['figwheel.client'], ['goog.userAgent.product', 'goog.Uri', 'cljs.core', 'cljs.core.async', 'figwheel.client.file_reloading', 'figwheel.client.utils', 'cljs.repl', 'figwheel.client.heads_up', 'figwheel.client.socket', 'clojure.string']);
 goog.addDependency("../figwheel/connect.js", ['figwheel.connect'], ['cljs.core', 'dcm.app', 'figwheel.client', 'figwheel.client.utils']);

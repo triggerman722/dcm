@@ -113,10 +113,15 @@
                        (ring.util.response/content-type "text/html")))
 
   (POST "/upload"
-   {{{tempfile :tempfile filename :filename} :file} :params :as params}
+   {{{tempfile :tempfile filename :filename size :size} :upload-file} :params :as params}
    (io/copy tempfile (io/file "resources" "private" "uploads" filename))   
    (sendmessage "upload-queue" filename) ; I should send a map with other values like id, user, etc.
-   "Success")
+   {:status 200
+   :headers {"Content-Type" "application/json"}
+   :body (json/write-str  {:status "OK"
+                           :filename filename
+                           :tempfile (str tempfile)
+                           :size size})})
   (GET "/authorized" request
        (friend/authorize #{::user} "This page can only be seen by authenticated users."))
   (GET "/admin" request
