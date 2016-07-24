@@ -19,6 +19,7 @@
 			[compojure.route :as route]
                         [cemerick.friend :as friend]
                         [ring.middleware.json :refer [wrap-json-response wrap-json-body]]
+                        [ring.middleware.keyword-params :refer [wrap-keyword-params]]
                         [ring.util.response :refer [response]]
 			[clamq.protocol.connection :as connection]
 			[clamq.protocol.consumer :as consumer]
@@ -67,7 +68,7 @@
 
 (defn join-message-receiver [message]
           (log/info message)
-          (data/add-item "users" (read-string message))
+          (data/add-item "users" message)
           (mail/send-gmail {:from "gemartin@gmail.com", 
                             :to "gemartin@gmail.com",
                             :subject "Welcome to the club",
@@ -102,12 +103,9 @@
           {:body (data/get-single "users" id)})
   (POST "/profile" req "Notimpl")
   (POST "/join" req
-          (let [userinfo (select-keys (:params req)[:username :password :firstname :lastname])
-                userinfo-json (json/write-str userinfo)]
-          (log/info req)
+          (let [userinfo (get-in req [:body])]
           (log/info userinfo)
-          (log/info userinfo-json)
-          (sendmessage "join-queue" (print-str userinfo)))
+          (sendmessage "join-queue" userinfo))
           (-> "activate.html"
                        (ring.util.response/file-response {:root "resources/public"})
                        (ring.util.response/content-type "text/html")))
@@ -152,5 +150,6 @@
             (log/info (.getMessage e))))
    (init-consumer "upload-queue" upload-message-receiver )
    (init-consumer "join-queue" join-message-receiver ))
+   (wrap-keyword-params)
    (wrap-json-body)
    (wrap-json-response)))

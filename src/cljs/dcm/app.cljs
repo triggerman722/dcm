@@ -159,8 +159,8 @@
          :response-format :json}))
 
 (defn joinaction []
-  (POST "/hello"
-        {:params {:user "from Joe!"}
+  (POST "/join"
+        {:params {:username (@app-state :username) :password (@app-state :password) :firstname (@app-state :firstname) :lastname (@app-state :lastname)}
          :handler loginsuccess
          :error-handler error-handler
          :format :json
@@ -233,6 +233,13 @@
      ]
     ]
    ])
+ (defn formfield [type placeholder formkey]
+   [:input {
+           :type type
+           :placeholder placeholder      
+           :on-change #(swap! app-state assoc formkey (-> % .-target .-value))
+           :class "form-control input-md"}]
+ )
  (defn join []
    [:div {:class "col-sm-12"} 
     [:div {:class "well"} 
@@ -241,34 +248,33 @@
       [:label "First name: "]
       [:div {:class "input-group"}
        [:span {:class "input-group-addon"} [:i {:class "glyphicon glyphicon-pencil"}]]
-       [:input {:id "join-firstname" :type "text" :class "form-control input-md" :name "join-firstname" :placeholder "Firstname"}]]
+       (formfield "text" "Firstname" :firstname)]
        [:span {:class "help-block"} "Your first name"]
       [:label "Last name: "]
       [:div {:class "input-group"}
        [:span {:class "input-group-addon"} [:i {:class "glyphicon glyphicon-pencil"}]]
-       [:input {:id "join-lastname" :type "text" :class "form-control input-md" :name "join-lastname" :placeholder "Lastname"}]]
+       (formfield "text" "Lastname" :lastname)]
        [:span {:class "help-block"} "Your last name"]
       [:label "Email: "]
       [:div {:class "input-group"}
        [:span {:class "input-group-addon"} [:i {:class "glyphicon glyphicon-envelope"}]]
-       [:input {:id "join-email" :type "email" :class "form-control input-md" :name "join-email"}]]
+       (formfield "email" "name@deckmotion.com" :joinemail)]
        [:span {:class "help-block"} "Your email"]
       [:label "Username: "]
       [:div {:class "input-group"}
        [:span {:class "input-group-addon"} [:i {:class "glyphicon glyphicon-user"}]]
-       [:input {:id "join-username" :type "text" :class "form-control input-md" :name "join-username" :placeholder "Username"}]]
+       (formfield "text" "Username" :username)]
        [:span {:class "help-block"} "Your user name"]
       [:label "Password: "]
       [:div {:class "input-group"}
        [:span {:class "input-group-addon"} [:i {:class "glyphicon glyphicon-asterisk"}]]
-       [:input {:id "join-password" :type "password" :class "form-control input-md" :name "join-password"}]]
+       (formfield "password" "" :password)];
        [:span {:class "help-block"} "Your password"]
       [:label "Confirm Password: "]
       [:div {:class "input-group"}
        [:span {:class "input-group-addon"} [:i {:class "glyphicon glyphicon-asterisk"}]]
-       [:input {:id "join-confirmpassword" :type "password" :class "form-control input-md" :name "join-confirmpassword"}]]
-       [:span {:class "help-block"} "Your password"]
-
+       (formfield "password" "" :confirmpassword)]
+       [:span {:class "help-block"} "Confirm your password"]
       [:div
        [:span {:class "help-block"} [:input {:id "join-agreetoterms" :type "checkbox" :name "join-agreetoterms"}] " I agree to the terms and conditions."]
       ]
