@@ -20,7 +20,7 @@
                         [cemerick.friend :as friend]
                         [ring.middleware.json :refer [wrap-json-response wrap-json-body]]
                         [ring.middleware.keyword-params :refer [wrap-keyword-params]]
-                        [ring.util.response :refer [response]]
+                        [ring.util.response :as rr]
 			[clamq.protocol.connection :as connection]
 			[clamq.protocol.consumer :as consumer]
 			[clamq.protocol.seqable :as seqable]
@@ -88,12 +88,12 @@
 
 (defroutes app-routes
   (GET "/" req (-> "index.html"
-                       (ring.util.response/file-response {:root "resources/public"})
-                       (ring.util.response/content-type "text/html")))
+                       (rr/file-response {:root "resources/public"})
+                       (rr/content-type "text/html")))
   (POST "/follow" req "Notimpl")
   (GET  "/likes" [] "NotImpl")
   (POST "/like" req "Notimpl")
-  (POST "/hello" req (ring.util.response/response {:greeting (get-in req [:params :user])}))
+  (POST "/hello" req (rr/response {:greeting (get-in req [:params :user])}))
   (POST "/post" req "Notimpl")
   (GET  "/comments/:id" [id] {:body {:hello "world"}})
   (POST "/comments" req "Notimpl")
@@ -107,8 +107,8 @@
           (log/info userinfo)
           (sendmessage "join-queue" userinfo))
           (-> "activate.html"
-                       (ring.util.response/file-response {:root "resources/public"})
-                       (ring.util.response/content-type "text/html")))
+                       (rr/file-response {:root "resources/public"})
+                       (rr/content-type "text/html")))
 
   (POST "/upload"
    {{{tempfile :tempfile filename :filename size :size} :upload-file} :params :as params}
@@ -125,15 +125,15 @@
   (GET "/admin" request
        (friend/authorize #{::admin} "This page can only be seen by administrators."))
 	(GET "/join" [] (-> "join.html"
-                       (ring.util.response/file-response {:root "resources/public"})
-                       (ring.util.response/content-type "text/html")))
+                       (rr/file-response {:root "resources/public"})
+                       (rr/content-type "text/html")))
   (GET "/login" [] (-> "login.html"
-                       (ring.util.response/file-response {:root "resources/public"})
-                       (ring.util.response/content-type "text/html")))
+                       (rr/file-response {:root "resources/public"})
+                       (rr/content-type "text/html")))
   (GET "/upload" [] (-> "upload.html"
-                       (ring.util.response/file-response {:root "resources/public"})
-                       (ring.util.response/content-type "text/html")))
-  (friend/logout (ANY "/logout" request (ring.util.response/redirect "/")))
+                       (rr/file-response {:root "resources/public"})
+                       (rr/content-type "text/html")))
+  (friend/logout (ANY "/logout" request (rr/redirect "/")))
  (route/resources "/") 
  (route/not-found "Not Found"))
 
@@ -141,7 +141,14 @@
   (-> (handler/site
    (friend/authenticate app-routes
            {:credential-fn (partial creds/bcrypt-credential-fn users)
-            :workflows [(workflows/interactive-form)]})
+            :workflows [(workflows/interactive-form)]
+            :redirect-on-auth? false
+;            :login-uri "/api/login"
+;            :default-landing-uri "/"
+            :login-failure-handler #(-> (rr/status % 401))
+            :unauthenticated-handler #(-> (log/info %) (rr/status 401))
+            :unauthorized-handler #(-> (rr/status % 401))
+})
    (try
       (let [
 	broker (org.apache.activemq.broker.BrokerFactory/createBroker  (URI. "broker:(tcp://localhost:61616)"))]
@@ -152,4 +159,5 @@
    (init-consumer "join-queue" join-message-receiver ))
    (wrap-keyword-params)
    (wrap-json-body)
-   (wrap-json-response)))
+   (wrap-json-response)
+))

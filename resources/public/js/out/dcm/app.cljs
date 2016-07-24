@@ -16,6 +16,14 @@
 
 (def app-state (reagent/atom {}))
 
+(defn formfield [type placeholder formkey]
+   [:input {
+           :type type
+           :placeholder placeholder
+           :on-change #(swap! app-state assoc formkey (-> % .-target .-value))
+           :class "form-control input-md"}]
+ )
+
 (defn hook-browser-navigation! []
   (doto (History.)
     (events/listen
@@ -26,6 +34,7 @@
 
 (defn error-handler [{:keys [status status-text]}]
   (.log js/console (str "something bad happened: " status " " status-text)))
+
 (defn loginsuccess [response]
    (aset js/window "location" "#/about"))
 
@@ -59,48 +68,6 @@
   [:div {:class class}
    [:h4 title]
    (into-list items)])
-
-;;; cljs-ajax upload routines
-(defn handle-response-ok [resp]
-  (let [rsp (js->clj resp :keywordize-keys true)
-        status (set-status "alert alert-success"
-                           "Upload Successful"
-                           [(str "Filename: " (:filename rsp))
-                            (str "Size: " (:size rsp))
-                            (str "Tempfile: " (:tempfile rsp))])]
-    (session/put! :upload-status status)))
-
-(defn handle-response-error [ctx]
-  (let [rsp (js->clj (:response ctx) :keywordize-keys true)
-        status (set-status "alert alert-danger"
-                           "Upload Failure"
-                           [(str "Status: " (:status ctx) " "
-                                 (:status-text ctx))
-                            (str (:message rsp))])]
-    (.log js/console (str "cljs-ajax error: " status))
-    (session/put! :upload-status status)))
-
-(defn cljs-ajax-upload-file [element-id]
-  (let [el (.getElementById js/document element-id)
-        name (.-name el)
-        file (aget (.-files el) 0)
-        form-data (doto
-                      (js/FormData.)
-                    (.append name file))]
-    (POST "/upload" {:params form-data
-                     :response-format :json
-                     :keywords? true
-                     :handler handle-response-ok
-                     :error-handler handle-response-error})
-    (set-upload-indicator)))
-
-(defn cljs-ajax-upload-button []
-  [:div
-   [:hr]
-   [:button {:class "btn btn-primary" :type "button"
-             :on-click #(cljs-ajax-upload-file "upload-file")}
-    "Upload using cljs-ajax  " [:span {:class "fa fa-upload"}]]])
-
 
 (defn iframe-response-ok [msg]
   (let [status (set-status "alert alert-success"
@@ -151,12 +118,13 @@
     "Upload Using IFrameIO " [:span {:class "fa fa-upload"}]]])
 
 (defn loginaction []
-  (POST "/hello"
-        {:params {:user "from Joe!"}
+  (POST "/login"
+        {:params {:username (@app-state :username) :password (@app-state :password)}
          :handler loginsuccess
          :error-handler error-handler
-         :format :json
-         :response-format :json}))
+         :format :raw
+         :response-format :text
+        }))
 
 (defn joinaction []
   (POST "/join"
@@ -191,9 +159,7 @@
   [:div [:h1 "Upload Page"]
      [status-component]
      [upload-component]
-     [cljs-ajax-upload-button]
-     [iframeio-upload-button]
-   [:a {:href "#/about"} "about page"]])
+     [iframeio-upload-button]])
 
 
 (defn about []
@@ -219,11 +185,13 @@
       [:legend "Login"]
       [:div {:class "input-group"}
        [:span {:class "input-group-addon"} [:i {:class "glyphicon glyphicon-user"}]]
-       [:input {:id "login-username" :type "text" :class "form-control" :name "username" :value "" :placeholder "username or email"}]]
+       (formfield "text" "Username" :username)]
+;       [:input {:id "login-username" :type "text" :class "form-control" :name "username" :value "" :placeholder "username or email"}]]
       [:br]
       [:div {:class "input-group"}
        [:span {:class "input-group-addon"} [:i {:class "glyphicon glyphicon-lock"}]]
-       [:input {:id "login-password" :type "password" :class "form-control" :name "password" :value "" :placeholder "password"}]]
+       (formfield "password" "Password" :password)]
+;       [:input {:id "login-password" :type "password" :class "form-control" :name "password" :value "" :placeholder "password"}]]
       [:br]
       [:div {:class "checkbox"}
        [:label [:input {:id "login-rememberme" :type "checkbox" :name "rememberme"}] "Remember Me"]
@@ -233,13 +201,6 @@
      ]
     ]
    ])
- (defn formfield [type placeholder formkey]
-   [:input {
-           :type type
-           :placeholder placeholder      
-           :on-change #(swap! app-state assoc formkey (-> % .-target .-value))
-           :class "form-control input-md"}]
- )
  (defn join []
    [:div {:class "col-sm-12"} 
     [:div {:class "well"} 
