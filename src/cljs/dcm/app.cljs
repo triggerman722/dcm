@@ -2,7 +2,7 @@
   (:import goog.History
            goog.net.IframeIo
            goog.net.EventType)
-  (:require [dcm.greet :as greet]
+  (:require 
             [secretary.core :as secretary :refer-macros [defroute]]
             [goog.events :as events]
             [ajax.core :refer [GET POST]]

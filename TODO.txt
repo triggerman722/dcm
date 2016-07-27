@@ -1,6 +1,10 @@
-1. save new users to a database
-2. make a nice user interface
-3. convert slide images to video
-4. introduce transitions
+1. save new users to a database -done
+2. make a nice user interface - doneish
+3. convert slide images to video - IN PROGRESS
+	a. save images - DONE
+	b. transitions is started
+	message contains slide images
+	
+4. introduce transitions - STARTED
 5. serve videos?
 6. enable editing of stuff

@@ -1,48 +1,61 @@
-[2016-07-24 09:12:22,135][INFO][org.apache.activemq.broker.BrokerService][main] Using Persistence Adapter: KahaDBPersistenceAdapter[/home/greg/Projects/dcm/activemq-data/localhost/KahaDB]
-[2016-07-24 09:12:22,831][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] KahaDB is version 3
-[2016-07-24 09:12:22,886][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovering from the journal ...
-[2016-07-24 09:12:22,886][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovery replayed 1 operations from the journal in 0.03 seconds.
-[2016-07-24 09:12:22,901][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ 5.5.0 JMS Message Broker (localhost) is starting
-[2016-07-24 09:12:22,902][INFO][org.apache.activemq.broker.BrokerService][main] For help or more information please see: http://activemq.apache.org/
-[2016-07-24 09:12:23,156][INFO][org.apache.activemq.transport.TransportServerThreadSupport][main] Listening for connections at: tcp://localhost:61616
-[2016-07-24 09:12:23,157][INFO][org.apache.activemq.broker.TransportConnector][main] Connector tcp://localhost:61616 Started
-[2016-07-24 09:12:23,159][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-37107-1469365942933-0:1) started
-[2016-07-24 09:12:23,282][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37107-1469365942933-2:1,clientId=null,started=false}
-[2016-07-24 09:12:23,406][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37107-1469365942933-2:2,clientId=null,started=false}
-[2016-07-24 09:12:23,525][INFO][org.eclipse.jetty.server.Server][main] jetty-7.6.13.v20130916
-[2016-07-24 09:12:23,611][INFO][org.eclipse.jetty.server.AbstractConnector][main] Started SelectChannelConnector@0.0.0.0:3000
-[2016-07-24 09:12:28,450][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:12:28,456][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:12:28,458][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37107-1469365942933-2:3,clientId=null,started=false}
-[2016-07-24 09:12:28,465][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37107-1469365942933-2:4,clientId=null,started=false}
-[2016-07-24 09:12:28,486][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:12:28,498][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:14:32,600][INFO][dcm.handler][qtp21974555-48] {:ssl-client-cert nil, :cookies {}, :remote-addr 127.0.0.1, :params {}, :flash nil, :route-params {}, :headers {host localhost:3000, user-agent Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0, content-type application/json; charset=utf-8, content-length 72, referer http://localhost:3000/, connection keep-alive, pragma no-cache, accept application/json; charset=utf-8, accept-language en-US,en;q=0.5, accept-encoding gzip, deflate, cache-control no-cache}, :server-port 3000, :content-length 72, :form-params {}, :compojure/route [:post /join], :session/key nil, :query-params {}, :content-type application/json; charset=utf-8, :character-encoding utf-8, :uri /join, :server-name localhost, :query-string nil, :body {username tri, password pass, firstname greg, lastname mar}, :multipart-params {}, :scheme :http, :cemerick.friend/auth-config {:default-landing-uri /, :login-uri /login, :credential-fn #object[clojure.core$partial$fn__4759 0x12a1fe3 clojure.core$partial$fn__4759@12a1fe3], :workflows [#object[cemerick.friend.workflows$interactive_form$fn__7515 0x15df22b cemerick.friend.workflows$interactive_form$fn__7515@15df22b]]}, :request-method :post, :session {}}
-[2016-07-24 09:14:32,601][INFO][dcm.handler][qtp21974555-48] {username tri, password pass, firstname greg, lastname mar}
-[2016-07-24 09:14:32,602][INFO][dcm.handler][qtp21974555-48] {"username":"tri","password":"pass","firstname":"greg","lastname":"mar"}
-[2016-07-24 09:14:32,616][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp21974555-48] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37107-1469365942933-2:5,clientId=null,started=false}
-[2016-07-24 09:14:32,731][INFO][dcm.handler][DefaultMessageListenerContainer-2] The message is: {"username":"tri","password":"pass","firstname":"greg","lastname":"mar"}
-[2016-07-24 09:14:32,732][INFO][dcm.handler][DefaultMessageListenerContainer-2] wtf
-[2016-07-24 09:14:32,779][INFO][org.mongodb.driver.connection][DefaultMessageListenerContainer-2] Opened connection [connectionId{localValue:2, serverValue:73}] to 0.0.0.0:27017
-[2016-07-24 09:14:32,890][INFO][dcm.mail][DefaultMessageListenerContainer-2] Sending join email to  gemartin@gmail.com
-[2016-07-24 09:15:46,642][INFO][dcm.handler][qtp21974555-49] Failed to bind to server socket: tcp://localhost:61616 due to: java.net.BindException: Address already in use
-[2016-07-24 09:15:46,644][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp21974555-49] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37107-1469365942933-2:6,clientId=null,started=false}
-[2016-07-24 09:15:46,661][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp21974555-49] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37107-1469365942933-2:7,clientId=null,started=false}
-[2016-07-24 09:15:46,683][INFO][dcm.handler][qtp21974555-49] {:ssl-client-cert nil, :cookies {}, :remote-addr 127.0.0.1, :params {}, :flash nil, :route-params {}, :headers {host localhost:3000, user-agent Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0, content-type application/json; charset=utf-8, content-length 72, referer http://localhost:3000/, connection keep-alive, pragma no-cache, accept application/json; charset=utf-8, accept-language en-US,en;q=0.5, accept-encoding gzip, deflate, cache-control no-cache}, :server-port 3000, :content-length 72, :form-params {}, :compojure/route [:post /join], :session/key nil, :query-params {}, :content-type application/json; charset=utf-8, :character-encoding utf-8, :uri /join, :server-name localhost, :query-string nil, :body {username tri, password pass, firstname greg, lastname mar}, :multipart-params {}, :scheme :http, :cemerick.friend/auth-config {:default-landing-uri /, :login-uri /login, :credential-fn #object[clojure.core$partial$fn__4759 0x171410 clojure.core$partial$fn__4759@171410], :workflows [#object[cemerick.friend.workflows$interactive_form$fn__7515 0x1263b00 cemerick.friend.workflows$interactive_form$fn__7515@1263b00]]}, :request-method :post, :session {}}
-[2016-07-24 09:15:46,683][INFO][dcm.handler][qtp21974555-49] {username tri, password pass, firstname greg, lastname mar}
-[2016-07-24 09:15:46,683][INFO][dcm.handler][qtp21974555-49] {"username":"tri","password":"pass","firstname":"greg","lastname":"mar"}
-[2016-07-24 09:15:46,686][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp21974555-49] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37107-1469365942933-2:8,clientId=null,started=false}
-[2016-07-24 09:15:46,706][INFO][dcm.handler][DefaultMessageListenerContainer-2] The message is: {"username":"tri","password":"pass","firstname":"greg","lastname":"mar"}
-[2016-07-24 09:15:46,707][INFO][dcm.handler][DefaultMessageListenerContainer-2] wtf
-[2016-07-24 09:15:46,711][INFO][dcm.mail][DefaultMessageListenerContainer-2] Sending join email to  gemartin@gmail.com
-[2016-07-24 09:15:51,662][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:15:51,666][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37107-1469365942933-2:9,clientId=null,started=false}
-[2016-07-24 09:15:51,680][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:15:51,681][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:15:51,684][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37107-1469365942933-2:10,clientId=null,started=false}
-[2016-07-24 09:15:51,710][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:16:04,793][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ Message Broker (localhost, ID:ryan-ThinkCentre-M57-37107-1469365942933-0:1) is shutting down
-[2016-07-24 09:16:05,699][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
+[2016-07-26 19:54:55,645][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  1a09a2e5-b51d-4f7f-bd56-f94cb2617478
+[2016-07-26 19:54:55,707][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a7368a8c-eba4-469f-bd46-c52f3f2ef13a
+[2016-07-26 19:54:55,708][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  a22ff1ba-a7ed-4707-8e7d-e038ea093a6d  and  eae672d3-b8b4-4c42-85b8-ce8939754d04
+[2016-07-26 19:54:55,765][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  1039cd8a-8150-4a80-a94e-8a8b2c46d07a
+[2016-07-26 19:54:55,828][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2db79b1c-2574-490f-a30a-85263c542856
+[2016-07-26 19:54:55,890][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6bd94454-695b-4bea-9b72-c951e1f050d9
+[2016-07-26 19:54:55,952][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e85e736c-5a03-48b2-90f4-b779aa5b21d1
+[2016-07-26 19:54:56,016][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  40f7ca88-06e9-40ed-bfc4-769aabf24686
+[2016-07-26 19:54:56,079][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  0350c781-52e0-412c-9647-d215506f129b
+[2016-07-26 19:54:56,140][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d7fa38a6-742e-46e7-943c-8faf8f946172
+[2016-07-26 19:54:56,202][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4be36c21-d0ac-47c9-9933-a7822ce1108f
+[2016-07-26 19:54:56,263][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  987c0cac-919d-4201-8755-ee01508f0d43
+[2016-07-26 19:54:56,324][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d6e93ffc-372f-45d7-a817-f692ea498e99
+[2016-07-26 19:54:56,324][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  eae672d3-b8b4-4c42-85b8-ce8939754d04  and  5624afda-1b52-458b-8260-edbfc94a4373
+[2016-07-26 19:54:56,379][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4eeec73e-85f6-4364-861e-ca1c122a2ead
+[2016-07-26 19:54:56,439][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  864f92f2-3503-4536-871c-203c11b41d52
+[2016-07-26 19:54:56,498][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  64c15472-9f4f-46b1-9fe9-d543d8982494
+[2016-07-26 19:54:56,559][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2e2551d2-a69d-48e2-9065-6ed984b07a3d
+[2016-07-26 19:54:56,635][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  516183df-a349-4fc1-a6dc-867763c0f416
+[2016-07-26 19:54:56,695][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  17eeb847-e2b3-4beb-a5dd-9161041e3915
+[2016-07-26 19:54:56,755][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ccfc4c22-c63e-4a2c-b1d2-cc8453c015da
+[2016-07-26 19:54:56,814][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  12f8786e-e7e0-4b82-b859-4cf8292d1f0e
+[2016-07-26 19:54:56,874][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ba7ce318-a1e9-4de5-be33-39f1ad0d046c
+[2016-07-26 19:54:56,935][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c8f4b307-53b6-4007-87e2-02e08adcd1fc
+[2016-07-26 19:54:56,935][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  5624afda-1b52-458b-8260-edbfc94a4373  and  66c7e3af-aced-4c01-b980-2dd330cb42b2
+[2016-07-26 19:54:56,990][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8d87a069-809c-4ba7-b98c-230854bac982
+[2016-07-26 19:54:57,052][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  49ac68c8-9ea0-42e1-a723-7f1932c6862f
+[2016-07-26 19:54:57,123][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2a5efef4-bf20-4988-bbf9-a38740f4eae9
+[2016-07-26 19:54:57,212][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  45b8f251-523b-4d46-a255-87f75bdb9581
+[2016-07-26 19:54:57,290][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d0bd21c4-5b15-4f46-939f-f04e9487fb5a
+[2016-07-26 19:54:57,353][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f05cac9a-b13e-40dd-ad7c-f7de50f7f958
+[2016-07-26 19:54:57,414][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a9eb5342-09e4-4acd-bc55-92d04a7044f1
+[2016-07-26 19:54:57,475][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  71bc1878-a4df-4264-a08a-50b9f9faf4af
+[2016-07-26 19:54:57,535][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b462596f-8f2b-428c-86ae-0634edaad0a1
+[2016-07-26 19:54:57,597][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  29371615-2419-4782-92ec-846d132dd91d
+[2016-07-26 19:54:57,597][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  66c7e3af-aced-4c01-b980-2dd330cb42b2  and  8bcb62b0-8ccd-4200-b7f2-a0ee8df9a7f7
+[2016-07-26 19:54:57,655][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f9e3ea83-cf7e-4bbf-bca9-1b48335f34d8
+[2016-07-26 19:54:57,718][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d390fad4-85f2-4b62-adc3-224b9c709eee
+[2016-07-26 19:54:57,779][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  67ef3074-352a-48d2-87f3-d13f47c4c755
+[2016-07-26 19:54:57,842][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  624059b3-bc95-4ce1-8e19-a54d1e95fca0
+[2016-07-26 19:54:57,903][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d029a914-c9b4-4a8b-be56-ce7eec515124
+[2016-07-26 19:54:57,965][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  cbf312cc-ccfa-4bdd-9b53-90d5b46ddbae
+[2016-07-26 19:54:58,027][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6c9682bc-5d88-48cf-993c-f931b59930ca
+[2016-07-26 19:54:58,089][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  00ff93e1-cabf-4d84-a9b3-bb6a39b8e846
+[2016-07-26 19:54:58,151][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  81b5892b-2fd7-4733-a173-220731ab5a8a
+[2016-07-26 19:54:58,213][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  5649e607-b42d-4d7e-a082-c18186657af6
+[2016-07-26 19:54:58,297][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c4564f82-0d95-49e1-a483-5a8f237a19e0
+[2016-07-26 19:54:58,360][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a72de274-5eeb-4179-a2cf-bc4b70f2b927
+[2016-07-26 19:54:58,422][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8662c8e0-41c4-43b7-84f5-73d9201084be
+[2016-07-26 19:54:58,485][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  1be264b8-5854-4064-bc11-530b8c4e52a5
+[2016-07-26 19:54:58,549][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a6c6e066-1f0a-4810-86a8-8aac5e51eb3b
+[2016-07-26 19:54:58,612][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  da67016e-ad0e-42e9-80e9-98b100ea1e79
+[2016-07-26 19:54:58,675][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  1262a3d9-aade-48e6-b4f5-324860e7e03f
+[2016-07-26 19:54:58,739][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e1daff0c-a49c-40cd-8931-6a3dec9154cc
+[2016-07-26 19:54:58,804][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  0b9c79da-a30a-4a7c-9c06-1342d10ea6ff
+[2016-07-26 19:54:58,867][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f0173921-f219-4b1f-89df-54220e4f8a43
+[2016-07-26 19:58:24,853][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ Message Broker (localhost, ID:ryan-ThinkCentre-M57-38440-1469577279760-0:1) is shutting down
+[2016-07-26 19:58:26,590][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
 javax.jms.JMSException: java.io.EOFException
 	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
 	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
@@ -63,9 +76,7 @@ Caused by: java.io.EOFException
 	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
 	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
 	... 1 more
-[2016-07-24 09:16:05,708][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The Consumer is closed
-[2016-07-24 09:16:05,710][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'upload-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
-[2016-07-24 09:16:05,714][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
+[2016-07-26 19:58:26,600][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
 javax.jms.JMSException: java.io.EOFException
 	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
 	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
@@ -86,7 +97,9 @@ Caused by: java.io.EOFException
 	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
 	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
 	... 1 more
-[2016-07-24 09:16:05,718][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
+[2016-07-26 19:58:26,604][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The Consumer is closed
+[2016-07-26 19:58:26,607][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The Consumer is closed
+[2016-07-26 19:58:26,608][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
 javax.jms.JMSException: java.io.EOFException
 	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
 	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
@@ -107,9 +120,181 @@ Caused by: java.io.EOFException
 	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
 	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
 	... 1 more
-[2016-07-24 09:16:05,722][INFO][org.apache.activemq.broker.TransportConnector][ActiveMQ ShutdownHook] Connector tcp://localhost:61616 Stopped
-[2016-07-24 09:16:05,722][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The Session is closed
-[2016-07-24 09:16:05,721][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
+[2016-07-26 19:58:26,607][INFO][org.apache.activemq.broker.TransportConnector][ActiveMQ ShutdownHook] Connector tcp://localhost:61616 Stopped
+[2016-07-26 19:58:26,620][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'join-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+[2016-07-26 19:58:26,624][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'upload-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+[2016-07-26 19:58:26,627][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'transition-queue' - trying to recover. Cause: The Consumer is closed
+[2016-07-26 19:58:26,627][INFO][org.apache.activemq.store.kahadb.plist.PListStore][ActiveMQ ShutdownHook] PListStore:activemq-data/localhost/tmp_storage stopped
+[2016-07-26 19:58:26,627][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopping async queue tasks
+[2016-07-26 19:58:26,627][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopping async topic tasks
+[2016-07-26 19:58:26,628][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopped KahaDB
+[2016-07-26 19:58:26,636][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'transition-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+[2016-07-26 19:58:26,967][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-38440-1469577279760-0:1) stopped
+[2016-07-26 19:58:41,215][INFO][org.mongodb.driver.cluster][main] Cluster created with settings {hosts=[0.0.0.0:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[2016-07-26 19:58:41,217][INFO][org.mongodb.driver.cluster][main] Adding discovered server 0.0.0.0:27017 to client view of cluster
+[2016-07-26 19:58:41,375][INFO][org.mongodb.driver.connection][cluster-ClusterId{value='5797f9313c7a8c57048ffa48', description='null'}-0.0.0.0:27017] Opened connection [connectionId{localValue:1, serverValue:125}] to 0.0.0.0:27017
+[2016-07-26 19:58:41,376][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5797f9313c7a8c57048ffa48', description='null'}-0.0.0.0:27017] Monitor thread successfully connected to server with description ServerDescription{address=0.0.0.0:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, electionId=null, maxDocumentSize=16777216, roundTripTimeNanos=791110}
+[2016-07-26 19:58:41,382][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5797f9313c7a8c57048ffa48', description='null'}-0.0.0.0:27017] Discovered cluster type of STANDALONE
+[2016-07-26 19:59:27,598][INFO][org.mongodb.driver.cluster][main] Cluster created with settings {hosts=[0.0.0.0:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[2016-07-26 19:59:27,599][INFO][org.mongodb.driver.cluster][main] Adding discovered server 0.0.0.0:27017 to client view of cluster
+[2016-07-26 19:59:27,764][INFO][org.mongodb.driver.connection][cluster-ClusterId{value='5797f95f3c7a8c57391f2081', description='null'}-0.0.0.0:27017] Opened connection [connectionId{localValue:1, serverValue:126}] to 0.0.0.0:27017
+[2016-07-26 19:59:27,766][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5797f95f3c7a8c57391f2081', description='null'}-0.0.0.0:27017] Monitor thread successfully connected to server with description ServerDescription{address=0.0.0.0:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, electionId=null, maxDocumentSize=16777216, roundTripTimeNanos=830729}
+[2016-07-26 19:59:27,773][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5797f95f3c7a8c57391f2081', description='null'}-0.0.0.0:27017] Discovered cluster type of STANDALONE
+[2016-07-26 19:59:28,909][INFO][org.apache.activemq.broker.jmx.ManagementContext][JMX connector] JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi
+[2016-07-26 19:59:28,952][INFO][org.apache.activemq.store.kahadb.plist.PListStore][main] PListStore:activemq-data/localhost/tmp_storage started
+[2016-07-26 19:59:28,954][INFO][org.apache.activemq.broker.BrokerService][main] Using Persistence Adapter: KahaDBPersistenceAdapter[/home/greg/Projects/dcm/activemq-data/localhost/KahaDB]
+[2016-07-26 19:59:30,063][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] KahaDB is version 3
+[2016-07-26 19:59:30,102][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovering from the journal ...
+[2016-07-26 19:59:30,103][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovery replayed 1 operations from the journal in 0.029 seconds.
+[2016-07-26 19:59:30,119][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ 5.5.0 JMS Message Broker (localhost) is starting
+[2016-07-26 19:59:30,119][INFO][org.apache.activemq.broker.BrokerService][main] For help or more information please see: http://activemq.apache.org/
+[2016-07-26 19:59:30,371][INFO][org.apache.activemq.transport.TransportServerThreadSupport][main] Listening for connections at: tcp://localhost:61616
+[2016-07-26 19:59:30,371][INFO][org.apache.activemq.broker.TransportConnector][main] Connector tcp://localhost:61616 Started
+[2016-07-26 19:59:30,376][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-43095-1469577570144-0:1) started
+[2016-07-26 19:59:30,480][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-43095-1469577570144-2:1,clientId=null,started=false}
+[2016-07-26 19:59:30,586][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-43095-1469577570144-2:2,clientId=null,started=false}
+[2016-07-26 19:59:30,631][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-43095-1469577570144-2:3,clientId=null,started=false}
+[2016-07-26 19:59:30,733][INFO][org.eclipse.jetty.server.Server][main] jetty-7.6.13.v20130916
+[2016-07-26 19:59:30,776][INFO][org.eclipse.jetty.server.AbstractConnector][main] Started SelectChannelConnector@0.0.0.0:3000
+[2016-07-26 19:59:35,614][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The connection is already closed
+[2016-07-26 19:59:35,619][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-43095-1469577570144-2:4,clientId=null,started=false}
+[2016-07-26 19:59:35,634][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
+[2016-07-26 19:59:35,640][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-43095-1469577570144-2:5,clientId=null,started=false}
+[2016-07-26 19:59:35,661][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-07-26 19:59:35,674][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'transition-queue' - trying to recover. Cause: The connection is already closed
+[2016-07-26 19:59:35,675][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-07-26 19:59:35,679][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-43095-1469577570144-2:6,clientId=null,started=false}
+[2016-07-26 19:59:35,707][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-07-26 19:59:42,636][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp27323835-57] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-43095-1469577570144-2:7,clientId=null,started=false}
+[2016-07-26 19:59:43,630][INFO][dcm.handler][DefaultMessageListenerContainer-2] Begin processing  slideshow.pptx
+[2016-07-26 19:59:46,145][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  1
+[2016-07-26 19:59:46,456][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  2
+[2016-07-26 19:59:46,750][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  3
+[2016-07-26 19:59:47,028][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  4
+[2016-07-26 19:59:47,359][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  5
+[2016-07-26 19:59:48,033][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  6
+[2016-07-26 19:59:48,254][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  7
+[2016-07-26 19:59:48,547][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  8
+[2016-07-26 19:59:48,900][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  9
+[2016-07-26 19:59:49,134][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  10
+[2016-07-26 19:59:49,600][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  11
+[2016-07-26 19:59:49,602][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-2] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-43095-1469577570144-2:8,clientId=null,started=false}
+[2016-07-26 19:59:49,629][INFO][dcm.handler][DefaultMessageListenerContainer-2] =====================Begin image transition==================
+
+
+[2016-07-26 19:59:49,631][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  29eb8bce-df59-4ea5-b30c-0b97a91e5c1b  and  f59490f3-74f5-43fc-9434-1e9867b75dd3
+[2016-07-26 19:59:49,632][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  f59490f3-74f5-43fc-9434-1e9867b75dd3  and  79fdb48c-8951-4dfd-a38b-f4a18977d695
+[2016-07-26 19:59:49,694][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9a1c5b80-393b-4c8d-a93b-191578010591
+[2016-07-26 19:59:49,711][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully processed  slideshow.pptx
+[2016-07-26 19:59:49,766][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7cc25801-e90d-4561-ab9e-314552906c6c
+[2016-07-26 19:59:49,830][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2dc1036d-367b-4925-b638-df2cc2a8e785
+[2016-07-26 19:59:49,891][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f3f54713-a883-4c5a-8d8d-9f23568205a9
+[2016-07-26 19:59:49,953][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c955061e-a9d9-4a4b-94ae-0a2be18b0b8a
+[2016-07-26 19:59:50,014][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  721c7e3f-db00-40ca-a004-3890cb6cc887
+[2016-07-26 19:59:50,076][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8e943ed7-4596-43a0-9397-a3268c9d19e4
+[2016-07-26 19:59:50,138][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  fda1062c-fcfb-43ab-b583-ab299809d1c7
+[2016-07-26 19:59:50,200][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8ee92af5-21fc-45bc-980a-f288f37dd151
+[2016-07-26 19:59:50,261][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4f9913d1-fd1c-4594-9fa7-cc64be711b71
+[2016-07-26 19:59:50,262][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  79fdb48c-8951-4dfd-a38b-f4a18977d695  and  f4690409-8c65-47cf-8d12-0e9f700d771d
+[2016-07-26 19:59:50,319][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  58786340-8e89-4182-9b7e-9e690f0e96c1
+[2016-07-26 19:59:50,384][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  10923e05-c51d-4603-95c0-84ad0e998393
+[2016-07-26 19:59:50,451][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8495ab5e-4ab5-469e-bf49-e3773a62ca14
+[2016-07-26 19:59:50,525][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  75e7cb58-220b-4564-a079-d76d541108e6
+[2016-07-26 19:59:50,611][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c0011fb1-81dc-4f19-a270-95aff0c7d4b1
+[2016-07-26 19:59:50,674][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a22c6050-bc49-40df-92a2-5a09257a7ff6
+[2016-07-26 19:59:50,738][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c13d1058-25bb-45ed-bbd8-5e3384416da6
+[2016-07-26 19:59:50,803][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7fe790cb-564d-4efe-81a8-1f8ee6b7f8f1
+[2016-07-26 19:59:50,892][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f2a5508b-4a04-4d60-b7f6-7b3fa7256c58
+[2016-07-26 19:59:50,955][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  32bbbc57-bc1d-47fd-8baf-7710ffa13dfd
+[2016-07-26 19:59:50,956][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  f4690409-8c65-47cf-8d12-0e9f700d771d  and  e9930742-f8c1-4e13-985e-8940fbfa043f
+[2016-07-26 19:59:51,016][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  5453b5d0-24aa-463a-94ad-3aeea2d056de
+[2016-07-26 19:59:51,111][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9b93a166-fb36-4bdc-a2eb-1c1419acd22f
+[2016-07-26 19:59:51,190][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ab235747-0792-45a2-8ba3-99fedebb3cad
+[2016-07-26 19:59:51,254][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  3eddbcf4-d7c3-43ba-b9ce-d9974e6af44f
+[2016-07-26 19:59:51,319][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c77420d0-a7a1-4900-aa82-8572d8c15c00
+[2016-07-26 19:59:51,384][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  017abc2a-547d-488b-857a-b1177d5a4cfe
+[2016-07-26 19:59:51,447][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  53cedbef-0e9c-4283-8dcf-1419afc52ad2
+[2016-07-26 19:59:51,510][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d84b8aed-7878-4df9-8aef-51449053dffa
+[2016-07-26 19:59:51,574][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ab6ac3ba-3df9-4356-9433-0e49bdc46e15
+[2016-07-26 19:59:51,637][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  60e18e80-4b2d-4977-a8ce-7ef9262a98c2
+[2016-07-26 19:59:51,637][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  e9930742-f8c1-4e13-985e-8940fbfa043f  and  707017e6-1ea6-44b6-8afe-bc55433b7101
+[2016-07-26 19:59:51,695][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4a6c9a45-a101-466b-aa6c-a15755b42a3a
+[2016-07-26 19:59:51,760][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  10ce3835-9b8e-4374-82cf-3744a6e953dc
+[2016-07-26 19:59:51,823][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9635bffe-9eaf-40ca-b057-c8ba040e9cc7
+[2016-07-26 19:59:51,885][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  3546aefd-9eff-4dde-a108-efeca5724935
+[2016-07-26 19:59:51,948][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  85797144-b49e-4dd3-b27f-326a82ca473b
+[2016-07-26 19:59:52,012][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9ad97fdb-6c91-4b77-a39e-df6d7ce8c1c0
+[2016-07-26 19:59:52,074][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  52d1656f-c677-4667-96a7-eb7510f38b4d
+[2016-07-26 19:59:52,136][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  aef25e54-f338-4d40-908f-db4f3044346a
+[2016-07-26 19:59:52,199][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8afe642e-d4df-418b-989f-52f82eaefdfa
+[2016-07-26 19:59:52,262][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  0a726c71-1617-460f-92cd-dc161936ced7
+[2016-07-26 19:59:52,262][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  707017e6-1ea6-44b6-8afe-bc55433b7101  and  e8ff4f34-4685-4694-9929-fd0329d01204
+[2016-07-26 19:59:52,332][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8e598ea5-0be1-411d-b255-3bfa57e78013
+[2016-07-26 19:59:52,395][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4e3b1b5f-30dd-4a62-bda9-ef16a46f84e4
+[2016-07-26 19:59:52,458][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ec8880ee-b22b-4f7e-a411-69d6705dfdf7
+[2016-07-26 19:59:52,523][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c17e7198-b97a-4940-a048-22b877048b58
+[2016-07-26 19:59:52,586][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  da93ef1e-5c25-484b-82de-10a55488913e
+[2016-07-26 19:59:52,649][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  65d15409-c9ec-4324-986f-08e5e4fea7d6
+[2016-07-26 19:59:52,711][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9d92f9fe-7af5-4682-b017-5351a33ca729
+[2016-07-26 19:59:52,775][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  09d365f7-b656-49ea-a280-f3e2d01d04c8
+[2016-07-26 19:59:52,837][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e829f891-3979-447f-8268-edfdc8e8140d
+[2016-07-26 19:59:52,900][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  fde4dedc-8dc8-4088-9fe2-08788d0ee9d7
+[2016-07-26 19:59:52,900][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  e8ff4f34-4685-4694-9929-fd0329d01204  and  96e437d1-b26b-4897-a8e4-50299e3a8a05
+[2016-07-26 19:59:52,959][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  aca7e2df-2dba-4678-9df5-7672946f81ff
+[2016-07-26 19:59:53,021][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9297a575-fe5a-4409-9503-1d9236ba6543
+[2016-07-26 19:59:53,083][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b6f996c4-f443-41b4-9bf3-0dd3680aa476
+[2016-07-26 19:59:53,146][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4dff3a9f-c709-45e6-a34b-e14d6932e868
+[2016-07-26 19:59:53,208][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e461ded2-2519-4860-9168-c2fbbf171d92
+[2016-07-26 19:59:53,270][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d6c77a9d-fae5-4aed-8f0a-e01749b6a720
+[2016-07-26 19:59:53,338][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b66f42c2-c478-486e-a911-0d6509db5054
+[2016-07-26 19:59:53,400][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  0c8ccc43-7e68-4803-aa70-ce22f2c97c4c
+[2016-07-26 19:59:53,463][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  93901427-8de7-448f-8135-1aeaddb3a601
+[2016-07-26 19:59:53,524][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d09c9600-c67e-46fe-9fbc-bf5ce5277a7b
+[2016-07-26 19:59:53,524][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  96e437d1-b26b-4897-a8e4-50299e3a8a05  and  cf4560f4-2f8f-4a30-8c74-50387c1feb06
+[2016-07-26 19:59:53,580][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  00eda807-8508-4ba5-98fe-20c8d4078939
+[2016-07-26 19:59:53,643][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  51a8b65b-27f8-41ba-a7c5-6712d3a7e49e
+[2016-07-26 19:59:53,704][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a3bdef48-f692-4e54-84bb-77b35e37ff6b
+[2016-07-26 19:59:53,764][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  44a05fd1-de54-49eb-9834-d6dd271709e5
+[2016-07-26 19:59:53,824][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f4341163-3f2a-4230-9085-e3fab23e0877
+[2016-07-26 19:59:53,884][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  fda786f9-9125-4888-a7f1-e5c2377f7064
+[2016-07-26 19:59:53,956][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  49e6db15-c26a-4210-ab21-961f70b6e922
+[2016-07-26 19:59:54,016][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8d81880c-7271-46c6-abb7-7461a9cea170
+[2016-07-26 19:59:54,078][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c4caf731-8a8b-48d6-a358-c9dfba836537
+[2016-07-26 19:59:54,137][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  05edc5e6-c18b-42ec-b398-7a8b468962e8
+[2016-07-26 19:59:54,138][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  cf4560f4-2f8f-4a30-8c74-50387c1feb06  and  b9f33bf9-346b-447b-8a46-0a4d08b917f0
+[2016-07-26 19:59:54,195][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  aba8e7c3-b90a-42d4-99cb-82ed2668073d
+[2016-07-26 19:59:54,255][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  53d02c71-ff7d-4f73-8c5d-efe8b168bab5
+[2016-07-26 19:59:54,317][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f1601d6a-a8b4-4876-b3b1-b3e45af00a91
+[2016-07-26 19:59:54,378][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  5c1e7c17-2451-4dc6-8258-a49a4e3184ef
+[2016-07-26 19:59:54,439][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  783dcf72-00b3-4e5b-b1c7-ebb798f225f9
+[2016-07-26 19:59:54,501][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ee472710-3d08-4f95-b186-a6a172624508
+[2016-07-26 19:59:54,562][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a3b5ed40-b000-4ac4-a19a-d11ef326f981
+[2016-07-26 19:59:54,628][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  1db5c938-fee9-413c-b510-5c6701746a36
+[2016-07-26 19:59:54,689][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a170c6e2-6277-4d2d-a83b-b680e2b5fa28
+[2016-07-26 19:59:54,751][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2cd3d5c9-fdef-4387-b209-8ccb4be15fba
+[2016-07-26 19:59:54,752][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  b9f33bf9-346b-447b-8a46-0a4d08b917f0  and  cdfe4d6c-11d4-45e2-86be-b960e148604a
+[2016-07-26 19:59:54,811][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  67b92a81-8da4-4bb2-8181-ab708e21c268
+[2016-07-26 19:59:54,874][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c641091b-f9b1-4095-9a14-88ac1f3171d6
+[2016-07-26 19:59:54,936][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  96869992-57f9-4710-bb04-429c5515ad20
+[2016-07-26 19:59:54,999][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f589b3c4-200d-4cf9-bba6-83b296b21c69
+[2016-07-26 19:59:55,062][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  789c96a6-c597-4492-8d9c-8be611b5a54d
+[2016-07-26 19:59:55,125][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  72bff6f7-88a7-447c-8e26-78e98f9ec19c
+[2016-07-26 19:59:55,188][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  46c97bba-010e-4a90-9ddb-063030181663
+[2016-07-26 19:59:55,254][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  211e6d95-46cb-4ff1-8654-f85fb7a5246b
+[2016-07-26 19:59:55,317][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f2e2dd92-93f9-431c-9dc1-c42f655c7260
+[2016-07-26 19:59:55,379][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  94a38f71-22e1-442d-8143-2a2de573dc6a
+[2016-07-26 19:59:55,437][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  1a568cf4-c024-4b35-87fc-7c272a51fdee
+[2016-07-26 19:59:55,503][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6ddc3577-97ae-4598-910d-857d49149491
+[2016-07-26 19:59:55,620][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b805d218-c2f6-4e5b-829e-ddb0265669a5
+[2016-07-26 19:59:55,686][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d3a7d842-521f-455b-b7d1-5da3a83aa5f4
+[2016-07-26 19:59:55,750][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  1d0730b4-900c-4234-8f51-d02b727eba34
+[2016-07-26 19:59:55,812][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e368411a-b0a7-448a-b341-63138906d78a
+[2016-07-26 19:59:55,876][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  86b0fa81-1836-4069-978b-db74d09c29c4
+[2016-07-26 19:59:55,940][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  107eba58-a219-4a0d-bfd9-dae9a493f059
+[2016-07-26 19:59:56,005][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ac23b693-15ee-40cc-b81e-b5d395d23672
+[2016-07-26 19:59:56,070][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  caac5616-e963-4c8e-92f2-fcf7efdb383f
+[2016-07-26 20:08:23,620][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ Message Broker (localhost, ID:ryan-ThinkCentre-M57-43095-1469577570144-0:1) is shutting down
+[2016-07-26 20:08:24,106][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
 javax.jms.JMSException: java.io.EOFException
 	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
 	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
@@ -130,66 +315,138 @@ Caused by: java.io.EOFException
 	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
 	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
 	... 1 more
-[2016-07-24 09:16:05,733][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'join-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
-[2016-07-24 09:16:05,734][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The Session is closed
-[2016-07-24 09:16:05,737][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'upload-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
-[2016-07-24 09:16:05,738][INFO][org.apache.activemq.store.kahadb.plist.PListStore][ActiveMQ ShutdownHook] PListStore:activemq-data/localhost/tmp_storage stopped
-[2016-07-24 09:16:05,739][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The Session is closed
-[2016-07-24 09:16:05,739][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopping async queue tasks
-[2016-07-24 09:16:05,739][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopping async topic tasks
-[2016-07-24 09:16:05,740][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopped KahaDB
-[2016-07-24 09:16:05,746][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'join-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
-[2016-07-24 09:16:06,055][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-37107-1469365942933-0:1) stopped
-[2016-07-24 09:17:34,834][INFO][org.mongodb.driver.cluster][main] Cluster created with settings {hosts=[0.0.0.0:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-[2016-07-24 09:17:34,835][INFO][org.mongodb.driver.cluster][main] Adding discovered server 0.0.0.0:27017 to client view of cluster
-[2016-07-24 09:17:35,065][INFO][org.mongodb.driver.connection][cluster-ClusterId{value='5794bfee3c7a8c1848f9fee8', description='null'}-0.0.0.0:27017] Opened connection [connectionId{localValue:1, serverValue:74}] to 0.0.0.0:27017
-[2016-07-24 09:17:35,067][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5794bfee3c7a8c1848f9fee8', description='null'}-0.0.0.0:27017] Monitor thread successfully connected to server with description ServerDescription{address=0.0.0.0:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, electionId=null, maxDocumentSize=16777216, roundTripTimeNanos=1183980}
-[2016-07-24 09:17:35,084][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5794bfee3c7a8c1848f9fee8', description='null'}-0.0.0.0:27017] Discovered cluster type of STANDALONE
-[2016-07-24 09:17:36,163][INFO][org.apache.activemq.broker.jmx.ManagementContext][JMX connector] JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi
-[2016-07-24 09:17:36,212][INFO][org.apache.activemq.store.kahadb.plist.PListStore][main] PListStore:activemq-data/localhost/tmp_storage started
-[2016-07-24 09:17:36,215][INFO][org.apache.activemq.broker.BrokerService][main] Using Persistence Adapter: KahaDBPersistenceAdapter[/home/greg/Projects/dcm/activemq-data/localhost/KahaDB]
-[2016-07-24 09:17:36,857][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] KahaDB is version 3
-[2016-07-24 09:17:36,891][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovering from the journal ...
-[2016-07-24 09:17:36,891][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovery replayed 1 operations from the journal in 0.024 seconds.
-[2016-07-24 09:17:36,905][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ 5.5.0 JMS Message Broker (localhost) is starting
-[2016-07-24 09:17:36,905][INFO][org.apache.activemq.broker.BrokerService][main] For help or more information please see: http://activemq.apache.org/
-[2016-07-24 09:17:37,147][INFO][org.apache.activemq.transport.TransportServerThreadSupport][main] Listening for connections at: tcp://localhost:61616
-[2016-07-24 09:17:37,148][INFO][org.apache.activemq.broker.TransportConnector][main] Connector tcp://localhost:61616 Started
-[2016-07-24 09:17:37,150][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-36976-1469366256933-0:1) started
-[2016-07-24 09:17:37,253][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36976-1469366256933-2:1,clientId=null,started=false}
-[2016-07-24 09:17:37,374][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36976-1469366256933-2:2,clientId=null,started=false}
-[2016-07-24 09:17:37,505][INFO][org.eclipse.jetty.server.Server][main] jetty-7.6.13.v20130916
-[2016-07-24 09:17:37,551][INFO][org.eclipse.jetty.server.AbstractConnector][main] Started SelectChannelConnector@0.0.0.0:3000
-[2016-07-24 09:17:42,378][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:17:42,390][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36976-1469366256933-2:3,clientId=null,started=false}
-[2016-07-24 09:17:42,412][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:17:42,422][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:17:42,424][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36976-1469366256933-2:4,clientId=null,started=false}
-[2016-07-24 09:17:42,446][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:17:50,422][INFO][dcm.handler][qtp5665467-49] {:ssl-client-cert nil, :cookies {}, :remote-addr 127.0.0.1, :params {}, :flash nil, :route-params {}, :headers {host localhost:3000, user-agent Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0, content-type application/json; charset=utf-8, content-length 72, referer http://localhost:3000/, connection keep-alive, pragma no-cache, accept application/json; charset=utf-8, accept-language en-US,en;q=0.5, accept-encoding gzip, deflate, cache-control no-cache}, :server-port 3000, :content-length 72, :form-params {}, :compojure/route [:post /join], :session/key nil, :query-params {}, :content-type application/json; charset=utf-8, :character-encoding utf-8, :uri /join, :server-name localhost, :query-string nil, :body {username tri, password pass, firstname greg, lastname mar}, :multipart-params {}, :scheme :http, :cemerick.friend/auth-config {:default-landing-uri /, :login-uri /login, :credential-fn #object[clojure.core$partial$fn__4759 0x1ff153e clojure.core$partial$fn__4759@1ff153e], :workflows [#object[cemerick.friend.workflows$interactive_form$fn__7515 0x7562e1 cemerick.friend.workflows$interactive_form$fn__7515@7562e1]]}, :request-method :post, :session {}}
-[2016-07-24 09:17:50,423][INFO][dcm.handler][qtp5665467-49] {username tri, password pass, firstname greg, lastname mar}
-[2016-07-24 09:17:50,423][INFO][dcm.handler][qtp5665467-49] {"username":"tri","password":"pass","firstname":"greg","lastname":"mar"}
-[2016-07-24 09:17:50,438][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp5665467-49] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36976-1469366256933-2:5,clientId=null,started=false}
-[2016-07-24 09:17:50,471][INFO][dcm.handler][DefaultMessageListenerContainer-2] {"username":"tri","password":"pass","firstname":"greg","lastname":"mar"}
-[2016-07-24 09:17:50,474][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Execution of JMS message listener failed, and no ErrorHandler has been set.
-java.lang.ClassCastException: java.lang.Character cannot be cast to java.util.Map$Entry
-	at clojure.lang.APersistentMap.cons(APersistentMap.java:42)
-	at clojure.lang.RT.conj(RT.java:652)
-	at clojure.core$conj__4345.invokeStatic(core.clj:85)
-	at clojure.core$merge$fn__4877.invoke(core.clj:2940)
-	at clojure.core$reduce1.invokeStatic(core.clj:925)
-	at clojure.core$reduce1.invokeStatic(core.clj:915)
-	at clojure.core$merge.invokeStatic(core.clj:2939)
-	at clojure.core$merge.doInvoke(core.clj:2932)
-	at clojure.lang.RestFn.invoke(RestFn.java:421)
-	at monger.collection$insert_and_return.invokeStatic(collection.clj:105)
-	at monger.collection$insert_and_return.invoke(collection.clj:91)
-	at monger.collection$insert_and_return.invokeStatic(collection.clj:97)
-	at monger.collection$insert_and_return.invoke(collection.clj:91)
-	at dcm.data$add_item.invokeStatic(data.clj:21)
-	at dcm.data$add_item.invoke(data.clj:20)
-	at dcm.handler$join_message_receiver.invokeStatic(handler.clj:70)
-	at dcm.handler$join_message_receiver.invoke(handler.clj:68)
+[2016-07-26 20:08:24,120][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
+javax.jms.JMSException: java.io.EOFException
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
+	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
+	at org.apache.activemq.ActiveMQConnection.onException(ActiveMQConnection.java:1858)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:126)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:160)
+	at org.apache.activemq.transport.InactivityMonitor.onException(InactivityMonitor.java:265)
+	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:206)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:269)
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:227)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
+	... 1 more
+[2016-07-26 20:08:24,121][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The Consumer is closed
+[2016-07-26 20:08:24,125][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The Session is closed
+[2016-07-26 20:08:24,126][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'join-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+[2016-07-26 20:08:24,127][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'upload-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+[2016-07-26 20:08:24,131][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
+javax.jms.JMSException: java.io.EOFException
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
+	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
+	at org.apache.activemq.ActiveMQConnection.onException(ActiveMQConnection.java:1858)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:126)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:160)
+	at org.apache.activemq.transport.InactivityMonitor.onException(InactivityMonitor.java:265)
+	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:206)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:269)
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:227)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
+	... 1 more
+[2016-07-26 20:08:24,134][INFO][org.apache.activemq.broker.TransportConnector][ActiveMQ ShutdownHook] Connector tcp://localhost:61616 Stopped
+[2016-07-26 20:08:24,138][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'transition-queue' - trying to recover. Cause: The Consumer is closed
+[2016-07-26 20:08:24,144][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'transition-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+[2016-07-26 20:08:24,145][INFO][org.apache.activemq.store.kahadb.plist.PListStore][ActiveMQ ShutdownHook] PListStore:activemq-data/localhost/tmp_storage stopped
+[2016-07-26 20:08:24,145][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopping async queue tasks
+[2016-07-26 20:08:24,145][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopping async topic tasks
+[2016-07-26 20:08:24,146][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopped KahaDB
+[2016-07-26 20:08:24,652][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-43095-1469577570144-0:1) stopped
+[2016-07-26 20:08:39,622][INFO][org.mongodb.driver.cluster][main] Cluster created with settings {hosts=[0.0.0.0:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[2016-07-26 20:08:39,623][INFO][org.mongodb.driver.cluster][main] Adding discovered server 0.0.0.0:27017 to client view of cluster
+[2016-07-26 20:08:39,779][INFO][org.mongodb.driver.connection][cluster-ClusterId{value='5797fb873c7a8c584260f326', description='null'}-0.0.0.0:27017] Opened connection [connectionId{localValue:1, serverValue:127}] to 0.0.0.0:27017
+[2016-07-26 20:08:39,781][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5797fb873c7a8c584260f326', description='null'}-0.0.0.0:27017] Monitor thread successfully connected to server with description ServerDescription{address=0.0.0.0:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, electionId=null, maxDocumentSize=16777216, roundTripTimeNanos=733968}
+[2016-07-26 20:08:39,789][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5797fb873c7a8c584260f326', description='null'}-0.0.0.0:27017] Discovered cluster type of STANDALONE
+[2016-07-26 20:08:40,928][INFO][org.apache.activemq.broker.jmx.ManagementContext][JMX connector] JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi
+[2016-07-26 20:08:40,967][INFO][org.apache.activemq.store.kahadb.plist.PListStore][main] PListStore:activemq-data/localhost/tmp_storage started
+[2016-07-26 20:08:40,969][INFO][org.apache.activemq.broker.BrokerService][main] Using Persistence Adapter: KahaDBPersistenceAdapter[/home/greg/Projects/dcm/activemq-data/localhost/KahaDB]
+[2016-07-26 20:08:42,059][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] KahaDB is version 3
+[2016-07-26 20:08:42,101][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovering from the journal ...
+[2016-07-26 20:08:42,102][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovery replayed 1 operations from the journal in 0.032 seconds.
+[2016-07-26 20:08:42,114][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ 5.5.0 JMS Message Broker (localhost) is starting
+[2016-07-26 20:08:42,115][INFO][org.apache.activemq.broker.BrokerService][main] For help or more information please see: http://activemq.apache.org/
+[2016-07-26 20:08:42,359][INFO][org.apache.activemq.transport.TransportServerThreadSupport][main] Listening for connections at: tcp://localhost:61616
+[2016-07-26 20:08:42,359][INFO][org.apache.activemq.broker.TransportConnector][main] Connector tcp://localhost:61616 Started
+[2016-07-26 20:08:42,362][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-33953-1469578122138-0:1) started
+[2016-07-26 20:08:42,464][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33953-1469578122138-2:1,clientId=null,started=false}
+[2016-07-26 20:08:42,560][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33953-1469578122138-2:2,clientId=null,started=false}
+[2016-07-26 20:08:42,597][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33953-1469578122138-2:3,clientId=null,started=false}
+[2016-07-26 20:08:42,690][INFO][org.eclipse.jetty.server.Server][main] jetty-7.6.13.v20130916
+[2016-07-26 20:08:42,735][INFO][org.eclipse.jetty.server.AbstractConnector][main] Started SelectChannelConnector@0.0.0.0:3000
+[2016-07-26 20:08:45,896][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp27199470-57] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33953-1469578122138-2:4,clientId=null,started=false}
+[2016-07-26 20:08:47,571][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The connection is already closed
+[2016-07-26 20:08:47,582][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33953-1469578122138-2:5,clientId=null,started=false}
+[2016-07-26 20:08:47,599][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
+[2016-07-26 20:08:47,608][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-07-26 20:08:47,613][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33953-1469578122138-2:6,clientId=null,started=false}
+[2016-07-26 20:08:47,631][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'transition-queue' - trying to recover. Cause: The connection is already closed
+[2016-07-26 20:08:47,643][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33953-1469578122138-2:7,clientId=null,started=false}
+[2016-07-26 20:08:47,653][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-07-26 20:08:47,708][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-07-26 20:08:48,717][INFO][dcm.handler][DefaultMessageListenerContainer-2] Begin processing  slideshow.pptx
+[2016-07-26 20:08:51,138][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  1
+[2016-07-26 20:08:51,449][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  2
+[2016-07-26 20:08:51,723][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  3
+[2016-07-26 20:08:51,996][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  4
+[2016-07-26 20:08:52,311][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  5
+[2016-07-26 20:08:52,975][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  6
+[2016-07-26 20:08:53,191][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  7
+[2016-07-26 20:08:53,405][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  8
+[2016-07-26 20:08:53,680][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  9
+[2016-07-26 20:08:53,904][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  10
+[2016-07-26 20:08:54,379][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  11
+[2016-07-26 20:08:54,382][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-2] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33953-1469578122138-2:8,clientId=null,started=false}
+[2016-07-26 20:08:54,426][INFO][dcm.handler][DefaultMessageListenerContainer-2] =====================Begin image transition==================
+
+
+[2016-07-26 20:08:54,428][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  25f3ac4d-a8c3-4699-b91a-315c7306174d  and  024b5758-1911-4a78-a7dc-cb3a0a08820f
+[2016-07-26 20:08:54,430][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Execution of JMS message listener failed, and no ErrorHandler has been set.
+java.lang.ClassCastException: java.lang.String cannot be cast to clojure.lang.IPersistentCollection
+	at clojure.core$conj__4345.invokeStatic(core.clj:82)
+	at clojure.core$conj__4345.invoke(core.clj:82)
+	at dcm.handler$make_transition_images.invokeStatic(handler.clj:110)
+	at dcm.handler$make_transition_images.invoke(handler.clj:99)
+	at dcm.handler$transition_message_receiver$iter__7575__7579$fn__7580.invoke(handler.clj:119)
+	at clojure.lang.LazySeq.sval(LazySeq.java:40)
+	at clojure.lang.LazySeq.seq(LazySeq.java:49)
+	at clojure.lang.RT.seq(RT.java:521)
+	at clojure.core$seq__4357.invokeStatic(core.clj:137)
+	at clojure.core$print_sequential.invokeStatic(core_print.clj:46)
+	at clojure.core$fn__6072.invokeStatic(core_print.clj:153)
+	at clojure.core$fn__6072.invoke(core_print.clj:153)
+	at clojure.lang.MultiFn.invoke(MultiFn.java:233)
+	at clojure.core$pr_on.invokeStatic(core.clj:3572)
+	at clojure.core$pr.invokeStatic(core.clj:3575)
+	at clojure.core$pr.invoke(core.clj:3575)
+	at clojure.lang.AFn.applyToHelper(AFn.java:154)
+	at clojure.lang.RestFn.applyTo(RestFn.java:132)
+	at clojure.core$apply.invokeStatic(core.clj:646)
+	at clojure.core$prn.invokeStatic(core.clj:3612)
+	at clojure.core$prn.doInvoke(core.clj:3612)
+	at clojure.lang.RestFn.applyTo(RestFn.java:137)
+	at clojure.core$apply.invokeStatic(core.clj:646)
+	at clojure.core$println.invokeStatic(core.clj:3631)
+	at clojure.core$println.doInvoke(core.clj:3631)
+	at clojure.lang.RestFn.invoke(RestFn.java:408)
+	at dcm.handler$transition_message_receiver.invokeStatic(handler.clj:122)
+	at dcm.handler$transition_message_receiver.invoke(handler.clj:115)
 	at clamq.jms$jms_consumer$fn__3888.invoke(jms.clj:38)
 	at clamq.jms.proxy$java.lang.Object$MessageListener$681b6920.onMessage(Unknown Source)
 	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:560)
@@ -201,52 +458,9 @@ java.lang.ClassCastException: java.lang.Character cannot be cast to java.util.Ma
 	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1050)
 	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:947)
 	at java.lang.Thread.run(Thread.java:745)
-[2016-07-24 09:18:44,663][INFO][dcm.handler][qtp5665467-49] Failed to bind to server socket: tcp://localhost:61616 due to: java.net.BindException: Address already in use
-[2016-07-24 09:18:44,666][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp5665467-49] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36976-1469366256933-2:6,clientId=null,started=false}
-[2016-07-24 09:18:44,691][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp5665467-49] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36976-1469366256933-2:7,clientId=null,started=false}
-[2016-07-24 09:18:44,713][INFO][dcm.handler][qtp5665467-49] {:ssl-client-cert nil, :cookies {}, :remote-addr 127.0.0.1, :params {}, :flash nil, :route-params {}, :headers {host localhost:3000, user-agent Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0, content-type application/json; charset=utf-8, content-length 72, referer http://localhost:3000/, connection keep-alive, pragma no-cache, accept application/json; charset=utf-8, accept-language en-US,en;q=0.5, accept-encoding gzip, deflate, cache-control no-cache}, :server-port 3000, :content-length 72, :form-params {}, :compojure/route [:post /join], :session/key nil, :query-params {}, :content-type application/json; charset=utf-8, :character-encoding utf-8, :uri /join, :server-name localhost, :query-string nil, :body {username tri, password pass, firstname greg, lastname mar}, :multipart-params {}, :scheme :http, :cemerick.friend/auth-config {:default-landing-uri /, :login-uri /login, :credential-fn #object[clojure.core$partial$fn__4759 0x1b03ea0 clojure.core$partial$fn__4759@1b03ea0], :workflows [#object[cemerick.friend.workflows$interactive_form$fn__7515 0x1df92d5 cemerick.friend.workflows$interactive_form$fn__7515@1df92d5]]}, :request-method :post, :session {}}
-[2016-07-24 09:18:44,713][INFO][dcm.handler][qtp5665467-49] {username tri, password pass, firstname greg, lastname mar}
-[2016-07-24 09:18:44,713][INFO][dcm.handler][qtp5665467-49] {"username":"tri","password":"pass","firstname":"greg","lastname":"mar"}
-[2016-07-24 09:18:44,718][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp5665467-49] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36976-1469366256933-2:8,clientId=null,started=false}
-[2016-07-24 09:18:44,739][INFO][dcm.handler][DefaultMessageListenerContainer-2] {"username":"tri","password":"pass","firstname":"greg","lastname":"mar"}
-[2016-07-24 09:18:44,740][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Execution of JMS message listener failed, and no ErrorHandler has been set.
-java.lang.ClassCastException: java.lang.Character cannot be cast to java.util.Map$Entry
-	at clojure.lang.APersistentMap.cons(APersistentMap.java:42)
-	at clojure.lang.RT.conj(RT.java:652)
-	at clojure.core$conj__4345.invokeStatic(core.clj:85)
-	at clojure.core$merge$fn__4877.invoke(core.clj:2940)
-	at clojure.core$reduce1.invokeStatic(core.clj:925)
-	at clojure.core$reduce1.invokeStatic(core.clj:915)
-	at clojure.core$merge.invokeStatic(core.clj:2939)
-	at clojure.core$merge.doInvoke(core.clj:2932)
-	at clojure.lang.RestFn.invoke(RestFn.java:421)
-	at monger.collection$insert_and_return.invokeStatic(collection.clj:105)
-	at monger.collection$insert_and_return.invoke(collection.clj:91)
-	at monger.collection$insert_and_return.invokeStatic(collection.clj:97)
-	at monger.collection$insert_and_return.invoke(collection.clj:91)
-	at dcm.data$add_item.invokeStatic(data.clj:21)
-	at dcm.data$add_item.invoke(data.clj:20)
-	at dcm.handler$join_message_receiver.invokeStatic(handler.clj:70)
-	at dcm.handler$join_message_receiver.invoke(handler.clj:68)
-	at clamq.jms$jms_consumer$fn__3888.invoke(jms.clj:38)
-	at clamq.jms.proxy$java.lang.Object$MessageListener$681b6920.onMessage(Unknown Source)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:560)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:498)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:467)
-	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:325)
-	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:263)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1058)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1050)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:947)
-	at java.lang.Thread.run(Thread.java:745)
-[2016-07-24 09:18:49,685][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: Stopped.
-[2016-07-24 09:18:49,687][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36976-1469366256933-2:9,clientId=null,started=false}
-[2016-07-24 09:18:49,701][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:18:49,716][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:18:49,721][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36976-1469366256933-2:10,clientId=null,started=false}
-[2016-07-24 09:18:49,730][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:18:51,699][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ Message Broker (localhost, ID:ryan-ThinkCentre-M57-36976-1469366256933-0:1) is shutting down
-[2016-07-24 09:18:51,724][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
+[2016-07-26 20:08:54,473][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully processed  slideshow.pptx
+[2016-07-26 20:09:49,008][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ Message Broker (localhost, ID:ryan-ThinkCentre-M57-33953-1469578122138-0:1) is shutting down
+[2016-07-26 20:09:50,445][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
 javax.jms.JMSException: java.io.EOFException
 	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
 	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
@@ -267,9 +481,8 @@ Caused by: java.io.EOFException
 	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
 	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
 	... 1 more
-[2016-07-24 09:18:51,730][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The Consumer is closed
-[2016-07-24 09:18:51,733][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'upload-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
-[2016-07-24 09:18:51,734][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
+[2016-07-26 20:09:50,449][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The Session is closed
+[2016-07-26 20:09:50,453][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
 javax.jms.JMSException: java.io.EOFException
 	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
 	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
@@ -290,7 +503,13 @@ Caused by: java.io.EOFException
 	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
 	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
 	... 1 more
-[2016-07-24 09:18:51,738][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
+[2016-07-26 20:09:50,459][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'upload-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+[2016-07-26 20:09:50,472][INFO][org.apache.activemq.broker.TransportConnector][ActiveMQ ShutdownHook] Connector tcp://localhost:61616 Stopped
+[2016-07-26 20:09:50,479][INFO][org.apache.activemq.store.kahadb.plist.PListStore][ActiveMQ ShutdownHook] PListStore:activemq-data/localhost/tmp_storage stopped
+[2016-07-26 20:09:50,479][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopping async queue tasks
+[2016-07-26 20:09:50,479][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopping async topic tasks
+[2016-07-26 20:09:50,479][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopped KahaDB
+[2016-07-26 20:09:50,481][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
 javax.jms.JMSException: java.io.EOFException
 	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
 	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
@@ -311,8 +530,171 @@ Caused by: java.io.EOFException
 	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
 	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
 	... 1 more
-[2016-07-24 09:18:51,743][INFO][org.apache.activemq.broker.TransportConnector][ActiveMQ ShutdownHook] Connector tcp://localhost:61616 Stopped
-[2016-07-24 09:18:51,743][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
+[2016-07-26 20:09:50,482][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The Consumer is closed
+[2016-07-26 20:09:50,490][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'join-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+[2016-07-26 20:09:50,491][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'transition-queue' - trying to recover. Cause: The Consumer is closed
+[2016-07-26 20:09:50,497][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'transition-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+[2016-07-26 20:09:50,968][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-33953-1469578122138-0:1) stopped
+[2016-07-26 20:10:05,429][INFO][org.mongodb.driver.cluster][main] Cluster created with settings {hosts=[0.0.0.0:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[2016-07-26 20:10:05,431][INFO][org.mongodb.driver.cluster][main] Adding discovered server 0.0.0.0:27017 to client view of cluster
+[2016-07-26 20:10:05,591][INFO][org.mongodb.driver.connection][cluster-ClusterId{value='5797fbdd3c7a8c58f624d5a2', description='null'}-0.0.0.0:27017] Opened connection [connectionId{localValue:1, serverValue:128}] to 0.0.0.0:27017
+[2016-07-26 20:10:05,593][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5797fbdd3c7a8c58f624d5a2', description='null'}-0.0.0.0:27017] Monitor thread successfully connected to server with description ServerDescription{address=0.0.0.0:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, electionId=null, maxDocumentSize=16777216, roundTripTimeNanos=763998}
+[2016-07-26 20:10:05,611][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5797fbdd3c7a8c58f624d5a2', description='null'}-0.0.0.0:27017] Discovered cluster type of STANDALONE
+[2016-07-26 20:10:06,753][INFO][org.apache.activemq.broker.jmx.ManagementContext][JMX connector] JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi
+[2016-07-26 20:10:06,792][INFO][org.apache.activemq.store.kahadb.plist.PListStore][main] PListStore:activemq-data/localhost/tmp_storage started
+[2016-07-26 20:10:06,795][INFO][org.apache.activemq.broker.BrokerService][main] Using Persistence Adapter: KahaDBPersistenceAdapter[/home/greg/Projects/dcm/activemq-data/localhost/KahaDB]
+[2016-07-26 20:10:07,899][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] KahaDB is version 3
+[2016-07-26 20:10:07,940][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovering from the journal ...
+[2016-07-26 20:10:07,940][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovery replayed 1 operations from the journal in 0.031 seconds.
+[2016-07-26 20:10:07,953][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ 5.5.0 JMS Message Broker (localhost) is starting
+[2016-07-26 20:10:07,953][INFO][org.apache.activemq.broker.BrokerService][main] For help or more information please see: http://activemq.apache.org/
+[2016-07-26 20:10:08,203][INFO][org.apache.activemq.transport.TransportServerThreadSupport][main] Listening for connections at: tcp://localhost:61616
+[2016-07-26 20:10:08,204][INFO][org.apache.activemq.broker.TransportConnector][main] Connector tcp://localhost:61616 Started
+[2016-07-26 20:10:08,205][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-36296-1469578207976-0:1) started
+[2016-07-26 20:10:08,310][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36296-1469578207976-2:1,clientId=null,started=false}
+[2016-07-26 20:10:08,415][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36296-1469578207976-2:2,clientId=null,started=false}
+[2016-07-26 20:10:08,465][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36296-1469578207976-2:3,clientId=null,started=false}
+[2016-07-26 20:10:08,563][INFO][org.eclipse.jetty.server.Server][main] jetty-7.6.13.v20130916
+[2016-07-26 20:10:08,606][INFO][org.eclipse.jetty.server.AbstractConnector][main] Started SelectChannelConnector@0.0.0.0:3000
+[2016-07-26 20:10:13,458][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The connection is already closed
+[2016-07-26 20:10:13,465][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
+[2016-07-26 20:10:13,465][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36296-1469578207976-2:4,clientId=null,started=false}
+[2016-07-26 20:10:13,474][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36296-1469578207976-2:5,clientId=null,started=false}
+[2016-07-26 20:10:13,493][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-07-26 20:10:13,498][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'transition-queue' - trying to recover. Cause: The connection is already closed
+[2016-07-26 20:10:13,505][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36296-1469578207976-2:6,clientId=null,started=false}
+[2016-07-26 20:10:13,509][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-07-26 20:10:13,528][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-07-26 20:10:16,980][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp6076184-60] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36296-1469578207976-2:7,clientId=null,started=false}
+[2016-07-26 20:10:18,139][INFO][dcm.handler][DefaultMessageListenerContainer-2] Begin processing  slideshow.pptx
+[2016-07-26 20:10:20,653][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  1
+[2016-07-26 20:10:20,968][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  2
+[2016-07-26 20:10:21,251][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  3
+[2016-07-26 20:10:21,547][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  4
+[2016-07-26 20:10:21,817][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  5
+[2016-07-26 20:10:22,486][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  6
+[2016-07-26 20:10:22,699][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  7
+[2016-07-26 20:10:22,915][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  8
+[2016-07-26 20:10:23,198][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  9
+[2016-07-26 20:10:23,420][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  10
+[2016-07-26 20:10:23,888][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  11
+[2016-07-26 20:10:23,891][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-2] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-36296-1469578207976-2:8,clientId=null,started=false}
+[2016-07-26 20:10:23,925][INFO][dcm.handler][DefaultMessageListenerContainer-2] =====================Begin image transition==================
+
+
+[2016-07-26 20:10:23,927][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  8a3e6f5c-a69f-4c48-a4ae-954daba4f125  and  5fdad468-74ed-45b4-9e53-d1e22193b769
+[2016-07-26 20:10:23,965][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully processed  slideshow.pptx
+[2016-07-26 20:10:23,998][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  343d8788-74b9-405e-b979-25e4546a7997
+[2016-07-26 20:10:24,064][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  76fbbcd6-676c-4e04-94c5-900a59649d53
+[2016-07-26 20:10:24,132][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  1635f1ce-4e9d-490c-b16c-6c31b34820ef
+[2016-07-26 20:10:24,201][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  075ce507-5d38-40f4-ae64-313c40e07d06
+[2016-07-26 20:10:24,274][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  77cacf3d-5e37-44be-ac37-a84d47699ed2
+[2016-07-26 20:10:24,338][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7c407422-1e6f-4403-87bd-de7b9cbcccc7
+[2016-07-26 20:10:24,399][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  480eb0b5-1544-4793-bb7e-d72642b32bb5
+[2016-07-26 20:10:24,462][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  be100a19-df1b-43f8-b195-961990da22e4
+[2016-07-26 20:10:24,523][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  55833565-9895-44a7-8043-f09bcf2571e5
+[2016-07-26 20:10:24,585][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  627448d7-4ba8-439a-8473-a07710632803
+[2016-07-26 20:10:24,586][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  5fdad468-74ed-45b4-9e53-d1e22193b769  and  bb6da8b1-f055-40f9-b3ca-87fc728452a0
+[2016-07-26 20:10:24,663][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d043d5a1-32eb-449b-96c8-a3d155f0bce9
+[2016-07-26 20:10:24,748][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  5f1829dd-5c10-4ad7-8c1b-dbed8b84e31b
+[2016-07-26 20:10:24,846][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  305082e7-9c3a-4091-9823-120153953c68
+[2016-07-26 20:10:24,909][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  285ea2f7-21d4-423f-80d7-8c6f5e352e53
+[2016-07-26 20:10:24,973][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b5c78f22-c573-4020-b6f0-b5694a213449
+[2016-07-26 20:10:25,036][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  bbb34037-3f62-43fd-8fa9-319b253d2713
+[2016-07-26 20:10:25,100][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  adc5a856-4a01-4f92-ace3-72dac4d6c9d2
+[2016-07-26 20:10:25,164][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  dff6558d-4527-4d4d-b653-96e8c7476a59
+[2016-07-26 20:10:25,227][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b0d9f77a-bcc5-4a84-83fb-80eccb4ea4c4
+[2016-07-26 20:10:25,291][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d1753220-6aef-4cff-b7be-ed364618d96e
+[2016-07-26 20:10:25,294][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  bb6da8b1-f055-40f9-b3ca-87fc728452a0  and  d2a43451-bd81-4c67-baf2-da8141b08091
+[2016-07-26 20:10:25,354][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4b55d24e-a4cf-4370-97e3-028918c48897
+[2016-07-26 20:10:25,419][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  81def2c6-a4ab-4fe7-ad6e-c061f4eda41a
+[2016-07-26 20:10:25,484][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8d5eef8e-6641-4dc0-8a9f-135db58db51c
+[2016-07-26 20:10:25,548][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  784237e5-72a4-4afe-8942-fb5e941d868c
+[2016-07-26 20:10:25,613][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  15fcce6b-c084-476b-a74e-1920b246b277
+[2016-07-26 20:10:25,677][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2114d0be-7b28-44f8-aff9-30c2a23b2676
+[2016-07-26 20:10:25,741][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  712bb977-4cc2-48e9-8888-6318bd3c2507
+[2016-07-26 20:10:25,805][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7ff3089b-b381-420b-9aad-9ed33df81ede
+[2016-07-26 20:10:25,870][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7871ac13-39fc-4f00-886f-7cf44f4312b3
+[2016-07-26 20:10:25,934][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6b459946-b566-4749-9eb1-983398660d45
+[2016-07-26 20:10:25,934][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  d2a43451-bd81-4c67-baf2-da8141b08091  and  3da645c8-1a71-4d3d-85b1-e7515140ed21
+[2016-07-26 20:10:25,993][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  38fd7670-8cba-484c-a82e-88dd476f308c
+[2016-07-26 20:10:26,059][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  eda85d57-41e3-4da7-a7ca-31c7036a631c
+[2016-07-26 20:10:26,135][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9ad6012a-7939-4e74-bc60-73fa1cc2589a
+[2016-07-26 20:10:26,265][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  58f51d98-ee14-4a9d-98c2-197b799014fd
+[2016-07-26 20:10:26,352][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e85eef9c-fbc6-481a-b173-6a1e12e76fef
+[2016-07-26 20:10:26,429][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  82dec121-865e-41ca-b0eb-25bf003277a7
+[2016-07-26 20:10:26,512][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6e3e00a5-2ab7-4a6b-ba4f-e77ed7e08457
+[2016-07-26 20:10:26,655][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  5d397c42-7e04-4cd4-aa5d-27007788988c
+[2016-07-26 20:10:26,732][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a7627f7d-bcad-4f0d-95f3-b2bcefb7b606
+[2016-07-26 20:10:26,794][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9ceaa32a-9d5e-41a3-a377-f995e12fe161
+[2016-07-26 20:10:26,795][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  3da645c8-1a71-4d3d-85b1-e7515140ed21  and  655e3958-2f57-401c-bd68-a9a2160b51f9
+[2016-07-26 20:10:26,855][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a295c9e4-aeba-4a3e-9149-eb938e57db41
+[2016-07-26 20:10:26,919][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  68aa7ef4-ac2a-46a5-893f-ebd8d6d4153b
+[2016-07-26 20:10:26,982][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a748acea-1cba-4462-858e-67c70fbb6944
+[2016-07-26 20:10:27,047][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  cb2cb4f3-f045-4158-80c5-2a3ef107b1f3
+[2016-07-26 20:10:27,110][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ccfc7fbf-1b36-4b24-9d72-feaede058e02
+[2016-07-26 20:10:27,176][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6c40eea1-785c-4cf7-9674-98cb0a12477f
+[2016-07-26 20:10:27,243][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  260a136f-bb85-4c50-80c3-1451a4a4aff5
+[2016-07-26 20:10:27,307][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  eed64ad7-2151-4b4e-85f4-539baf014b8d
+[2016-07-26 20:10:27,372][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9eff42e7-8a93-4c11-8bc5-53046c5b585f
+[2016-07-26 20:10:27,437][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b0b7e844-49ad-48c2-bde8-ef7dbe14c885
+[2016-07-26 20:10:27,437][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  655e3958-2f57-401c-bd68-a9a2160b51f9  and  394fb5e6-ab66-480a-89f2-4d6c3f2b3231
+[2016-07-26 20:10:27,501][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  04d3e4bd-3948-48ae-ae4b-d8e439889f3f
+[2016-07-26 20:10:27,579][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  5957b8a6-54fa-4c48-a32c-82f3a544e6f6
+[2016-07-26 20:10:27,642][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9b2b6119-dbbe-40e6-9520-24dc407821f4
+[2016-07-26 20:10:27,705][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  bea1fcef-1af8-4ba4-a4f3-1931f123c360
+[2016-07-26 20:10:27,768][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  51a6ac82-8690-45a7-9d5d-51aaadc36b27
+[2016-07-26 20:10:27,830][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7a6dbdc5-962b-457f-927b-4ff0af06e189
+[2016-07-26 20:10:27,895][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ae868f85-8144-47ae-bb42-b999d514ea97
+[2016-07-26 20:10:27,957][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  446ef3ce-45b1-4785-83ec-35d5250988e7
+[2016-07-26 20:10:28,019][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  cf3c6bc0-e9c7-4e88-b1e8-a960d5a5f093
+[2016-07-26 20:10:28,081][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ba41a4c1-eb34-41a7-9d3e-1cd8c8b3b584
+[2016-07-26 20:10:28,082][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  394fb5e6-ab66-480a-89f2-4d6c3f2b3231  and  7fb80ac9-1d45-4550-9f00-a2198e2fb6df
+[2016-07-26 20:10:28,138][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  33003fdc-76d3-4abc-ad17-654dd929ac5e
+[2016-07-26 20:10:28,199][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  290da711-ac20-468b-9f80-954d0284ebd9
+[2016-07-26 20:10:28,260][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b6b0379c-f6c1-4daf-8baf-b951e8697cfe
+[2016-07-26 20:10:28,345][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  855da4da-e026-483f-9453-a812b97dd5cf
+[2016-07-26 20:10:28,405][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  047e1e79-1999-47fa-a328-80902452af43
+[2016-07-26 20:10:28,468][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  30fe4d90-63f2-4ac7-a1ea-5a1d6fdb741f
+[2016-07-26 20:10:28,529][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d02ba72c-4324-4cb9-bea4-7b0fae6c9d91
+[2016-07-26 20:10:28,592][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6adfba64-e948-4226-9644-05d31af8bb25
+[2016-07-26 20:10:28,661][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e3bdf637-14ac-43ff-b781-2cc1beda27d5
+[2016-07-26 20:10:28,724][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d63cd3a8-812f-4cda-a7fe-04ca7648fb8c
+[2016-07-26 20:10:28,726][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  7fb80ac9-1d45-4550-9f00-a2198e2fb6df  and  8c275a4a-3ee6-4556-8f12-2216fe279c8f
+[2016-07-26 20:10:28,783][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d441e2b4-6bef-4c79-9dcd-3876fe17be78
+[2016-07-26 20:10:28,845][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  11c8be31-f70e-44a2-b8a9-b0dcb13d7094
+[2016-07-26 20:10:28,909][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  bb668273-b3f8-4945-bb2b-20a24e0016e4
+[2016-07-26 20:10:28,983][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ed661235-13ad-4ac9-be18-5052de2dd4b8
+[2016-07-26 20:10:29,057][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  1330342d-ebbd-407a-b0e7-28437d849f27
+[2016-07-26 20:10:29,118][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  5dd4e787-b5f2-4c8b-937d-6a4b672b1347
+[2016-07-26 20:10:29,179][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  68452295-1f71-4183-9d48-d113f4a00f28
+[2016-07-26 20:10:29,241][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4276cc6c-732e-4879-b575-eb077a390676
+[2016-07-26 20:10:29,303][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  122a0c0d-2bab-46a4-988b-1ec319d381e1
+[2016-07-26 20:10:29,366][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  fc297a55-b5cd-48ca-a101-2c90a41799de
+[2016-07-26 20:10:29,366][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  8c275a4a-3ee6-4556-8f12-2216fe279c8f  and  b681e181-d2ce-472c-b19c-17ef89fc3d8c
+[2016-07-26 20:10:29,424][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ea8efa5d-3830-4606-ab0f-80af01add9a9
+[2016-07-26 20:10:29,488][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ab7cd1ee-7bfb-4a5a-ab71-5149fe1ea8ff
+[2016-07-26 20:10:29,551][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c8d62a5c-db1b-4673-abfb-68b1633bc1a6
+[2016-07-26 20:10:29,614][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c675be3b-2e1e-4dbf-b29f-b42348e8a01c
+[2016-07-26 20:10:29,677][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  0035c038-f120-47ea-a139-62dd30d2e56a
+[2016-07-26 20:10:29,740][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a1b2712f-1720-479a-8dea-969b4ed827fd
+[2016-07-26 20:10:29,802][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d4e0f128-8ef2-4098-b9d3-9977a0cca657
+[2016-07-26 20:10:29,865][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  57144420-f24c-4964-b547-29506c7f1f4c
+[2016-07-26 20:10:29,928][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  108656cb-aaf1-4c72-8063-c636c46033d2
+[2016-07-26 20:10:30,005][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  50062886-b8a1-4409-bf2a-c75c385c3e12
+[2016-07-26 20:10:30,005][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  b681e181-d2ce-472c-b19c-17ef89fc3d8c  and  df025050-fbd6-4a51-875d-c6dafee2e908
+[2016-07-26 20:10:30,065][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c40d1e94-5e57-4809-94ba-67ab5a6b934f
+[2016-07-26 20:10:30,128][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  da97cd20-91f0-458d-b725-81aa0fb4565f
+[2016-07-26 20:10:30,191][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  21b3f77a-b112-43b4-b849-854a84af73de
+[2016-07-26 20:10:30,255][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2b8cf2a2-4760-4aa1-888a-c9795c4750f6
+[2016-07-26 20:10:30,318][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  0b99da50-6289-485d-af02-6b6bf1e58a05
+[2016-07-26 20:10:30,382][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  61977e67-6914-41c0-bb9b-341ce224cccf
+[2016-07-26 20:10:30,445][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2a83fa4d-17d2-46f8-bb6a-61d9429288e2
+[2016-07-26 20:10:30,509][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2504256f-67f4-48b4-97cb-86544a23d296
+[2016-07-26 20:10:30,573][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a24f997e-c5ae-4e0a-a788-08f168c23e4a
+[2016-07-26 20:10:30,637][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  35d10f04-744d-4331-a967-e2c3c3bdddf4
+[2016-07-26 20:12:22,928][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ Message Broker (localhost, ID:ryan-ThinkCentre-M57-36296-1469578207976-0:1) is shutting down
+[2016-07-26 20:12:24,004][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
 javax.jms.JMSException: java.io.EOFException
 	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
 	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
@@ -333,116 +715,9 @@ Caused by: java.io.EOFException
 	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
 	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
 	... 1 more
-[2016-07-24 09:18:51,742][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The Consumer is closed
-[2016-07-24 09:18:51,746][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The Consumer is closed
-[2016-07-24 09:18:51,754][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'join-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
-[2016-07-24 09:18:51,758][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The Session is closed
-[2016-07-24 09:18:51,759][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'upload-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
-[2016-07-24 09:18:51,765][INFO][org.apache.activemq.store.kahadb.plist.PListStore][ActiveMQ ShutdownHook] PListStore:activemq-data/localhost/tmp_storage stopped
-[2016-07-24 09:18:51,766][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopping async queue tasks
-[2016-07-24 09:18:51,766][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopping async topic tasks
-[2016-07-24 09:18:51,766][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopped KahaDB
-[2016-07-24 09:18:51,768][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'join-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
-[2016-07-24 09:18:52,074][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-36976-1469366256933-0:1) stopped
-[2016-07-24 09:19:08,214][INFO][org.mongodb.driver.cluster][main] Cluster created with settings {hosts=[0.0.0.0:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-[2016-07-24 09:19:08,215][INFO][org.mongodb.driver.cluster][main] Adding discovered server 0.0.0.0:27017 to client view of cluster
-[2016-07-24 09:19:08,380][INFO][org.mongodb.driver.connection][cluster-ClusterId{value='5794c04c3c7a8c190392b893', description='null'}-0.0.0.0:27017] Opened connection [connectionId{localValue:1, serverValue:75}] to 0.0.0.0:27017
-[2016-07-24 09:19:08,383][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5794c04c3c7a8c190392b893', description='null'}-0.0.0.0:27017] Monitor thread successfully connected to server with description ServerDescription{address=0.0.0.0:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, electionId=null, maxDocumentSize=16777216, roundTripTimeNanos=2270751}
-[2016-07-24 09:19:08,395][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5794c04c3c7a8c190392b893', description='null'}-0.0.0.0:27017] Discovered cluster type of STANDALONE
-[2016-07-24 09:19:09,509][INFO][org.apache.activemq.broker.jmx.ManagementContext][JMX connector] JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi
-[2016-07-24 09:19:09,554][INFO][org.apache.activemq.store.kahadb.plist.PListStore][main] PListStore:activemq-data/localhost/tmp_storage started
-[2016-07-24 09:19:09,556][INFO][org.apache.activemq.broker.BrokerService][main] Using Persistence Adapter: KahaDBPersistenceAdapter[/home/greg/Projects/dcm/activemq-data/localhost/KahaDB]
-[2016-07-24 09:19:10,195][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] KahaDB is version 3
-[2016-07-24 09:19:10,229][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovering from the journal ...
-[2016-07-24 09:19:10,229][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovery replayed 1 operations from the journal in 0.024 seconds.
-[2016-07-24 09:19:10,242][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ 5.5.0 JMS Message Broker (localhost) is starting
-[2016-07-24 09:19:10,242][INFO][org.apache.activemq.broker.BrokerService][main] For help or more information please see: http://activemq.apache.org/
-[2016-07-24 09:19:10,483][INFO][org.apache.activemq.transport.TransportServerThreadSupport][main] Listening for connections at: tcp://localhost:61616
-[2016-07-24 09:19:10,483][INFO][org.apache.activemq.broker.TransportConnector][main] Connector tcp://localhost:61616 Started
-[2016-07-24 09:19:10,485][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-38947-1469366350263-0:1) started
-[2016-07-24 09:19:10,588][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38947-1469366350263-2:1,clientId=null,started=false}
-[2016-07-24 09:19:10,688][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38947-1469366350263-2:2,clientId=null,started=false}
-[2016-07-24 09:19:10,793][INFO][org.eclipse.jetty.server.Server][main] jetty-7.6.13.v20130916
-[2016-07-24 09:19:10,835][INFO][org.eclipse.jetty.server.AbstractConnector][main] Started SelectChannelConnector@0.0.0.0:3000
-[2016-07-24 09:19:15,732][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:19:15,734][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:19:15,749][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38947-1469366350263-2:3,clientId=null,started=false}
-[2016-07-24 09:19:15,757][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38947-1469366350263-2:4,clientId=null,started=false}
-[2016-07-24 09:19:15,781][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:19:15,794][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:19:16,661][INFO][dcm.handler][qtp7001647-51] {:ssl-client-cert nil, :cookies {}, :remote-addr 127.0.0.1, :params {}, :flash nil, :route-params {}, :headers {host localhost:3000, user-agent Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0, content-type application/json; charset=utf-8, content-length 72, referer http://localhost:3000/, connection keep-alive, pragma no-cache, accept application/json; charset=utf-8, accept-language en-US,en;q=0.5, accept-encoding gzip, deflate, cache-control no-cache}, :server-port 3000, :content-length 72, :form-params {}, :compojure/route [:post /join], :session/key nil, :query-params {}, :content-type application/json; charset=utf-8, :character-encoding utf-8, :uri /join, :server-name localhost, :query-string nil, :body {username tri, password pass, firstname greg, lastname mar}, :multipart-params {}, :scheme :http, :cemerick.friend/auth-config {:default-landing-uri /, :login-uri /login, :credential-fn #object[clojure.core$partial$fn__4759 0x3da3b5 clojure.core$partial$fn__4759@3da3b5], :workflows [#object[cemerick.friend.workflows$interactive_form$fn__7515 0xd25b4f cemerick.friend.workflows$interactive_form$fn__7515@d25b4f]]}, :request-method :post, :session {}}
-[2016-07-24 09:19:16,662][INFO][dcm.handler][qtp7001647-51] {username tri, password pass, firstname greg, lastname mar}
-[2016-07-24 09:19:16,662][INFO][dcm.handler][qtp7001647-51] {"username":"tri","password":"pass","firstname":"greg","lastname":"mar"}
-[2016-07-24 09:19:16,676][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp7001647-51] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38947-1469366350263-2:5,clientId=null,started=false}
-[2016-07-24 09:19:16,711][INFO][dcm.handler][DefaultMessageListenerContainer-2] {"username":"tri","password":"pass","firstname":"greg","lastname":"mar"}
-[2016-07-24 09:19:16,736][INFO][org.mongodb.driver.connection][DefaultMessageListenerContainer-2] Opened connection [connectionId{localValue:2, serverValue:76}] to 0.0.0.0:27017
-[2016-07-24 09:19:16,837][INFO][dcm.mail][DefaultMessageListenerContainer-2] Sending join email to  gemartin@gmail.com
-[2016-07-24 09:23:29,921][INFO][dcm.handler][qtp7001647-50] Failed to bind to server socket: tcp://localhost:61616 due to: java.net.BindException: Address already in use
-[2016-07-24 09:23:29,923][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp7001647-50] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38947-1469366350263-2:6,clientId=null,started=false}
-[2016-07-24 09:23:29,949][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp7001647-50] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38947-1469366350263-2:7,clientId=null,started=false}
-[2016-07-24 09:23:29,966][INFO][dcm.handler][qtp7001647-50] {:ssl-client-cert nil, :cookies {}, :remote-addr 127.0.0.1, :params {}, :flash nil, :route-params {}, :headers {host localhost:3000, user-agent Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0, content-type application/json; charset=utf-8, content-length 72, referer http://localhost:3000/, connection keep-alive, pragma no-cache, accept application/json; charset=utf-8, accept-language en-US,en;q=0.5, accept-encoding gzip, deflate, cache-control no-cache}, :server-port 3000, :content-length 72, :form-params {}, :compojure/route [:post /join], :session/key nil, :query-params {}, :content-type application/json; charset=utf-8, :character-encoding utf-8, :uri /join, :server-name localhost, :query-string nil, :body {username tri, password pass, firstname greg, lastname mar}, :multipart-params {}, :scheme :http, :cemerick.friend/auth-config {:default-landing-uri /, :login-uri /login, :credential-fn #object[clojure.core$partial$fn__4759 0xcc0e6f clojure.core$partial$fn__4759@cc0e6f], :workflows [#object[cemerick.friend.workflows$interactive_form$fn__7515 0xc7d657 cemerick.friend.workflows$interactive_form$fn__7515@c7d657]]}, :request-method :post, :session {}}
-[2016-07-24 09:23:29,967][INFO][dcm.handler][qtp7001647-50] {username tri, password pass, firstname greg, lastname mar}
-[2016-07-24 09:23:29,967][INFO][dcm.handler][qtp7001647-50] {"username":"tri","password":"pass","firstname":"greg","lastname":"mar"}
-[2016-07-24 09:23:29,969][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp7001647-50] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38947-1469366350263-2:8,clientId=null,started=false}
-[2016-07-24 09:23:29,983][INFO][dcm.handler][DefaultMessageListenerContainer-2] #object[java.util.HashMap 0x1349cd {username=tri, lastname=mar, firstname=greg, password=pass}]
-[2016-07-24 09:23:29,985][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Execution of JMS message listener failed, and no ErrorHandler has been set.
-java.lang.ClassCastException: java.util.HashMap cannot be cast to java.lang.String
-	at clojure.data.json$read_str.invokeStatic(json.clj:278)
-	at clojure.data.json$read_str.doInvoke(json.clj:274)
-	at clojure.lang.RestFn.invoke(RestFn.java:410)
-	at dcm.handler$join_message_receiver.invokeStatic(handler.clj:70)
-	at dcm.handler$join_message_receiver.invoke(handler.clj:68)
-	at clamq.jms$jms_consumer$fn__3888.invoke(jms.clj:38)
-	at clamq.jms.proxy$java.lang.Object$MessageListener$681b6920.onMessage(Unknown Source)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:560)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:498)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:467)
-	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:325)
-	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:263)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1058)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1050)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:947)
-	at java.lang.Thread.run(Thread.java:745)
-[2016-07-24 09:23:34,947][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: Stopped.
-[2016-07-24 09:23:34,950][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38947-1469366350263-2:9,clientId=null,started=false}
-[2016-07-24 09:23:34,962][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:23:34,964][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:23:34,966][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38947-1469366350263-2:10,clientId=null,started=false}
-[2016-07-24 09:23:34,988][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:34:07,237][INFO][dcm.handler][qtp7001647-52] Failed to bind to server socket: tcp://localhost:61616 due to: java.net.BindException: Address already in use
-[2016-07-24 09:34:07,240][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp7001647-52] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38947-1469366350263-2:11,clientId=null,started=false}
-[2016-07-24 09:34:07,258][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp7001647-52] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38947-1469366350263-2:12,clientId=null,started=false}
-[2016-07-24 09:34:07,271][INFO][dcm.handler][qtp7001647-52] {:ssl-client-cert nil, :cookies {}, :remote-addr 127.0.0.1, :params {}, :flash nil, :route-params {}, :headers {host localhost:3000, user-agent Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0, content-type application/json; charset=utf-8, content-length 72, referer http://localhost:3000/, connection keep-alive, pragma no-cache, accept application/json; charset=utf-8, accept-language en-US,en;q=0.5, accept-encoding gzip, deflate, cache-control no-cache}, :server-port 3000, :content-length 72, :form-params {}, :compojure/route [:post /join], :session/key nil, :query-params {}, :content-type application/json; charset=utf-8, :character-encoding utf-8, :uri /join, :server-name localhost, :query-string nil, :body {username tri, password pass, firstname greg, lastname mar}, :multipart-params {}, :scheme :http, :cemerick.friend/auth-config {:default-landing-uri /, :login-uri /login, :credential-fn #object[clojure.core$partial$fn__4759 0x1302a79 clojure.core$partial$fn__4759@1302a79], :workflows [#object[cemerick.friend.workflows$interactive_form$fn__7515 0x13475b9 cemerick.friend.workflows$interactive_form$fn__7515@13475b9]]}, :request-method :post, :session {}}
-[2016-07-24 09:34:07,271][INFO][dcm.handler][qtp7001647-52] {username tri, password pass, firstname greg, lastname mar}
-[2016-07-24 09:34:07,271][INFO][dcm.handler][qtp7001647-52] {"username":"tri","password":"pass","firstname":"greg","lastname":"mar"}
-[2016-07-24 09:34:07,278][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp7001647-52] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38947-1469366350263-2:13,clientId=null,started=false}
-[2016-07-24 09:34:07,290][INFO][dcm.handler][DefaultMessageListenerContainer-2] #object[java.util.HashMap 0x117673a {username=tri, lastname=mar, firstname=greg, password=pass}]
-[2016-07-24 09:34:07,290][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Execution of JMS message listener failed, and no ErrorHandler has been set.
-java.lang.ClassCastException: java.util.HashMap cannot be cast to java.lang.String
-	at clojure.data.json$read_str.invokeStatic(json.clj:278)
-	at clojure.data.json$read_str.doInvoke(json.clj:274)
-	at clojure.lang.RestFn.invoke(RestFn.java:410)
-	at dcm.handler$join_message_receiver.invokeStatic(handler.clj:70)
-	at dcm.handler$join_message_receiver.invoke(handler.clj:68)
-	at clamq.jms$jms_consumer$fn__3888.invoke(jms.clj:38)
-	at clamq.jms.proxy$java.lang.Object$MessageListener$681b6920.onMessage(Unknown Source)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:560)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:498)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:467)
-	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:325)
-	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:263)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1058)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1050)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:947)
-	at java.lang.Thread.run(Thread.java:745)
-[2016-07-24 09:34:12,254][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: Stopped.
-[2016-07-24 09:34:12,256][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38947-1469366350263-2:14,clientId=null,started=false}
-[2016-07-24 09:34:12,265][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:34:12,269][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:34:12,275][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38947-1469366350263-2:15,clientId=null,started=false}
-[2016-07-24 09:34:12,287][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:34:25,794][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ Message Broker (localhost, ID:ryan-ThinkCentre-M57-38947-1469366350263-0:1) is shutting down
-[2016-07-24 09:34:26,285][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
+[2016-07-26 20:12:24,010][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The Consumer is closed
+[2016-07-26 20:12:24,015][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'upload-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+[2016-07-26 20:12:24,017][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
 javax.jms.JMSException: java.io.EOFException
 	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
 	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
@@ -463,8 +738,9 @@ Caused by: java.io.EOFException
 	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
 	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
 	... 1 more
-[2016-07-24 09:34:26,295][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The Consumer is closed
-[2016-07-24 09:34:26,298][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
+[2016-07-26 20:12:24,020][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The Consumer is closed
+[2016-07-26 20:12:24,022][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'join-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+[2016-07-26 20:12:24,031][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
 javax.jms.JMSException: java.io.EOFException
 	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
 	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
@@ -485,273 +761,5 @@ Caused by: java.io.EOFException
 	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
 	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
 	... 1 more
-[2016-07-24 09:34:26,302][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'join-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
-[2016-07-24 09:34:26,312][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
-javax.jms.JMSException: java.io.EOFException
-	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
-	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
-	at org.apache.activemq.ActiveMQConnection.onException(ActiveMQConnection.java:1858)
-	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
-	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:126)
-	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
-	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
-	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:160)
-	at org.apache.activemq.transport.InactivityMonitor.onException(InactivityMonitor.java:265)
-	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96)
-	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:206)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.io.EOFException
-	at java.io.DataInputStream.readInt(DataInputStream.java:392)
-	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:269)
-	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:227)
-	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
-	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
-	... 1 more
-[2016-07-24 09:34:26,318][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
-javax.jms.JMSException: java.io.EOFException
-	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
-	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
-	at org.apache.activemq.ActiveMQConnection.onException(ActiveMQConnection.java:1858)
-	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
-	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:126)
-	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
-	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
-	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:160)
-	at org.apache.activemq.transport.InactivityMonitor.onException(InactivityMonitor.java:265)
-	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96)
-	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:206)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.io.EOFException
-	at java.io.DataInputStream.readInt(DataInputStream.java:392)
-	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:269)
-	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:227)
-	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
-	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
-	... 1 more
-[2016-07-24 09:34:26,319][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
-javax.jms.JMSException: java.io.EOFException
-	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
-	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
-	at org.apache.activemq.ActiveMQConnection.onException(ActiveMQConnection.java:1858)
-	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
-	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:126)
-	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
-	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
-	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:160)
-	at org.apache.activemq.transport.InactivityMonitor.onException(InactivityMonitor.java:265)
-	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96)
-	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:206)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.io.EOFException
-	at java.io.DataInputStream.readInt(DataInputStream.java:392)
-	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:269)
-	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:227)
-	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
-	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
-	... 1 more
-[2016-07-24 09:34:26,319][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The Consumer is closed
-[2016-07-24 09:34:26,325][INFO][org.apache.activemq.broker.TransportConnector][ActiveMQ ShutdownHook] Connector tcp://localhost:61616 Stopped
-[2016-07-24 09:34:26,326][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The Consumer is closed
-[2016-07-24 09:34:26,325][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The Consumer is closed
-[2016-07-24 09:34:26,324][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
-javax.jms.JMSException: java.io.EOFException
-	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
-	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
-	at org.apache.activemq.ActiveMQConnection.onException(ActiveMQConnection.java:1858)
-	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
-	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:126)
-	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
-	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
-	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:160)
-	at org.apache.activemq.transport.InactivityMonitor.onException(InactivityMonitor.java:265)
-	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96)
-	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:206)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.io.EOFException
-	at java.io.DataInputStream.readInt(DataInputStream.java:392)
-	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:269)
-	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:227)
-	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
-	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
-	... 1 more
-[2016-07-24 09:34:26,334][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'upload-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
-[2016-07-24 09:34:26,333][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'join-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
-[2016-07-24 09:34:26,336][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The Session is closed
-[2016-07-24 09:34:26,332][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'upload-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
-[2016-07-24 09:34:26,337][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'upload-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
-[2016-07-24 09:34:26,336][INFO][org.apache.activemq.store.kahadb.plist.PListStore][ActiveMQ ShutdownHook] PListStore:activemq-data/localhost/tmp_storage stopped
-[2016-07-24 09:34:26,339][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopping async queue tasks
-[2016-07-24 09:34:26,339][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopping async topic tasks
-[2016-07-24 09:34:26,339][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopped KahaDB
-[2016-07-24 09:34:26,341][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The Session is closed
-[2016-07-24 09:34:26,343][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'join-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
-[2016-07-24 09:34:26,683][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-38947-1469366350263-0:1) stopped
-[2016-07-24 09:34:42,465][INFO][org.mongodb.driver.cluster][main] Cluster created with settings {hosts=[0.0.0.0:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
-[2016-07-24 09:34:42,466][INFO][org.mongodb.driver.cluster][main] Adding discovered server 0.0.0.0:27017 to client view of cluster
-[2016-07-24 09:34:42,636][INFO][org.mongodb.driver.connection][cluster-ClusterId{value='5794c3f23c7a8c1a72ff6eb4', description='null'}-0.0.0.0:27017] Opened connection [connectionId{localValue:1, serverValue:77}] to 0.0.0.0:27017
-[2016-07-24 09:34:42,639][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5794c3f23c7a8c1a72ff6eb4', description='null'}-0.0.0.0:27017] Monitor thread successfully connected to server with description ServerDescription{address=0.0.0.0:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, electionId=null, maxDocumentSize=16777216, roundTripTimeNanos=1564304}
-[2016-07-24 09:34:42,642][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5794c3f23c7a8c1a72ff6eb4', description='null'}-0.0.0.0:27017] Discovered cluster type of STANDALONE
-[2016-07-24 09:34:43,796][INFO][org.apache.activemq.broker.jmx.ManagementContext][JMX connector] JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi
-[2016-07-24 09:34:43,837][INFO][org.apache.activemq.store.kahadb.plist.PListStore][main] PListStore:activemq-data/localhost/tmp_storage started
-[2016-07-24 09:34:43,839][INFO][org.apache.activemq.broker.BrokerService][main] Using Persistence Adapter: KahaDBPersistenceAdapter[/home/greg/Projects/dcm/activemq-data/localhost/KahaDB]
-[2016-07-24 09:34:44,450][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] KahaDB is version 3
-[2016-07-24 09:34:44,487][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovering from the journal ...
-[2016-07-24 09:34:44,488][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovery replayed 1 operations from the journal in 0.027 seconds.
-[2016-07-24 09:34:44,501][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ 5.5.0 JMS Message Broker (localhost) is starting
-[2016-07-24 09:34:44,504][INFO][org.apache.activemq.broker.BrokerService][main] For help or more information please see: http://activemq.apache.org/
-[2016-07-24 09:34:44,747][INFO][org.apache.activemq.transport.TransportServerThreadSupport][main] Listening for connections at: tcp://localhost:61616
-[2016-07-24 09:34:44,748][INFO][org.apache.activemq.broker.TransportConnector][main] Connector tcp://localhost:61616 Started
-[2016-07-24 09:34:44,752][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-38472-1469367284528-0:1) started
-[2016-07-24 09:34:44,864][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38472-1469367284528-2:1,clientId=null,started=false}
-[2016-07-24 09:34:44,982][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38472-1469367284528-2:2,clientId=null,started=false}
-[2016-07-24 09:34:45,097][INFO][org.eclipse.jetty.server.Server][main] jetty-7.6.13.v20130916
-[2016-07-24 09:34:45,143][INFO][org.eclipse.jetty.server.AbstractConnector][main] Started SelectChannelConnector@0.0.0.0:3000
-[2016-07-24 09:34:49,194][INFO][dcm.handler][qtp15572771-48] {:ssl-client-cert nil, :cookies {}, :remote-addr 127.0.0.1, :params {}, :flash nil, :route-params {}, :headers {host localhost:3000, user-agent Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0, content-type application/json; charset=utf-8, content-length 72, referer http://localhost:3000/, connection keep-alive, pragma no-cache, accept application/json; charset=utf-8, accept-language en-US,en;q=0.5, accept-encoding gzip, deflate, cache-control no-cache}, :server-port 3000, :content-length 72, :form-params {}, :compojure/route [:post /join], :session/key nil, :query-params {}, :content-type application/json; charset=utf-8, :character-encoding utf-8, :uri /join, :server-name localhost, :query-string nil, :body {username tri, password pass, firstname greg, lastname mar}, :multipart-params {}, :scheme :http, :cemerick.friend/auth-config {:default-landing-uri /, :login-uri /login, :credential-fn #object[clojure.core$partial$fn__4759 0xab862e clojure.core$partial$fn__4759@ab862e], :workflows [#object[cemerick.friend.workflows$interactive_form$fn__7515 0xbaa341 cemerick.friend.workflows$interactive_form$fn__7515@baa341]]}, :request-method :post, :session {}}
-[2016-07-24 09:34:49,195][INFO][dcm.handler][qtp15572771-48] {username tri, password pass, firstname greg, lastname mar}
-[2016-07-24 09:34:49,195][INFO][dcm.handler][qtp15572771-48] {"username":"tri","password":"pass","firstname":"greg","lastname":"mar"}
-[2016-07-24 09:34:49,217][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp15572771-48] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38472-1469367284528-2:3,clientId=null,started=false}
-[2016-07-24 09:34:50,007][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:34:50,010][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38472-1469367284528-2:4,clientId=null,started=false}
-[2016-07-24 09:34:50,024][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:34:50,025][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:34:50,042][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38472-1469367284528-2:5,clientId=null,started=false}
-[2016-07-24 09:34:50,064][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:34:50,091][INFO][dcm.handler][DefaultMessageListenerContainer-2] #object[java.util.HashMap 0xbb32c4 {username=tri, lastname=mar, firstname=greg, password=pass}]
-[2016-07-24 09:34:50,095][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Execution of JMS message listener failed, and no ErrorHandler has been set.
-java.lang.ClassCastException: java.lang.Character cannot be cast to java.util.Map$Entry
-	at clojure.lang.APersistentMap.cons(APersistentMap.java:42)
-	at clojure.lang.RT.conj(RT.java:652)
-	at clojure.core$conj__4345.invokeStatic(core.clj:85)
-	at clojure.core$merge$fn__4877.invoke(core.clj:2940)
-	at clojure.core$reduce1.invokeStatic(core.clj:925)
-	at clojure.core$reduce1.invokeStatic(core.clj:915)
-	at clojure.core$merge.invokeStatic(core.clj:2939)
-	at clojure.core$merge.doInvoke(core.clj:2932)
-	at clojure.lang.RestFn.invoke(RestFn.java:421)
-	at monger.collection$insert_and_return.invokeStatic(collection.clj:105)
-	at monger.collection$insert_and_return.invoke(collection.clj:91)
-	at monger.collection$insert_and_return.invokeStatic(collection.clj:97)
-	at monger.collection$insert_and_return.invoke(collection.clj:91)
-	at dcm.data$add_item.invokeStatic(data.clj:21)
-	at dcm.data$add_item.invoke(data.clj:20)
-	at dcm.handler$join_message_receiver.invokeStatic(handler.clj:71)
-	at dcm.handler$join_message_receiver.invoke(handler.clj:69)
-	at clamq.jms$jms_consumer$fn__3888.invoke(jms.clj:38)
-	at clamq.jms.proxy$java.lang.Object$MessageListener$681b6920.onMessage(Unknown Source)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:560)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:498)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:467)
-	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:325)
-	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:263)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1058)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1050)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:947)
-	at java.lang.Thread.run(Thread.java:745)
-[2016-07-24 09:36:25,257][INFO][dcm.handler][qtp15572771-52] Failed to bind to server socket: tcp://localhost:61616 due to: java.net.BindException: Address already in use
-[2016-07-24 09:36:25,260][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp15572771-52] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38472-1469367284528-2:6,clientId=null,started=false}
-[2016-07-24 09:36:25,277][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp15572771-52] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38472-1469367284528-2:7,clientId=null,started=false}
-[2016-07-24 09:36:25,294][INFO][dcm.handler][qtp15572771-52] {username tri, password pass, firstname greg, lastname mar}
-[2016-07-24 09:36:25,296][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp15572771-52] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38472-1469367284528-2:8,clientId=null,started=false}
-[2016-07-24 09:36:25,306][INFO][dcm.handler][DefaultMessageListenerContainer-2] #object[java.util.HashMap 0xb63176 {username=tri, lastname=mar, firstname=greg, password=pass}]
-[2016-07-24 09:36:25,306][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Execution of JMS message listener failed, and no ErrorHandler has been set.
-java.lang.ClassCastException: java.lang.Character cannot be cast to java.util.Map$Entry
-	at clojure.lang.APersistentMap.cons(APersistentMap.java:42)
-	at clojure.lang.RT.conj(RT.java:652)
-	at clojure.core$conj__4345.invokeStatic(core.clj:85)
-	at clojure.core$merge$fn__4877.invoke(core.clj:2940)
-	at clojure.core$reduce1.invokeStatic(core.clj:925)
-	at clojure.core$reduce1.invokeStatic(core.clj:915)
-	at clojure.core$merge.invokeStatic(core.clj:2939)
-	at clojure.core$merge.doInvoke(core.clj:2932)
-	at clojure.lang.RestFn.invoke(RestFn.java:421)
-	at monger.collection$insert_and_return.invokeStatic(collection.clj:105)
-	at monger.collection$insert_and_return.invoke(collection.clj:91)
-	at monger.collection$insert_and_return.invokeStatic(collection.clj:97)
-	at monger.collection$insert_and_return.invoke(collection.clj:91)
-	at dcm.data$add_item.invokeStatic(data.clj:21)
-	at dcm.data$add_item.invoke(data.clj:20)
-	at dcm.handler$join_message_receiver.invokeStatic(handler.clj:71)
-	at dcm.handler$join_message_receiver.invoke(handler.clj:69)
-	at clamq.jms$jms_consumer$fn__3888.invoke(jms.clj:38)
-	at clamq.jms.proxy$java.lang.Object$MessageListener$681b6920.onMessage(Unknown Source)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:560)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:498)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:467)
-	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:325)
-	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:263)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1058)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1050)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:947)
-	at java.lang.Thread.run(Thread.java:745)
-[2016-07-24 09:36:30,276][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:36:30,280][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38472-1469367284528-2:9,clientId=null,started=false}
-[2016-07-24 09:36:30,294][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:36:30,295][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:36:30,299][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38472-1469367284528-2:10,clientId=null,started=false}
-[2016-07-24 09:36:30,319][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:37:13,445][INFO][dcm.handler][qtp15572771-51] Failed to bind to server socket: tcp://localhost:61616 due to: java.net.BindException: Address already in use
-[2016-07-24 09:37:13,447][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp15572771-51] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38472-1469367284528-2:11,clientId=null,started=false}
-[2016-07-24 09:37:13,464][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp15572771-51] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38472-1469367284528-2:12,clientId=null,started=false}
-[2016-07-24 09:37:13,485][INFO][dcm.handler][qtp15572771-51] {username tri, password pass, firstname greg, lastname mar}
-[2016-07-24 09:37:13,491][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp15572771-51] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38472-1469367284528-2:13,clientId=null,started=false}
-[2016-07-24 09:37:13,503][INFO][dcm.handler][DefaultMessageListenerContainer-2] #object[java.util.HashMap 0xbb46f9 {username=tri, lastname=mar, firstname=greg, password=pass}]
-[2016-07-24 09:37:13,503][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Execution of JMS message listener failed, and no ErrorHandler has been set.
-java.lang.ClassCastException: java.lang.Character cannot be cast to java.util.Map$Entry
-	at clojure.lang.APersistentMap.cons(APersistentMap.java:42)
-	at clojure.lang.RT.conj(RT.java:652)
-	at clojure.core$conj__4345.invokeStatic(core.clj:85)
-	at clojure.core$merge$fn__4877.invoke(core.clj:2940)
-	at clojure.core$reduce1.invokeStatic(core.clj:925)
-	at clojure.core$reduce1.invokeStatic(core.clj:915)
-	at clojure.core$merge.invokeStatic(core.clj:2939)
-	at clojure.core$merge.doInvoke(core.clj:2932)
-	at clojure.lang.RestFn.invoke(RestFn.java:421)
-	at monger.collection$insert_and_return.invokeStatic(collection.clj:105)
-	at monger.collection$insert_and_return.invoke(collection.clj:91)
-	at monger.collection$insert_and_return.invokeStatic(collection.clj:97)
-	at monger.collection$insert_and_return.invoke(collection.clj:91)
-	at dcm.data$add_item.invokeStatic(data.clj:21)
-	at dcm.data$add_item.invoke(data.clj:20)
-	at dcm.handler$join_message_receiver.invokeStatic(handler.clj:71)
-	at dcm.handler$join_message_receiver.invoke(handler.clj:69)
-	at clamq.jms$jms_consumer$fn__3888.invoke(jms.clj:38)
-	at clamq.jms.proxy$java.lang.Object$MessageListener$681b6920.onMessage(Unknown Source)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:560)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:498)
-	at org.springframework.jms.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:467)
-	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.doReceiveAndExecute(AbstractPollingMessageListenerContainer.java:325)
-	at org.springframework.jms.listener.AbstractPollingMessageListenerContainer.receiveAndExecute(AbstractPollingMessageListenerContainer.java:263)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.invokeListener(DefaultMessageListenerContainer.java:1058)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.executeOngoingLoop(DefaultMessageListenerContainer.java:1050)
-	at org.springframework.jms.listener.DefaultMessageListenerContainer$AsyncMessageListenerInvoker.run(DefaultMessageListenerContainer.java:947)
-	at java.lang.Thread.run(Thread.java:745)
-[2016-07-24 09:37:18,461][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:37:18,464][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38472-1469367284528-2:14,clientId=null,started=false}
-[2016-07-24 09:37:18,480][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:37:18,483][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 09:37:18,485][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-38472-1469367284528-2:15,clientId=null,started=false}
-[2016-07-24 09:37:18,497][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 09:37:51,702][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ Message Broker (localhost, ID:ryan-ThinkCentre-M57-38472-1469367284528-0:1) is shutting down
-[2016-07-24 09:37:52,518][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
-javax.jms.JMSException: java.io.EOFException
-	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
-	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
-	at org.apache.activemq.ActiveMQConnection.onException(ActiveMQConnection.java:1858)
-	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
-	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:126)
-	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
-	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
-	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:160)
-	at org.apache.activemq.transport.InactivityMonitor.onException(InactivityMonitor.java:265)
-	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96)
-	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:206)
-	at java.lang.Thread.run(Thread.java:745)
-Caused by: java.io.EOFException
-	at java.io.DataInputStream.readInt(DataInputStream.java:392)
-	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:269)
-	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:227)
-	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
-	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
-	... 1 more
-[2016-07-24 09:37:52,532][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The Consumer is closed
-[2016-07-24 09:37:52,535][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'upload-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+[2016-07-26 20:12:24,031][INFO][org.apache.activemq.broker.TransportConnector][ActiveMQ ShutdownHook] Connector tcp://localhost:61616 Stopped
+[2016-07-26 20:12:24,037][INFO][org.apache.activemq.store.kahadb.plist.PListStore][ActiveMQ ShutdownHook] PListStore:activemq-data/localhost/tmp_storage stopped

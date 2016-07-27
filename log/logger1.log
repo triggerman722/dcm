@@ -1,22 +1,397 @@
-[2016-07-24 11:16:36,121][INFO][org.apache.activemq.transport.TransportServerThreadSupport][main] Listening for connections at: tcp://localhost:61616
-[2016-07-24 11:16:36,122][INFO][org.apache.activemq.broker.TransportConnector][main] Connector tcp://localhost:61616 Started
-[2016-07-24 11:16:36,124][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-33874-1469373395898-0:1) started
-[2016-07-24 11:16:36,233][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33874-1469373395898-2:1,clientId=null,started=false}
-[2016-07-24 11:16:36,334][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33874-1469373395898-2:2,clientId=null,started=false}
-[2016-07-24 11:16:36,456][INFO][org.eclipse.jetty.server.Server][main] jetty-7.6.13.v20130916
-[2016-07-24 11:16:36,501][INFO][org.eclipse.jetty.server.AbstractConnector][main] Started SelectChannelConnector@0.0.0.0:3000
-[2016-07-24 11:16:41,387][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 11:16:41,387][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 11:16:41,394][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33874-1469373395898-2:3,clientId=null,started=false}
-[2016-07-24 11:16:41,396][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33874-1469373395898-2:4,clientId=null,started=false}
-[2016-07-24 11:16:41,411][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 11:16:41,437][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 11:19:18,708][INFO][dcm.handler][qtp237209-54] Failed to bind to server socket: tcp://localhost:61616 due to: java.net.BindException: Address already in use
-[2016-07-24 11:19:18,711][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp237209-54] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33874-1469373395898-2:5,clientId=null,started=false}
-[2016-07-24 11:19:18,750][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp237209-54] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33874-1469373395898-2:6,clientId=null,started=false}
-[2016-07-24 11:19:23,748][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: Stopped.
-[2016-07-24 11:19:23,751][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33874-1469373395898-2:7,clientId=null,started=false}
-[2016-07-24 11:19:23,766][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-07-24 11:19:23,773][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
-[2016-07-24 11:19:23,778][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33874-1469373395898-2:8,clientId=null,started=false}
-[2016-07-24 11:19:23,798][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-07-26 20:21:40,393][INFO][org.apache.activemq.store.kahadb.plist.PListStore][ActiveMQ ShutdownHook] PListStore:activemq-data/localhost/tmp_storage stopped
+[2016-07-26 20:21:40,394][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopping async queue tasks
+[2016-07-26 20:21:40,394][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopping async topic tasks
+[2016-07-26 20:21:40,394][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopped KahaDB
+[2016-07-26 20:21:40,710][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-41816-1469578740799-0:1) stopped
+[2016-07-26 20:21:56,035][INFO][org.mongodb.driver.cluster][main] Cluster created with settings {hosts=[0.0.0.0:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[2016-07-26 20:21:56,037][INFO][org.mongodb.driver.cluster][main] Adding discovered server 0.0.0.0:27017 to client view of cluster
+[2016-07-26 20:21:56,205][INFO][org.mongodb.driver.connection][cluster-ClusterId{value='5797fea43c7a8c5c70e3b5de', description='null'}-0.0.0.0:27017] Opened connection [connectionId{localValue:1, serverValue:134}] to 0.0.0.0:27017
+[2016-07-26 20:21:56,219][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5797fea43c7a8c5c70e3b5de', description='null'}-0.0.0.0:27017] Monitor thread successfully connected to server with description ServerDescription{address=0.0.0.0:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, electionId=null, maxDocumentSize=16777216, roundTripTimeNanos=1281222}
+[2016-07-26 20:21:56,220][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5797fea43c7a8c5c70e3b5de', description='null'}-0.0.0.0:27017] Discovered cluster type of STANDALONE
+[2016-07-26 20:21:57,469][INFO][org.apache.activemq.broker.jmx.ManagementContext][JMX connector] JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi
+[2016-07-26 20:21:57,478][INFO][org.apache.activemq.store.kahadb.plist.PListStore][main] PListStore:activemq-data/localhost/tmp_storage started
+[2016-07-26 20:21:57,483][INFO][org.apache.activemq.broker.BrokerService][main] Using Persistence Adapter: KahaDBPersistenceAdapter[/home/greg/Projects/dcm/activemq-data/localhost/KahaDB]
+[2016-07-26 20:21:58,536][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] KahaDB is version 3
+[2016-07-26 20:21:58,579][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovering from the journal ...
+[2016-07-26 20:21:58,580][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovery replayed 1 operations from the journal in 0.034 seconds.
+[2016-07-26 20:21:58,592][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ 5.5.0 JMS Message Broker (localhost) is starting
+[2016-07-26 20:21:58,592][INFO][org.apache.activemq.broker.BrokerService][main] For help or more information please see: http://activemq.apache.org/
+[2016-07-26 20:21:58,841][INFO][org.apache.activemq.transport.TransportServerThreadSupport][main] Listening for connections at: tcp://localhost:61616
+[2016-07-26 20:21:58,841][INFO][org.apache.activemq.broker.TransportConnector][main] Connector tcp://localhost:61616 Started
+[2016-07-26 20:21:58,843][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-37773-1469578918615-0:1) started
+[2016-07-26 20:21:58,959][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37773-1469578918615-2:1,clientId=null,started=false}
+[2016-07-26 20:21:59,090][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37773-1469578918615-2:2,clientId=null,started=false}
+[2016-07-26 20:21:59,148][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37773-1469578918615-2:3,clientId=null,started=false}
+[2016-07-26 20:21:59,281][INFO][org.eclipse.jetty.server.Server][main] jetty-7.6.13.v20130916
+[2016-07-26 20:21:59,331][INFO][org.eclipse.jetty.server.AbstractConnector][main] Started SelectChannelConnector@0.0.0.0:3000
+[2016-07-26 20:22:04,096][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The connection is already closed
+[2016-07-26 20:22:04,106][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37773-1469578918615-2:4,clientId=null,started=false}
+[2016-07-26 20:22:04,137][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-07-26 20:22:04,142][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
+[2016-07-26 20:22:04,152][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37773-1469578918615-2:5,clientId=null,started=false}
+[2016-07-26 20:22:04,184][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'transition-queue' - trying to recover. Cause: The connection is already closed
+[2016-07-26 20:22:04,186][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-07-26 20:22:04,197][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37773-1469578918615-2:6,clientId=null,started=false}
+[2016-07-26 20:22:04,232][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-07-26 20:22:04,368][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp17412892-55] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37773-1469578918615-2:7,clientId=null,started=false}
+[2016-07-26 20:22:05,477][INFO][dcm.handler][DefaultMessageListenerContainer-2] Begin processing  slideshow.pptx
+[2016-07-26 20:22:08,064][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  1
+[2016-07-26 20:22:08,414][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  2
+[2016-07-26 20:22:08,691][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  3
+[2016-07-26 20:22:08,988][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  4
+[2016-07-26 20:22:09,334][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  5
+[2016-07-26 20:22:10,090][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  6
+[2016-07-26 20:22:10,349][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  7
+[2016-07-26 20:22:10,567][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  8
+[2016-07-26 20:22:10,899][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  9
+[2016-07-26 20:22:11,129][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  10
+[2016-07-26 20:22:11,601][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  11
+[2016-07-26 20:22:11,603][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-2] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-37773-1469578918615-2:8,clientId=null,started=false}
+[2016-07-26 20:22:11,636][INFO][dcm.handler][DefaultMessageListenerContainer-2] =====================Begin image transition==================
+
+
+[2016-07-26 20:22:11,638][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  9b69149f-93d2-4f27-bb7a-33d270a05a71  and  85635669-b42e-4e12-818d-9e31f2c42df7
+[2016-07-26 20:22:11,639][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  85635669-b42e-4e12-818d-9e31f2c42df7  and  4a99fd49-85ee-4b02-bc85-263ee333e87d
+[2016-07-26 20:22:11,676][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully processed  slideshow.pptx
+[2016-07-26 20:22:11,721][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b4073d88-b3f7-4b57-88ea-6d0d5682e1ba
+[2016-07-26 20:22:11,799][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b2bc7b0b-5c14-413e-a185-0f55c4f2c013
+[2016-07-26 20:22:11,880][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  66901ac5-e02a-4399-8631-19da92c054a0
+[2016-07-26 20:22:11,943][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4d13fb42-854d-4d18-8271-4c9ad83ade3f
+[2016-07-26 20:22:12,006][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7b7dcb2d-ed05-4c62-af49-77ff8119a033
+[2016-07-26 20:22:12,075][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e0c8b900-62e5-43e2-873d-c91011b1a847
+[2016-07-26 20:22:12,180][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f5500752-b26e-496d-acd6-003a506b5980
+[2016-07-26 20:22:12,244][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  079f14ee-677e-4480-902f-28835425aa6b
+[2016-07-26 20:22:12,311][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6716b541-c362-4ce1-88ca-d353bad6154b
+[2016-07-26 20:22:12,376][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ed8f9c8a-b827-48ae-963f-cdcafe88791c
+[2016-07-26 20:22:12,384][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  4a99fd49-85ee-4b02-bc85-263ee333e87d  and  c2e6554e-9873-40fb-a740-fb09fad4ee8f
+[2016-07-26 20:22:12,479][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  faa2231a-cc7e-4b81-9c0d-db83381152c3
+[2016-07-26 20:22:12,549][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  743fc5f1-09a0-4bc7-b0c0-7a64417068d2
+[2016-07-26 20:22:12,668][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  5038b4a5-db49-43f6-b5bf-cdd2422b194b
+[2016-07-26 20:22:12,781][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f0e67a87-ac93-4a5e-b79d-3e36621ab401
+[2016-07-26 20:22:12,925][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  41a85b7a-5465-4d1a-910f-a3c526b2be42
+[2016-07-26 20:22:13,003][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c896b56f-33e3-4c6e-8d15-8e7eb0ffafb3
+[2016-07-26 20:22:13,069][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ee81d7bf-5733-468a-a4c1-4f236c5a485d
+[2016-07-26 20:22:13,133][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  402b9b47-e499-418c-a215-a176fc313f5a
+[2016-07-26 20:22:13,198][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a443070b-d3fd-457d-8484-8a6184ed7dbf
+[2016-07-26 20:22:13,263][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  42973ff4-0e73-4df3-a221-15acbb363ad3
+[2016-07-26 20:22:13,263][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  c2e6554e-9873-40fb-a740-fb09fad4ee8f  and  3f6410cf-d281-448b-a205-72fad3d85b54
+[2016-07-26 20:22:13,325][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f16ee075-9530-4521-b2b3-691a38d043fb
+[2016-07-26 20:22:13,391][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  23f4c747-7389-4b61-85e6-8e2e80768015
+[2016-07-26 20:22:13,456][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7207953d-9525-4174-a98b-199597b76c3e
+[2016-07-26 20:22:13,521][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b3761d02-1008-42a3-ad77-b5d27e8c0f7a
+[2016-07-26 20:22:13,587][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f6194c20-0c2f-463b-891f-b7626c4833cb
+[2016-07-26 20:22:13,653][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f2f0394b-fba7-4a38-95b4-d71041c46381
+[2016-07-26 20:22:13,733][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  38843eae-ee2e-48c3-81c2-30a80189ee03
+[2016-07-26 20:22:13,797][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  03771420-4a03-4245-a4d4-69f9ef6a2da9
+[2016-07-26 20:22:13,866][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  09ce4546-0177-48c7-a223-237c51e1b31b
+[2016-07-26 20:22:13,932][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6cb2a38c-eeb3-46f0-be61-f1e4cad49f49
+[2016-07-26 20:22:13,933][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  3f6410cf-d281-448b-a205-72fad3d85b54  and  8483841e-3861-414f-80a9-b50de16f0cd1
+[2016-07-26 20:22:13,994][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  1fc3d262-0f5f-4f33-bdb4-7d0be7f37769
+[2016-07-26 20:22:14,061][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b5e6ff58-b0b5-49e3-98ff-fe11d79c1e79
+[2016-07-26 20:22:14,127][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8a3edac9-79b9-44e4-9423-b801418009ac
+[2016-07-26 20:22:14,193][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a91feb6c-f1be-4f3c-a760-a096aa0bdbb3
+[2016-07-26 20:22:14,257][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  29c328c6-bbf1-4f59-966a-91762d9a8a4e
+[2016-07-26 20:22:14,324][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  156f0479-769c-43bd-80b4-ce15944c746b
+[2016-07-26 20:22:14,402][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  3c9a8a61-207b-4676-80ab-500b06ee06db
+[2016-07-26 20:22:14,468][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  bcdb741c-dc5f-4097-a25d-e42654c4bc54
+[2016-07-26 20:22:14,553][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  14e73226-b3bf-4b6d-9937-0ad253427bea
+[2016-07-26 20:22:14,636][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d550cf69-30cd-47b7-9a69-597af7f12158
+[2016-07-26 20:22:14,636][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  8483841e-3861-414f-80a9-b50de16f0cd1  and  a2c5a852-c4a6-4026-bd3f-f9824a6e7860
+[2016-07-26 20:22:14,800][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6a83b4a0-e8f6-470b-b35e-b57322619441
+[2016-07-26 20:22:14,864][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  25eda440-10d8-43c8-9e8e-9a04b2d74114
+[2016-07-26 20:22:14,927][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  1770ecff-c69a-4987-9037-9dca57a789f4
+[2016-07-26 20:22:14,991][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  5c3294a4-6396-4226-9e25-843d8cd68014
+[2016-07-26 20:22:15,057][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8f30bbb9-5cbc-4a81-a70c-bad5ed3ebe98
+[2016-07-26 20:22:15,121][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  320e68c4-92df-4423-ba2c-09f6243663de
+[2016-07-26 20:22:15,185][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b83913d2-67b0-4cc3-a824-8836c9e78014
+[2016-07-26 20:22:15,250][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8c0de755-bfde-4795-b874-3062ed885365
+[2016-07-26 20:22:15,314][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7075c6a0-a2bd-440a-a9c2-8cd9a997e672
+[2016-07-26 20:22:15,378][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ec2b677d-68c9-4cac-959a-447a5d633cee
+[2016-07-26 20:22:15,378][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  a2c5a852-c4a6-4026-bd3f-f9824a6e7860  and  118d564f-5610-4d61-9c5a-fde505b3128d
+[2016-07-26 20:22:15,438][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a891e671-7309-4f59-834b-84e2af19cc26
+[2016-07-26 20:22:15,502][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  00b2de74-bd68-4ed5-831a-e56c91933ec2
+[2016-07-26 20:22:15,565][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  20343301-53a8-4bee-8d1e-c84e974d717b
+[2016-07-26 20:22:15,630][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c8f205d6-cb5b-48a6-b372-47c454e48d83
+[2016-07-26 20:22:15,694][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a7061d6e-3df5-4d64-be73-21015542e10c
+[2016-07-26 20:22:15,757][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  63aee516-5e68-4f67-90d2-b06669c98a37
+[2016-07-26 20:22:15,823][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ee929f6c-1005-4407-a9fc-ab8d37e95058
+[2016-07-26 20:22:15,890][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e634928e-c23d-40cc-bbc1-735e973f9590
+[2016-07-26 20:22:15,964][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2aea2006-51db-467e-b3bf-73fc6bc6d783
+[2016-07-26 20:22:16,027][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  09a9d1fc-15c4-48a9-8588-8e2f2b247312
+[2016-07-26 20:22:16,028][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  118d564f-5610-4d61-9c5a-fde505b3128d  and  d09faa7c-c0f4-4c71-bd1f-3790117b3fd7
+[2016-07-26 20:22:16,099][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  3e5cb473-5d2d-402b-a435-2c080e8739e3
+[2016-07-26 20:22:16,176][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  bad17b17-fee6-4d70-be4d-717d613f7819
+[2016-07-26 20:22:16,249][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4b8359a6-985d-4d4e-b4da-cf9e7ddcb5e2
+[2016-07-26 20:22:16,311][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ce2346f5-40e0-47cd-9a8f-ae046ce94d26
+[2016-07-26 20:22:16,373][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8723a4af-7a3b-42e4-beb0-fb5358a199f8
+[2016-07-26 20:22:16,440][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  181fdc87-0321-40c1-8d9f-25fd1b68d272
+[2016-07-26 20:22:16,535][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  557ae30d-90cb-44fd-8fe2-44ccce153b63
+[2016-07-26 20:22:16,619][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  22bb3269-e9a7-4d8e-9c45-49a254b47f32
+[2016-07-26 20:22:16,707][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  32dd9741-c063-48a5-b859-45428ee170ea
+[2016-07-26 20:22:16,858][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8ef52d3a-fa9e-4317-8255-95964c241439
+[2016-07-26 20:22:16,858][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  d09faa7c-c0f4-4c71-bd1f-3790117b3fd7  and  93ca4ca4-9911-4fc1-8b7c-da0cb615fd2e
+[2016-07-26 20:22:16,946][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f850c13f-96c0-44d7-9b43-c6f17be0994d
+[2016-07-26 20:22:17,072][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  68c7d039-7907-4a55-a317-419bed71b766
+[2016-07-26 20:22:17,147][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ad676673-159d-47cc-9c5a-6523d225498c
+[2016-07-26 20:22:17,276][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4f1c1cad-443c-43a2-9a91-96357667bff3
+[2016-07-26 20:22:17,355][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7fff952d-d7e2-4da7-ad6d-f1a829c633fc
+[2016-07-26 20:22:17,451][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  188ef800-cd42-493c-8862-ce0763a3ffcf
+[2016-07-26 20:22:17,533][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2e763c06-bcfd-41c9-a214-816223c741db
+[2016-07-26 20:22:17,598][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  aeb9de28-1d43-4822-af0c-25cc7ccfe9ba
+[2016-07-26 20:22:17,662][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7e1b7ce1-1883-4c97-aeba-2a2e3517271d
+[2016-07-26 20:22:17,727][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a753e924-7034-4e6a-8934-b8b9edb8e9ea
+[2016-07-26 20:22:17,728][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  93ca4ca4-9911-4fc1-8b7c-da0cb615fd2e  and  aa3704bb-0f8a-48c1-9f6b-b262c5faf884
+[2016-07-26 20:22:17,790][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6ab8bef5-04dc-4732-82b2-1cca331935b9
+[2016-07-26 20:22:17,866][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  cd8447c3-2159-4b1c-be2f-8cf8ba9465ba
+[2016-07-26 20:22:17,941][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  cd289444-1ddf-42d3-8476-e4177523f0c8
+[2016-07-26 20:22:18,040][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e8a967b4-adf9-4be6-831a-4e9d69aab5ca
+[2016-07-26 20:22:18,106][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e47b2b2e-cd92-40c9-af17-d6fe0b7546e1
+[2016-07-26 20:22:18,179][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  0ac8ae5f-b225-4d36-89c0-7183ca1268a5
+[2016-07-26 20:22:18,244][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d4cf8dd8-c36a-41d3-bc90-150f33c68d68
+[2016-07-26 20:22:18,335][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  60beb659-55cd-4d8c-aa02-2a6e6f77f7f2
+[2016-07-26 20:22:18,399][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e8324362-b7de-47d5-bbe6-87b21827bc2a
+[2016-07-26 20:22:18,468][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4a798694-32bb-4d96-89af-d215e21bbf3c
+[2016-07-26 20:22:18,527][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e618a054-0d7f-4567-ac6d-c90a5393b711
+[2016-07-26 20:22:18,592][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  547d810a-8c91-4bf2-8b6d-40f160c2c328
+[2016-07-26 20:22:18,683][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c687fc7d-ca27-4588-bb58-b67d44ea8fbb
+[2016-07-26 20:22:18,748][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  3228138c-31df-44a7-9936-9d8c06bce1d6
+[2016-07-26 20:22:18,815][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a9482515-6cc7-4514-aee9-1f5b41c42066
+[2016-07-26 20:22:18,879][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e824d4d3-f3a8-4840-a8d4-4ec06bc508ee
+[2016-07-26 20:22:18,943][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4089828f-a78b-46af-81be-21cdda83c841
+[2016-07-26 20:22:19,012][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f0f62b89-6025-41e0-abfc-c772023a17d6
+[2016-07-26 20:22:19,078][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f2ac3bd3-b2ee-44f3-a4fb-15826d547307
+[2016-07-26 20:22:19,189][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e0e043ea-2b04-4bcd-9f1a-3bee3712119c
+[2016-07-26 20:23:40,324][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ Message Broker (localhost, ID:ryan-ThinkCentre-M57-37773-1469578918615-0:1) is shutting down
+[2016-07-26 20:23:41,695][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
+javax.jms.JMSException: java.io.EOFException
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
+	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
+	at org.apache.activemq.ActiveMQConnection.onException(ActiveMQConnection.java:1858)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:126)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:160)
+	at org.apache.activemq.transport.InactivityMonitor.onException(InactivityMonitor.java:265)
+	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:206)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:269)
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:227)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
+	... 1 more
+[2016-07-26 20:23:41,710][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The Session is closed
+[2016-07-26 20:23:41,710][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
+javax.jms.JMSException: java.io.EOFException
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
+	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
+	at org.apache.activemq.ActiveMQConnection.onException(ActiveMQConnection.java:1858)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:126)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:160)
+	at org.apache.activemq.transport.InactivityMonitor.onException(InactivityMonitor.java:265)
+	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:206)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:269)
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:227)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
+	... 1 more
+[2016-07-26 20:23:41,722][WARN][org.springframework.jms.connection.CachingConnectionFactory][ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616] Encountered a JMSException - resetting the underlying JMS Connection
+javax.jms.JMSException: java.io.EOFException
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
+	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1841)
+	at org.apache.activemq.ActiveMQConnection.onException(ActiveMQConnection.java:1858)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:126)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:160)
+	at org.apache.activemq.transport.InactivityMonitor.onException(InactivityMonitor.java:265)
+	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:206)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:269)
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:227)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:219)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:202)
+	... 1 more
+[2016-07-26 20:23:41,724][INFO][org.apache.activemq.broker.TransportConnector][ActiveMQ ShutdownHook] Connector tcp://localhost:61616 Stopped
+[2016-07-26 20:23:41,723][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'upload-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+[2016-07-26 20:23:41,722][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The Consumer is closed
+[2016-07-26 20:23:41,736][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'join-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+[2016-07-26 20:23:41,738][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Setup of JMS message listener invoker failed for destination 'transition-queue' - trying to recover. Cause: The Consumer is closed
+[2016-07-26 20:23:41,742][INFO][org.apache.activemq.store.kahadb.plist.PListStore][ActiveMQ ShutdownHook] PListStore:activemq-data/localhost/tmp_storage stopped
+[2016-07-26 20:23:41,746][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopping async queue tasks
+[2016-07-26 20:23:41,746][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopping async topic tasks
+[2016-07-26 20:23:41,746][INFO][org.apache.activemq.store.kahadb.KahaDBStore][ActiveMQ ShutdownHook] Stopped KahaDB
+[2016-07-26 20:23:41,747][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-2] Could not refresh JMS Connection for destination 'transition-queue' - retrying in 5000 ms. Cause: Could not connect to broker URL: tcp://localhost:61616. Reason: java.net.ConnectException: Connection refused
+[2016-07-26 20:23:42,096][INFO][org.apache.activemq.broker.BrokerService][ActiveMQ ShutdownHook] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-37773-1469578918615-0:1) stopped
+[2016-07-26 20:23:56,793][INFO][org.mongodb.driver.cluster][main] Cluster created with settings {hosts=[0.0.0.0:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+[2016-07-26 20:23:56,794][INFO][org.mongodb.driver.cluster][main] Adding discovered server 0.0.0.0:27017 to client view of cluster
+[2016-07-26 20:23:56,968][INFO][org.mongodb.driver.connection][cluster-ClusterId{value='5797ff1c3c7a8c5d2f9d4cbb', description='null'}-0.0.0.0:27017] Opened connection [connectionId{localValue:1, serverValue:135}] to 0.0.0.0:27017
+[2016-07-26 20:23:56,970][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5797ff1c3c7a8c5d2f9d4cbb', description='null'}-0.0.0.0:27017] Monitor thread successfully connected to server with description ServerDescription{address=0.0.0.0:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, electionId=null, maxDocumentSize=16777216, roundTripTimeNanos=935173}
+[2016-07-26 20:23:56,972][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='5797ff1c3c7a8c5d2f9d4cbb', description='null'}-0.0.0.0:27017] Discovered cluster type of STANDALONE
+[2016-07-26 20:23:58,094][INFO][org.apache.activemq.broker.jmx.ManagementContext][JMX connector] JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi
+[2016-07-26 20:23:58,129][INFO][org.apache.activemq.store.kahadb.plist.PListStore][main] PListStore:activemq-data/localhost/tmp_storage started
+[2016-07-26 20:23:58,132][INFO][org.apache.activemq.broker.BrokerService][main] Using Persistence Adapter: KahaDBPersistenceAdapter[/home/greg/Projects/dcm/activemq-data/localhost/KahaDB]
+[2016-07-26 20:23:59,181][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] KahaDB is version 3
+[2016-07-26 20:23:59,238][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovering from the journal ...
+[2016-07-26 20:23:59,239][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovery replayed 1 operations from the journal in 0.048 seconds.
+[2016-07-26 20:23:59,264][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ 5.5.0 JMS Message Broker (localhost) is starting
+[2016-07-26 20:23:59,264][INFO][org.apache.activemq.broker.BrokerService][main] For help or more information please see: http://activemq.apache.org/
+[2016-07-26 20:23:59,535][INFO][org.apache.activemq.transport.TransportServerThreadSupport][main] Listening for connections at: tcp://localhost:61616
+[2016-07-26 20:23:59,536][INFO][org.apache.activemq.broker.TransportConnector][main] Connector tcp://localhost:61616 Started
+[2016-07-26 20:23:59,538][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-46359-1469579039295-0:1) started
+[2016-07-26 20:23:59,644][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-46359-1469579039295-2:1,clientId=null,started=false}
+[2016-07-26 20:23:59,753][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-46359-1469579039295-2:2,clientId=null,started=false}
+[2016-07-26 20:23:59,791][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-46359-1469579039295-2:3,clientId=null,started=false}
+[2016-07-26 20:23:59,872][INFO][org.eclipse.jetty.server.Server][main] jetty-7.6.13.v20130916
+[2016-07-26 20:23:59,916][INFO][org.eclipse.jetty.server.AbstractConnector][main] Started SelectChannelConnector@0.0.0.0:3000
+[2016-07-26 20:24:04,798][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: The connection is already closed
+[2016-07-26 20:24:04,798][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
+[2016-07-26 20:24:04,806][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-46359-1469579039295-2:4,clientId=null,started=false}
+[2016-07-26 20:24:04,808][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'transition-queue' - trying to recover. Cause: The connection is already closed
+[2016-07-26 20:24:04,817][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-46359-1469579039295-2:5,clientId=null,started=false}
+[2016-07-26 20:24:04,822][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-46359-1469579039295-2:6,clientId=null,started=false}
+[2016-07-26 20:24:04,842][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-07-26 20:24:04,851][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-07-26 20:24:04,855][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-07-26 20:24:05,175][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp27124122-58] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-46359-1469579039295-2:7,clientId=null,started=false}
+[2016-07-26 20:24:06,288][INFO][dcm.handler][DefaultMessageListenerContainer-2] Begin processing  slideshow.pptx
+[2016-07-26 20:24:08,815][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  1
+[2016-07-26 20:24:09,130][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  2
+[2016-07-26 20:24:09,405][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  3
+[2016-07-26 20:24:09,689][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  4
+[2016-07-26 20:24:10,029][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  5
+[2016-07-26 20:24:10,801][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  6
+[2016-07-26 20:24:11,032][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  7
+[2016-07-26 20:24:11,258][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  8
+[2016-07-26 20:24:11,572][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  9
+[2016-07-26 20:24:11,807][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  10
+[2016-07-26 20:24:12,356][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  11
+[2016-07-26 20:24:12,360][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-2] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-46359-1469579039295-2:8,clientId=null,started=false}
+[2016-07-26 20:24:12,400][INFO][dcm.handler][DefaultMessageListenerContainer-2] =====================Begin image transition==================
+
+
+[2016-07-26 20:24:12,401][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  6a6282c9-e91a-405e-9ecd-6fdd19d2eb34  and  c7b7b5c3-ce12-4cbd-8c5b-192a49ad03d2
+[2016-07-26 20:24:12,452][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully processed  slideshow.pptx
+[2016-07-26 20:24:12,535][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  55e5908e-7dba-4b3b-a1bd-52a916dd9c20
+[2016-07-26 20:24:12,609][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2e83d66c-952f-46c8-9f3e-d3c11689280a
+[2016-07-26 20:24:12,697][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  fe24fd9c-828e-454a-8cd1-c42551a9e73e
+[2016-07-26 20:24:12,767][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9d6a2caf-c0e4-4061-a8a3-6ac0ad903bef
+[2016-07-26 20:24:12,830][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  fbf40e5e-7f6c-4eac-a284-93f7d2beac6e
+[2016-07-26 20:24:12,894][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  1665488a-016d-4d5c-9565-26580926353e
+[2016-07-26 20:24:12,955][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2fff25e5-d02e-4300-bdd9-8f8ad251fca2
+[2016-07-26 20:24:13,018][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a85e2def-d4fa-4a66-8201-faa0b0a58281
+[2016-07-26 20:24:13,082][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  65d12ded-e9c3-43f7-b932-c9e14da97c40
+[2016-07-26 20:24:13,145][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c34e1cb0-8f8b-4d5b-a438-637dc1bbf952
+[2016-07-26 20:24:13,146][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  c7b7b5c3-ce12-4cbd-8c5b-192a49ad03d2  and  e799d9ab-dc7e-41ad-aafe-a674793e367c
+[2016-07-26 20:24:13,205][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b0af66e0-48da-4f51-bd08-69285b13156b
+[2016-07-26 20:24:13,288][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  fef4bcdf-76d8-4e5e-a2af-dfa9a7a6772d
+[2016-07-26 20:24:13,356][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  efc6e2f1-261e-4474-bb44-09a0580b9530
+[2016-07-26 20:24:13,434][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  1906cd49-7bd7-4d53-a431-281126f8effa
+[2016-07-26 20:24:13,541][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  aedd7f68-fcd1-4560-ae9f-ac9850eb3143
+[2016-07-26 20:24:13,606][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ec524795-9b17-4426-b02c-aa2ba9d748bb
+[2016-07-26 20:24:13,672][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6c69d3b5-a699-4d56-8795-5be06742af9b
+[2016-07-26 20:24:13,739][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  80ddeb82-e351-4e00-907f-c49cc16dbbd4
+[2016-07-26 20:24:13,806][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  64b89cf6-a97f-4d07-9d1d-8d35ed941f11
+[2016-07-26 20:24:13,873][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2d0b91b1-e518-41c7-9ff1-50fa21494409
+[2016-07-26 20:24:13,881][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  e799d9ab-dc7e-41ad-aafe-a674793e367c  and  6f2a69a9-54f0-403b-bf90-03b1e353567c
+[2016-07-26 20:24:13,942][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  fa23f841-3b86-4df0-b0fd-3615aff9f234
+[2016-07-26 20:24:14,012][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  63dae9ce-9729-44b5-ab21-eb919cac3383
+[2016-07-26 20:24:14,078][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  361f9db9-856c-4996-a997-3002bf71ff3e
+[2016-07-26 20:24:14,143][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8c23cd7a-5447-4d07-9507-bd30e60f812f
+[2016-07-26 20:24:14,206][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9939bcd9-efbc-41fc-b71d-8bb7765b549a
+[2016-07-26 20:24:14,272][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c1d541a3-6afe-4bbf-91a6-db60d39d9c6a
+[2016-07-26 20:24:14,340][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7b6831df-f78e-4cb1-baa9-fd4f8ed7dc5f
+[2016-07-26 20:24:14,425][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e8bf2284-47c8-4bb2-a046-e23d98b50bb5
+[2016-07-26 20:24:14,549][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  dc730204-5a64-4202-8875-f2fad1c606c5
+[2016-07-26 20:24:14,625][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  340490b6-0f2e-4018-ac37-90de88d859f0
+[2016-07-26 20:24:14,643][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  6f2a69a9-54f0-403b-bf90-03b1e353567c  and  c9420ecf-378f-4298-99af-11ea1bfe3cc7
+[2016-07-26 20:24:14,760][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f01adae8-952a-40ae-b139-108e0fd0f339
+[2016-07-26 20:24:14,825][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  16e011e0-8636-401f-bf7d-e92ab912d63c
+[2016-07-26 20:24:14,893][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  96a4751f-f71e-41a4-96e9-215b196aae41
+[2016-07-26 20:24:14,974][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  53973845-d54d-4b5c-988b-0574db9db29c
+[2016-07-26 20:24:15,039][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  43d53f4f-a218-45de-88ac-3288a4afed1b
+[2016-07-26 20:24:15,107][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6ff9864a-225a-411c-b7b5-5b518083b281
+[2016-07-26 20:24:15,172][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6e19ecfb-86be-4d74-8da5-657caeba277b
+[2016-07-26 20:24:15,235][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  21c36b03-6c11-4cba-96bf-72b103fb0387
+[2016-07-26 20:24:15,299][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d79a6c88-1230-4452-9ce8-c5b0bd0eac27
+[2016-07-26 20:24:15,392][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  459ee6f8-0409-428c-ba82-8e93d9242dfd
+[2016-07-26 20:24:15,393][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  c9420ecf-378f-4298-99af-11ea1bfe3cc7  and  3a53b3aa-4961-40a3-8849-b96f0fc9d283
+[2016-07-26 20:24:15,464][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  3460277e-7852-40e1-8809-8ff284b49397
+[2016-07-26 20:24:15,529][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  83a015fa-0eb5-4cb8-959e-b557aa47c961
+[2016-07-26 20:24:15,593][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  858a01d4-3477-4726-bedb-1340a6b2caab
+[2016-07-26 20:24:15,658][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8c10bb6b-eb20-4dcc-b44c-55ac0ad7fdda
+[2016-07-26 20:24:15,722][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2821daf7-a28f-4b6b-8be3-05d8bda4988a
+[2016-07-26 20:24:15,786][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9cc442be-e04b-40c0-bcac-1b91c18ca09b
+[2016-07-26 20:24:15,849][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  31346978-5b53-473b-9fa3-4b6bcace6eff
+[2016-07-26 20:24:15,913][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  64cc53ae-4510-48f8-bab4-730946068be7
+[2016-07-26 20:24:15,979][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  165701f2-f940-41d0-aa0a-601c5fd15d71
+[2016-07-26 20:24:16,043][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9d424000-6f70-49c3-a335-af7838dd6d35
+[2016-07-26 20:24:16,043][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  3a53b3aa-4961-40a3-8849-b96f0fc9d283  and  9dd16bc4-426c-410e-ab44-856877345369
+[2016-07-26 20:24:16,103][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4b19ca77-883b-4fe0-ab03-8891a413173f
+[2016-07-26 20:24:16,167][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b9f1e8a4-442d-4577-a787-8a21d391e958
+[2016-07-26 20:24:16,230][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  109f836d-0d5f-4d86-9425-5868119bf90c
+[2016-07-26 20:24:16,308][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  79b4e968-71a1-441c-b97e-a38264f04551
+[2016-07-26 20:24:16,375][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  0181992c-0915-4633-8c71-5c80469f471e
+[2016-07-26 20:24:16,452][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4b868f07-1ee3-41cd-a19a-d1effb8751ff
+[2016-07-26 20:24:16,518][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  390f9dc0-583a-4d2b-a50b-68fb5136c7ce
+[2016-07-26 20:24:16,588][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  db17a366-2e28-4f2a-a902-89dd5bb167ca
+[2016-07-26 20:24:16,651][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  25ca0ac6-ade8-4aaa-bc3b-06f5fe7fe4d9
+[2016-07-26 20:24:16,717][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b6f2fc5f-ae01-4cad-8880-4fb48071f7fa
+[2016-07-26 20:24:16,720][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  9dd16bc4-426c-410e-ab44-856877345369  and  ac5edbba-d063-4bd4-aba0-c375f1f69bb7
+[2016-07-26 20:24:16,791][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  94321d3b-cc54-4efa-9153-fe9ea29327fd
+[2016-07-26 20:24:16,876][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4675ff36-54d3-4373-a022-5a69d2f680ec
+[2016-07-26 20:24:17,022][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ea7d8d0c-b29f-45ba-bdaa-ccaa730d78be
+[2016-07-26 20:24:17,100][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6d6de29f-197c-4303-9137-359761cd2fa8
+[2016-07-26 20:24:17,171][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  dba7cec5-ebcd-4d9b-b5a2-21f15509fded
+[2016-07-26 20:24:17,329][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9936ec0f-cec6-499c-bd58-5cc924274ced
+[2016-07-26 20:24:17,431][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a71d3b35-52e9-4c3c-bebc-27bd127802b9
+[2016-07-26 20:24:17,505][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  caac45b4-271e-438f-9f18-fe8210cd62d0
+[2016-07-26 20:24:17,580][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  165f1f98-9c88-4741-ae79-f1aca52eea26
+[2016-07-26 20:24:17,641][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  0b77ab0f-e37f-41a3-95ee-5146f31d3b90
+[2016-07-26 20:24:17,644][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  ac5edbba-d063-4bd4-aba0-c375f1f69bb7  and  d5884f3f-8f41-41d8-9df9-96ddcd950fb6
+[2016-07-26 20:24:17,700][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  027e6e4e-d4f0-404c-8475-becc841a9ef3
+[2016-07-26 20:24:17,762][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c7739621-74e3-451d-9606-b785d039f37d
+[2016-07-26 20:24:17,824][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2fd1caf6-7b5e-4bff-9ee3-baa8d495555b
+[2016-07-26 20:24:17,886][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  86ed6e5b-0e46-499e-8175-5dc801c6216e
+[2016-07-26 20:24:17,946][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  79c7fe38-4b4f-4c20-9ec7-4a071f9d401b
+[2016-07-26 20:24:18,007][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a2d393ca-bcbc-4378-952a-a650d721f12c
+[2016-07-26 20:24:18,071][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  37be2c99-7009-4b68-922b-3e288b85d592
+[2016-07-26 20:24:18,133][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  abde171a-775a-4ae4-b71e-9389a2f18c9d
+[2016-07-26 20:24:18,197][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e0f7e526-b85d-4624-88fb-6dcc0ee1629d
+[2016-07-26 20:24:18,276][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  69d14399-6dcd-4a80-87c6-a13abe0e3c52
+[2016-07-26 20:24:18,277][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  d5884f3f-8f41-41d8-9df9-96ddcd950fb6  and  e5d3ca68-bdca-4900-a75a-175c95e3fe95
+[2016-07-26 20:24:18,354][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9f5b1b82-cc7c-454f-94d1-4ae7a00c5f90
+[2016-07-26 20:24:18,418][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6f72ebd4-9274-4076-962f-81d0a7f90a1b
+[2016-07-26 20:24:18,482][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  25f71bda-c31a-43e3-b44c-6a250143c8d2
+[2016-07-26 20:24:18,546][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  fa3783e1-f018-4105-b6c4-bd417c4fffd0
+[2016-07-26 20:24:18,611][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  47c0047a-13eb-4003-a16d-bc039134e982
+[2016-07-26 20:24:18,676][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6e27cf72-b908-4d76-82ff-9ad86c617edc
+[2016-07-26 20:24:18,741][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f4724810-3173-4254-b883-ca95cd7a88c2
+[2016-07-26 20:24:18,807][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d186e7d9-5848-48e0-989f-2cf21c8108b6
+[2016-07-26 20:24:18,872][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  0d65070a-d0f3-4683-b2a2-b30230364c3c
+[2016-07-26 20:24:18,993][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7d6e50c4-5e20-40ab-b60d-3b4bcf7722fa
+[2016-07-26 20:24:18,994][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  e5d3ca68-bdca-4900-a75a-175c95e3fe95  and  edb4581f-c8ed-41cb-a78c-7fe7b7dcc4d1
+[2016-07-26 20:24:19,054][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d367995b-7019-47f5-81fb-216e98464b58
+[2016-07-26 20:24:19,167][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6b3d0de9-9ca7-4321-ab50-e46ed27a4b6b
+[2016-07-26 20:24:19,247][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  14f45280-24c7-42bb-8721-2f4ac7715043
+[2016-07-26 20:24:19,312][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f8f28994-ae22-4395-8a67-806fa78ab4a9
+[2016-07-26 20:24:19,424][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f00d40ed-c16b-485f-8589-b8cf68dc208d
+[2016-07-26 20:24:19,496][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2750bfba-3544-465f-91d3-6ea216d5d772
+[2016-07-26 20:24:19,567][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a7ecb192-151f-4b0a-bb9d-1f14b841b6cc
+[2016-07-26 20:24:19,655][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b62bcee9-a6d1-4f56-b8c7-6794a47cf67f
+[2016-07-26 20:24:19,724][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  66409504-147c-4a99-a056-cf4c661c5760
+[2016-07-26 20:24:19,792][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  15907bb6-59e8-42cb-b529-9a921acb0012

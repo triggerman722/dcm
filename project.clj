@@ -7,7 +7,6 @@
                  [org.clojure/clojurescript "1.7.122"]
                  [secretary "1.2.3"]
                  [cljs-ajax "0.5.1"]
-                 [prismatic/dommy "1.1.0"]
                  [reagent "0.5.1"]
                  [reagent-forms "0.5.1"]
                  [reagent-utils "0.1.4"]
@@ -39,6 +38,8 @@
                         :figwheel true
                         :compiler {:main "dcm.app"
                                    :asset-path "js/out"
+                                   :optimizations :advanced
+                                   :pretty-print false
                                    :output-dir "resources/public/js/out"
                                    :output-to "resources/public/js/dcm.js"}}]}
 
