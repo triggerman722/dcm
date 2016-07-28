@@ -72,10 +72,10 @@
        filein (io/input-stream (io/file "resources" "private" "uploads" filepath))
        ppt (new XMLSlideShow filein)
        slides (into [] (.getSlides ppt))
-       result-map (map save-slide-image slides)
+       result-map (doall (map save-slide-image slides))
      ]
        (log/info "Begin processing " filepath)
-       (println result-map) ;do not remove this, it is needed to force the map
+       ; (println result-map) ; update: trying doall instead ;do not remove this, it is needed to force the map
        (sendmessage "transition-queue" result-map)
        (log/info "Successfully processed " filepath))) ;map is a lazy function; doall forces it.
 
@@ -94,31 +94,26 @@
      (.drawImage gfx img-end 0 0 nil)
      (ImageIO/write img-new "jpeg" fileout)
      (log/info "Successfully transitioned image: " uniquename)
-     {:uniquename uniquename}))
+     uniquename))
 (defn make-transition-images [start end]
-(let [
-       startfile (io/file "resources" "private" "images" start)
-       endfile   (io/file "resources" "private" "images" end)
-     ]
+     (let [startfile (io/file "resources" "private" "images" start)
+       endfile   (io/file "resources" "private" "images" end)]
      (log/info "Performing image transition between " start " and " end)
-
-     ; I think dotimes should send a msg to a queue. so this fork/join just got harder.
-     ; if I can just figure out a correlation id (i.e. a counter) I can send that plus the other info to a queue
-     ; and then when processing, I can save the image to that counter name.
-
-      (conj [start] (conj (for [n (range 10)] (fade-image startfile endfile n)) [end]))
-;     (println (dotimes [n 10] (fade-image startfile endfile n)))
-
-)
+     (flatten (concat [start] (concat (for [n (range 10)] (fade-image startfile endfile n)) [end])))))
+(defn video-message-receiver [message]
+      (log/info "=====================Begin video transition==================\n\n")
+      (println message)
+      
 )
 (defn transition-message-receiver [message]
       (log/info "=====================Begin image transition==================\n\n")
       (let
           [
-             transition-results (for [[a b] (partition 2 1 message)](make-transition-images a b))
+             transition-results (doall (for [[a b] (partition 2 1 message)](make-transition-images a b)))
           ]
-          ;(sendmessage "video-queue" transition-results)
           (println transition-results)
+          (sendmessage "video-queue" transition-results)
+          ;(println transition-results)
       )
 )
 
@@ -204,9 +199,10 @@
            (.start broker))
          (catch Exception e
             (log/info (.getMessage e))))
-   (init-consumer "upload-queue" upload-message-receiver )
-   (init-consumer "join-queue" join-message-receiver )
-   (init-consumer "transition-queue" transition-message-receiver ))
+   (init-consumer "upload-queue" upload-message-receiver)
+   (init-consumer "join-queue" join-message-receiver)
+   (init-consumer "transition-queue" transition-message-receiver)
+   (init-consumer "video-queue" video-message-receiver))
    (wrap-keyword-params)
    (wrap-json-body)
    (wrap-json-response)
