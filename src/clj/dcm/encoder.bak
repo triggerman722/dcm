@@ -1,0 +1,68 @@
+(ns dcm.encoder
+  (:import [javax.media.control.TrackControl]
+           [javax.media.datasink DataSinkErrorEvent DataSinkEvent DataSinkListener EndOfStreamEvent]
+           [javax.media.format VideoFormat Format]
+           [javax.media.protocol ContentDescriptor DataSource FileTypeDescriptor PullBufferDataSource PullBufferStream]
+           [javax.media MediaLocator]
+           [java.awt Dimension]
+           [java.io File IOException RandomAccessFile]
+           [java.net MalformedURLException]
+  )
+)
+
+(defn create-image-source-stream
+     "Creates the ImageSourceString class which implements PullBufferStream"
+     [width height framerate images]
+     (let [ fIsEnded (atom false)
+            imagestateful (atom {images})
+            format (new VideoFormat (.JPEG VideoFormat) (new Dimension width height) (.NOT_SPECIFIED Format) (.byteArray Format) framerate)
+            imagesourcestream (proxy PullBufferStream []
+                                 (willReadBlock [] false)
+                                 (getFormat []  )
+                                 (read [buffer]
+                                    (let [imageframe (nth imagestateful 0 -1)
+                                          imagefile (new RandomAccessFile (str "resources" "private" "images" imageframe) "r")
+                                          dataspace (byte-array (.length imagefile))
+                                         ]
+                                         (if (= imageframe -1)
+                                            (.setEOM buffer true)
+                                            (.setOffset buffer 0)
+                                            (.setLength buffer 0)
+                                            (reset! fIsEnded? true))
+                                         (do
+                                         (.setData buffer dataspace)
+                                         (.readFully imagefile dataspace 0 (.length imagefile))
+                                         (.setOffset buffer 0)
+                                         (.setLength buffer (.length imagefile))
+                                         (.setFormat buffer format)
+                                         (.setFlags buffer ((bit-or (.getFlags buffer) (.FLAG_KEY_FRAME buffer)))
+                                         (.close imagefile)
+                                         (swap! imagestateful pop))
+                                    )) 
+                                 (getContentDescriptor [] (new ContentDescriptor ContentDescriptor.RAW))
+                                 (getContentLength [] 0)
+                                 (endOfStream [] fIsEnded)
+                                 (getControls []  (new Object) ;Object[0])
+                                 (getControl [type] nil)
+            
+(defn create-image-data-source
+     "Creates the ImageDataSource class which extends PullBufferDataSource"
+     [width height framerate images]
+     (let [streams (atom {})
+           imagedatasource (proxy PullBufferDataSource [width height framerate images]
+                              (setLocator [source])
+                              (getLocator []  nil)
+                              (getContentType []
+                                    (ContentDescriptor/RAW))
+                              (connect [])
+                              (disconnect [])
+                              (start [])
+                              (stop [])
+                              (getStreams [] streams)
+                              (getDuration []  DURATION_UNKNOWN)
+                              (getControls []  (new Object) ;Object[0])
+                              (getControl [type] nil))]
+     (doto imagedatasource
+        (swap! streams )
+ ))
+

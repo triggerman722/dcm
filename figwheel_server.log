@@ -574,3 +574,22 @@ notifying browser that file changed:  /dcm/app.js
 [0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
 [32mSuccessfully compiled "resources/public/js/dcm.js" in 1.964 seconds.[0m
 notifying browser that file changed:  /dcm/app.js
+Figwheel: focusing on build-ids (dcmclient)
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.629 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/dcm.js" failed.[0m
+ERROR: Map literal must contain an even number of forms on file /home/greg/Projects/dcm/src/cljs/dcm/app.cljs, line 253, column 50
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.514 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 2.559 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 3.443 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js

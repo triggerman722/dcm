@@ -3,6 +3,8 @@
   :url "http://example.com/FIXME"
   :min-lein-version "2.0.0"
   :source-paths ["src/clj"]
+  :javac-options {:destdir "classes/"}
+  :java-source-paths ["src/java"] ; location of Java source
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.7.122"]
                  [secretary "1.2.3"]
@@ -25,7 +27,11 @@
                  [org.clojure/data.json "0.2.6"]
                  [org.apache.poi/poi "3.14"]
                  [org.apache.poi/poi-ooxml "3.14"]
-                 [org.apache.poi/poi-scratchpad "3.14"]]
+                 [org.apache.poi/poi-scratchpad "3.14"]
+                 [javax.media/jmf "2.1.1e"]
+                 [javax.media.jai/com.springsource.javax.media.jai.core "1.1.3"]]
+  :repositories  [["com.springsource.repository.bundles.external" "http://repository.springsource.com/maven/bundles/external"]
+                 ["JBoss repository" "http://repository.jboss.org/nexus/content/groups/public/"]]
   :plugins      [[lein-ring "0.9.7"]
                  [lein-cljsbuild "1.1.3"]
                  [lein-figwheel "0.4.1"]]
@@ -38,7 +44,7 @@
                         :figwheel true
                         :compiler {:main "dcm.app"
                                    :asset-path "js/out"
-                                   :optimizations :advanced
+;                                   :optimizations :advanced
                                    :pretty-print false
                                    :output-dir "resources/public/js/out"
                                    :output-to "resources/public/js/dcm.js"}}]}

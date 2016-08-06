@@ -10,10 +10,14 @@
   (:import [java.awt.image BufferedImage])
   (:import [javax.imageio ImageIO])
   (:import [java.awt Color])
+  (:import [java.util Vector])
+  (:import [java.io File])
+  (:import [com.deckmotion VideoEncoder])
 
   (:require 
                         [compojure.handler :as handler]
 			[clojure.java.io :as io]
+                        [clojure.java.shell :as shell]
                         [clojure.tools.logging :as log]
                         [clojure.data.json :as json]
 			[compojure.route :as route]
@@ -94,16 +98,47 @@
      (.drawImage gfx img-end 0 0 nil)
      (ImageIO/write img-new "jpeg" fileout)
      (log/info "Successfully transitioned image: " uniquename)
-     uniquename))
+     (str "/home/greg/Projects/dcm/resources/private/images/" uniquename)))
 (defn make-transition-images [start end]
      (let [startfile (io/file "resources" "private" "images" start)
        endfile   (io/file "resources" "private" "images" end)]
      (log/info "Performing image transition between " start " and " end)
-     (flatten (concat [start] (concat (for [n (range 10)] (fade-image startfile endfile n)) [end])))))
+     (concat [(str "/home/greg/Projects/dcm/resources/private/images/" start)] (concat (for [n (range 10)] (fade-image startfile endfile n)) [(str "/home/greg/Projects/dcm/resources/private/images/" end)]))
+     )
+)
+(defn rename-image-files [inputfile increment]
+     (let [ newfile (str "/home/greg/Projects/dcm/resources/private/images/slide_" increment ".jpg")]
+     (.renameTo (File. inputfile) (File. newfile))
+     newfile) ; force extension to jpg ?
+)
 (defn video-message-receiver [message]
       (log/info "=====================Begin video transition==================\n\n")
-      (println message)
-      
+      (println (flatten message))
+      ; TODO: Use clojure shell and run FFMPEG.
+      (let [
+            filelist (distinct (flatten message)) ; how to eliminate duplicates?
+            ;videoencoder (new VideoEncoder)
+            ;temporaryVideoFilename (str "/home/greg/Projects/dcm/resources/private/videos/" (.toString (java.util.UUID/randomUUID)) ".mov")
+            ;temporaryVideo (VideoEncoder/createMediaLocator temporaryVideoFilename)
+            ;audioencoder (new VideoEncoder)
+            ;soundfile (io/file "resources" "private" "audio" "slideshow.wav")
+            ;destinationVideo (VideoEncoder/createMediaLocator (str "/home/greg/Projects/dcm/resources/public/videos/" (.toString (java.util.UUID/randomUUID)) ".mp4"))
+            inc-filelist (doall (map-indexed (fn [i x] (rename-image-files x i)) filelist))
+           ]
+;           (println filelist)
+          (println inc-filelist)
+          (println (shell/sh "ffmpeg" "-y" "-f" "image2" "-loop" "1" "-i" "/home/greg/Projects/dcm/resources/private/images/slide_%d.jpg" "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.wav" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" "-t" "00:00:30" (str "/home/greg/Projects/dcm/resources/public/videos/" (.toString (java.util.UUID/randomUUID)) ".mp4")))
+          ;(.encode videoencoder 640 480 20 (Vector. filelist) temporaryVideo)
+          ;(println "Beginning merge")
+          ;(.mergeFiles audioencoder temporaryVideo soundfile destinationVideo)
+          ;(println "Finished merge")
+          ;(println (str "Killing temp video: " temporaryVideoFilename))          
+          ;(io/delete-file temporaryVideoFilename)
+          ;(println "Temporary Video Successfully killed")
+          (println "Killing temporary image files...")
+          (doall (map #(io/delete-file % true) inc-filelist))
+          (println "Successfully killed all temporary images files")
+          )
 )
 (defn transition-message-receiver [message]
       (log/info "=====================Begin image transition==================\n\n")
