@@ -1,136 +1,665 @@
-[2016-08-06 08:52:36,897][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-45558-1470487951319-2:8,clientId=null,started=false}
-[2016-08-06 08:52:36,912][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-08-06 08:52:36,935][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-08-06 08:52:36,951][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
-[2016-08-06 08:52:39,781][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp28734983-66] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-45558-1470487951319-2:9,clientId=null,started=false}
-[2016-08-06 08:52:43,739][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  1
-[2016-08-06 08:52:44,059][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  2
-[2016-08-06 08:52:44,339][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  3
-[2016-08-06 08:52:44,686][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  4
-[2016-08-06 08:52:44,963][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  5
-[2016-08-06 08:52:45,644][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  6
-[2016-08-06 08:52:45,864][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  7
-[2016-08-06 08:52:46,084][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  8
-[2016-08-06 08:52:46,438][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  9
-[2016-08-06 08:52:46,677][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  10
-[2016-08-06 08:52:47,283][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  11
-[2016-08-06 08:52:47,283][INFO][dcm.handler][DefaultMessageListenerContainer-2] Begin processing  slideshow.pptx
-[2016-08-06 08:52:47,289][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-2] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-45558-1470487951319-2:10,clientId=null,started=false}
-[2016-08-06 08:52:47,319][INFO][dcm.handler][DefaultMessageListenerContainer-2] =====================Begin image transition==================
+[2016-08-07 11:59:59,521][INFO][org.mongodb.driver.cluster][main] Adding discovered server 0.0.0.0:27017 to client view of cluster
+[2016-08-07 11:59:59,794][INFO][org.mongodb.driver.connection][cluster-ClusterId{value='57a75aff3c7a8c233a5751aa', description='null'}-0.0.0.0:27017] Opened connection [connectionId{localValue:1, serverValue:200}] to 0.0.0.0:27017
+[2016-08-07 11:59:59,799][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='57a75aff3c7a8c233a5751aa', description='null'}-0.0.0.0:27017] Monitor thread successfully connected to server with description ServerDescription{address=0.0.0.0:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[2, 6, 10]}, minWireVersion=0, maxWireVersion=2, electionId=null, maxDocumentSize=16777216, roundTripTimeNanos=3307776}
+[2016-08-07 11:59:59,808][INFO][org.mongodb.driver.cluster][cluster-ClusterId{value='57a75aff3c7a8c233a5751aa', description='null'}-0.0.0.0:27017] Discovered cluster type of STANDALONE
+[2016-08-07 12:00:01,288][INFO][org.apache.activemq.broker.jmx.ManagementContext][JMX connector] JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi
+[2016-08-07 12:00:01,324][INFO][org.apache.activemq.store.kahadb.plist.PListStore][main] PListStore:activemq-data/localhost/tmp_storage started
+[2016-08-07 12:00:01,326][INFO][org.apache.activemq.broker.BrokerService][main] Using Persistence Adapter: KahaDBPersistenceAdapter[/home/greg/Projects/dcm/activemq-data/localhost/KahaDB]
+[2016-08-07 12:00:02,062][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] KahaDB is version 3
+[2016-08-07 12:00:02,106][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovering from the journal ...
+[2016-08-07 12:00:02,106][INFO][org.apache.activemq.store.kahadb.MessageDatabase][main] Recovery replayed 1 operations from the journal in 0.033 seconds.
+[2016-08-07 12:00:02,119][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ 5.5.0 JMS Message Broker (localhost) is starting
+[2016-08-07 12:00:02,119][INFO][org.apache.activemq.broker.BrokerService][main] For help or more information please see: http://activemq.apache.org/
+[2016-08-07 12:00:02,387][INFO][org.apache.activemq.transport.TransportServerThreadSupport][main] Listening for connections at: tcp://localhost:61616
+[2016-08-07 12:00:02,388][INFO][org.apache.activemq.broker.TransportConnector][main] Connector tcp://localhost:61616 Started
+[2016-08-07 12:00:02,390][INFO][org.apache.activemq.broker.BrokerService][main] ActiveMQ JMS Message Broker (localhost, ID:ryan-ThinkCentre-M57-33475-1470585602143-0:1) started
+[2016-08-07 12:00:02,505][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33475-1470585602143-2:1,clientId=null,started=false}
+[2016-08-07 12:00:02,624][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33475-1470585602143-2:2,clientId=null,started=false}
+[2016-08-07 12:00:02,660][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33475-1470585602143-2:3,clientId=null,started=false}
+[2016-08-07 12:00:02,704][INFO][org.springframework.jms.connection.CachingConnectionFactory][main] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33475-1470585602143-2:4,clientId=null,started=false}
+[2016-08-07 12:00:02,812][INFO][org.eclipse.jetty.server.Server][main] jetty-7.6.13.v20130916
+[2016-08-07 12:00:02,858][INFO][org.eclipse.jetty.server.AbstractConnector][main] Started SelectChannelConnector@0.0.0.0:3000
+[2016-08-07 12:00:06,726][INFO][org.springframework.jms.connection.CachingConnectionFactory][qtp14684753-63] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33475-1470585602143-2:5,clientId=null,started=false}
+[2016-08-07 12:00:07,644][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'upload-queue' - trying to recover. Cause: Cannot send, channel has already failed: localhost/127.0.0.1:61616
+[2016-08-07 12:00:07,649][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33475-1470585602143-2:6,clientId=null,started=false}
+[2016-08-07 12:00:07,662][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'join-queue' - trying to recover. Cause: The connection is already closed
+[2016-08-07 12:00:07,671][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33475-1470585602143-2:7,clientId=null,started=false}
+[2016-08-07 12:00:07,686][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-08-07 12:00:07,699][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'transition-queue' - trying to recover. Cause: The connection is already closed
+[2016-08-07 12:00:07,700][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-08-07 12:00:07,704][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33475-1470585602143-2:8,clientId=null,started=false}
+[2016-08-07 12:00:07,732][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-08-07 12:00:07,757][WARN][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Setup of JMS message listener invoker failed for destination 'video-queue' - trying to recover. Cause: The connection is already closed
+[2016-08-07 12:00:07,768][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-1] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33475-1470585602143-2:9,clientId=null,started=false}
+[2016-08-07 12:00:07,815][INFO][org.springframework.jms.listener.DefaultMessageListenerContainer][DefaultMessageListenerContainer-1] Successfully refreshed JMS Connection
+[2016-08-07 12:00:11,962][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  1
+[2016-08-07 12:00:12,427][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  2
+[2016-08-07 12:00:12,798][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  3
+[2016-08-07 12:00:13,210][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  4
+[2016-08-07 12:00:13,576][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  5
+[2016-08-07 12:00:14,374][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  6
+[2016-08-07 12:00:14,745][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  7
+[2016-08-07 12:00:15,022][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  8
+[2016-08-07 12:00:15,361][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  9
+[2016-08-07 12:00:15,674][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  10
+[2016-08-07 12:00:16,234][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully saved image for slide#:  11
+[2016-08-07 12:00:16,235][INFO][dcm.handler][DefaultMessageListenerContainer-2] Begin processing  slideshow.pptx
+[2016-08-07 12:00:16,236][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-2] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33475-1470585602143-2:10,clientId=null,started=false}
+[2016-08-07 12:00:16,265][INFO][dcm.handler][DefaultMessageListenerContainer-2] =====================Begin image transition==================
 
 
-[2016-08-06 08:52:47,321][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  9f081457-a31c-4520-8d68-d2d8827f8f09  and  13c1a82a-4900-4c72-bc51-56bb6e322d1b
-[2016-08-06 08:52:47,322][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  13c1a82a-4900-4c72-bc51-56bb6e322d1b  and  2e9d4bc4-79d2-4f7b-8a87-2d668db2cc56
-[2016-08-06 08:52:47,322][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  2e9d4bc4-79d2-4f7b-8a87-2d668db2cc56  and  816fc617-21a2-4a32-a115-db599dbb4d1c
-[2016-08-06 08:52:47,322][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  816fc617-21a2-4a32-a115-db599dbb4d1c  and  3b797840-6888-4c4c-9b1f-7d9c08b014d5
-[2016-08-06 08:52:47,323][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  3b797840-6888-4c4c-9b1f-7d9c08b014d5  and  17d24e71-7d89-4796-b4fe-aa98b7d9c1a4
-[2016-08-06 08:52:47,323][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  17d24e71-7d89-4796-b4fe-aa98b7d9c1a4  and  3fedc059-44af-4264-9d45-d7da47d96c42
-[2016-08-06 08:52:47,323][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  3fedc059-44af-4264-9d45-d7da47d96c42  and  e2f0e4ab-9eba-45c3-861f-30f4979642e3
-[2016-08-06 08:52:47,323][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  e2f0e4ab-9eba-45c3-861f-30f4979642e3  and  a3bd790c-3cbc-4ced-9bc8-f1fc927b7e69
-[2016-08-06 08:52:47,323][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  a3bd790c-3cbc-4ced-9bc8-f1fc927b7e69  and  0659718c-7d18-4540-ac34-2e460f1bc73e
-[2016-08-06 08:52:47,324][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  0659718c-7d18-4540-ac34-2e460f1bc73e  and  0c335a13-0266-47e4-bf5c-5a2153e9a6e1
-[2016-08-06 08:52:47,365][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully processed  slideshow.pptx
-[2016-08-06 08:52:47,408][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  528e2aae-19bc-4ff8-b66f-927b3d6434b0
-[2016-08-06 08:52:47,473][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c267dab2-4aad-463a-b377-dfa5a1621c28
-[2016-08-06 08:52:47,535][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f401c41c-eae3-4e91-8294-aec8a4240cdf
-[2016-08-06 08:52:47,598][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6c523d90-dd7c-40c2-9012-eed8af83d40c
-[2016-08-06 08:52:47,670][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  65eea759-4fe6-4c20-8c56-6bc98938f121
-[2016-08-06 08:52:47,734][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ab754709-4c5b-49d1-b381-6c04471d10f4
-[2016-08-06 08:52:47,795][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  944f151f-cba9-4dbe-b3e8-13ed5aa0e2e1
-[2016-08-06 08:52:47,868][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4c050d18-5306-45f6-87c4-c08481d063bd
-[2016-08-06 08:52:47,932][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  61c974e0-ffee-4456-948c-08b5c31575a1
-[2016-08-06 08:52:47,996][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7fb424e7-dd49-4ecf-9911-02ed727fd920
-[2016-08-06 08:52:48,054][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2af9e470-cf93-4de5-a711-0b4bb89278c5
-[2016-08-06 08:52:48,121][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  346dbe57-5bc8-41c6-8587-d1baf7bdf05d
-[2016-08-06 08:52:48,192][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  89e471fe-b530-46df-856c-89659c111b02
-[2016-08-06 08:52:48,279][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2b3b0ba8-6ac0-4835-80f7-63bbf2aa7991
-[2016-08-06 08:52:48,342][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  93a3258d-c2e1-4b7f-8dfb-c3aa1a4c1fd2
-[2016-08-06 08:52:48,407][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f8fb30a6-d3af-4939-bac2-22c276fdef66
-[2016-08-06 08:52:48,470][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f6afe2ad-b0ff-467b-af31-2249ce265720
-[2016-08-06 08:52:48,534][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e9e6b8c0-49ea-4b64-93f4-cbad3625da87
-[2016-08-06 08:52:48,597][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a95a7309-b7cd-43e4-9dfa-c86fd0ded702
-[2016-08-06 08:52:48,660][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e883e7c1-6c83-4bd7-a67b-30a54364bc9c
-[2016-08-06 08:52:48,720][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4210324e-a8e1-489e-bd9a-13debb7a4e42
-[2016-08-06 08:52:48,805][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  5bf10611-3095-4094-962f-9d062c912373
-[2016-08-06 08:52:48,881][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  777b1142-d413-4258-835e-4c85b95d078a
-[2016-08-06 08:52:48,945][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d6f66e4f-953b-4cc4-b721-fa9b04b81aa3
-[2016-08-06 08:52:49,010][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  bd0996d8-7d2d-4d95-9b69-29ae1e8963ca
-[2016-08-06 08:52:49,074][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ba6fe7c6-40f9-4535-aedc-ae173725f800
-[2016-08-06 08:52:49,137][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4c5af8e5-2501-4688-81f3-b6bfb5143d6b
-[2016-08-06 08:52:49,202][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c714b828-588e-445c-97be-fb6f392e7bd3
-[2016-08-06 08:52:49,273][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d12071fb-3708-41e6-a9b0-01793b7eb6ac
-[2016-08-06 08:52:49,347][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  37508cc7-5ae6-4350-8a6b-1b541b45b3b1
-[2016-08-06 08:52:49,406][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  24915237-cb5d-4843-b851-521f8c68f3dd
-[2016-08-06 08:52:49,471][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  02b904d4-5b8f-47de-a167-0a519c2b0d84
-[2016-08-06 08:52:49,535][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d3f45e92-897a-456a-aa79-843f2fdf9ea8
-[2016-08-06 08:52:49,600][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c19d15ee-4e1c-4d4f-b0bb-08c00e7a4a25
-[2016-08-06 08:52:49,666][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ed0913da-1948-4e1b-bfcd-7c44e9049d8b
-[2016-08-06 08:52:49,728][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  59bc0057-32a0-4654-ae96-2729d65ed74a
-[2016-08-06 08:52:49,791][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  3fd44514-8465-4aa3-88b1-dbf3970ec7a0
-[2016-08-06 08:52:49,855][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  323e9f38-307b-49ef-b84c-1945c2726ef9
-[2016-08-06 08:52:49,917][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e9feff4c-27f6-43d4-a6d4-c14ece04ba6d
-[2016-08-06 08:52:49,994][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  0d4a462a-7b25-448c-bcb5-dd14ed0fae87
-[2016-08-06 08:52:50,052][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d811b702-7532-4e75-b6c5-4cd47e3afb00
-[2016-08-06 08:52:50,116][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8a4e0745-8756-43f3-824f-1531647a0f88
-[2016-08-06 08:52:50,178][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f7df5e2b-ab34-484b-a360-e9df7a3e225c
-[2016-08-06 08:52:50,242][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6eda0134-452f-4b5b-89f5-d4f11c5c5c94
-[2016-08-06 08:52:50,305][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  790647c1-7c93-4f62-90fc-e81b6a83f832
-[2016-08-06 08:52:50,368][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  37b35ccf-3faa-4c30-b784-79de73363ff0
-[2016-08-06 08:52:50,432][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  76abcbf4-ab1c-4dce-9b98-7b9b43c02e90
-[2016-08-06 08:52:50,497][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8d6f515f-3bee-4fe6-ae5d-b40408fb9b61
-[2016-08-06 08:52:50,559][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  22e6a97e-0325-4ace-a08e-56464d5e46a3
-[2016-08-06 08:52:50,623][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  0398d825-84ca-49b6-90f3-30567faefb37
-[2016-08-06 08:52:50,681][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  49919840-c074-48bb-b1de-8bafde4d337b
-[2016-08-06 08:52:50,744][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4a6428f0-bd93-43e4-ba70-7b4ab8f08e18
-[2016-08-06 08:52:50,807][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d8ccb1fb-9d03-4d12-ad7d-15c245eb09fc
-[2016-08-06 08:52:50,870][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  aea10f8b-ce4e-490a-82bb-808a7c1c4507
-[2016-08-06 08:52:50,933][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d6bf7b3f-ce74-4801-9361-3a4f8a27f1b2
-[2016-08-06 08:52:50,996][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  142e469b-639e-49ff-bd6d-1f1d567668d3
-[2016-08-06 08:52:51,057][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  65b813d6-9758-46b4-9514-79e279ea4abf
-[2016-08-06 08:52:51,121][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  06c2e5f4-e1bb-4588-858c-3afbf2ed277a
-[2016-08-06 08:52:51,185][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  fbfc4970-43ed-486f-a532-dd104b8a9d88
-[2016-08-06 08:52:51,247][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  5a2436f7-c68f-4915-9a45-4bcf6bdf0cb3
-[2016-08-06 08:52:51,303][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  dfc80858-5d8f-4317-8796-0d76e90ee62a
-[2016-08-06 08:52:51,363][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  461a0550-aa52-4b3e-8191-e80ebf44056d
-[2016-08-06 08:52:51,424][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  cbd493cb-bfa5-46f9-a374-0df59fa0adc5
-[2016-08-06 08:52:51,484][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ce4b014e-a49f-484f-b288-e4698ddd495b
-[2016-08-06 08:52:51,545][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2226240a-8a5e-4575-9cb1-689e8f489ee4
-[2016-08-06 08:52:51,621][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a78f7ead-ea45-423c-8bc7-b1fe668a7f7a
-[2016-08-06 08:52:51,681][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  72ecdf9f-cda1-48ff-b1b4-bee6dd7e0f8b
-[2016-08-06 08:52:51,743][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  fad61905-5354-495f-badf-c4910455cda3
-[2016-08-06 08:52:51,803][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  99c8f69f-44a9-40d1-bdf3-807a54ed0a49
-[2016-08-06 08:52:51,865][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d28fdef9-b100-48c5-ab27-ff83374281ba
-[2016-08-06 08:52:51,928][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f4b14862-c7f6-4b9a-b3b6-fd93923bd7dc
-[2016-08-06 08:52:52,000][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  514c2627-68a2-4c01-8109-f9e0aac5de3a
-[2016-08-06 08:52:52,076][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4e84c5fc-e85d-4049-8f73-312b0e8d54bf
-[2016-08-06 08:52:52,143][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  63755142-2aa7-4654-98c9-96678b43506d
-[2016-08-06 08:52:52,207][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ec78b39e-5c53-49b3-85ca-a20b00368e4e
-[2016-08-06 08:52:52,267][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8829ba15-ca8e-4d0a-9d34-db7db06bf5ad
-[2016-08-06 08:52:52,329][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  da75fea5-29e8-4279-85db-d028ac8df5e9
-[2016-08-06 08:52:52,390][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b0967de0-e742-4736-bc59-c21453873283
-[2016-08-06 08:52:52,453][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7023a773-f145-42b3-b87b-b604835c09c6
-[2016-08-06 08:52:52,514][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f45eceed-c0c7-421e-85c4-d7247e04271e
-[2016-08-06 08:52:52,579][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c114af68-ae3c-4543-bd42-4b7eed5540c5
-[2016-08-06 08:52:52,642][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  66bc2ce7-e30f-4328-9055-2e3d2e20ebfc
-[2016-08-06 08:52:52,704][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  52f9fd92-9143-4287-b7ed-e591e373dce4
-[2016-08-06 08:52:52,767][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c7dc5735-7726-4e40-a4fd-ab3637f31cf9
-[2016-08-06 08:52:52,829][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e73aba38-a7d2-41b4-8815-109950335960
-[2016-08-06 08:52:52,891][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  25a5e4c9-976d-49cf-a115-b2fa833ba027
-[2016-08-06 08:52:52,953][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d17230e4-15ea-4ab1-8820-8ade9182007c
-[2016-08-06 08:52:53,017][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2f94f440-813f-4fa6-b9f4-755b555c5f92
-[2016-08-06 08:52:53,080][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  33ff81ab-976a-4478-8ed0-f8505465ea60
-[2016-08-06 08:52:53,143][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  af960d05-52b4-41e0-b3a9-22035d10dc7b
-[2016-08-06 08:52:53,201][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6e9bb34d-2e89-45d4-8566-53047aa695b7
-[2016-08-06 08:52:53,307][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  59ec0609-6810-48e9-9e93-b4ea5bcdbde8
-[2016-08-06 08:52:53,371][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e3d4df21-b3f8-42e8-ba44-b094474b4364
-[2016-08-06 08:52:53,434][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d7bec75b-2b36-4bc3-8dcd-4b09be57f317
-[2016-08-06 08:52:53,499][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  279d5168-1f82-40df-988b-9972f0e599de
-[2016-08-06 08:52:53,562][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a57c1ace-c7e6-4e6a-863f-1bc3e2dfe190
-[2016-08-06 08:52:53,626][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d846a4e0-b87b-49f7-8818-b3b256610d85
-[2016-08-06 08:52:53,691][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8de19fcc-ba61-4d2b-b740-2d3bcb3d300f
-[2016-08-06 08:52:53,755][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  009c9ed1-9f7a-49e9-822d-d9e1354e7e80
-[2016-08-06 08:52:53,818][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  34fc6513-656b-46aa-a087-556f828022af
-[2016-08-06 08:52:53,819][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-2] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-45558-1470487951319-2:11,clientId=null,started=false}
-[2016-08-06 08:52:53,851][INFO][dcm.handler][DefaultMessageListenerContainer-2] =====================Begin video transition==================
+[2016-08-07 12:00:16,267][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  e0560353-7b38-4df1-a4eb-ce17cad01dcb  and  638a93e6-b97f-4440-9283-434c7788f49e
+[2016-08-07 12:00:16,268][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  638a93e6-b97f-4440-9283-434c7788f49e  and  d2271166-d2b8-4ec5-a7ef-3d2b5981556c
+[2016-08-07 12:00:16,269][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  d2271166-d2b8-4ec5-a7ef-3d2b5981556c  and  6c2b7f21-0d1f-44ba-8a0c-0773adec028e
+[2016-08-07 12:00:16,269][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  6c2b7f21-0d1f-44ba-8a0c-0773adec028e  and  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf
+[2016-08-07 12:00:16,269][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf  and  d5265bf5-6282-42ca-82b8-e44007d63142
+[2016-08-07 12:00:16,269][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  d5265bf5-6282-42ca-82b8-e44007d63142  and  c0c1dfe1-8a46-4791-921d-b295c576a97f
+[2016-08-07 12:00:16,269][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  c0c1dfe1-8a46-4791-921d-b295c576a97f  and  31447f74-af5c-482e-a054-a2417895d220
+[2016-08-07 12:00:16,269][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  31447f74-af5c-482e-a054-a2417895d220  and  3a14bc18-4302-4816-b833-be5592a5ef14
+[2016-08-07 12:00:16,269][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  3a14bc18-4302-4816-b833-be5592a5ef14  and  1150caf3-eb6a-4420-b750-7e979460d470
+[2016-08-07 12:00:16,270][INFO][dcm.handler][DefaultMessageListenerContainer-2] Performing image transition between  1150caf3-eb6a-4420-b750-7e979460d470  and  833cd3ea-9ce0-4b0f-9c8d-77e22e1ebabd
+[2016-08-07 12:00:16,339][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully processed  slideshow.pptx
+[2016-08-07 12:00:16,381][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  74367a15-19ef-4507-99cc-bb6d2da96b2d
+[2016-08-07 12:00:16,695][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  506ecf24-fa6a-45bd-88b0-ae41050bdfc6
+[2016-08-07 12:00:16,859][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ca2519d8-a488-456a-a6df-d716555e5457
+[2016-08-07 12:00:16,968][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  65f0d017-fbd8-4ac6-8b89-50459e8c0819
+[2016-08-07 12:00:17,106][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e7f90956-d07d-40ed-b923-dba660100d00
+[2016-08-07 12:00:17,233][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  ef2b99db-7d66-451d-a74f-af3325aaa05a
+[2016-08-07 12:00:17,350][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7f383528-34db-4337-a80c-a86cbcf9fcb7
+[2016-08-07 12:00:17,462][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e7d9ee10-e203-4b81-b49d-7ef360f55aef
+[2016-08-07 12:00:17,566][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  74fe78e9-72b9-44ae-93c5-bbdf42c0bb60
+[2016-08-07 12:00:17,669][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d56ebfb4-57e3-4871-aac5-2916b900f808
+[2016-08-07 12:00:17,670][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_0
+[2016-08-07 12:00:17,671][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_1
+[2016-08-07 12:00:17,671][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_2
+[2016-08-07 12:00:17,671][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_3
+[2016-08-07 12:00:17,672][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_4
+[2016-08-07 12:00:17,672][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_5
+[2016-08-07 12:00:17,672][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_6
+[2016-08-07 12:00:17,673][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_7
+[2016-08-07 12:00:17,673][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_8
+[2016-08-07 12:00:17,674][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_9
+[2016-08-07 12:00:17,674][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_10
+[2016-08-07 12:00:17,674][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_11
+[2016-08-07 12:00:17,675][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_12
+[2016-08-07 12:00:17,675][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_13
+[2016-08-07 12:00:17,675][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_14
+[2016-08-07 12:00:17,676][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_15
+[2016-08-07 12:00:17,676][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_16
+[2016-08-07 12:00:17,676][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_17
+[2016-08-07 12:00:17,676][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_18
+[2016-08-07 12:00:17,677][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_19
+[2016-08-07 12:00:17,677][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_20
+[2016-08-07 12:00:17,677][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_21
+[2016-08-07 12:00:17,678][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_22
+[2016-08-07 12:00:17,678][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_23
+[2016-08-07 12:00:17,678][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_24
+[2016-08-07 12:00:17,678][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_25
+[2016-08-07 12:00:17,679][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_26
+[2016-08-07 12:00:17,679][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_27
+[2016-08-07 12:00:17,679][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_28
+[2016-08-07 12:00:17,679][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_29
+[2016-08-07 12:00:17,681][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_30
+[2016-08-07 12:00:17,684][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_31
+[2016-08-07 12:00:17,685][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_32
+[2016-08-07 12:00:17,686][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_33
+[2016-08-07 12:00:17,686][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_34
+[2016-08-07 12:00:17,686][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_35
+[2016-08-07 12:00:17,687][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_36
+[2016-08-07 12:00:17,687][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_37
+[2016-08-07 12:00:17,687][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_38
+[2016-08-07 12:00:17,688][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_39
+[2016-08-07 12:00:17,688][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_40
+[2016-08-07 12:00:17,689][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_41
+[2016-08-07 12:00:17,689][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_42
+[2016-08-07 12:00:17,690][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_43
+[2016-08-07 12:00:17,690][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_44
+[2016-08-07 12:00:17,690][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_45
+[2016-08-07 12:00:17,691][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_46
+[2016-08-07 12:00:17,691][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_47
+[2016-08-07 12:00:17,691][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_48
+[2016-08-07 12:00:17,692][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  e0560353-7b38-4df1-a4eb-ce17cad01dcb_49
+[2016-08-07 12:00:17,794][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  061fa855-3fbc-48ed-a066-fdf56db02f60
+[2016-08-07 12:00:17,900][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  87843118-5ef3-42a4-8d99-edf5ada73da9
+[2016-08-07 12:00:18,005][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  af7201b8-5245-4a36-8339-b627dacd09c7
+[2016-08-07 12:00:18,111][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b33fad2d-890d-4ad1-af0f-285d0ba4bfa8
+[2016-08-07 12:00:18,220][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  79a29950-2e5e-471b-b02e-d16b650a6536
+[2016-08-07 12:00:18,326][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  98989f27-e7e6-4845-96bb-87f3e584ceaa
+[2016-08-07 12:00:18,458][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e551e76a-8574-42d1-a9a3-1c16c9be2406
+[2016-08-07 12:00:18,567][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7d9c4286-531c-4ec0-b3db-4707a9d9e688
+[2016-08-07 12:00:18,675][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6d7f5ae5-6377-4de8-8a7c-2e22bc64211b
+[2016-08-07 12:00:18,782][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  791ba6ad-e5d7-4fb9-9900-3237a9ddc4fc
+[2016-08-07 12:00:18,783][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_0
+[2016-08-07 12:00:18,783][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_1
+[2016-08-07 12:00:18,784][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_2
+[2016-08-07 12:00:18,784][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_3
+[2016-08-07 12:00:18,784][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_4
+[2016-08-07 12:00:18,784][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_5
+[2016-08-07 12:00:18,785][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_6
+[2016-08-07 12:00:18,785][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_7
+[2016-08-07 12:00:18,785][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_8
+[2016-08-07 12:00:18,786][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_9
+[2016-08-07 12:00:18,786][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_10
+[2016-08-07 12:00:18,786][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_11
+[2016-08-07 12:00:18,787][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_12
+[2016-08-07 12:00:18,787][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_13
+[2016-08-07 12:00:18,788][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_14
+[2016-08-07 12:00:18,788][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_15
+[2016-08-07 12:00:18,788][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_16
+[2016-08-07 12:00:18,789][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_17
+[2016-08-07 12:00:18,789][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_18
+[2016-08-07 12:00:18,789][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_19
+[2016-08-07 12:00:18,790][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_20
+[2016-08-07 12:00:18,790][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_21
+[2016-08-07 12:00:18,790][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_22
+[2016-08-07 12:00:18,791][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_23
+[2016-08-07 12:00:18,791][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_24
+[2016-08-07 12:00:18,791][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_25
+[2016-08-07 12:00:18,792][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_26
+[2016-08-07 12:00:18,792][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_27
+[2016-08-07 12:00:18,792][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_28
+[2016-08-07 12:00:18,793][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_29
+[2016-08-07 12:00:18,794][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_30
+[2016-08-07 12:00:18,794][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_31
+[2016-08-07 12:00:18,795][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_32
+[2016-08-07 12:00:18,795][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_33
+[2016-08-07 12:00:18,795][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_34
+[2016-08-07 12:00:18,796][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_35
+[2016-08-07 12:00:18,796][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_36
+[2016-08-07 12:00:18,796][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_37
+[2016-08-07 12:00:18,796][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_38
+[2016-08-07 12:00:18,797][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_39
+[2016-08-07 12:00:18,797][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_40
+[2016-08-07 12:00:18,797][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_41
+[2016-08-07 12:00:18,798][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_42
+[2016-08-07 12:00:18,798][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_43
+[2016-08-07 12:00:18,798][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_44
+[2016-08-07 12:00:18,799][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_45
+[2016-08-07 12:00:18,799][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_46
+[2016-08-07 12:00:18,799][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_47
+[2016-08-07 12:00:18,800][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_48
+[2016-08-07 12:00:18,800][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  638a93e6-b97f-4440-9283-434c7788f49e_49
+[2016-08-07 12:00:18,902][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  35235423-371b-4be2-941d-6402cf0b757f
+[2016-08-07 12:00:19,010][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  3016e10c-577c-41d4-94d1-a361a2adfb1e
+[2016-08-07 12:00:19,126][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a2b8799b-ef83-4f39-857a-dcfda58b1d74
+[2016-08-07 12:00:19,250][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  26c148df-16b4-4c85-94a9-9395cca1106d
+[2016-08-07 12:00:19,399][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e98766d2-d03c-4b46-8fba-decd8a409f03
+[2016-08-07 12:00:19,535][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2f075693-15e0-4a95-b90c-ce4fffd1075f
+[2016-08-07 12:00:19,645][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c5b1e8bb-4085-45d3-9104-c62016ea3b8c
+[2016-08-07 12:00:19,755][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  49e5306a-da31-4712-a8a1-ae886eb822ae
+[2016-08-07 12:00:19,867][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7e652c2e-a9d8-40de-8a69-892cf3839e98
+[2016-08-07 12:00:19,976][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2d04925b-d97f-436f-90a5-183082064fcd
+[2016-08-07 12:00:19,976][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_0
+[2016-08-07 12:00:19,977][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_1
+[2016-08-07 12:00:19,977][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_2
+[2016-08-07 12:00:19,978][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_3
+[2016-08-07 12:00:19,978][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_4
+[2016-08-07 12:00:19,979][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_5
+[2016-08-07 12:00:19,979][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_6
+[2016-08-07 12:00:19,979][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_7
+[2016-08-07 12:00:19,980][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_8
+[2016-08-07 12:00:19,980][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_9
+[2016-08-07 12:00:19,981][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_10
+[2016-08-07 12:00:19,981][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_11
+[2016-08-07 12:00:19,982][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_12
+[2016-08-07 12:00:19,982][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_13
+[2016-08-07 12:00:19,982][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_14
+[2016-08-07 12:00:19,983][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_15
+[2016-08-07 12:00:19,983][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_16
+[2016-08-07 12:00:19,984][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_17
+[2016-08-07 12:00:19,984][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_18
+[2016-08-07 12:00:19,984][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_19
+[2016-08-07 12:00:19,985][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_20
+[2016-08-07 12:00:19,985][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_21
+[2016-08-07 12:00:19,985][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_22
+[2016-08-07 12:00:19,986][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_23
+[2016-08-07 12:00:19,986][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_24
+[2016-08-07 12:00:19,986][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_25
+[2016-08-07 12:00:19,987][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_26
+[2016-08-07 12:00:19,987][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_27
+[2016-08-07 12:00:19,987][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_28
+[2016-08-07 12:00:19,988][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_29
+[2016-08-07 12:00:19,988][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_30
+[2016-08-07 12:00:19,989][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_31
+[2016-08-07 12:00:19,989][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_32
+[2016-08-07 12:00:19,989][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_33
+[2016-08-07 12:00:19,990][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_34
+[2016-08-07 12:00:19,990][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_35
+[2016-08-07 12:00:19,990][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_36
+[2016-08-07 12:00:19,991][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_37
+[2016-08-07 12:00:19,991][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_38
+[2016-08-07 12:00:19,992][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_39
+[2016-08-07 12:00:19,992][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_40
+[2016-08-07 12:00:19,993][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_41
+[2016-08-07 12:00:19,993][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_42
+[2016-08-07 12:00:19,993][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_43
+[2016-08-07 12:00:19,994][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_44
+[2016-08-07 12:00:19,994][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_45
+[2016-08-07 12:00:19,995][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_46
+[2016-08-07 12:00:19,995][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_47
+[2016-08-07 12:00:19,996][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_48
+[2016-08-07 12:00:19,996][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d2271166-d2b8-4ec5-a7ef-3d2b5981556c_49
+[2016-08-07 12:00:20,096][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  dacf3951-0f22-440c-8d32-5e8a52bed474
+[2016-08-07 12:00:20,280][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8f54e5de-dcd6-4590-8994-0edb426ccff4
+[2016-08-07 12:00:20,421][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  3ebc77c2-4480-42e9-9d8e-1dd3ded61853
+[2016-08-07 12:00:20,531][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  3da8ea89-48ce-4ea2-9ce4-d7ad8df18269
+[2016-08-07 12:00:20,637][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  94cbe66a-1b17-43ee-aa59-a54e8d6c5833
+[2016-08-07 12:00:20,743][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f03d5df3-1aea-4162-9a9c-d37cb36496f4
+[2016-08-07 12:00:20,848][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  303885aa-7578-4ff9-91fb-fd01a4390923
+[2016-08-07 12:00:20,953][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  762db7d1-dcf6-4521-ba4a-0276d41a705c
+[2016-08-07 12:00:21,058][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e75b1515-1035-4a4e-949e-69af88e0cf7a
+[2016-08-07 12:00:21,166][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  01fd6b7e-3d6d-44f5-87da-7052ab1796fa
+[2016-08-07 12:00:21,167][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_0
+[2016-08-07 12:00:21,167][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_1
+[2016-08-07 12:00:21,170][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_2
+[2016-08-07 12:00:21,171][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_3
+[2016-08-07 12:00:21,171][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_4
+[2016-08-07 12:00:21,171][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_5
+[2016-08-07 12:00:21,172][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_6
+[2016-08-07 12:00:21,172][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_7
+[2016-08-07 12:00:21,172][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_8
+[2016-08-07 12:00:21,173][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_9
+[2016-08-07 12:00:21,173][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_10
+[2016-08-07 12:00:21,173][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_11
+[2016-08-07 12:00:21,174][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_12
+[2016-08-07 12:00:21,174][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_13
+[2016-08-07 12:00:21,175][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_14
+[2016-08-07 12:00:21,175][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_15
+[2016-08-07 12:00:21,175][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_16
+[2016-08-07 12:00:21,175][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_17
+[2016-08-07 12:00:21,176][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_18
+[2016-08-07 12:00:21,176][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_19
+[2016-08-07 12:00:21,176][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_20
+[2016-08-07 12:00:21,177][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_21
+[2016-08-07 12:00:21,177][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_22
+[2016-08-07 12:00:21,177][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_23
+[2016-08-07 12:00:21,178][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_24
+[2016-08-07 12:00:21,178][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_25
+[2016-08-07 12:00:21,178][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_26
+[2016-08-07 12:00:21,179][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_27
+[2016-08-07 12:00:21,179][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_28
+[2016-08-07 12:00:21,182][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_29
+[2016-08-07 12:00:21,183][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_30
+[2016-08-07 12:00:21,183][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_31
+[2016-08-07 12:00:21,184][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_32
+[2016-08-07 12:00:21,184][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_33
+[2016-08-07 12:00:21,185][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_34
+[2016-08-07 12:00:21,185][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_35
+[2016-08-07 12:00:21,185][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_36
+[2016-08-07 12:00:21,186][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_37
+[2016-08-07 12:00:21,186][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_38
+[2016-08-07 12:00:21,186][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_39
+[2016-08-07 12:00:21,187][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_40
+[2016-08-07 12:00:21,187][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_41
+[2016-08-07 12:00:21,187][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_42
+[2016-08-07 12:00:21,188][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_43
+[2016-08-07 12:00:21,188][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_44
+[2016-08-07 12:00:21,188][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_45
+[2016-08-07 12:00:21,189][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_46
+[2016-08-07 12:00:21,189][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_47
+[2016-08-07 12:00:21,189][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_48
+[2016-08-07 12:00:21,190][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  6c2b7f21-0d1f-44ba-8a0c-0773adec028e_49
+[2016-08-07 12:00:21,292][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b3e54598-1ed6-4f35-ad9d-2457c128215d
+[2016-08-07 12:00:21,399][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9b141e77-3c9a-48dc-9c7e-6a01e818717d
+[2016-08-07 12:00:21,512][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  94235ccd-163e-40b6-bc3f-4ea3ccf5903a
+[2016-08-07 12:00:21,617][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4b9fbc2a-ac10-4072-9d50-3e39ed539356
+[2016-08-07 12:00:21,724][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9fcfef39-d632-4aea-a070-aaf54684ccdf
+[2016-08-07 12:00:21,829][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b845b6f5-68be-44b5-b8fa-6ce069b6d0d8
+[2016-08-07 12:00:21,963][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6fa770dc-26d9-472a-9ce9-9bdc87c5b9e5
+[2016-08-07 12:00:22,069][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  263e02e1-a550-4a2e-abf8-5aab4bd8b39c
+[2016-08-07 12:00:22,181][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  77862a30-ec06-4ad1-814a-56882288a56e
+[2016-08-07 12:00:22,291][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f9fc11dd-12ae-42ce-b3ed-98c2c26a6e53
+[2016-08-07 12:00:22,291][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_0
+[2016-08-07 12:00:22,291][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_1
+[2016-08-07 12:00:22,292][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_2
+[2016-08-07 12:00:22,292][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_3
+[2016-08-07 12:00:22,292][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_4
+[2016-08-07 12:00:22,292][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_5
+[2016-08-07 12:00:22,293][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_6
+[2016-08-07 12:00:22,293][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_7
+[2016-08-07 12:00:22,293][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_8
+[2016-08-07 12:00:22,294][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_9
+[2016-08-07 12:00:22,294][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_10
+[2016-08-07 12:00:22,294][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_11
+[2016-08-07 12:00:22,295][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_12
+[2016-08-07 12:00:22,295][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_13
+[2016-08-07 12:00:22,295][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_14
+[2016-08-07 12:00:22,296][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_15
+[2016-08-07 12:00:22,296][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_16
+[2016-08-07 12:00:22,296][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_17
+[2016-08-07 12:00:22,297][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_18
+[2016-08-07 12:00:22,297][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_19
+[2016-08-07 12:00:22,297][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_20
+[2016-08-07 12:00:22,298][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_21
+[2016-08-07 12:00:22,298][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_22
+[2016-08-07 12:00:22,298][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_23
+[2016-08-07 12:00:22,299][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_24
+[2016-08-07 12:00:22,299][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_25
+[2016-08-07 12:00:22,299][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_26
+[2016-08-07 12:00:22,300][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_27
+[2016-08-07 12:00:22,300][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_28
+[2016-08-07 12:00:22,300][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_29
+[2016-08-07 12:00:22,300][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_30
+[2016-08-07 12:00:22,301][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_31
+[2016-08-07 12:00:22,301][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_32
+[2016-08-07 12:00:22,301][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_33
+[2016-08-07 12:00:22,302][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_34
+[2016-08-07 12:00:22,302][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_35
+[2016-08-07 12:00:22,302][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_36
+[2016-08-07 12:00:22,302][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_37
+[2016-08-07 12:00:22,303][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_38
+[2016-08-07 12:00:22,303][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_39
+[2016-08-07 12:00:22,303][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_40
+[2016-08-07 12:00:22,304][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_41
+[2016-08-07 12:00:22,304][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_42
+[2016-08-07 12:00:22,304][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_43
+[2016-08-07 12:00:22,305][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_44
+[2016-08-07 12:00:22,305][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_45
+[2016-08-07 12:00:22,305][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_46
+[2016-08-07 12:00:22,306][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_47
+[2016-08-07 12:00:22,306][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_48
+[2016-08-07 12:00:22,306][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  8c68060e-49e7-4cf7-8919-5f6d7e88a5cf_49
+[2016-08-07 12:00:22,405][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  0c9de0f0-6e38-48d6-a84f-e710e10de4df
+[2016-08-07 12:00:22,511][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  5e88ceb1-3753-4351-9aa4-5fd4e78c1c29
+[2016-08-07 12:00:22,618][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e65ba3c3-51ce-4548-b1c6-9b004fd4b3ad
+[2016-08-07 12:00:22,725][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  bc60bdb3-1c6b-4727-8e49-8c0a712a77fc
+[2016-08-07 12:00:22,831][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9a1cfacc-3127-42eb-8f47-fb868cb6d63c
+[2016-08-07 12:00:22,940][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a561f299-45c3-4704-a423-7ddb6a0eb165
+[2016-08-07 12:00:23,046][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  37b238f3-5c51-4fa6-b1bb-0598e03baab9
+[2016-08-07 12:00:23,150][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2b317313-925d-4bf6-85fc-ba6e54a13642
+[2016-08-07 12:00:23,255][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  70de2a86-1f07-4b05-96c6-3c76cdb809e5
+[2016-08-07 12:00:23,362][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  f7840dd2-14d5-4c5c-8c69-a9373b00e67a
+[2016-08-07 12:00:23,363][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_0
+[2016-08-07 12:00:23,363][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_1
+[2016-08-07 12:00:23,363][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_2
+[2016-08-07 12:00:23,364][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_3
+[2016-08-07 12:00:23,364][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_4
+[2016-08-07 12:00:23,365][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_5
+[2016-08-07 12:00:23,365][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_6
+[2016-08-07 12:00:23,365][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_7
+[2016-08-07 12:00:23,366][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_8
+[2016-08-07 12:00:23,366][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_9
+[2016-08-07 12:00:23,366][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_10
+[2016-08-07 12:00:23,367][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_11
+[2016-08-07 12:00:23,367][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_12
+[2016-08-07 12:00:23,367][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_13
+[2016-08-07 12:00:23,368][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_14
+[2016-08-07 12:00:23,368][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_15
+[2016-08-07 12:00:23,368][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_16
+[2016-08-07 12:00:23,369][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_17
+[2016-08-07 12:00:23,369][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_18
+[2016-08-07 12:00:23,369][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_19
+[2016-08-07 12:00:23,370][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_20
+[2016-08-07 12:00:23,370][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_21
+[2016-08-07 12:00:23,370][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_22
+[2016-08-07 12:00:23,371][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_23
+[2016-08-07 12:00:23,371][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_24
+[2016-08-07 12:00:23,371][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_25
+[2016-08-07 12:00:23,372][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_26
+[2016-08-07 12:00:23,372][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_27
+[2016-08-07 12:00:23,372][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_28
+[2016-08-07 12:00:23,373][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_29
+[2016-08-07 12:00:23,378][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_30
+[2016-08-07 12:00:23,379][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_31
+[2016-08-07 12:00:23,379][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_32
+[2016-08-07 12:00:23,380][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_33
+[2016-08-07 12:00:23,380][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_34
+[2016-08-07 12:00:23,380][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_35
+[2016-08-07 12:00:23,381][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_36
+[2016-08-07 12:00:23,381][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_37
+[2016-08-07 12:00:23,381][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_38
+[2016-08-07 12:00:23,382][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_39
+[2016-08-07 12:00:23,382][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_40
+[2016-08-07 12:00:23,383][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_41
+[2016-08-07 12:00:23,383][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_42
+[2016-08-07 12:00:23,383][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_43
+[2016-08-07 12:00:23,384][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_44
+[2016-08-07 12:00:23,384][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_45
+[2016-08-07 12:00:23,384][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_46
+[2016-08-07 12:00:23,385][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_47
+[2016-08-07 12:00:23,385][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_48
+[2016-08-07 12:00:23,385][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  d5265bf5-6282-42ca-82b8-e44007d63142_49
+[2016-08-07 12:00:23,514][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  9d700fa0-8bd1-4ff1-b535-7548e0796334
+[2016-08-07 12:00:23,618][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7b8a0206-74d8-4eb4-b787-ed534be964c5
+[2016-08-07 12:00:23,720][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  27a7abda-402d-43e0-8558-07ff65f8e301
+[2016-08-07 12:00:23,821][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  712f1ca7-dbee-480f-a42b-e323cdcf6f13
+[2016-08-07 12:00:23,923][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  073787a4-e129-40d5-ba0f-ee1bb97abea6
+[2016-08-07 12:00:24,024][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  616658fd-177f-41e9-957e-fb91f6b6b735
+[2016-08-07 12:00:24,126][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  62cb675d-881d-43d6-9e91-891fa7c39ca6
+[2016-08-07 12:00:24,228][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7a01e62a-7f27-439c-95e2-66ba6628d08e
+[2016-08-07 12:00:24,331][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a328bc8d-65fd-4388-8445-4695c400c666
+[2016-08-07 12:00:24,432][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7e6f6870-93be-4ec6-8fd1-d6351be8898d
+[2016-08-07 12:00:24,432][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_0
+[2016-08-07 12:00:24,432][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_1
+[2016-08-07 12:00:24,433][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_2
+[2016-08-07 12:00:24,433][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_3
+[2016-08-07 12:00:24,433][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_4
+[2016-08-07 12:00:24,433][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_5
+[2016-08-07 12:00:24,433][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_6
+[2016-08-07 12:00:24,434][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_7
+[2016-08-07 12:00:24,434][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_8
+[2016-08-07 12:00:24,434][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_9
+[2016-08-07 12:00:24,434][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_10
+[2016-08-07 12:00:24,435][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_11
+[2016-08-07 12:00:24,435][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_12
+[2016-08-07 12:00:24,435][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_13
+[2016-08-07 12:00:24,435][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_14
+[2016-08-07 12:00:24,436][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_15
+[2016-08-07 12:00:24,436][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_16
+[2016-08-07 12:00:24,436][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_17
+[2016-08-07 12:00:24,436][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_18
+[2016-08-07 12:00:24,437][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_19
+[2016-08-07 12:00:24,437][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_20
+[2016-08-07 12:00:24,437][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_21
+[2016-08-07 12:00:24,437][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_22
+[2016-08-07 12:00:24,437][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_23
+[2016-08-07 12:00:24,438][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_24
+[2016-08-07 12:00:24,438][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_25
+[2016-08-07 12:00:24,438][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_26
+[2016-08-07 12:00:24,438][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_27
+[2016-08-07 12:00:24,439][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_28
+[2016-08-07 12:00:24,439][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_29
+[2016-08-07 12:00:24,439][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_30
+[2016-08-07 12:00:24,439][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_31
+[2016-08-07 12:00:24,440][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_32
+[2016-08-07 12:00:24,440][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_33
+[2016-08-07 12:00:24,440][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_34
+[2016-08-07 12:00:24,440][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_35
+[2016-08-07 12:00:24,441][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_36
+[2016-08-07 12:00:24,441][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_37
+[2016-08-07 12:00:24,441][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_38
+[2016-08-07 12:00:24,441][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_39
+[2016-08-07 12:00:24,441][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_40
+[2016-08-07 12:00:24,442][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_41
+[2016-08-07 12:00:24,442][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_42
+[2016-08-07 12:00:24,442][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_43
+[2016-08-07 12:00:24,442][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_44
+[2016-08-07 12:00:24,442][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_45
+[2016-08-07 12:00:24,443][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_46
+[2016-08-07 12:00:24,443][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_47
+[2016-08-07 12:00:24,443][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_48
+[2016-08-07 12:00:24,443][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  c0c1dfe1-8a46-4791-921d-b295c576a97f_49
+[2016-08-07 12:00:24,538][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  8a3944d8-7e84-45c8-a477-4e038110ba3d
+[2016-08-07 12:00:24,640][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c9423658-e778-4676-be34-962dc572d493
+[2016-08-07 12:00:24,743][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  1e8027b2-0d81-4fc1-a84b-859f7c14da45
+[2016-08-07 12:00:24,846][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c434c3f3-5727-4c3f-bbd0-b8d4d0596f66
+[2016-08-07 12:00:24,949][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  6ba4eee6-8ff7-458d-9ffd-e1bfb8be7b1b
+[2016-08-07 12:00:25,074][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  41185a17-d7f4-487d-b040-9a4a1d3219cb
+[2016-08-07 12:00:25,180][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  16427994-e18b-4338-8c50-09319aaf5105
+[2016-08-07 12:00:25,284][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  1519a7d0-c06c-4deb-b62a-a9f5d98f4030
+[2016-08-07 12:00:25,390][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  e526340f-7d14-4216-9045-6823dded2040
+[2016-08-07 12:00:25,493][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4a6b9ecb-66ca-4825-b180-ae6fbb44377c
+[2016-08-07 12:00:25,494][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_0
+[2016-08-07 12:00:25,494][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_1
+[2016-08-07 12:00:25,494][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_2
+[2016-08-07 12:00:25,494][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_3
+[2016-08-07 12:00:25,494][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_4
+[2016-08-07 12:00:25,495][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_5
+[2016-08-07 12:00:25,495][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_6
+[2016-08-07 12:00:25,495][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_7
+[2016-08-07 12:00:25,495][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_8
+[2016-08-07 12:00:25,495][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_9
+[2016-08-07 12:00:25,496][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_10
+[2016-08-07 12:00:25,496][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_11
+[2016-08-07 12:00:25,496][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_12
+[2016-08-07 12:00:25,496][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_13
+[2016-08-07 12:00:25,496][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_14
+[2016-08-07 12:00:25,497][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_15
+[2016-08-07 12:00:25,497][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_16
+[2016-08-07 12:00:25,497][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_17
+[2016-08-07 12:00:25,497][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_18
+[2016-08-07 12:00:25,497][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_19
+[2016-08-07 12:00:25,498][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_20
+[2016-08-07 12:00:25,498][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_21
+[2016-08-07 12:00:25,498][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_22
+[2016-08-07 12:00:25,498][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_23
+[2016-08-07 12:00:25,498][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_24
+[2016-08-07 12:00:25,498][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_25
+[2016-08-07 12:00:25,499][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_26
+[2016-08-07 12:00:25,499][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_27
+[2016-08-07 12:00:25,499][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_28
+[2016-08-07 12:00:25,499][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_29
+[2016-08-07 12:00:25,500][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_30
+[2016-08-07 12:00:25,500][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_31
+[2016-08-07 12:00:25,500][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_32
+[2016-08-07 12:00:25,500][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_33
+[2016-08-07 12:00:25,501][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_34
+[2016-08-07 12:00:25,501][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_35
+[2016-08-07 12:00:25,501][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_36
+[2016-08-07 12:00:25,501][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_37
+[2016-08-07 12:00:25,501][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_38
+[2016-08-07 12:00:25,502][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_39
+[2016-08-07 12:00:25,502][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_40
+[2016-08-07 12:00:25,502][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_41
+[2016-08-07 12:00:25,502][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_42
+[2016-08-07 12:00:25,503][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_43
+[2016-08-07 12:00:25,503][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_44
+[2016-08-07 12:00:25,503][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_45
+[2016-08-07 12:00:25,503][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_46
+[2016-08-07 12:00:25,503][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_47
+[2016-08-07 12:00:25,504][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_48
+[2016-08-07 12:00:25,504][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  31447f74-af5c-482e-a054-a2417895d220_49
+[2016-08-07 12:00:25,603][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  1849dd66-a07f-4d9b-bcbd-79ac5deb3dff
+[2016-08-07 12:00:25,709][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  11451dbb-6ec2-4e95-817f-7a1a3a528e86
+[2016-08-07 12:00:25,814][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  aba17ce5-380b-49d9-b98d-ee07897376e3
+[2016-08-07 12:00:25,918][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  0d13170d-f10a-44ab-8321-1fb0f947f709
+[2016-08-07 12:00:26,024][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b09b2d14-57f9-4a0e-8e0e-e0f72eb2361d
+[2016-08-07 12:00:26,130][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a6017a85-1578-49dd-8b0c-492395165a23
+[2016-08-07 12:00:26,235][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  d9a33c33-288e-4608-8420-22468e6a1dd7
+[2016-08-07 12:00:26,346][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  a9e0872f-8d35-4547-a817-1df5e5fda547
+[2016-08-07 12:00:26,452][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  3a85e892-7ade-401e-ac36-3d40f4786df8
+[2016-08-07 12:00:26,556][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  4bca2ad0-dc29-4cc3-9eb1-8abc9c62cf0b
+[2016-08-07 12:00:26,556][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_0
+[2016-08-07 12:00:26,557][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_1
+[2016-08-07 12:00:26,557][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_2
+[2016-08-07 12:00:26,557][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_3
+[2016-08-07 12:00:26,557][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_4
+[2016-08-07 12:00:26,558][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_5
+[2016-08-07 12:00:26,558][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_6
+[2016-08-07 12:00:26,558][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_7
+[2016-08-07 12:00:26,558][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_8
+[2016-08-07 12:00:26,559][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_9
+[2016-08-07 12:00:26,559][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_10
+[2016-08-07 12:00:26,559][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_11
+[2016-08-07 12:00:26,559][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_12
+[2016-08-07 12:00:26,560][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_13
+[2016-08-07 12:00:26,560][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_14
+[2016-08-07 12:00:26,560][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_15
+[2016-08-07 12:00:26,560][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_16
+[2016-08-07 12:00:26,560][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_17
+[2016-08-07 12:00:26,561][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_18
+[2016-08-07 12:00:26,561][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_19
+[2016-08-07 12:00:26,561][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_20
+[2016-08-07 12:00:26,561][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_21
+[2016-08-07 12:00:26,562][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_22
+[2016-08-07 12:00:26,562][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_23
+[2016-08-07 12:00:26,562][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_24
+[2016-08-07 12:00:26,562][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_25
+[2016-08-07 12:00:26,562][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_26
+[2016-08-07 12:00:26,563][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_27
+[2016-08-07 12:00:26,563][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_28
+[2016-08-07 12:00:26,563][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_29
+[2016-08-07 12:00:26,563][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_30
+[2016-08-07 12:00:26,564][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_31
+[2016-08-07 12:00:26,564][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_32
+[2016-08-07 12:00:26,564][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_33
+[2016-08-07 12:00:26,564][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_34
+[2016-08-07 12:00:26,565][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_35
+[2016-08-07 12:00:26,565][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_36
+[2016-08-07 12:00:26,565][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_37
+[2016-08-07 12:00:26,565][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_38
+[2016-08-07 12:00:26,566][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_39
+[2016-08-07 12:00:26,566][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_40
+[2016-08-07 12:00:26,566][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_41
+[2016-08-07 12:00:26,566][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_42
+[2016-08-07 12:00:26,567][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_43
+[2016-08-07 12:00:26,567][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_44
+[2016-08-07 12:00:26,567][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_45
+[2016-08-07 12:00:26,567][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_46
+[2016-08-07 12:00:26,568][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_47
+[2016-08-07 12:00:26,568][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_48
+[2016-08-07 12:00:26,568][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  3a14bc18-4302-4816-b833-be5592a5ef14_49
+[2016-08-07 12:00:26,698][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  c996be1e-2737-4801-9a7e-e791c2352594
+[2016-08-07 12:00:26,805][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  2700940c-1d1a-4b80-ab6c-8231a6d69923
+[2016-08-07 12:00:26,911][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  0d33bedb-57ef-4ae5-9fdc-86d16877d040
+[2016-08-07 12:00:27,017][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  fb170ce8-438e-4eb5-a455-a962a9ff3cf0
+[2016-08-07 12:00:27,123][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  19774603-30d4-439e-be8a-0102edca2427
+[2016-08-07 12:00:27,236][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  7f3b6033-c042-446e-b8ed-a4ac81edb7ed
+[2016-08-07 12:00:27,355][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  b25bf3b1-d32f-4e84-8155-0d041715722d
+[2016-08-07 12:00:27,464][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  dc2651bf-2997-41c0-97ab-8e18c692622d
+[2016-08-07 12:00:27,571][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  14cea121-745d-4a44-85ab-261ab6479142
+[2016-08-07 12:00:27,677][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully transitioned image:  28afd045-87f3-49cc-8790-9b7f6c172c02
+[2016-08-07 12:00:27,677][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_0
+[2016-08-07 12:00:27,678][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_1
+[2016-08-07 12:00:27,678][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_2
+[2016-08-07 12:00:27,678][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_3
+[2016-08-07 12:00:27,678][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_4
+[2016-08-07 12:00:27,679][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_5
+[2016-08-07 12:00:27,679][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_6
+[2016-08-07 12:00:27,679][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_7
+[2016-08-07 12:00:27,679][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_8
+[2016-08-07 12:00:27,680][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_9
+[2016-08-07 12:00:27,680][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_10
+[2016-08-07 12:00:27,680][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_11
+[2016-08-07 12:00:27,680][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_12
+[2016-08-07 12:00:27,681][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_13
+[2016-08-07 12:00:27,681][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_14
+[2016-08-07 12:00:27,681][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_15
+[2016-08-07 12:00:27,681][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_16
+[2016-08-07 12:00:27,682][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_17
+[2016-08-07 12:00:27,682][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_18
+[2016-08-07 12:00:27,682][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_19
+[2016-08-07 12:00:27,682][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_20
+[2016-08-07 12:00:27,683][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_21
+[2016-08-07 12:00:27,683][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_22
+[2016-08-07 12:00:27,683][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_23
+[2016-08-07 12:00:27,684][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_24
+[2016-08-07 12:00:27,684][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_25
+[2016-08-07 12:00:27,684][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_26
+[2016-08-07 12:00:27,685][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_27
+[2016-08-07 12:00:27,685][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_28
+[2016-08-07 12:00:27,685][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_29
+[2016-08-07 12:00:27,686][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_30
+[2016-08-07 12:00:27,686][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_31
+[2016-08-07 12:00:27,686][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_32
+[2016-08-07 12:00:27,687][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_33
+[2016-08-07 12:00:27,687][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_34
+[2016-08-07 12:00:27,688][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_35
+[2016-08-07 12:00:27,688][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_36
+[2016-08-07 12:00:27,688][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_37
+[2016-08-07 12:00:27,689][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_38
+[2016-08-07 12:00:27,689][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_39
+[2016-08-07 12:00:27,689][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_40
+[2016-08-07 12:00:27,689][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_41
+[2016-08-07 12:00:27,690][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_42
+[2016-08-07 12:00:27,690][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_43
+[2016-08-07 12:00:27,690][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_44
+[2016-08-07 12:00:27,691][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_45
+[2016-08-07 12:00:27,691][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_46
+[2016-08-07 12:00:27,692][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_47
+[2016-08-07 12:00:27,692][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_48
+[2016-08-07 12:00:27,692][INFO][dcm.handler][DefaultMessageListenerContainer-2] Successfully copied image:  1150caf3-eb6a-4420-b750-7e979460d470_49
+[2016-08-07 12:00:27,695][INFO][org.springframework.jms.connection.CachingConnectionFactory][DefaultMessageListenerContainer-2] Established shared JMS Connection: ActiveMQConnection {id=ID:ryan-ThinkCentre-M57-33475-1470585602143-2:11,clientId=null,started=false}
+[2016-08-07 12:00:27,733][INFO][dcm.handler][DefaultMessageListenerContainer-2] =====================Begin video transition==================
 
 

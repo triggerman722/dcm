@@ -250,7 +250,7 @@
 (defn deckmotion []
   [:div [:h1 "Deckmotion Page"] [:h3 (@app-state :page-id)]
    [:a {:href "#/about"} "about page"]
-   [:video {:width "640" :height "480" :controls true :src (str "/videos/" (@app-state :page-id) ".mp4")}
+   [:video {:controls true :src (str "/videos/" (@app-state :page-id) ".mp4")}
     ]])
 
 (defmulti current-page #(@app-state :page))

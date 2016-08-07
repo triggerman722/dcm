@@ -593,3 +593,6 @@ notifying browser that file changed:  /dcm/app.js
 [32mSuccessfully compiled "resources/public/js/dcm.js" in 3.443 seconds.[0m
 notifying browser that file changed:  resources/public/js/out/cljs_deps.js
 notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 4.593 seconds.[0m
+notifying browser that file changed:  /dcm/app.js

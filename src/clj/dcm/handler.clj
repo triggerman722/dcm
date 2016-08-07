@@ -6,13 +6,14 @@
   (:import [org.apache.activemq.broker.BrokerFactory])
   (:import [org.apache.activemq.broker.BrokerService])
   (:import [org.apache.poi.xslf.usermodel XMLSlideShow XSLFSlide])
+  (:import [org.apache.poi.util Units])
   (:import [java.awt Image Graphics Dimension AlphaComposite])
   (:import [java.awt.image BufferedImage])
+  (:import [java.awt.geom AffineTransform])
   (:import [javax.imageio ImageIO])
-  (:import [java.awt Color])
+  (:import [java.awt Color RenderingHints])
   (:import [java.util Vector])
   (:import [java.io File])
-  (:import [com.deckmotion VideoEncoder])
 
   (:require 
                         [compojure.handler :as handler]
@@ -59,13 +60,24 @@
 (let [
        slideshow (.getSlideShow slide)
        dims (.getPageSize slideshow)
-       img (new BufferedImage (.getWidth dims) (.getHeight dims) BufferedImage/TYPE_INT_RGB)
+       slidewidth (Units/pointsToPixel (.getWidth dims))
+       slideheight (Units/pointsToPixel (.getHeight dims))
+       img (new BufferedImage slidewidth slideheight BufferedImage/TYPE_INT_RGB)
        gfx (.createGraphics img)
        uniquename (.toString (java.util.UUID/randomUUID))
        fileout (io/output-stream (io/file "resources" "private" "images" uniquename))
+       transx (new AffineTransform)
+       dpisize (/ 96.0 72.0)
      ] 
+        (.scale transx dpisize dpisize)
+        (.setTransform gfx transx)
+        (.setRenderingHint gfx RenderingHints/KEY_ANTIALIASING RenderingHints/VALUE_ANTIALIAS_ON)
+        (.setRenderingHint gfx RenderingHints/KEY_RENDERING RenderingHints/VALUE_RENDER_QUALITY)
+        (.setRenderingHint gfx RenderingHints/KEY_INTERPOLATION RenderingHints/VALUE_INTERPOLATION_BICUBIC)
+        (.setRenderingHint gfx RenderingHints/KEY_FRACTIONALMETRICS RenderingHints/VALUE_FRACTIONALMETRICS_ON)
         (.setPaint gfx Color/white)
-        (.fillRect gfx 0 0 (.getWidth dims) (.getHeight dims))
+        (println (str "The dimensions are: " slidewidth slideheight))
+        (.fillRect gfx 0 0 slidewidth slideheight)
         (.draw slide gfx)
         (ImageIO/write img "jpeg" fileout)
         (log/info "Successfully saved image for slide#: " (.getSlideNumber slide))
@@ -99,11 +111,25 @@
      (ImageIO/write img-new "jpeg" fileout)
      (log/info "Successfully transitioned image: " uniquename)
      (str "/home/greg/Projects/dcm/resources/private/images/" uniquename)))
+(defn copy-image [start progress]
+ (let [startfile (io/file "resources" "private" "images" start)
+       endname   (str start "_" progress)
+       endfile   (io/file "resources" "private" "images" endname)]
+     (io/copy startfile endfile)
+     (log/info "Successfully copied image: " endname)
+     (str "/home/greg/Projects/dcm/resources/private/images/" endname))
+)
 (defn make-transition-images [start end]
      (let [startfile (io/file "resources" "private" "images" start)
        endfile   (io/file "resources" "private" "images" end)]
      (log/info "Performing image transition between " start " and " end)
-     (concat [(str "/home/greg/Projects/dcm/resources/private/images/" start)] (concat (for [n (range 10)] (fade-image startfile endfile n)) [(str "/home/greg/Projects/dcm/resources/private/images/" end)]))
+     (concat [(for [l (range 50)] 
+                 (copy-image start l))] 
+         (concat 
+             (for [n (range 10)] (fade-image startfile endfile n))
+             [(str "/home/greg/Projects/dcm/resources/private/images/" end)]
+         )
+     )
      )
 )
 (defn rename-image-files [inputfile increment]
@@ -117,24 +143,21 @@
       ; TODO: Use clojure shell and run FFMPEG.
       (let [
             filelist (distinct (flatten message)) ; how to eliminate duplicates?
-            ;videoencoder (new VideoEncoder)
-            ;temporaryVideoFilename (str "/home/greg/Projects/dcm/resources/private/videos/" (.toString (java.util.UUID/randomUUID)) ".mov")
-            ;temporaryVideo (VideoEncoder/createMediaLocator temporaryVideoFilename)
-            ;audioencoder (new VideoEncoder)
-            ;soundfile (io/file "resources" "private" "audio" "slideshow.wav")
-            ;destinationVideo (VideoEncoder/createMediaLocator (str "/home/greg/Projects/dcm/resources/public/videos/" (.toString (java.util.UUID/randomUUID)) ".mp4"))
             inc-filelist (doall (map-indexed (fn [i x] (rename-image-files x i)) filelist))
+            outputfilename (.toString (java.util.UUID/randomUUID))
+            outputMP4video (str "/home/greg/Projects/dcm/resources/public/videos/" outputfilename  ".mp4")
+            outputOGVvideo (str "/home/greg/Projects/dcm/resources/public/videos/" outputfilename  ".ogv")
+            outputWEBMvideo (str "/home/greg/Projects/dcm/resources/public/videos/" outputfilename  ".webm")
            ]
-;           (println filelist)
           (println inc-filelist)
-          (println (shell/sh "ffmpeg" "-y" "-f" "image2" "-loop" "1" "-i" "/home/greg/Projects/dcm/resources/private/images/slide_%d.jpg" "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.wav" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" "-t" "00:00:30" (str "/home/greg/Projects/dcm/resources/public/videos/" (.toString (java.util.UUID/randomUUID)) ".mp4")))
-          ;(.encode videoencoder 640 480 20 (Vector. filelist) temporaryVideo)
-          ;(println "Beginning merge")
-          ;(.mergeFiles audioencoder temporaryVideo soundfile destinationVideo)
-          ;(println "Finished merge")
-          ;(println (str "Killing temp video: " temporaryVideoFilename))          
-          ;(io/delete-file temporaryVideoFilename)
-          ;(println "Temporary Video Successfully killed")
+
+;          (println (shell/sh "ffmpeg" "-y" "-f" "image2" "-loop" "1" "-i" "/home/greg/Projects/dcm/resources/private/images/slide_%d.jpg" "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.wav" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" "-t" "00:00:30" outputMP4video))
+          (println (shell/sh "ffmpeg" "-y" "-f" "image2" "-i" "/home/greg/Projects/dcm/resources/private/images/slide_%d.jpg" "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.wav" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" outputMP4video))
+
+          (println "Transforming to OGV")
+          (println (shell/sh "ffmpeg" "-y" "-i" outputMP4video "-vcodec" "libtheora" "-qscale:v" "7" "-acodec" "libvorbis" "-qscale:a" "3" outputOGVvideo))
+          (println "Transforming to WEBM")
+          (println (shell/sh "ffmpeg" "-y" "-i" outputMP4video "-acodec" "libvorbis" "-ac" "2" "-ab" "96k" "-ar" "44100" "-b" "345k" "-s" "640x360" outputWEBMvideo))
           (println "Killing temporary image files...")
           (doall (map #(io/delete-file % true) inc-filelist))
           (println "Successfully killed all temporary images files")

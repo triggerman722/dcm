@@ -12,27 +12,27 @@ goog.require('goog.events');
 dcm.app.application = document.getElementById("application");
 dcm.app.app_state = reagent.core.atom.call(null,cljs.core.PersistentArrayMap.EMPTY);
 dcm.app.formfield = (function dcm$app$formfield(type,placeholder,formkey){
-return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"input","input",556931961),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"type","type",1174270348),type,new cljs.core.Keyword(null,"placeholder","placeholder",-104873083),placeholder,new cljs.core.Keyword(null,"on-change","on-change",-732046149),(function (p1__32892_SHARP_){
-return cljs.core.swap_BANG_.call(null,dcm.app.app_state,cljs.core.assoc,formkey,p1__32892_SHARP_.target.value);
+return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"input","input",556931961),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"type","type",1174270348),type,new cljs.core.Keyword(null,"placeholder","placeholder",-104873083),placeholder,new cljs.core.Keyword(null,"on-change","on-change",-732046149),(function (p1__32967_SHARP_){
+return cljs.core.swap_BANG_.call(null,dcm.app.app_state,cljs.core.assoc,formkey,p1__32967_SHARP_.target.value);
 }),new cljs.core.Keyword(null,"class","class",-2030961996),"form-control input-md"], null)], null);
 });
 dcm.app.hook_browser_navigation_BANG_ = (function dcm$app$hook_browser_navigation_BANG_(){
-var G__32894 = (new goog.History());
-goog.events.listen(G__32894,goog.history.EventType.NAVIGATE,((function (G__32894){
+var G__32969 = (new goog.History());
+goog.events.listen(G__32969,goog.history.EventType.NAVIGATE,((function (G__32969){
 return (function (event){
 return secretary.core.dispatch_BANG_.call(null,event.token);
-});})(G__32894))
+});})(G__32969))
 );
 
-G__32894.setEnabled(true);
+G__32969.setEnabled(true);
 
-return G__32894;
+return G__32969;
 });
-dcm.app.error_handler = (function dcm$app$error_handler(p__32895){
-var map__32898 = p__32895;
-var map__32898__$1 = ((((!((map__32898 == null)))?((((map__32898.cljs$lang$protocol_mask$partition0$ & (64))) || (map__32898.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__32898):map__32898);
-var status = cljs.core.get.call(null,map__32898__$1,new cljs.core.Keyword(null,"status","status",-1997798413));
-var status_text = cljs.core.get.call(null,map__32898__$1,new cljs.core.Keyword(null,"status-text","status-text",-1834235478));
+dcm.app.error_handler = (function dcm$app$error_handler(p__32970){
+var map__32973 = p__32970;
+var map__32973__$1 = ((((!((map__32973 == null)))?((((map__32973.cljs$lang$protocol_mask$partition0$ & (64))) || (map__32973.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__32973):map__32973);
+var status = cljs.core.get.call(null,map__32973__$1,new cljs.core.Keyword(null,"status","status",-1997798413));
+var status_text = cljs.core.get.call(null,map__32973__$1,new cljs.core.Keyword(null,"status-text","status-text",-1834235478));
 return console.log([cljs.core.str("something bad happened: "),cljs.core.str(status),cljs.core.str(" "),cljs.core.str(status_text)].join(''));
 });
 dcm.app.loginsuccess = (function dcm$app$loginsuccess(response){
@@ -55,25 +55,25 @@ var class$ = "fa fa-spinner fa-spin fa-pulse";
 return reagent.session.put_BANG_.call(null,new cljs.core.Keyword(null,"upload-status","upload-status",-116013326),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"p","p",151049309),"Uploading file... ",new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),class$], null)], null)], null)], null));
 });
 dcm.app.into_list = (function dcm$app$into_list(items){
-return cljs.core.into.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ul","ul",-1349521403)], null),(function (){var iter__17547__auto__ = (function dcm$app$into_list_$_iter__32904(s__32905){
+return cljs.core.into.call(null,new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"ul","ul",-1349521403)], null),(function (){var iter__17547__auto__ = (function dcm$app$into_list_$_iter__32979(s__32980){
 return (new cljs.core.LazySeq(null,(function (){
-var s__32905__$1 = s__32905;
+var s__32980__$1 = s__32980;
 while(true){
-var temp__4657__auto__ = cljs.core.seq.call(null,s__32905__$1);
+var temp__4657__auto__ = cljs.core.seq.call(null,s__32980__$1);
 if(temp__4657__auto__){
-var s__32905__$2 = temp__4657__auto__;
-if(cljs.core.chunked_seq_QMARK_.call(null,s__32905__$2)){
-var c__17545__auto__ = cljs.core.chunk_first.call(null,s__32905__$2);
+var s__32980__$2 = temp__4657__auto__;
+if(cljs.core.chunked_seq_QMARK_.call(null,s__32980__$2)){
+var c__17545__auto__ = cljs.core.chunk_first.call(null,s__32980__$2);
 var size__17546__auto__ = cljs.core.count.call(null,c__17545__auto__);
-var b__32907 = cljs.core.chunk_buffer.call(null,size__17546__auto__);
-if((function (){var i__32906 = (0);
+var b__32982 = cljs.core.chunk_buffer.call(null,size__17546__auto__);
+if((function (){var i__32981 = (0);
 while(true){
-if((i__32906 < size__17546__auto__)){
-var i = cljs.core._nth.call(null,c__17545__auto__,i__32906);
-cljs.core.chunk_append.call(null,b__32907,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li","li",723558921),i], null));
+if((i__32981 < size__17546__auto__)){
+var i = cljs.core._nth.call(null,c__17545__auto__,i__32981);
+cljs.core.chunk_append.call(null,b__32982,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li","li",723558921),i], null));
 
-var G__32908 = (i__32906 + (1));
-i__32906 = G__32908;
+var G__32983 = (i__32981 + (1));
+i__32981 = G__32983;
 continue;
 } else {
 return true;
@@ -81,13 +81,13 @@ return true;
 break;
 }
 })()){
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__32907),dcm$app$into_list_$_iter__32904.call(null,cljs.core.chunk_rest.call(null,s__32905__$2)));
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__32982),dcm$app$into_list_$_iter__32979.call(null,cljs.core.chunk_rest.call(null,s__32980__$2)));
 } else {
-return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__32907),null);
+return cljs.core.chunk_cons.call(null,cljs.core.chunk.call(null,b__32982),null);
 }
 } else {
-var i = cljs.core.first.call(null,s__32905__$2);
-return cljs.core.cons.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li","li",723558921),i], null),dcm$app$into_list_$_iter__32904.call(null,cljs.core.rest.call(null,s__32905__$2)));
+var i = cljs.core.first.call(null,s__32980__$2);
+return cljs.core.cons.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"li","li",723558921),i], null),dcm$app$into_list_$_iter__32979.call(null,cljs.core.rest.call(null,s__32980__$2)));
 }
 } else {
 return null;
@@ -130,8 +130,8 @@ var el = document.getElementById(form_id);
 var iframe = (new goog.net.IframeIo());
 goog.events.listen(iframe,goog.net.EventType.COMPLETE,((function (el,iframe){
 return (function (event){
-var rsp_32909 = iframe.getResponseJson();
-var status_32910 = cljs.core.List.EMPTY;
+var rsp_32984 = iframe.getResponseJson();
+var status_32985 = cljs.core.List.EMPTY;
 
 dcm.app.handle_iframe_response.call(null,iframe.getResponseJson());
 
@@ -157,103 +157,103 @@ return ajax.core.POST.call(null,"/join",new cljs.core.PersistentArrayMap(null, 5
 dcm.app.app_routes = (function dcm$app$app_routes(){
 secretary.core.set_config_BANG_.call(null,new cljs.core.Keyword(null,"prefix","prefix",-265908465),"#");
 
-var action__19591__auto___32947 = (function (params__19592__auto__){
+var action__19591__auto___33022 = (function (params__19592__auto__){
 if(cljs.core.map_QMARK_.call(null,params__19592__auto__)){
-var map__32929 = params__19592__auto__;
-var map__32929__$1 = ((((!((map__32929 == null)))?((((map__32929.cljs$lang$protocol_mask$partition0$ & (64))) || (map__32929.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__32929):map__32929);
+var map__33004 = params__19592__auto__;
+var map__33004__$1 = ((((!((map__33004 == null)))?((((map__33004.cljs$lang$protocol_mask$partition0$ & (64))) || (map__33004.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__33004):map__33004);
 return cljs.core.swap_BANG_.call(null,dcm.app.app_state,cljs.core.assoc,new cljs.core.Keyword(null,"page","page",849072397),new cljs.core.Keyword(null,"home","home",-74557309));
 } else {
 if(cljs.core.vector_QMARK_.call(null,params__19592__auto__)){
-var vec__32931 = params__19592__auto__;
+var vec__33006 = params__19592__auto__;
 return cljs.core.swap_BANG_.call(null,dcm.app.app_state,cljs.core.assoc,new cljs.core.Keyword(null,"page","page",849072397),new cljs.core.Keyword(null,"home","home",-74557309));
 } else {
 return null;
 }
 }
 });
-secretary.core.add_route_BANG_.call(null,"/",action__19591__auto___32947);
+secretary.core.add_route_BANG_.call(null,"/",action__19591__auto___33022);
 
 
-var action__19591__auto___32948 = (function (params__19592__auto__){
+var action__19591__auto___33023 = (function (params__19592__auto__){
 if(cljs.core.map_QMARK_.call(null,params__19592__auto__)){
-var map__32932 = params__19592__auto__;
-var map__32932__$1 = ((((!((map__32932 == null)))?((((map__32932.cljs$lang$protocol_mask$partition0$ & (64))) || (map__32932.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__32932):map__32932);
+var map__33007 = params__19592__auto__;
+var map__33007__$1 = ((((!((map__33007 == null)))?((((map__33007.cljs$lang$protocol_mask$partition0$ & (64))) || (map__33007.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__33007):map__33007);
 return cljs.core.swap_BANG_.call(null,dcm.app.app_state,cljs.core.assoc,new cljs.core.Keyword(null,"page","page",849072397),new cljs.core.Keyword(null,"upload","upload",-255769218));
 } else {
 if(cljs.core.vector_QMARK_.call(null,params__19592__auto__)){
-var vec__32934 = params__19592__auto__;
+var vec__33009 = params__19592__auto__;
 return cljs.core.swap_BANG_.call(null,dcm.app.app_state,cljs.core.assoc,new cljs.core.Keyword(null,"page","page",849072397),new cljs.core.Keyword(null,"upload","upload",-255769218));
 } else {
 return null;
 }
 }
 });
-secretary.core.add_route_BANG_.call(null,"/upload",action__19591__auto___32948);
+secretary.core.add_route_BANG_.call(null,"/upload",action__19591__auto___33023);
 
 
-var action__19591__auto___32949 = (function (params__19592__auto__){
+var action__19591__auto___33024 = (function (params__19592__auto__){
 if(cljs.core.map_QMARK_.call(null,params__19592__auto__)){
-var map__32935 = params__19592__auto__;
-var map__32935__$1 = ((((!((map__32935 == null)))?((((map__32935.cljs$lang$protocol_mask$partition0$ & (64))) || (map__32935.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__32935):map__32935);
+var map__33010 = params__19592__auto__;
+var map__33010__$1 = ((((!((map__33010 == null)))?((((map__33010.cljs$lang$protocol_mask$partition0$ & (64))) || (map__33010.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__33010):map__33010);
 return cljs.core.swap_BANG_.call(null,dcm.app.app_state,cljs.core.assoc,new cljs.core.Keyword(null,"page","page",849072397),new cljs.core.Keyword(null,"about","about",1423892543));
 } else {
 if(cljs.core.vector_QMARK_.call(null,params__19592__auto__)){
-var vec__32937 = params__19592__auto__;
+var vec__33012 = params__19592__auto__;
 return cljs.core.swap_BANG_.call(null,dcm.app.app_state,cljs.core.assoc,new cljs.core.Keyword(null,"page","page",849072397),new cljs.core.Keyword(null,"about","about",1423892543));
 } else {
 return null;
 }
 }
 });
-secretary.core.add_route_BANG_.call(null,"/about",action__19591__auto___32949);
+secretary.core.add_route_BANG_.call(null,"/about",action__19591__auto___33024);
 
 
-var action__19591__auto___32950 = (function (params__19592__auto__){
+var action__19591__auto___33025 = (function (params__19592__auto__){
 if(cljs.core.map_QMARK_.call(null,params__19592__auto__)){
-var map__32938 = params__19592__auto__;
-var map__32938__$1 = ((((!((map__32938 == null)))?((((map__32938.cljs$lang$protocol_mask$partition0$ & (64))) || (map__32938.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__32938):map__32938);
+var map__33013 = params__19592__auto__;
+var map__33013__$1 = ((((!((map__33013 == null)))?((((map__33013.cljs$lang$protocol_mask$partition0$ & (64))) || (map__33013.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__33013):map__33013);
 return cljs.core.swap_BANG_.call(null,dcm.app.app_state,cljs.core.assoc,new cljs.core.Keyword(null,"page","page",849072397),new cljs.core.Keyword(null,"login","login",55217519));
 } else {
 if(cljs.core.vector_QMARK_.call(null,params__19592__auto__)){
-var vec__32940 = params__19592__auto__;
+var vec__33015 = params__19592__auto__;
 return cljs.core.swap_BANG_.call(null,dcm.app.app_state,cljs.core.assoc,new cljs.core.Keyword(null,"page","page",849072397),new cljs.core.Keyword(null,"login","login",55217519));
 } else {
 return null;
 }
 }
 });
-secretary.core.add_route_BANG_.call(null,"/login",action__19591__auto___32950);
+secretary.core.add_route_BANG_.call(null,"/login",action__19591__auto___33025);
 
 
-var action__19591__auto___32951 = (function (params__19592__auto__){
+var action__19591__auto___33026 = (function (params__19592__auto__){
 if(cljs.core.map_QMARK_.call(null,params__19592__auto__)){
-var map__32941 = params__19592__auto__;
-var map__32941__$1 = ((((!((map__32941 == null)))?((((map__32941.cljs$lang$protocol_mask$partition0$ & (64))) || (map__32941.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__32941):map__32941);
+var map__33016 = params__19592__auto__;
+var map__33016__$1 = ((((!((map__33016 == null)))?((((map__33016.cljs$lang$protocol_mask$partition0$ & (64))) || (map__33016.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__33016):map__33016);
 return cljs.core.swap_BANG_.call(null,dcm.app.app_state,cljs.core.assoc,new cljs.core.Keyword(null,"page","page",849072397),new cljs.core.Keyword(null,"join","join",-758861890));
 } else {
 if(cljs.core.vector_QMARK_.call(null,params__19592__auto__)){
-var vec__32943 = params__19592__auto__;
+var vec__33018 = params__19592__auto__;
 return cljs.core.swap_BANG_.call(null,dcm.app.app_state,cljs.core.assoc,new cljs.core.Keyword(null,"page","page",849072397),new cljs.core.Keyword(null,"join","join",-758861890));
 } else {
 return null;
 }
 }
 });
-secretary.core.add_route_BANG_.call(null,"/join",action__19591__auto___32951);
+secretary.core.add_route_BANG_.call(null,"/join",action__19591__auto___33026);
 
 
-var action__19591__auto___32952 = (function (params__19592__auto__){
+var action__19591__auto___33027 = (function (params__19592__auto__){
 if(cljs.core.map_QMARK_.call(null,params__19592__auto__)){
-var map__32944 = params__19592__auto__;
-var map__32944__$1 = ((((!((map__32944 == null)))?((((map__32944.cljs$lang$protocol_mask$partition0$ & (64))) || (map__32944.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__32944):map__32944);
-var id = cljs.core.get.call(null,map__32944__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
+var map__33019 = params__19592__auto__;
+var map__33019__$1 = ((((!((map__33019 == null)))?((((map__33019.cljs$lang$protocol_mask$partition0$ & (64))) || (map__33019.cljs$core$ISeq$))?true:false):false))?cljs.core.apply.call(null,cljs.core.hash_map,map__33019):map__33019);
+var id = cljs.core.get.call(null,map__33019__$1,new cljs.core.Keyword(null,"id","id",-1388402092));
 cljs.core.swap_BANG_.call(null,dcm.app.app_state,cljs.core.assoc,new cljs.core.Keyword(null,"page","page",849072397),new cljs.core.Keyword(null,"deckmotion","deckmotion",-1080603491));
 
 return cljs.core.swap_BANG_.call(null,dcm.app.app_state,cljs.core.assoc,new cljs.core.Keyword(null,"page-id","page-id",-872941168),id);
 } else {
 if(cljs.core.vector_QMARK_.call(null,params__19592__auto__)){
-var vec__32946 = params__19592__auto__;
-var id = cljs.core.nth.call(null,vec__32946,(0),null);
+var vec__33021 = params__19592__auto__;
+var id = cljs.core.nth.call(null,vec__33021,(0),null);
 cljs.core.swap_BANG_.call(null,dcm.app.app_state,cljs.core.assoc,new cljs.core.Keyword(null,"page","page",849072397),new cljs.core.Keyword(null,"deckmotion","deckmotion",-1080603491));
 
 return cljs.core.swap_BANG_.call(null,dcm.app.app_state,cljs.core.assoc,new cljs.core.Keyword(null,"page-id","page-id",-872941168),id);
@@ -262,7 +262,7 @@ return null;
 }
 }
 });
-secretary.core.add_route_BANG_.call(null,"/deckmotion/:id",action__19591__auto___32952);
+secretary.core.add_route_BANG_.call(null,"/deckmotion/:id",action__19591__auto___33027);
 
 
 return dcm.app.hook_browser_navigation_BANG_.call(null);
@@ -285,7 +285,7 @@ dcm.app.join = (function dcm$app$join(){
 return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"col-sm-12"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"well"], null),new cljs.core.PersistentVector(null, 23, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"fieldset","fieldset",-1949770816),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"legend","legend",-1027192245),"Join"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"label","label",1718410804),"First name: "], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"input-group"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"input-group-addon"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"i","i",-1386841315),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"glyphicon glyphicon-pencil"], null)], null)], null),dcm.app.formfield.call(null,"text","Firstname",new cljs.core.Keyword(null,"firstname","firstname",1659984849))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"help-block"], null),"Your first name"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"label","label",1718410804),"Last name: "], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"input-group"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"input-group-addon"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"i","i",-1386841315),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"glyphicon glyphicon-pencil"], null)], null)], null),dcm.app.formfield.call(null,"text","Lastname",new cljs.core.Keyword(null,"lastname","lastname",-265181465))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"help-block"], null),"Your last name"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"label","label",1718410804),"Email: "], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"input-group"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"input-group-addon"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"i","i",-1386841315),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"glyphicon glyphicon-envelope"], null)], null)], null),dcm.app.formfield.call(null,"email","name@deckmotion.com",new cljs.core.Keyword(null,"joinemail","joinemail",1147581717))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"help-block"], null),"Your email"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"label","label",1718410804),"Username: "], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"input-group"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"input-group-addon"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"i","i",-1386841315),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"glyphicon glyphicon-user"], null)], null)], null),dcm.app.formfield.call(null,"text","Username",new cljs.core.Keyword(null,"username","username",1605666410))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"help-block"], null),"Your user name"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"label","label",1718410804),"Password: "], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"input-group"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"input-group-addon"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"i","i",-1386841315),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"glyphicon glyphicon-asterisk"], null)], null)], null),dcm.app.formfield.call(null,"password","",new cljs.core.Keyword(null,"password","password",417022471))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"help-block"], null),"Your password"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"label","label",1718410804),"Confirm Password: "], null),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"input-group"], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"input-group-addon"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"i","i",-1386841315),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"glyphicon glyphicon-asterisk"], null)], null)], null),dcm.app.formfield.call(null,"password","",new cljs.core.Keyword(null,"confirmpassword","confirmpassword",99869612))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"help-block"], null),"Confirm your password"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"span","span",1394872991),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"class","class",-2030961996),"help-block"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"input","input",556931961),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"id","id",-1388402092),"join-agreetoterms",new cljs.core.Keyword(null,"type","type",1174270348),"checkbox",new cljs.core.Keyword(null,"name","name",1843675177),"join-agreetoterms"], null)], null)," I agree to the terms and conditions."], null)], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"br","br",934104792)], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"button","button",1456579943),new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null,"type","type",1174270348),"submit",new cljs.core.Keyword(null,"class","class",-2030961996),"btn btn-success",new cljs.core.Keyword(null,"on-click","on-click",1632826543),dcm.app.joinaction], null),"Join"], null)], null)], null)], null);
 });
 dcm.app.deckmotion = (function dcm$app$deckmotion(){
-return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"h1","h1",-1896887462),"Deckmotion Page"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"h3","h3",2067611163),cljs.core.deref.call(null,dcm.app.app_state).call(null,new cljs.core.Keyword(null,"page-id","page-id",-872941168))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a","a",-2123407586),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"href","href",-793805698),"#/about"], null),"about page"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"video","video",156888130),new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"width","width",-384071477),"640",new cljs.core.Keyword(null,"height","height",1025178622),"480",new cljs.core.Keyword(null,"controls","controls",1340701452),true,new cljs.core.Keyword(null,"src","src",-1651076051),[cljs.core.str("/videos/"),cljs.core.str(cljs.core.deref.call(null,dcm.app.app_state).call(null,new cljs.core.Keyword(null,"page-id","page-id",-872941168))),cljs.core.str(".mp4")].join('')], null)], null)], null);
+return new cljs.core.PersistentVector(null, 5, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"div","div",1057191632),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"h1","h1",-1896887462),"Deckmotion Page"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"h3","h3",2067611163),cljs.core.deref.call(null,dcm.app.app_state).call(null,new cljs.core.Keyword(null,"page-id","page-id",-872941168))], null),new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"a","a",-2123407586),new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null,"href","href",-793805698),"#/about"], null),"about page"], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"video","video",156888130),new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null,"controls","controls",1340701452),true,new cljs.core.Keyword(null,"src","src",-1651076051),[cljs.core.str("/videos/"),cljs.core.str(cljs.core.deref.call(null,dcm.app.app_state).call(null,new cljs.core.Keyword(null,"page-id","page-id",-872941168))),cljs.core.str(".mp4")].join('')], null)], null)], null);
 });
 if(typeof dcm.app.current_page !== 'undefined'){
 } else {
