@@ -1,0 +1,74 @@
+$execstring = "$tvsRootfolder/bin/ffmpeg -y -f image2 -loop 1 -i $tvsRootfolder/tmp/".$tvsVideoGUID."_%d.jpg -i $tvsAudioFile -threads 1 -c:v libx264 -vf \"fps=25,format=yuv420p\" -c:a aac -strict experimental -b:a 44k -t 00:00:30 $tvsRootfolder/tmp/$tvsVideoGUID.mp4";
+
+$execstring = "$tvsRootfolder/bin/ffmpeg -y  -i $tvsRootfolder/tmp/".$tvsVideoGUID.".mp4 -vcodec libtheora -qscale:v 7 -acodec libvorbis -qscale:a 3 $tvsRootfolder/tmp/$tvsVideoGUID.ogv";
+
+$execstring = "$tvsRootfolder/bin/ffmpeg -y -i $tvsRootfolder/tmp/".$tvsVideoGUID.".mov  -acodec libvorbis -ac 2 -ab 96k -ar 44100   -b 345k -s 640x360  $tvsRootfolder/tmp/$tvsVideoGUID.webm";
+
+
+Problems:
+
+- devops at openshift: activemq
+- coordination of audio with video length
+	- this should end up being ffmpeg commands
+- quality of video
+	- DONE: Look, there's a limit here.
+- additional types: openoffice, pdf, keynote
+- web interface
+
+
+soffice --headless --convert-to pdf ./slideshow.pptx
+gs  -sDEVICE=jpeg  -o %03d.jpeg  -dJPEGQ=100  -r300 slideshow.pdf
+ffmpeg -i %03d.jpeg -vf scale=320:-1 
+
+
+blend=all_expr='if(eq(mod(X,2),mod(Y,2)),A,B)'
+
+ffmpeg -i %d.jpeg -vf scale=640:-1 -q:v 1 %d.jpeg
+
+
+ffmpeg \
+-loop 1 -t 3 -i 1.jpeg \
+-loop 1 -t 3 -i 2.jpeg \
+-loop 1 -t 3 -i 3.jpeg \
+-loop 1 -t 3 -i 4.jpeg \
+-loop 1 -t 3 -i 5.jpeg \
+-filter_complex \
+"[1:v][0:v]blend=all_expr='if(eq(mod(X,2),mod(Y,2)),A,B)'[b1v];\
+ [2:v][1:v]blend=all_expr='if(eq(mod(X,2),mod(Y,2)),A,B)'[b2v];\
+ [3:v][2:v]blend=all_expr='if(eq(mod(X,2),mod(Y,2)),A,B)'[b3v];\
+ [4:v][3:v]blend=all_expr='if(eq(mod(X,2),mod(Y,2)),A,B)'[b4v];\
+ [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p[v]" -map "[v]" out.mp4
+
+
+"[1:v][0:v]blend=all_expr='A*(if(gte(T,3),1,T/3))+B*(1-(if(gte(T,3),1,T/3)))'[b1v]; \
+ [2:v][1:v]blend=all_expr='A*(if(gte(T,3),1,T/3))+B*(1-(if(gte(T,3),1,T/3)))'[b2v]; \
+ [3:v][2:v]blend=all_expr='A*(if(gte(T,3),1,T/3))+B*(1-(if(gte(T,3),1,T/3)))'[b3v]; \
+ [4:v][3:v]blend=all_expr='A*(if(gte(T,3),1,T/3))+B*(1-(if(gte(T,3),1,T/3)))'[b4v]; \
+ [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p[v]" -map "[v]"  out.mp4
+
+"[1:v][0:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b1v]; \
+ [2:v][1:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b2v]; \
+ [3:v][2:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b3v]; \
+ [4:v][3:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b4v]; \
+ [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p[v]" -map "[v]" out.mp4
+
+"[1:v][0:v]blend=all_expr='if(gte(Y-N*SH,0),A,B)'[b1v]; \
+ [2:v][1:v]blend=all_expr='if(gte(Y-N*SH,0),A,B)'[b2v]; \
+ [3:v][2:v]blend=all_expr='if(gte(Y-N*SH,0),A,B)'[b3v]; \
+ [4:v][3:v]blend=all_expr='if(gte(Y-N*SH,0),A,B)'[b4v]; \
+ [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p[v]" -map "[v]" out.mp4
+
+
+"[1:v][0:v]blend=all_expr='if(eq(mod(X,2),mod(Y,2)),A,B)'[b1v];\
+ [2:v][1:v]blend=all_expr='if(eq(mod(X,2),mod(Y,2)),A,B)'[b2v];\
+ [3:v][2:v]blend=all_expr='if(eq(mod(X,2),mod(Y,2)),A,B)'[b3v];\
+ [4:v][3:v]blend=all_expr='if(eq(mod(X,2),mod(Y,2)),A,B)'[b4v];\
+ [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p[v]" -map "[v]" out.mp4
+
+"[1:v][0:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b1v]; \
+ [2:v][1:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b2v]; \
+ [3:v][2:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b3v]; \
+ [4:v][3:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b4v]; \
+ [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p[v]" -map "[v]" out.mp4
+
+

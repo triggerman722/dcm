@@ -95,7 +95,36 @@
        (sendmessage "transition-queue" result-map)
        (log/info "Successfully processed " filepath))) ;map is a lazy function; doall forces it.
 
+(defn make-slide-images-cli [filepath]
+     (let [ slidedeck (str "/home/greg/Projects/dcm/resources/private/uploads/" filepath)
+            slidepdf (str "/home/greg/Projects/dcm/resources/private/uploads/" (.substring filepath 0 (.lastIndexOf filepath ".")) ".pdf")           
+            uniquename (.toString (java.util.UUID/randomUUID))
+            imagenames (str "/home/greg/Projects/dcm/resources/private/images/" uniquename "%d.jpeg")
+            slideextension (.substring filepath (.lastIndexOf filepath "."))]
+     (log/info "=====================Begin Make Slide Images CLI==================\n\n")
+     (log/info (str "Attempting to convert " slidedeck))
+     (log/info "Slide Extension: " slideextension)
+     (when (not (.contains slideextension "pdf"))
+         (log/info "This is NOT a PDF")
+         (println (shell/sh "soffice" "--headless" "--convert-to" "pdf" "--outdir" "/home/greg/Projects/dcm/resources/private/uploads/" slidedeck)))
+
+;     (.mkdir (io/file (str "/home/greg/Projects/dcm/resources/private/uploads/" uniquename)))
+
+     (println (shell/sh "gs" "-sDEVICE=jpeg" "-r300" "-o" imagenames slidepdf))
+     (println (shell/sh "ffmpeg" "-i" imagenames "-vf" "scale=640:-1" "-q:v" "1" imagenames))
+     (let[ whole-dir (.list (io/file (str "/home/greg/Projects/dcm/resources/private/images/")))
+           filtered-dir (filter #(.contains % uniquename)  whole-dir)
+           filecount (count filtered-dir)
+           final-list (for [l (range 1 (+ 1 filecount))] (str uniquename l ".jpeg"))]
+
+     (log/info "Final List: " final-list)
+     (sendmessage "transition-queue" final-list))
+     (log/info "Successfully made slide images")
+     )
+)
+
 (defn fade-image [startfile endfile progress]
+(log/info (str "Initiating transition between: " startfile " and " endfile ". Progress: " progress))
 (let [
        img-start (ImageIO/read startfile)
        img-end (ImageIO/read endfile)
@@ -150,9 +179,10 @@
             outputWEBMvideo (str "/home/greg/Projects/dcm/resources/public/videos/" outputfilename  ".webm")
            ]
           (println inc-filelist)
+; if the person is a free account, use -fs <bytes> to limit the filesize "-fs" "2000000" 
 
 ;          (println (shell/sh "ffmpeg" "-y" "-f" "image2" "-loop" "1" "-i" "/home/greg/Projects/dcm/resources/private/images/slide_%d.jpg" "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.wav" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" "-t" "00:00:30" outputMP4video))
-          (println (shell/sh "ffmpeg" "-y" "-f" "image2" "-i" "/home/greg/Projects/dcm/resources/private/images/slide_%d.jpg" "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.wav" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" outputMP4video))
+          (println (shell/sh "ffmpeg" "-y" "-f" "image2" "-i" "/home/greg/Projects/dcm/resources/private/images/slide_%d.jpg" "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.wav" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" "-x264opts" "keyint=25" outputMP4video))
 
           (println "Transforming to OGV")
           (println (shell/sh "ffmpeg" "-y" "-i" outputMP4video "-vcodec" "libtheora" "-qscale:v" "7" "-acodec" "libvorbis" "-qscale:a" "3" outputOGVvideo))
@@ -176,7 +206,8 @@
 )
 
 (defn upload-message-receiver [message]
-      (make-slide-images message))
+      ;(make-slide-images message))
+       (make-slide-images-cli message))
 
 (defn join-message-receiver [message]
           (log/info message)
