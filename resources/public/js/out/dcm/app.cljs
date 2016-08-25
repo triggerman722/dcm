@@ -49,10 +49,40 @@
    [:form {:id "upload-form"
            :enc-type "multipart/form-data"
            :method "POST"}
-    [:label "Upload Filename: "]
+    [:label "Upload Slide Deck (*.ppt, *.pptx, *.ods, *.pdf): "]
     [:input {:type "file"
-             :name "upload-file"
-             :id "upload-file"}]]])
+             :name "upload-deck"
+             :id "upload-deck"}]
+    [:label "Upload (optional) Audio file (*.wav, *.mp3, *.aac): "]
+    [:input {:type "file"
+             :name "upload-audio"
+             :id "upload-audio"}]
+
+]])
+
+ (defn form-element [label-text glyphicon fieldtype fieldname fieldkey]
+  [:div {:class "form-group"}
+       [:label {:class "control-label col-lg-4"} (str label-text " ")]
+       [:div {:class "input-group col-lg-7"}
+        [:span {:class "input-group-addon"} [:i {:class (str "glyphicon " glyphicon)}]]
+;        [:span {:class "help-block"} "Your password"]
+        (formfield fieldtype fieldname fieldkey)]]
+
+ )
+ (defn about-sidebar [class]
+ [:div {:class "panel panel-default"}
+    [:div {:class "panel-body"}
+    [:legend "Get in motion in less than a minute"]
+    [:div {:class class}
+      [:img {:src "ref/openspection/img/loop.png" :class "center-block"}]
+      [:h4 {:class "text-center"} "Create your slide deck."]]
+    [:div {:class class}
+     [:img {:src "ref/openspection/img/audio.png" :class "center-block"}]
+      [:h4 {:class "text-center"} "Add some sound."]]
+    [:div {:class class}
+     [:img {:src "ref/openspection/img/create.png" :class "center-block"}]
+      [:h4 {:class "text-center"} "Get in motion."]]]]
+ )
 
 (defn set-upload-indicator []
   (let [class "fa fa-spinner fa-spin fa-pulse"]
@@ -168,90 +198,75 @@
 (defn about []
   [:h2 "Everflair"]
   [:div {:class "row"}
-    [:div {:class "col-lg-4"}
-     [:img {:src "ref/openspection/img/create.png" :class "center-block"}]
-      [:h4 {:class "text-center"} "Make it."]
-        [:p {:class "well"} "You make awesome stuff. Whether it is super-cute kitten collars, or amazingly insightful website reviews, you make awesome stuff."]]
-    [:div {:class "col-lg-4"}
-     [:img {:src "ref/openspection/img/images.png" :class "center-block"}] 
-      [:h4 {:class "text-center"} "Sell it."]     
-       [:p {:class "well"} "Create a beautiful storefront at Everflair where people who love your stuff can find you"]]
-    [:div {:class "col-lg-4"}
-     [:img {:src "ref/openspection/img/loop.png" :class "center-block"}]
-      [:h4 {:class "text-center"} "Repeat"]
-       [:p {:class "well"} "Create a beautiful storefront at Everflair where people who love your stuff can find you"]]])
+    [:div {:class "col-lg-12"}
+    (about-sidebar "col-lg-4")]])
+;     [:img {:src "ref/openspection/img/create.png" :class "center-block"}]
+;      [:h4 {:class "text-center"} "Make it."]
+;        [:p {:class "well"} "You make awesome stuff. Whether it is super-cute kitten collars, or amazingly insightful website reviews, you make awesome stuff."]]
+;    [:div {:class "col-lg-4"}
+;     [:img {:src "ref/openspection/img/images.png" :class "center-block"}] 
+;      [:h4 {:class "text-center"} "Sell it."]     
+;       [:p {:class "well"} "Create a beautiful storefront at Everflair where people who love your stuff can find you"]]
+;    [:div {:class "col-lg-4"}
+;     [:img {:src "ref/openspection/img/loop.png" :class "center-block"}]
+;      [:h4 {:class "text-center"} "Repeat"]
+;       [:p {:class "well"} "Create a beautiful storefront at Everflair where people who love your stuff can find you"]]])
 
  (defn login []
-   [:div {:class "col-sm-12"}
-    [:div {:class "well"}
+   [:div {:class "row"}
+   [:div {:class "col-lg-5"}
+    (about-sidebar "col-lg-12")]
+   [:div {:class "col-lg-7"}
+    [:div {:class "panel panel-default"}
+     [:div {:class "panel-body"}
      [:fieldset
       [:legend "Login"]
-      [:div {:class "input-group"}
-       [:span {:class "input-group-addon"} [:i {:class "glyphicon glyphicon-user"}]]
-       (formfield "text" "Username" :username)]
-;       [:input {:id "login-username" :type "text" :class "form-control" :name "username" :value "" :placeholder "username or email"}]]
-      [:br]
-      [:div {:class "input-group"}
-       [:span {:class "input-group-addon"} [:i {:class "glyphicon glyphicon-lock"}]]
-       (formfield "password" "Password" :password)]
-;       [:input {:id "login-password" :type "password" :class "form-control" :name "password" :value "" :placeholder "password"}]]
-      [:br]
-      [:div {:class "checkbox"}
-       [:label [:input {:id "login-rememberme" :type "checkbox" :name "rememberme"}] "Remember Me"]
-      ]
-      [:br]
-      [:div {:class "form-actions"} [:button {:type "submit" :class "btn btn-success" :on-click loginaction} "Login"]]
-     ]
-    ]
-   ])
+      [:form {:class "form-horizontal" :role "form"}
+       (form-element "Username:" "glyphicon-user" "text" "Username" :username)
+       (form-element "Password:" "glyphicon-asterisk" "password" "Password" :password)
+       [:div {:class "form-group"}
+         [:label {:class "control-label col-lg-4"}]
+         [:span {:class "input-group col-lg-7"} [:input {:id "login-rememberme" :type "checkbox" :name "rememberme"}] " Remember Me"]]
+        [:div {:class "form-group"}
+         [:label {:class "control-label col-lg-4"}]
+         [:button {:type "submit" :class "btn btn-success" :on-click loginaction} "Login"]]]]]]]])
+
  (defn join []
-   [:div {:class "col-sm-12"} 
-    [:div {:class "well"} 
+   [:div {:class "row"}
+   [:div {:class "col-lg-5"}
+    (about-sidebar "col-lg-12")]
+   [:div {:class "col-lg-7"}
+    [:div {:class "panel panel-default"}
+     [:div {:class "panel-body"} 
      [:fieldset 
       [:legend "Join"]
-      [:label "First name: "]
-      [:div {:class "input-group"}
-       [:span {:class "input-group-addon"} [:i {:class "glyphicon glyphicon-pencil"}]]
-       (formfield "text" "Firstname" :firstname)]
-       [:span {:class "help-block"} "Your first name"]
-      [:label "Last name: "]
-      [:div {:class "input-group"}
-       [:span {:class "input-group-addon"} [:i {:class "glyphicon glyphicon-pencil"}]]
-       (formfield "text" "Lastname" :lastname)]
-       [:span {:class "help-block"} "Your last name"]
-      [:label "Email: "]
-      [:div {:class "input-group"}
-       [:span {:class "input-group-addon"} [:i {:class "glyphicon glyphicon-envelope"}]]
-       (formfield "email" "name@deckmotion.com" :joinemail)]
-       [:span {:class "help-block"} "Your email"]
-      [:label "Username: "]
-      [:div {:class "input-group"}
-       [:span {:class "input-group-addon"} [:i {:class "glyphicon glyphicon-user"}]]
-       (formfield "text" "Username" :username)]
-       [:span {:class "help-block"} "Your user name"]
-      [:label "Password: "]
-      [:div {:class "input-group"}
-       [:span {:class "input-group-addon"} [:i {:class "glyphicon glyphicon-asterisk"}]]
-       (formfield "password" "" :password)];
-       [:span {:class "help-block"} "Your password"]
-      [:label "Confirm Password: "]
-      [:div {:class "input-group"}
-       [:span {:class "input-group-addon"} [:i {:class "glyphicon glyphicon-asterisk"}]]
-       (formfield "password" "" :confirmpassword)]
-       [:span {:class "help-block"} "Confirm your password"]
-      [:div
-       [:span {:class "help-block"} [:input {:id "join-agreetoterms" :type "checkbox" :name "join-agreetoterms"}] " I agree to the terms and conditions."]
-      ]
-      [:br]
-      [:button {:type "submit" :class "btn btn-success" :on-click joinaction} "Join"]
-     ]
-    ]
-   ])
+      [:form {:class "form-horizontal" :role "form"}
+       (form-element "First name:" "glyphicon-pencil" "text" "Firstname" :firstname)
+       (form-element "Last name:" "glyphicon-pencil" "text" "Lastname" :lastname)
+       (form-element "Email:" "glyphicon-envelope" "email" "name@deckmotion.com" :joinemail)
+       (form-element "Username:" "glyphicon-user" "text" "Username" :username)
+       (form-element "Password:" "glyphicon-asterisk" "password" "" :password)
+       (form-element "Confirm Password:" "glyphicon-asterisk" "password" "" :confirmpassword)
+        [:div {:class "form-group"}
+         [:label {:class "control-label col-lg-4"}]
+         [:span {:class "input-group col-lg-7"} [:input {:id "join-agreetoterms" :type "checkbox" :name "join-agreetoterms"}] " I agree to the terms and conditions."]]
+        [:div {:class "form-group"}
+         [:label {:class "control-label col-lg-4"}]
+         [:button {:type "submit" :class "btn btn-success" :on-click joinaction} "Get Started"]]]]]]]])
 (defn deckmotion []
-  [:div [:h1 "Deckmotion Page"] [:h3 (@app-state :page-id)]
-   [:a {:href "#/about"} "about page"]
-   [:video {:controls true :src (str "/videos/" (@app-state :page-id) ".mp4")}
-    ]])
+   [:div {:class "row"}
+    [:div {:class "col-lg-9"}
+      [:div {:align "center" :class "embed-responsive embed-responsive-16by9"}
+        [:video {:controls true :src (str "/videos/" (@app-state :page-id) ".mp4") :width "100%" :class "embed-responsive-item"}]]
+      [:br]
+      [:div {:class "col-lg-12 panel panel-default"}
+        [:div {:class "panel-body"}
+         [:h1 "Deckmotion Page"] [:h3 (@app-state :page-id)]]]] 
+    [:div {:class "col-lg-3"}
+      [:div {:class "panel panel-default"}
+        [:div {:class "panel-body"}]]]
+   ]   
+)
 
 (defmulti current-page #(@app-state :page))
 (defmethod current-page :home [] 

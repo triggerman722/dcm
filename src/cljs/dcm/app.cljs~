@@ -1,0 +1,278 @@
+(ns dcm.app
+  (:import goog.History
+           goog.net.IframeIo
+           goog.net.EventType)
+  (:require 
+            [secretary.core :as secretary :refer-macros [defroute]]
+            [goog.events :as events]
+            [ajax.core :refer [GET POST]]
+            [goog.history.EventType :as EventType]
+            [reagent.core :as reagent]
+            [reagent.session :as session]))
+
+
+(def application
+  (js/document.getElementById "application"))
+
+(def app-state (reagent/atom {}))
+
+(defn formfield [type placeholder formkey]
+   [:input {
+           :type type
+           :placeholder placeholder
+           :on-change #(swap! app-state assoc formkey (-> % .-target .-value))
+           :class "form-control input-md"}]
+ )
+
+(defn hook-browser-navigation! []
+  (doto (History.)
+    (events/listen
+     EventType/NAVIGATE
+     (fn [event]
+       (secretary/dispatch! (.-token event))))
+    (.setEnabled true)))
+
+(defn error-handler [{:keys [status status-text]}]
+  (.log js/console (str "something bad happened: " status " " status-text)))
+
+(defn loginsuccess [response]
+   (aset js/window "location" "#/about"))
+
+(defn status-component []
+  (if-let [status (session/get :upload-status)]
+    [:div
+     [:h3 "Status"]
+     status]))
+
+(defn upload-component []
+  [:div
+   [:form {:id "upload-form"
+           :enc-type "multipart/form-data"
+           :method "POST"}
+    [:label "Upload Filename: "]
+    [:input {:type "file"
+             :name "upload-file"
+             :id "upload-file"}]]])
+
+(defn set-upload-indicator []
+  (let [class "fa fa-spinner fa-spin fa-pulse"]
+    (session/put! :upload-status [:div 
+                                  [:p "Uploading file... "
+                                   [:span {:class class}]]])))
+(defn into-list [items]
+  (into [:ul]
+        (for [i items]
+          [:li i])))
+
+(defn set-status [class title items]
+  [:div {:class class}
+   [:h4 title]
+   (into-list items)])
+
+(defn iframe-response-ok [msg]
+  (let [status (set-status "alert alert-success"
+                           "Upload Successful"
+                           [(str "Filename: " (:filename msg))
+                            (str "Size: " (:size msg))
+                            (str "Tempfile: " (:tempfile msg))])]
+    (session/put! :upload-status status)))
+
+(defn iframe-response-error [msg]
+  (let [status (set-status "alert alert-danger"
+                           "Upload Failure"
+                           [(str "Status: " (:status msg))
+                            (str (:message msg))])]
+    (session/put! :upload-status status)))
+
+(defn handle-iframe-response [json-msg]
+  (let [msg (js->clj json-msg :keywordize-keys true)]
+    (.log js/console (str "iframe-response: " msg))
+    (cond
+      (= "OK" (:status msg)) (iframe-response-ok msg)
+      (= "ERROR" (:status msg)) (iframe-response-error msg)
+      :else (session/put! :upload-status [:div.alert.alert-danger
+                                          [:h4 "Unexpected Error"]
+                                          [:ul
+                                           [:li (str "Status: " (:status msg))]
+                                           [:li (:message msg)]]]))))
+;;; Stole this from Dmitri Sotnikov - thanks.
+;;; Original code is at https://github.com/yogthos
+(defn iframeio-upload-file [form-id]
+  (let [el (.getElementById js/document form-id)
+        iframe (IframeIo.)]
+    (events/listen iframe EventType.COMPLETE
+                   (fn [event]
+                     (let [rsp (.getResponseJson iframe)
+                           status ()])
+                     (handle-iframe-response (.getResponseJson iframe))
+                     (.dispose iframe)))
+    (set-upload-indicator)
+    (.sendFromForm iframe el "/upload")))
+
+(defn iframeio-upload-button []
+  [:div
+   [:hr]
+   [:button {:class "btn btn-primary"
+             :type "button"
+             :on-click #(iframeio-upload-file "upload-form")}
+    "Upload Using IFrameIO " [:span {:class "fa fa-upload"}]]])
+
+(defn loginaction []
+  (POST "/login"
+        {:params {:username (@app-state :username) :password (@app-state :password)}
+         :handler loginsuccess
+         :error-handler error-handler
+         :format :raw
+         :response-format :text
+        }))
+
+(defn joinaction []
+  (POST "/join"
+        {:params {:username (@app-state :username) :password (@app-state :password) :firstname (@app-state :firstname) :lastname (@app-state :lastname)}
+         :handler loginsuccess
+         :error-handler error-handler
+         :format :json
+         :response-format :json}))
+
+
+(defn app-routes []
+  (secretary/set-config! :prefix "#")
+
+  (defroute "/" []
+    (swap! app-state assoc :page :home))
+  (defroute "/upload" []
+    (swap! app-state assoc :page :upload))
+  (defroute "/about" []
+    (swap! app-state assoc :page :about))
+   (defroute "/login" []
+    (swap! app-state assoc :page :login))
+   (defroute "/join" []
+    (swap! app-state assoc :page :join))
+   (defroute "/deckmotion/:id" [id]
+    (swap! app-state assoc :page :deckmotion)
+    (swap! app-state assoc :page-id id))
+
+  (hook-browser-navigation!))
+
+(defn home []
+  [:div [:h1 "Home Page"]
+   [:a {:href "#/about"} "about page"]])
+
+(defn upload []
+  [:div [:h1 "Upload Page"]
+     [status-component]
+     [upload-component]
+     [iframeio-upload-button]])
+
+
+(defn about []
+  [:h2 "Everflair"]
+  [:div {:class "row"}
+    [:div {:class "col-lg-4"}
+     [:img {:src "ref/openspection/img/create.png" :class "center-block"}]
+      [:h4 {:class "text-center"} "Make it."]
+        [:p {:class "well"} "You make awesome stuff. Whether it is super-cute kitten collars, or amazingly insightful website reviews, you make awesome stuff."]]
+    [:div {:class "col-lg-4"}
+     [:img {:src "ref/openspection/img/images.png" :class "center-block"}] 
+      [:h4 {:class "text-center"} "Sell it."]     
+       [:p {:class "well"} "Create a beautiful storefront at Everflair where people who love your stuff can find you"]]
+    [:div {:class "col-lg-4"}
+     [:img {:src "ref/openspection/img/loop.png" :class "center-block"}]
+      [:h4 {:class "text-center"} "Repeat"]
+       [:p {:class "well"} "Create a beautiful storefront at Everflair where people who love your stuff can find you"]]])
+
+ (defn login []
+   [:div {:class "row"}
+   [:div {:class "col-lg-5"}
+    (about-sidebar)]
+   [:div {:class "col-lg-7"}
+    [:div {:class "well"}
+     [:fieldset
+      [:legend "Login"]
+      [:form {:class "form-horizontal" :role "form"}
+       (form-element "Username:" "glyphicon-user" "text" "Username" :username)
+       (form-element "Password:" "glyphicon-asterisk" "password" "Password" :password)
+       [:div {:class "form-group"}
+         [:label {:class "control-label col-lg-4"}]
+         [:span {:class "input-group col-lg-7"} [:input {:id "login-rememberme" :type "checkbox" :name "rememberme"}] " Remember Me"]]
+        [:div {:class "form-group"}
+         [:label {:class "control-label col-lg-4"}]
+         [:button {:type "submit" :class "btn btn-success" :on-click loginaction} "Login"]]]]]]])
+
+ (defn form-element [label-text glyphicon fieldtype fieldname fieldkey]
+  [:div {:class "form-group"}
+       [:label {:class "control-label col-lg-4"} (str label-text " ")]
+       [:div {:class "input-group col-lg-7"}
+        [:span {:class "input-group-addon"} [:i {:class (str "glyphicon " glyphicon)}]]
+;        [:span {:class "help-block"} "Your password"]
+        (formfield fieldtype fieldname fieldkey)]]
+
+ )
+ (defn about-sidebar []
+ [:div {:class "well"}
+    [:legend "Get in motion in less than a minute"]
+    [:div
+      [:img {:src "ref/openspection/img/create.png" :class "center-block"}]
+      [:h4 {:class "text-center"} "Make it."]]
+    [:div
+     [:img {:src "ref/openspection/img/images.png" :class "center-block"}]
+      [:h4 {:class "text-center"} "Sell it."]]
+    [:div
+     [:img {:src "ref/openspection/img/loop.png" :class "center-block"}]
+      [:h4 {:class "text-center"} "Repeat"]]]
+ )
+ (defn join []
+   [:div {:class "row"}
+   [:div {:class "col-lg-5"}
+    (about-sidebar)]
+   [:div {:class "col-lg-7"}
+    [:div {:class "well"} 
+     [:fieldset 
+      [:legend "Join"]
+      [:form {:class "form-horizontal" :role "form"}
+       (form-element "First name:" "glyphicon-pencil" "text" "Firstname" :firstname)
+       (form-element "Last name:" "glyphicon-pencil" "text" "Lastname" :lastname)
+       (form-element "Email:" "glyphicon-envelope" "email" "name@deckmotion.com" :joinemail)
+       (form-element "Username:" "glyphicon-user" "text" "Username" :username)
+       (form-element "Password:" "glyphicon-asterisk" "password" "" :password)
+       (form-element "Confirm Password:" "glyphicon-asterisk" "password" "" :confirmpassword)
+        [:div {:class "form-group"}
+         [:label {:class "control-label col-lg-4"}]
+         [:span {:class "input-group col-lg-7"} [:input {:id "join-agreetoterms" :type "checkbox" :name "join-agreetoterms"}] " I agree to the terms and conditions."]]
+        [:div {:class "form-group"}
+         [:label {:class "control-label col-lg-4"}]
+         [:button {:type "submit" :class "btn btn-success" :on-click joinaction} "Get Started"]]]]]]])
+(defn deckmotion []
+   [:div {:class "row"}
+    [:div {:class "col-lg-9"}        
+      [:video {:controls true :src (str "/videos/" (@app-state :page-id) ".mp4") :width "100%"}]
+      [:br][:br]
+      [:div {:class "col-lg-12 well"} [:h1 "Deckmotion Page"] [:h3 (@app-state :page-id)]]] 
+    [:div {:class "col-lg-3"}
+      [:div {:class "well"}]]
+   ]   
+)
+
+(defmulti current-page #(@app-state :page))
+(defmethod current-page :home [] 
+  [home])
+(defmethod current-page :upload []
+  [upload])
+(defmethod current-page :about [] 
+  [about])
+(defmethod current-page :login []
+  [login])
+(defmethod current-page :join []
+  [join])
+(defmethod current-page :deckmotion []
+  [deckmotion])
+
+
+(defmethod current-page :default [] 
+  [:div])
+
+(defn ^:export main []
+  (app-routes)
+  (reagent/render [current-page]
+                  application))
+

@@ -596,3 +596,265 @@ notifying browser that file changed:  /dcm/app.js
 [0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
 [32mSuccessfully compiled "resources/public/js/dcm.js" in 4.593 seconds.[0m
 notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 5.153 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+Figwheel: focusing on build-ids (dcmclient)
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 2.427 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.334 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/dcm.js" failed.[0m
+ERROR: Map literal must contain an even number of forms on file /home/greg/Projects/dcm/src/cljs/dcm/app.cljs, line 254, column 26
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.741 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.637 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/dcm.js" failed.[0m
+ERROR: Unmatched delimiter ] on file /home/greg/Projects/dcm/src/cljs/dcm/app.cljs, line 257, column 5
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/dcm.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/greg/Projects/dcm/src/cljs/dcm/app.cljs, line 259, column 2
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.757 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.649 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.658 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.685 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.595 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.674 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.681 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.695 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.727 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.742 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.641 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.651 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.644 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.628 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.686 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.624 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.877 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.578 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.615 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.539 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.593 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.553 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.601 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/dcm.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/greg/Projects/dcm/src/cljs/dcm/app.cljs, line 235, column 5
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.613 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.573 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.544 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.625 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.549 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.617 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.592 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.566 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.55 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[31mCompiling "resources/public/js/dcm.js" failed.[0m
+ERROR: Unmatched delimiter ) on file /home/greg/Projects/dcm/src/cljs/dcm/app.cljs, line 245, column 95
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.541 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.562 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.557 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.597 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.619 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.609 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.54 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.605 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+WARNING: Use of undeclared Var dcm.app/about-sidebar at line 187 src/cljs/dcm/app.cljs
+WARNING: Use of undeclared Var dcm.app/form-element at line 193 src/cljs/dcm/app.cljs
+WARNING: Use of undeclared Var dcm.app/form-element at line 194 src/cljs/dcm/app.cljs
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.642 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.57 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.63 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 2.847 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.543 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.79 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.594 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.582 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.709 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.147 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.596 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.884 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.139 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.076 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.61 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.527 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 1.142 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+Figwheel: focusing on build-ids (dcmclient)
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.414 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/goog/deps.js
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 4.529 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.582 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.615 seconds.[0m
+notifying browser that file changed:  /dcm/app.js

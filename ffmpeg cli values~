@@ -1,24 +1,42 @@
 $execstring = "$tvsRootfolder/bin/ffmpeg -y -f image2 -loop 1 -i $tvsRootfolder/tmp/".$tvsVideoGUID."_%d.jpg -i $tvsAudioFile -threads 1 -c:v libx264 -vf \"fps=25,format=yuv420p\" -c:a aac -strict experimental -b:a 44k -t 00:00:30 $tvsRootfolder/tmp/$tvsVideoGUID.mp4";
 
+-filter:v "scale=iw*min(720/iw\,405/ih):ih*min(720/iw\,405/ih), pad=720:405:(720-iw*min(720/iw\,405/ih))/2:(405-ih*min(720/iw\,405/ih))/2"
+
+
 $execstring = "$tvsRootfolder/bin/ffmpeg -y  -i $tvsRootfolder/tmp/".$tvsVideoGUID.".mp4 -vcodec libtheora -qscale:v 7 -acodec libvorbis -qscale:a 3 $tvsRootfolder/tmp/$tvsVideoGUID.ogv";
 
 $execstring = "$tvsRootfolder/bin/ffmpeg -y -i $tvsRootfolder/tmp/".$tvsVideoGUID.".mov  -acodec libvorbis -ac 2 -ab 96k -ar 44100   -b 345k -s 640x360  $tvsRootfolder/tmp/$tvsVideoGUID.webm";
 
+640:360
+-vf scale=720:405,pad=720:576:0:72
 
 Problems:
 
-- devops at openshift: activemq
+- devops at openshift: activemq, gs (maybe pdfbox?), soffice
+	- use futures instead of activemq? Yes. Nothing after upload is mission critical (i.e. just start again).
+        - PDFBox - Done, but the expense is a time delay of 1 extra minute (!)
 - coordination of audio with video length
 	- this should end up being ffmpeg commands
 - quality of video
-	- DONE: Look, there's a limit here.
-- additional types: openoffice, pdf, keynote
+	- DONE
+- additional types: DONE: openoffice, DONE: pdf, TODO:keynote
 - web interface
+-more transitions
+- consideration of workflow:
+	- size limits?
+	- should I be adding other video formats?
 
 
 soffice --headless --convert-to pdf ./slideshow.pptx
 gs  -sDEVICE=jpeg  -o %03d.jpeg  -dJPEGQ=100  -r300 slideshow.pdf
 ffmpeg -i %03d.jpeg -vf scale=320:-1 
+
+//audio concat: 
+ffmpeg -t 123.456 -f slideshow.wav -i concat.txt -c copy -t 123.456 output.mp3
+ffmpeg -i audio.wav -filter_complex "[0:a]afifo[a0];[0:a]afifo[a1];[0:a]afifo[a2];[a0][a1][a2]concat=n=3:v=0:a=1[a]" -map "[a]" out.wav
+
+Note: This worked:
+ffmpeg -lavfi "amovie=slideshow.wav:loop=3" slideshow.mp3
 
 
 blend=all_expr='if(eq(mod(X,2),mod(Y,2)),A,B)'
@@ -32,7 +50,46 @@ ffmpeg \
 -loop 1 -t 1 -i 3.jpeg \
 -loop 1 -t 1 -i 4.jpeg \
 -loop 1 -t 1 -i 5.jpeg \
+-loop 1 -t 1 -i 6.jpeg \
+-loop 1 -t 1 -i 7.jpeg \
+-loop 1 -t 1 -i 8.jpeg \
+-loop 1 -t 1 -i 9.jpeg \
+-loop 1 -t 1 -i 10.jpeg \
+-loop 1 -t 1 -i 11.jpeg \
+-loop 1 -t 1 -i 12.jpeg \
+-loop 1 -t 1 -i 13.jpeg \
+-loop 1 -t 1 -i 14.jpeg \
+-loop 1 -t 1 -i 15.jpeg \
+-loop 1 -t 1 -i 16.jpeg \
+-loop 1 -t 1 -i 17.jpeg \
+-loop 1 -t 1 -i 18.jpeg \
 -filter_complex \
+"[1:v][0:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b1v]; \
+ [2:v][1:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b2v]; \
+ [3:v][2:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b3v]; \
+ [4:v][3:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b4v]; \
+ [5:v][4:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b5v]; \
+ [6:v][5:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b6v]; \
+ [7:v][6:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b7v]; \
+ [8:v][7:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b8v]; \
+ [9:v][8:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b9v]; \
+ [10:v][9:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b10v]; \
+ [11:v][10:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b11v]; \
+ [12:v][11:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b12v]; \
+ [13:v][12:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b13v]; \
+ [14:v][13:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b14v]; \
+ [15:v][14:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b15v]; \
+ [16:v][15:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b16v]; \
+ [17:v][16:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b17v]; \
+ [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v][b5v][5:v][b6v][6:v][b7v][7:v][b8v][8:v][b9v][9:v][b10v][10:v][b11v][11:v][b12v][12:v][b13v][13:v][b14v][14:v][b15v][15:v][b16v][16:v][b17v][17:v]concat=n=35:v=1:a=0,format=yuv420p[v]" -map "[v]" out.mp4
+
+"[1:v][0:v]blend=all_expr='if(eq(mod(X,2),mod(Y,2)),A,B)'[b1v];\
+ [2:v][1:v]blend=all_expr='if(eq(mod(X,2),mod(Y,2)),A,B)'[b2v];\
+ [3:v][2:v]blend=all_expr='if(eq(mod(X,2),mod(Y,2)),A,B)'[b3v];\
+ [4:v][3:v]blend=all_expr='if(eq(mod(X,2),mod(Y,2)),A,B)'[b4v];\
+ [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p[v]" -map "[v]" out.mp4
+
+
 "[1:v][0:v]blend=all_expr='A*(if(gte(T,3),1,T/3))+B*(1-(if(gte(T,3),1,T/3)))'[b1v]; \
  [2:v][1:v]blend=all_expr='A*(if(gte(T,3),1,T/3))+B*(1-(if(gte(T,3),1,T/3)))'[b2v]; \
  [3:v][2:v]blend=all_expr='A*(if(gte(T,3),1,T/3))+B*(1-(if(gte(T,3),1,T/3)))'[b3v]; \
@@ -63,5 +120,11 @@ ffmpeg \
  [3:v][2:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b3v]; \
  [4:v][3:v]blend=all_expr='A*(if(gte(T,0.5),1,T/0.5))+B*(1-(if(gte(T,0.5),1,T/0.5)))'[b4v]; \
  [0:v][b1v][1:v][b2v][2:v][b3v][3:v][b4v][4:v]concat=n=9:v=1:a=0,format=yuv420p[v]" -map "[v]" out.mp4
+
+
+I can:
+- forget soffice and high quality pptx to help with dev ops. Hm...
+- use futures to help with dev ops
+- review db alternatives
 
 
