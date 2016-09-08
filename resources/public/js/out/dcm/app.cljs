@@ -33,10 +33,20 @@
     (.setEnabled true)))
 
 (defn error-handler [{:keys [status status-text]}]
+; is status is 401, change to unauthenticated
+  (if (= status 401) (swap! app-state assoc :authenticated false))
   (.log js/console (str "something bad happened: " status " " status-text)))
 
-(defn loginsuccess [response]
-   (aset js/window "location" "#/about"))
+(defn unauthenticatedsuccess [response]
+   ;set a value indicating we are authenticated
+   (swap! app-state assoc :authenticated false)
+   (aset js/window "location" "#/"))
+
+(defn authenticatedsuccess [response]
+   ;set a value indicating we are authenticated
+   (swap! app-state assoc :authenticated true)
+   (aset js/window "location" "#/profile"))
+
 
 (defn status-component []
   (if-let [status (session/get :upload-status)]
@@ -145,25 +155,50 @@
    [:button {:class "btn btn-primary"
              :type "button"
              :on-click #(iframeio-upload-file "upload-form")}
-    "Upload Using IFrameIO " [:span {:class "fa fa-upload"}]]])
+    "Upload" [:span {:class "fa fa-upload"}]]])
 
 (defn loginaction []
   (POST "/login"
         {:params {:username (@app-state :username) :password (@app-state :password)}
-         :handler loginsuccess
+         :handler authenticatedsuccess
          :error-handler error-handler
          :format :raw
          :response-format :text
         }))
 
+(defn forgotaction []
+  (POST "/forgot"
+        {:params {:username (@app-state :username)}
+         :handler unauthenticatedsuccess
+         :error-handler error-handler
+         :format :json
+         :response-format :json
+        }))
+
+
 (defn joinaction []
   (POST "/join"
-        {:params {:username (@app-state :username) :password (@app-state :password) :firstname (@app-state :firstname) :lastname (@app-state :lastname)}
-         :handler loginsuccess
+        {:params {:username (@app-state :username)
+                  :password (@app-state :password)
+                  :confirmpassword (@app-state :confirmpassword)
+                  :firstname (@app-state :firstname)
+                  :lastname (@app-state :lastname)
+                  :joinemail (@app-state :joinemail)
+                  :join-agreetoterms (@app-state :join-agreetoterms)
+                  }
+         :handler authenticatedsuccess
          :error-handler error-handler
          :format :json
          :response-format :json}))
-
+(defn temp-auth-action []
+ (GET "/admin" 
+         {:params {:username (@app-state :username) :password (@app-state :password) :firstname (@app-state :firstname) :lastname (@app-state :lastname)}
+         :handler unauthenticatedsuccess
+         :error-handler error-handler
+         :format :json
+         :response-format :json}))
+(defn logout-action []
+ (POST "/logout" {:handler unauthenticatedsuccess}))
 
 (defn app-routes []
   (secretary/set-config! :prefix "#")
@@ -176,6 +211,8 @@
     (swap! app-state assoc :page :about))
    (defroute "/login" []
     (swap! app-state assoc :page :login))
+   (defroute "/forgot" []
+    (swap! app-state assoc :page :forgot))
    (defroute "/join" []
     (swap! app-state assoc :page :join))
    (defroute "/deckmotion/:id" [id]
@@ -189,17 +226,28 @@
    [:a {:href "#/about"} "about page"]])
 
 (defn upload []
-  [:div [:h1 "Upload Page"]
-     [status-component]
-     [upload-component]
-     [iframeio-upload-button]])
+ (if (not= (@app-state :authenticated) true)
+    (aset js/window "location" "#/login"))
+   [:div {:class "row"}
+    [:div {:class "col-lg-12"}
+     [:div {:class "panel panel-default"}
+      [:div {:class "panel-body"}
+       [:legend "Upload your deck and audio and get in motion"]
+        [status-component]
+        [upload-component]
+        [iframeio-upload-button] ]]]])
 
 
 (defn about []
-  [:h2 "Everflair"]
+  [:h2 "Deckmotion"]
   [:div {:class "row"}
     [:div {:class "col-lg-12"}
-    (about-sidebar "col-lg-4")]])
+    (about-sidebar "col-lg-4")]
+    [:div {:class "col-lg-12"}
+     [:div {:class "panel panel-default"}
+      [:div {:class "panel-body"}
+       [:button {:on-click temp-auth-action} "Auth"]
+       [:button {:on-click logout-action} "Logout"]]]]])
 ;     [:img {:src "ref/openspection/img/create.png" :class "center-block"}]
 ;      [:h4 {:class "text-center"} "Make it."]
 ;        [:p {:class "well"} "You make awesome stuff. Whether it is super-cute kitten collars, or amazingly insightful website reviews, you make awesome stuff."]]
@@ -229,7 +277,23 @@
          [:span {:class "input-group col-lg-7"} [:input {:id "login-rememberme" :type "checkbox" :name "rememberme"}] " Remember Me"]]
         [:div {:class "form-group"}
          [:label {:class "control-label col-lg-4"}]
-         [:button {:type "submit" :class "btn btn-success" :on-click loginaction} "Login"]]]]]]]])
+         [:button {:type "submit" :class "btn btn-success" :on-click loginaction} "Login"]
+         [:a {:href "#/forgot" :style {:padding-left "20px"}} "Forgot your password?"]]]]]]]])
+
+ (defn forgot []
+   [:div {:class "row"}
+   [:div {:class "col-lg-5"}
+    (about-sidebar "col-lg-12")]
+   [:div {:class "col-lg-7"}
+    [:div {:class "panel panel-default"}
+     [:div {:class "panel-body"}
+     [:fieldset
+      [:legend "Forgot your password?"]
+      [:form {:class "form-horizontal" :role "form"}
+       (form-element "Email or Username:" "glyphicon-user" "text" "Email or Username" :username)
+        [:div {:class "form-group"}
+         [:label {:class "control-label col-lg-4"}]
+         [:button {:type "submit" :class "btn btn-success" :on-click forgotaction} "Send Password Reset Instructions"]]]]]]]])
 
  (defn join []
    [:div {:class "row"}
@@ -277,6 +341,8 @@
   [about])
 (defmethod current-page :login []
   [login])
+(defmethod current-page :forgot []
+  [forgot])
 (defmethod current-page :join []
   [join])
 (defmethod current-page :deckmotion []

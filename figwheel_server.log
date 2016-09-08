@@ -858,3 +858,107 @@ notifying browser that file changed:  /dcm/app.js
 [0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
 [32mSuccessfully compiled "resources/public/js/dcm.js" in 0.615 seconds.[0m
 notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 2.686 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.708 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.648 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.752 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.569 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.669 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.589 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.954 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.604 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.602 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.63 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.602 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.619 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.62 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.61 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.631 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.72 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.665 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.648 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.633 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.578 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.63 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+WARNING: Wrong number of args (2) passed to dcm.app/actionsuccess at line 157 src/cljs/dcm/app.cljs
+WARNING: Wrong number of args (2) passed to dcm.app/actionsuccess at line 166 src/cljs/dcm/app.cljs
+WARNING: Wrong number of args (2) passed to dcm.app/actionsuccess at line 183 src/cljs/dcm/app.cljs
+WARNING: Wrong number of args (2) passed to dcm.app/actionsuccess at line 190 src/cljs/dcm/app.cljs
+WARNING: Wrong number of args (2) passed to dcm.app/actionsuccess at line 195 src/cljs/dcm/app.cljs
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.948 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.605 seconds.[0m
+notifying browser that file changed:  resources/public/js/out/cljs_deps.js
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.584 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.618 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.759 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.795 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.652 seconds.[0m
+notifying browser that file changed:  /dcm/app.js
+[0mCompiling "resources/public/js/dcm.js" from ["src/cljs"]...
+[32mSuccessfully compiled "resources/public/js/dcm.js" in 0.622 seconds.[0m
+notifying browser that file changed:  /dcm/app.js

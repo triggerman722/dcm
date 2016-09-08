@@ -1,0 +1,125 @@
+(:users db)
+(def db (atom {:users {"admin" {:username "admin"
+                    :password (creds/hash-bcrypt "password")
+                    :roles #{::admin}}
+            "dave" {:username "dave"
+                    :password (creds/hash-bcrypt "password")
+                    :roles #{::user}}}}))
+(def db (atom {:users {"admin" {:username "admin"
+                    :password "password"
+                    :roles #{::admin}}
+            "dave" {:username "dave"
+                    :password "password"
+                    :roles #{::user}}}}))
+(:users db)
+(def my-car {:color "candy-apple red" :horsepower 450})
+(:color my-car)
+(db :users)
+(get db :users)
+(get-in db :users)
+(def db (atom {}))
+(swap! db concat {:users {"admin" {:username "admin"
+                    :password "password"
+                    :roles #{::admin}}
+            "dave" {:username "dave"
+                    :password "password"
+                    :roles #{::user}}}}) 
+(:users db)
+(db)
+@db
+:users @db
+:dusers @db
+(:dusers @db)
+(:users @db)
+{users :users db}
+(get-in @db :users)
+(get-in @db users)
+(def state (atom {}))
+(doseq [x [1 2 3]]
+  (swap! state assoc :x x))
+(println @state)
+(println @state :x)
+(println (:x state))
+(def my-atom (atom {}))
+(swap! my-atom assoc :a 1)
+(swap! my-atom assoc :b 2)
+(:b my-atom)
+( my-atom)
+my-atom
+:b my-atom
+(get-in my-atom :b)
+(get my-atom :b)
+(let [db @db] (println "the Users are: " (:users db)))
+(let [db2 @db] (println "the Users are: " (:users db2)))
+@db
+(def db (atom {}))
+(swap! db assoc :users {"greg" {:username "greg" :password "pwd"}})
+@db
+(let [db2 @db] (println "the Users are: " (:users db2)))
+(let [db2 @db ])
+(let [db2 @db
+users (:users db2)]
+(swap! users conj {"45-098459034-5890834095" {:username "trig" :password "pwd"}})
+)
+(let [db2 @db
+users (:users db2)]
+(swap! users assoc :user32323 {"45-098459034-5890834095" {:username "trig" :password "pwd"}}))
+(let [db2 @db
+users (:users db2)]
+(println users))
+(let [db2 @db
+users (:users db2)]
+(conj users {:user32323 {"45-098459034-5890834095" {:username "trig" :password "pwd"}}}))
+@db
+@users
+(users
+f
+)
+(let [db2 @db
+users (:users db2)]
+(conj users {:user32323 {"45-098459034-5890834095" {:username "trig" :password "pwd"}}})
+(swap! db conj db2)
+)
+@db
+(let [db2 @db
+users (:users db2)]
+(swap! db update-in db2)
+)
+(let [db2 @db
+users (atom (:users db2))]
+(swap! users conj {:user123 {username greg pwe pwd}}))
+(let [db2 @db
+users (atom (:users db2))]
+(swap! users conj {:user123 {:username "greg" :password "pwd"}}))
+@db
+(let [db2 @db
+users (atom (:users db2))]
+(swap! db update-in [:users] conj {:user123 {:username "greg" :password "pwd"}}))
+@db
+(let [db2 @db
+users (:users db2)]
+(swap! db update-in [:users] conj {:user1234 {:username "greg" :password "pwd"}}))
+@db
+(let [db2 @db
+users (:users db2)]
+(swap! db update-in [:users] assoc :user1234 {:username "greg" :password "pwde"}))
+@db
+(swap! db update-in [:users] assoc :user1234 {:username "greg3" :password "pwde"}))
+(swap! db update-in [:users] assoc :user1234 {:username "greg3" :password "
+@db
+(swap! db update-in [:users] assoc :user1234 {:username "greg3" :password "ggg")
+(swap! db update-in [:users] conj :user1234 {:username "greg3" :password "ggg")
+(swap! db update-in [:users] conj :user1234 {:username "greg3" :password "ggg"})
+@db
+(let [db2 @db
+users (:users db2)]
+(swap! db update-in [:users] conj :user1234 {:username "greg3" :password "ggg"})
+)
+@db
+(swap! db update-in [:users] conj :user123 {:username "greg3" :password "ggg"})
+(def db (atom {}))
+(swap! db update-in [:users] conj :user123 {:username "greg3" :password "ggg"})
+@db
+(swap! db update-in [:users] conj :user1233 {:username "greg3" :password "ggg"})
+@db
+exit

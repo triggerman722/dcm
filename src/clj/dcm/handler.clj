@@ -35,16 +35,17 @@
 ;			[clamq.protocol.producer :as producer]
 ;			[clamq.pipes :as pipes]
                         [dcm.mail :as mail]
+                        [dcm.transactional :as trans]
 ;                        [dcm.data :as data]
                         (cemerick.friend [workflows :as workflows]
                                          [credentials :as creds])))
 
-(def users {"admin" {:username "admin"
-                    :password (creds/hash-bcrypt "password")
-                    :roles #{::admin}}
-            "dave" {:username "dave"
-                    :password (creds/hash-bcrypt "password")
-                    :roles #{::user}}})
+;(def users {"admin" {:username "admin"
+;                    :password (creds/hash-bcrypt "password")
+;                    :roles #{::admin}}
+;            "dave" {:username "dave"
+;                    :password (creds/hash-bcrypt "password")
+;                    :roles #{::user}}})
 
 (derive ::admin ::user)
 
@@ -56,8 +57,20 @@
 ;(defn save-data []
 ;  (spit "somefile" (prn-str @db)))
 
-(defn load-data []
-  (reset! db (read-string (slurp "somefile"))))
+(defn load-data [app]
+(try
+  (log/info "Loading database...")
+  (reset! db (read-string (slurp "somefile")))
+  (log/info "...done loading database. Its contents:" @db)
+  
+  (catch Exception e
+     (log/info (.getMessage e))))
+  app)
+
+(defn write-data []
+ (spit "somefile.tmp" (prn-str @db))
+ (.renameTo (File. "somefile.tmp") (File. "somefile"))
+)
 
 (def save-agent (agent nil))
 
@@ -66,6 +79,25 @@
     (fn [_]
       (spit "somefile.tmp" (prn-str @db))
       (.renameTo (File. "somefile.tmp") (File. "somefile")))))
+
+
+;(defn save-data2 []
+;  (log/info "saving data")
+;  (println "try again")
+;   (future (try (write-data)
+;   (catch Exception e
+;       (log/info (.getMessage e)))))
+;)
+
+(defn load-user [username]
+ (log/info "user: " username)
+ (log/info "DB: " @db)
+ (log/info "Users: " (:users @db))
+ (log/info "Specific Users: " ((:users @db) username))
+ ((:users @db) username))
+;(log/info (doall (filter #(some? (= (:username  %) username))  @db)))
+;(doall (filter #(some? (= (:username %) username)) (:users @db))))
+;(:users @db))
 
 ;========================== file based db
 
@@ -152,8 +184,8 @@
         (doall (for [n (range numpages)] (write-pdf-page-to-image uniquename n pdRenderer)))
         (.close pdDoc)))
 
-(defn rename-image-files [inputfile increment]
-     (let [ newfile (str "/home/greg/Projects/dcm/resources/private/images/slide_" increment ".jpg")]
+(defn rename-image-files [inputfile increment outputfilename]
+     (let [ newfile (str "/home/greg/Projects/dcm/resources/private/images/" outputfilename "_" increment ".jpg")]
      (.renameTo (File. inputfile) (File. newfile))
      newfile) ; force extension to jpg ?
 )
@@ -164,8 +196,8 @@
       ; TODO: Use clojure shell and run FFMPEG.
       (let [
             filelist (distinct (flatten message)) ; how to eliminate duplicates?
-            inc-filelist (doall (map-indexed (fn [i x] (rename-image-files x i)) filelist))
             outputfilename (.toString (java.util.UUID/randomUUID))
+            inc-filelist (doall (map-indexed (fn [i x] (rename-image-files x i outputfilename)) filelist))            
             outputMP4video (str "/home/greg/Projects/dcm/resources/public/videos/" outputfilename  ".mp4")
             outputOGVvideo (str "/home/greg/Projects/dcm/resources/public/videos/" outputfilename  ".ogv")
             outputWEBMvideo (str "/home/greg/Projects/dcm/resources/public/videos/" outputfilename  ".webm")
@@ -174,7 +206,8 @@
 ; if the person is a free account, use -fs <bytes> to limit the filesize "-fs" "2000000" 
 ; also free accounts get jpg, whereas pro accounts get HQ?
 
-           (println (shell/sh "avconv" "-y" "-f" "image2" "-i" "/home/greg/Projects/dcm/resources/private/images/slide_%d.jpg" "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.wav" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" outputMP4video))
+; TODO: Fix the .wav file hardcoding!!!!
+           (println (shell/sh "avconv" "-y" "-f" "image2" "-i" (str "/home/greg/Projects/dcm/resources/private/images/" outputfilename "_%d.jpg") "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.wav" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" outputMP4video))
 ;          (println (shell/sh "ffmpeg" "-y" "-f" "image2" "-loop" "1" "-i" "/home/greg/Projects/dcm/resources/private/images/slide_%d.jpg" "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.wav" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" "-t" "00:00:30" outputMP4video))
 ; Note: trying change from wav file to mp3.
 ;          (println (shell/sh "ffmpeg" "-y" "-f" "image2" "-i" "/home/greg/Projects/dcm/resources/private/images/slide_%d.jpg" "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.mp3" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" "-x264opts" "keyint=25" outputMP4video))
@@ -335,12 +368,54 @@
       ;(make-slide-images message))
        (make-slide-images-cli message))
 
+(defn forgot-password-receiver [message]
+ (log/info "Forgot from: " message)
+ (let [userinfo (load-user (:username message))]
+  (log/info "Email address: " (:email userinfo))
+  (mail/send-gmail {:from "gemartin@gmail.com",
+                            :to (:email userinfo),
+                            :subject "Forgot to the club",
+                            :text "Please click the activation link to proceed",
+                            :user "gemartin@gmail.com",
+                            :password "hockey"} )))
 (defn join-message-receiver [message]
-          (log/info message)
+          (log/info "The message is: " message)
  ;         (data/add-item "users" message)
+(log/info "Is DB Swap Working?")
+(log/info @db)
+   (try
+; you should get the :users branch of the db, then add to it.
+;          (swap! db concat {(.toString (java.util.UUID/randomUUID)) {:username (:username message)
+;                                                                     :password (creds/hash-bcrypt (:password message))
+;                                                                     :roles #{::admin}}})
+;          (let [dbref @db
+;                users (:users dbref)]
+;                (swap! db update-in [:users] conj {(.toString (java.util.UUID/randomUUID)) {:username (:username message)
+;                                                                     :password (creds/hash-bcrypt (:password message))
+;                                                                     :roles #{::admin}}}))
 
-          (swap! db (concat (into {} message)))
+(swap! db assoc-in [:users (:username message)] {:username (:username message)
+                                   :userid (.toString (java.util.UUID/randomUUID))
+                                   :password (creds/hash-bcrypt (:password message))
+                                   :email (:joinemail message)
+                                   :enabled false
+                                   :account-expired false
+                                   :credentials-expired false
+                                   :account-locked false
+                                   :firstname (:firstname message)
+                                   :lastname (:lastname message)
+                                   :created-date (java.util.Date.)
+                                   :roles #{::admin}})
+;(trans/create-user (:firstname message) (:username message))
+(log/info (deref (:state trans/db)))
+(log/info @db)
+   (catch Exception e
+         (log/info (.getMessage e))
+         (log/info "Nope")))
+(log/info "Yep way")
+(log/info "SAVING DATA+++++++++++++++++")
           (save-data)
+(log/info "SAVED DATA+++++++++++++++++")
 
           (mail/send-gmail {:from "gemartin@gmail.com", 
                             :to "gemartin@gmail.com",
@@ -378,6 +453,12 @@
           {:body "todo"})
 ;(data/get-single "users" id)})
   (POST "/profile" req "Notimpl")
+  (POST "/forgot" req 
+       (let [userinfo (get-in req [:body])]
+         (future (forgot-password-receiver userinfo)))
+ {:status 200
+   :headers {"Content-Type" "application/json"}
+   :body (json/write-str  {:status "OK"})})
   (POST "/join" req
           (let [userinfo (get-in req [:body])]
           (log/info userinfo)
@@ -390,30 +471,31 @@
   (POST "/upload"
    {{{tempfile :tempfile filename :filename size :size} :upload-deck {audio-tempfile :tempfile audio-filename :filename audio-size :size}:upload-audio} :params :as params}
 
-   (future (future-file-uploads tempfile filename audio-tempfile audio-filename))
+   (friend/authorize #{::user} 
+    (future (future-file-uploads tempfile filename audio-tempfile audio-filename))
 ;   (io/copy tempfile (io/file "resources" "private" "uploads" filename))
 ;   (io/copy audio-tempfile (io/file "resources" "private" "uploads" audio-filename))
 ;   (log/info "The params: " params ". the audio file: " audio-filename)
 ;   (sendmessage "upload-queue" filename) ; I should send a map with other values like id, user, etc.
-   {:status 200
-   :headers {"Content-Type" "application/json"}
-   :body (json/write-str  {:status "OK"
+    {:status 200
+    :headers {"Content-Type" "application/json"}
+    :body (json/write-str  {:status "OK"
                            :filename filename
                            :tempfile (str tempfile)
-                           :size size})})
+                           :size size})}))
   (GET "/authorized" request
        (friend/authorize #{::user} "This page can only be seen by authenticated users."))
   (GET "/admin" request
        (friend/authorize #{::admin} "This page can only be seen by administrators."))
-	(GET "/join" [] (-> "join.html"
-                       (rr/file-response {:root "resources/public"})
-                       (rr/content-type "text/html")))
-  (GET "/login" [] (-> "login.html"
-                       (rr/file-response {:root "resources/public"})
-                       (rr/content-type "text/html")))
-  (GET "/upload" [] (-> "upload.html"
-                       (rr/file-response {:root "resources/public"})
-                       (rr/content-type "text/html")))
+;	(GET "/join" [] (-> "join.html"
+;                       (rr/file-response {:root "resources/public"})
+;                       (rr/content-type "text/html")))
+;  (GET "/login" [] (-> "login.html"
+;                       (rr/file-response {:root "resources/public"})
+;                       (rr/content-type "text/html")))
+;  (GET "/upload" [] (-> "upload.html"
+;                       (rr/file-response {:root "resources/public"})
+;                       (rr/content-type "text/html")))
   (friend/logout (ANY "/logout" request (rr/redirect "/")))
  (route/resources "/") 
  (route/not-found "Not Found"))
@@ -421,15 +503,14 @@
 (def app
   (-> (handler/site
    (friend/authenticate app-routes
-           {:credential-fn (partial creds/bcrypt-credential-fn users)
+           {:credential-fn (partial creds/bcrypt-credential-fn load-user)
             :workflows [(workflows/interactive-form)]
             :redirect-on-auth? false
 ;            :login-uri "/api/login"
 ;            :default-landing-uri "/"
             :login-failure-handler #(-> (rr/status % 401))
             :unauthenticated-handler #(-> (log/info %) (rr/status 401))
-            :unauthorized-handler #(-> (rr/status % 401))
-}))
+            :unauthorized-handler #(-> (rr/status % 401))}))
 ;   (try
 ;     (let [
 ;	broker (org.apache.activemq.broker.BrokerFactory/createBroker  (URI. "broker:(tcp://localhost:61616)"))]
@@ -439,8 +520,11 @@
 ;   (init-consumer "upload-queue" upload-message-receiver)
 ;   (init-consumer "join-queue" join-message-receiver)
 ;   (init-consumer "transition-queue" transition-message-receiver)
-;   (init-consumer "video-queue" video-message-receiver))
+;   (init-consumer "video-queue" video-message-receiver))   
    (wrap-keyword-params)
-   (wrap-json-body)
+   (wrap-json-body {:keywords? true :bigdecimals? true})
    (wrap-json-response)
-))
+   (load-data)   
+)
+
+)
