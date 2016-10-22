@@ -1,521 +1,229 @@
-[2016-09-06 08:12:12,458][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_25
-[2016-09-06 08:12:12,458][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_26
-[2016-09-06 08:12:12,459][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_27
-[2016-09-06 08:12:12,459][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_28
-[2016-09-06 08:12:12,459][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_29
-[2016-09-06 08:12:12,459][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_30
-[2016-09-06 08:12:12,459][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_31
-[2016-09-06 08:12:12,460][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_32
-[2016-09-06 08:12:12,460][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_33
-[2016-09-06 08:12:12,460][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_34
-[2016-09-06 08:12:12,460][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_35
-[2016-09-06 08:12:12,460][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_36
-[2016-09-06 08:12:12,460][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_37
-[2016-09-06 08:12:12,461][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_38
-[2016-09-06 08:12:12,461][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_39
-[2016-09-06 08:12:12,461][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_40
-[2016-09-06 08:12:12,461][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_41
-[2016-09-06 08:12:12,461][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_42
-[2016-09-06 08:12:12,461][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_43
-[2016-09-06 08:12:12,462][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_44
-[2016-09-06 08:12:12,462][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_45
-[2016-09-06 08:12:12,462][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_46
-[2016-09-06 08:12:12,462][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_47
-[2016-09-06 08:12:12,462][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_48
-[2016-09-06 08:12:12,463][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62220.jpeg_49
-[2016-09-06 08:12:12,463][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62221.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg. Progress: 0
-[2016-09-06 08:12:12,505][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  48c39f15-b976-4c5c-8203-670d6e1e0166
-[2016-09-06 08:12:12,505][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62221.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg. Progress: 1
-[2016-09-06 08:12:12,552][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  221da499-4663-4777-89ed-48c55d03fb1a
-[2016-09-06 08:12:12,552][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62221.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg. Progress: 2
-[2016-09-06 08:12:12,598][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  1d23925c-bdba-4c9c-8331-66ab59d83408
-[2016-09-06 08:12:12,599][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62221.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg. Progress: 3
-[2016-09-06 08:12:12,644][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  afdfde60-e1f5-4352-9993-200426c39246
-[2016-09-06 08:12:12,644][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62221.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg. Progress: 4
-[2016-09-06 08:12:12,690][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  3fad9af9-0940-4ad6-8ddb-a928f835a9f5
-[2016-09-06 08:12:12,690][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62221.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg. Progress: 5
-[2016-09-06 08:12:12,736][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  05819df4-cff4-4b96-9d27-65b3d9c2f7d7
-[2016-09-06 08:12:12,736][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62221.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg. Progress: 6
-[2016-09-06 08:12:12,783][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  da9d172d-bc42-4182-a58a-7448285537d4
-[2016-09-06 08:12:12,783][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62221.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg. Progress: 7
-[2016-09-06 08:12:12,829][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  d76e71b1-ae45-4643-bce2-cd756df5fc11
-[2016-09-06 08:12:12,829][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62221.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg. Progress: 8
-[2016-09-06 08:12:12,874][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  814f55bf-a9da-46c4-8e3e-1a17d04dafbc
-[2016-09-06 08:12:12,874][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62221.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg. Progress: 9
-[2016-09-06 08:12:12,920][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  c715579a-3f14-4105-8130-26deb6b2e254
-[2016-09-06 08:12:12,924][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_0
-[2016-09-06 08:12:12,928][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_1
-[2016-09-06 08:12:12,928][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_2
-[2016-09-06 08:12:12,928][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_3
-[2016-09-06 08:12:12,929][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_4
-[2016-09-06 08:12:12,929][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_5
-[2016-09-06 08:12:12,930][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_6
-[2016-09-06 08:12:12,930][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_7
-[2016-09-06 08:12:12,930][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_8
-[2016-09-06 08:12:12,930][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_9
-[2016-09-06 08:12:12,930][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_10
-[2016-09-06 08:12:12,931][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_11
-[2016-09-06 08:12:12,931][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_12
-[2016-09-06 08:12:12,931][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_13
-[2016-09-06 08:12:12,931][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_14
-[2016-09-06 08:12:12,931][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_15
-[2016-09-06 08:12:12,931][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_16
-[2016-09-06 08:12:12,932][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_17
-[2016-09-06 08:12:12,932][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_18
-[2016-09-06 08:12:12,932][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_19
-[2016-09-06 08:12:12,932][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_20
-[2016-09-06 08:12:12,932][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_21
-[2016-09-06 08:12:12,933][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_22
-[2016-09-06 08:12:12,933][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_23
-[2016-09-06 08:12:12,933][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_24
-[2016-09-06 08:12:12,933][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_25
-[2016-09-06 08:12:12,933][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_26
-[2016-09-06 08:12:12,934][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_27
-[2016-09-06 08:12:12,934][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_28
-[2016-09-06 08:12:12,934][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_29
-[2016-09-06 08:12:12,934][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_30
-[2016-09-06 08:12:12,935][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_31
-[2016-09-06 08:12:12,935][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_32
-[2016-09-06 08:12:12,935][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_33
-[2016-09-06 08:12:12,935][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_34
-[2016-09-06 08:12:12,935][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_35
-[2016-09-06 08:12:12,936][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_36
-[2016-09-06 08:12:12,936][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_37
-[2016-09-06 08:12:12,936][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_38
-[2016-09-06 08:12:12,936][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_39
-[2016-09-06 08:12:12,936][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_40
-[2016-09-06 08:12:12,937][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_41
-[2016-09-06 08:12:12,937][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_42
-[2016-09-06 08:12:12,937][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_43
-[2016-09-06 08:12:12,937][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_44
-[2016-09-06 08:12:12,937][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_45
-[2016-09-06 08:12:12,937][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_46
-[2016-09-06 08:12:12,938][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_47
-[2016-09-06 08:12:12,938][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_48
-[2016-09-06 08:12:12,938][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62221.jpeg_49
-[2016-09-06 08:12:12,938][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg. Progress: 0
-[2016-09-06 08:12:12,981][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  42450891-2768-4fb0-bfd1-e2809a6588fc
-[2016-09-06 08:12:12,981][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg. Progress: 1
-[2016-09-06 08:12:13,034][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  ce0eb269-60c0-494f-bcf3-5c555c0dfa67
-[2016-09-06 08:12:13,034][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg. Progress: 2
-[2016-09-06 08:12:13,080][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  4af46851-b4a7-4325-83a3-fa900fa7e7e0
-[2016-09-06 08:12:13,080][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg. Progress: 3
-[2016-09-06 08:12:13,126][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  793cd2c6-2f68-46b6-804e-96c95ed22cc9
-[2016-09-06 08:12:13,126][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg. Progress: 4
-[2016-09-06 08:12:13,172][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  ef8d9682-5211-41dd-ae33-bcc13aed7c58
-[2016-09-06 08:12:13,172][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg. Progress: 5
-[2016-09-06 08:12:13,217][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  3c62cdc2-f9ad-4975-986b-f1275343b591
-[2016-09-06 08:12:13,218][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg. Progress: 6
-[2016-09-06 08:12:13,264][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  d9b169cb-2763-4e1c-8290-e167cb54c42e
-[2016-09-06 08:12:13,264][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg. Progress: 7
-[2016-09-06 08:12:13,309][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  3a3a7573-ebee-457d-98ed-734d8e8d1454
-[2016-09-06 08:12:13,309][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg. Progress: 8
-[2016-09-06 08:12:13,355][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  1ea61b88-e66f-40b6-bee8-9da86f2434ea
-[2016-09-06 08:12:13,355][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62222.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg. Progress: 9
-[2016-09-06 08:12:13,401][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  2a1e100b-7409-4bc8-bc27-9731669fc7d0
-[2016-09-06 08:12:13,401][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_0
-[2016-09-06 08:12:13,402][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_1
-[2016-09-06 08:12:13,402][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_2
-[2016-09-06 08:12:13,402][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_3
-[2016-09-06 08:12:13,402][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_4
-[2016-09-06 08:12:13,402][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_5
-[2016-09-06 08:12:13,403][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_6
-[2016-09-06 08:12:13,403][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_7
-[2016-09-06 08:12:13,403][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_8
-[2016-09-06 08:12:13,403][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_9
-[2016-09-06 08:12:13,403][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_10
-[2016-09-06 08:12:13,404][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_11
-[2016-09-06 08:12:13,404][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_12
-[2016-09-06 08:12:13,404][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_13
-[2016-09-06 08:12:13,404][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_14
-[2016-09-06 08:12:13,404][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_15
-[2016-09-06 08:12:13,405][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_16
-[2016-09-06 08:12:13,405][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_17
-[2016-09-06 08:12:13,405][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_18
-[2016-09-06 08:12:13,405][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_19
-[2016-09-06 08:12:13,405][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_20
-[2016-09-06 08:12:13,405][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_21
-[2016-09-06 08:12:13,406][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_22
-[2016-09-06 08:12:13,406][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_23
-[2016-09-06 08:12:13,406][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_24
-[2016-09-06 08:12:13,406][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_25
-[2016-09-06 08:12:13,407][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_26
-[2016-09-06 08:12:13,407][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_27
-[2016-09-06 08:12:13,407][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_28
-[2016-09-06 08:12:13,407][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_29
-[2016-09-06 08:12:13,407][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_30
-[2016-09-06 08:12:13,408][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_31
-[2016-09-06 08:12:13,408][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_32
-[2016-09-06 08:12:13,408][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_33
-[2016-09-06 08:12:13,409][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_34
-[2016-09-06 08:12:13,409][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_35
-[2016-09-06 08:12:13,409][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_36
-[2016-09-06 08:12:13,409][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_37
-[2016-09-06 08:12:13,410][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_38
-[2016-09-06 08:12:13,410][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_39
-[2016-09-06 08:12:13,410][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_40
-[2016-09-06 08:12:13,410][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_41
-[2016-09-06 08:12:13,410][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_42
-[2016-09-06 08:12:13,411][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_43
-[2016-09-06 08:12:13,411][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_44
-[2016-09-06 08:12:13,411][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_45
-[2016-09-06 08:12:13,411][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_46
-[2016-09-06 08:12:13,412][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_47
-[2016-09-06 08:12:13,412][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_48
-[2016-09-06 08:12:13,412][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62222.jpeg_49
-[2016-09-06 08:12:13,412][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg. Progress: 0
-[2016-09-06 08:12:13,456][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  be717f65-7523-419b-ae13-e8833eb6f40e
-[2016-09-06 08:12:13,456][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg. Progress: 1
-[2016-09-06 08:12:13,502][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  b84abbe7-17d0-4ac3-acaf-b4b9ef735f60
-[2016-09-06 08:12:13,502][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg. Progress: 2
-[2016-09-06 08:12:13,547][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  7d390c10-8cc1-42e1-942a-81249d7565bf
-[2016-09-06 08:12:13,548][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg. Progress: 3
-[2016-09-06 08:12:13,594][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  57dad02f-a419-4ed4-93ea-6b07e74cc506
-[2016-09-06 08:12:13,594][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg. Progress: 4
-[2016-09-06 08:12:13,639][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  66d504a3-cf72-4bc0-96a9-d9f662c2b567
-[2016-09-06 08:12:13,639][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg. Progress: 5
-[2016-09-06 08:12:13,685][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  7adfe252-cc19-4582-8860-dca511f489bd
-[2016-09-06 08:12:13,685][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg. Progress: 6
-[2016-09-06 08:12:13,731][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  09a3e8ef-754c-4d44-938d-a5fc6fc516ad
-[2016-09-06 08:12:13,731][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg. Progress: 7
-[2016-09-06 08:12:13,776][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  be251fc8-515f-40a6-93a5-322a8a005a36
-[2016-09-06 08:12:13,776][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg. Progress: 8
-[2016-09-06 08:12:13,822][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  8592c1e3-fbc6-452c-9427-863880a820e9
-[2016-09-06 08:12:13,822][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62223.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg. Progress: 9
-[2016-09-06 08:12:13,868][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  da4dfdd7-681e-4da0-bc1a-3a19b30b2948
-[2016-09-06 08:12:13,869][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_0
-[2016-09-06 08:12:13,869][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_1
-[2016-09-06 08:12:13,869][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_2
-[2016-09-06 08:12:13,869][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_3
-[2016-09-06 08:12:13,869][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_4
-[2016-09-06 08:12:13,870][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_5
-[2016-09-06 08:12:13,870][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_6
-[2016-09-06 08:12:13,870][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_7
-[2016-09-06 08:12:13,870][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_8
-[2016-09-06 08:12:13,870][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_9
-[2016-09-06 08:12:13,870][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_10
-[2016-09-06 08:12:13,871][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_11
-[2016-09-06 08:12:13,871][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_12
-[2016-09-06 08:12:13,871][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_13
-[2016-09-06 08:12:13,871][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_14
-[2016-09-06 08:12:13,871][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_15
-[2016-09-06 08:12:13,872][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_16
-[2016-09-06 08:12:13,872][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_17
-[2016-09-06 08:12:13,872][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_18
-[2016-09-06 08:12:13,872][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_19
-[2016-09-06 08:12:13,872][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_20
-[2016-09-06 08:12:13,872][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_21
-[2016-09-06 08:12:13,873][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_22
-[2016-09-06 08:12:13,873][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_23
-[2016-09-06 08:12:13,873][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_24
-[2016-09-06 08:12:13,873][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_25
-[2016-09-06 08:12:13,873][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_26
-[2016-09-06 08:12:13,874][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_27
-[2016-09-06 08:12:13,874][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_28
-[2016-09-06 08:12:13,874][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_29
-[2016-09-06 08:12:13,874][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_30
-[2016-09-06 08:12:13,874][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_31
-[2016-09-06 08:12:13,875][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_32
-[2016-09-06 08:12:13,875][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_33
-[2016-09-06 08:12:13,875][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_34
-[2016-09-06 08:12:13,875][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_35
-[2016-09-06 08:12:13,875][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_36
-[2016-09-06 08:12:13,875][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_37
-[2016-09-06 08:12:13,876][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_38
-[2016-09-06 08:12:13,876][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_39
-[2016-09-06 08:12:13,876][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_40
-[2016-09-06 08:12:13,876][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_41
-[2016-09-06 08:12:13,876][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_42
-[2016-09-06 08:12:13,877][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_43
-[2016-09-06 08:12:13,877][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_44
-[2016-09-06 08:12:13,877][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_45
-[2016-09-06 08:12:13,877][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_46
-[2016-09-06 08:12:13,877][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_47
-[2016-09-06 08:12:13,878][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_48
-[2016-09-06 08:12:13,878][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62223.jpeg_49
-[2016-09-06 08:12:13,878][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg. Progress: 0
-[2016-09-06 08:12:13,927][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  9c94f205-3586-49ef-b9ba-7469312d2577
-[2016-09-06 08:12:13,927][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg. Progress: 1
-[2016-09-06 08:12:13,973][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  d9589dd6-683f-40c9-84a9-d8d8ba229fc9
-[2016-09-06 08:12:13,973][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg. Progress: 2
-[2016-09-06 08:12:14,018][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  120030c9-54a2-4082-a443-69005d95d8a8
-[2016-09-06 08:12:14,019][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg. Progress: 3
-[2016-09-06 08:12:14,064][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  e8cd8f73-1f4e-4185-bc64-c7a3d18bc829
-[2016-09-06 08:12:14,064][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg. Progress: 4
-[2016-09-06 08:12:14,110][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  5133f8f3-4380-4791-8640-d8b0d5fcada2
-[2016-09-06 08:12:14,110][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg. Progress: 5
-[2016-09-06 08:12:14,156][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  2130b081-a914-40e0-86ff-49d3d3787683
-[2016-09-06 08:12:14,156][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg. Progress: 6
-[2016-09-06 08:12:14,205][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  a7af5678-3e5a-46fc-980e-86d8bb471f10
-[2016-09-06 08:12:14,205][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg. Progress: 7
-[2016-09-06 08:12:14,252][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  fd804834-1417-4653-ba6f-4f0662f9f33f
-[2016-09-06 08:12:14,252][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg. Progress: 8
-[2016-09-06 08:12:14,299][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  4133df29-182c-49d1-8770-6d44dafc2323
-[2016-09-06 08:12:14,299][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62224.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg. Progress: 9
-[2016-09-06 08:12:14,427][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  8d6e1ad4-5257-480e-8bbc-1595ee2c37f7
-[2016-09-06 08:12:14,428][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_0
-[2016-09-06 08:12:14,428][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_1
-[2016-09-06 08:12:14,428][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_2
-[2016-09-06 08:12:14,428][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_3
-[2016-09-06 08:12:14,429][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_4
-[2016-09-06 08:12:14,429][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_5
-[2016-09-06 08:12:14,429][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_6
-[2016-09-06 08:12:14,429][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_7
-[2016-09-06 08:12:14,429][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_8
-[2016-09-06 08:12:14,430][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_9
-[2016-09-06 08:12:14,430][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_10
-[2016-09-06 08:12:14,430][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_11
-[2016-09-06 08:12:14,430][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_12
-[2016-09-06 08:12:14,430][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_13
-[2016-09-06 08:12:14,430][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_14
-[2016-09-06 08:12:14,431][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_15
-[2016-09-06 08:12:14,431][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_16
-[2016-09-06 08:12:14,431][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_17
-[2016-09-06 08:12:14,431][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_18
-[2016-09-06 08:12:14,431][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_19
-[2016-09-06 08:12:14,432][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_20
-[2016-09-06 08:12:14,432][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_21
-[2016-09-06 08:12:14,432][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_22
-[2016-09-06 08:12:14,432][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_23
-[2016-09-06 08:12:14,432][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_24
-[2016-09-06 08:12:14,432][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_25
-[2016-09-06 08:12:14,433][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_26
-[2016-09-06 08:12:14,433][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_27
-[2016-09-06 08:12:14,433][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_28
-[2016-09-06 08:12:14,433][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_29
-[2016-09-06 08:12:14,433][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_30
-[2016-09-06 08:12:14,434][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_31
-[2016-09-06 08:12:14,434][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_32
-[2016-09-06 08:12:14,434][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_33
-[2016-09-06 08:12:14,434][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_34
-[2016-09-06 08:12:14,434][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_35
-[2016-09-06 08:12:14,435][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_36
-[2016-09-06 08:12:14,435][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_37
-[2016-09-06 08:12:14,435][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_38
-[2016-09-06 08:12:14,435][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_39
-[2016-09-06 08:12:14,435][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_40
-[2016-09-06 08:12:14,436][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_41
-[2016-09-06 08:12:14,436][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_42
-[2016-09-06 08:12:14,436][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_43
-[2016-09-06 08:12:14,436][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_44
-[2016-09-06 08:12:14,436][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_45
-[2016-09-06 08:12:14,436][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_46
-[2016-09-06 08:12:14,437][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_47
-[2016-09-06 08:12:14,437][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_48
-[2016-09-06 08:12:14,437][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62224.jpeg_49
-[2016-09-06 08:12:14,437][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg. Progress: 0
-[2016-09-06 08:12:14,480][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  eb873261-43d7-44f7-8287-d836a74ebb16
-[2016-09-06 08:12:14,480][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg. Progress: 1
-[2016-09-06 08:12:14,526][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  e4a27ee3-e28b-4493-ba1f-f38b342b7695
-[2016-09-06 08:12:14,526][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg. Progress: 2
-[2016-09-06 08:12:14,572][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  e4901acd-5d06-4d37-8216-7461ca3e8856
-[2016-09-06 08:12:14,572][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg. Progress: 3
-[2016-09-06 08:12:14,618][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  f8d9305a-aed0-435f-8f52-7fd1304c3bf6
-[2016-09-06 08:12:14,618][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg. Progress: 4
-[2016-09-06 08:12:14,663][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  08181ae0-1ccb-4796-a016-0d58bfe734b2
-[2016-09-06 08:12:14,664][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg. Progress: 5
-[2016-09-06 08:12:14,709][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  451b425d-5419-4977-af4c-9a4978a861a5
-[2016-09-06 08:12:14,710][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg. Progress: 6
-[2016-09-06 08:12:14,755][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  80ea4e9b-624e-45f4-af7c-910615943b18
-[2016-09-06 08:12:14,755][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg. Progress: 7
-[2016-09-06 08:12:14,801][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  98c14907-d8e5-4812-b283-e87372b2044b
-[2016-09-06 08:12:14,801][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg. Progress: 8
-[2016-09-06 08:12:14,846][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  18c6bf54-ef46-403a-b215-add31cac62f6
-[2016-09-06 08:12:14,846][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62225.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg. Progress: 9
-[2016-09-06 08:12:14,892][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  314408bb-301f-451c-9028-cf8923848336
-[2016-09-06 08:12:14,892][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_0
-[2016-09-06 08:12:14,893][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_1
-[2016-09-06 08:12:14,893][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_2
-[2016-09-06 08:12:14,893][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_3
-[2016-09-06 08:12:14,893][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_4
-[2016-09-06 08:12:14,893][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_5
-[2016-09-06 08:12:14,894][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_6
-[2016-09-06 08:12:14,894][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_7
-[2016-09-06 08:12:14,894][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_8
-[2016-09-06 08:12:14,894][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_9
-[2016-09-06 08:12:14,894][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_10
-[2016-09-06 08:12:14,894][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_11
-[2016-09-06 08:12:14,895][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_12
-[2016-09-06 08:12:14,895][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_13
-[2016-09-06 08:12:14,895][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_14
-[2016-09-06 08:12:14,895][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_15
-[2016-09-06 08:12:14,895][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_16
-[2016-09-06 08:12:14,896][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_17
-[2016-09-06 08:12:14,896][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_18
-[2016-09-06 08:12:14,896][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_19
-[2016-09-06 08:12:14,896][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_20
-[2016-09-06 08:12:14,896][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_21
-[2016-09-06 08:12:14,897][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_22
-[2016-09-06 08:12:14,897][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_23
-[2016-09-06 08:12:14,897][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_24
-[2016-09-06 08:12:14,897][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_25
-[2016-09-06 08:12:14,897][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_26
-[2016-09-06 08:12:14,898][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_27
-[2016-09-06 08:12:14,898][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_28
-[2016-09-06 08:12:14,898][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_29
-[2016-09-06 08:12:14,898][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_30
-[2016-09-06 08:12:14,898][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_31
-[2016-09-06 08:12:14,899][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_32
-[2016-09-06 08:12:14,899][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_33
-[2016-09-06 08:12:14,899][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_34
-[2016-09-06 08:12:14,899][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_35
-[2016-09-06 08:12:14,899][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_36
-[2016-09-06 08:12:14,900][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_37
-[2016-09-06 08:12:14,900][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_38
-[2016-09-06 08:12:14,900][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_39
-[2016-09-06 08:12:14,900][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_40
-[2016-09-06 08:12:14,900][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_41
-[2016-09-06 08:12:14,900][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_42
-[2016-09-06 08:12:14,901][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_43
-[2016-09-06 08:12:14,901][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_44
-[2016-09-06 08:12:14,901][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_45
-[2016-09-06 08:12:14,901][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_46
-[2016-09-06 08:12:14,901][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_47
-[2016-09-06 08:12:14,902][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_48
-[2016-09-06 08:12:14,902][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62225.jpeg_49
-[2016-09-06 08:12:14,902][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg. Progress: 0
-[2016-09-06 08:12:14,944][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  a543ecb2-831f-4706-bb9a-5c812052ebfb
-[2016-09-06 08:12:14,944][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg. Progress: 1
-[2016-09-06 08:12:14,995][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  28d56e71-e43d-4f86-ba9a-ba0134e9ccb4
-[2016-09-06 08:12:14,995][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg. Progress: 2
-[2016-09-06 08:12:15,041][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  722aa84c-048f-4b75-9c4e-fce691be1cde
-[2016-09-06 08:12:15,041][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg. Progress: 3
-[2016-09-06 08:12:15,086][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  11913d7e-78a5-48ea-bcfe-149eaa82e521
-[2016-09-06 08:12:15,086][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg. Progress: 4
-[2016-09-06 08:12:15,131][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  800ca99c-fd29-4281-bada-ab54d7b63cb8
-[2016-09-06 08:12:15,132][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg. Progress: 5
-[2016-09-06 08:12:15,177][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  7aaaeb3a-2e6e-4d8e-a862-a9c40934922c
-[2016-09-06 08:12:15,178][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg. Progress: 6
-[2016-09-06 08:12:15,223][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  5a89e3a2-2051-4754-a801-c0f3ad5642d6
-[2016-09-06 08:12:15,223][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg. Progress: 7
-[2016-09-06 08:12:15,269][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  f2b77b65-ea37-40f3-9148-aabde9a0198b
-[2016-09-06 08:12:15,269][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg. Progress: 8
-[2016-09-06 08:12:15,314][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  09589439-5c09-4861-9f9d-864a0bdb0925
-[2016-09-06 08:12:15,314][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62226.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg. Progress: 9
-[2016-09-06 08:12:15,360][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  37f2ec25-ef46-4595-b88e-e1fe9e4ba185
-[2016-09-06 08:12:15,361][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_0
-[2016-09-06 08:12:15,361][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_1
-[2016-09-06 08:12:15,361][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_2
-[2016-09-06 08:12:15,361][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_3
-[2016-09-06 08:12:15,362][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_4
-[2016-09-06 08:12:15,362][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_5
-[2016-09-06 08:12:15,362][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_6
-[2016-09-06 08:12:15,362][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_7
-[2016-09-06 08:12:15,362][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_8
-[2016-09-06 08:12:15,362][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_9
-[2016-09-06 08:12:15,363][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_10
-[2016-09-06 08:12:15,363][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_11
-[2016-09-06 08:12:15,363][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_12
-[2016-09-06 08:12:15,363][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_13
-[2016-09-06 08:12:15,363][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_14
-[2016-09-06 08:12:15,364][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_15
-[2016-09-06 08:12:15,364][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_16
-[2016-09-06 08:12:15,364][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_17
-[2016-09-06 08:12:15,364][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_18
-[2016-09-06 08:12:15,364][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_19
-[2016-09-06 08:12:15,365][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_20
-[2016-09-06 08:12:15,365][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_21
-[2016-09-06 08:12:15,365][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_22
-[2016-09-06 08:12:15,365][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_23
-[2016-09-06 08:12:15,365][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_24
-[2016-09-06 08:12:15,365][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_25
-[2016-09-06 08:12:15,366][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_26
-[2016-09-06 08:12:15,366][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_27
-[2016-09-06 08:12:15,366][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_28
-[2016-09-06 08:12:15,366][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_29
-[2016-09-06 08:12:15,366][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_30
-[2016-09-06 08:12:15,367][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_31
-[2016-09-06 08:12:15,367][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_32
-[2016-09-06 08:12:15,367][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_33
-[2016-09-06 08:12:15,367][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_34
-[2016-09-06 08:12:15,367][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_35
-[2016-09-06 08:12:15,368][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_36
-[2016-09-06 08:12:15,368][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_37
-[2016-09-06 08:12:15,368][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_38
-[2016-09-06 08:12:15,368][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_39
-[2016-09-06 08:12:15,368][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_40
-[2016-09-06 08:12:15,369][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_41
-[2016-09-06 08:12:15,369][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_42
-[2016-09-06 08:12:15,369][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_43
-[2016-09-06 08:12:15,369][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_44
-[2016-09-06 08:12:15,369][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_45
-[2016-09-06 08:12:15,370][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_46
-[2016-09-06 08:12:15,370][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_47
-[2016-09-06 08:12:15,370][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_48
-[2016-09-06 08:12:15,370][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62226.jpeg_49
-[2016-09-06 08:12:15,370][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62228.jpeg. Progress: 0
-[2016-09-06 08:12:15,415][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  832bfeee-b95c-4193-b8f6-f8ed3ac60751
-[2016-09-06 08:12:15,415][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62228.jpeg. Progress: 1
-[2016-09-06 08:12:15,460][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  b4252daf-227f-445c-b419-1817f07aa8e1
-[2016-09-06 08:12:15,460][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62228.jpeg. Progress: 2
-[2016-09-06 08:12:15,505][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  60784270-e599-4c39-9df9-4df8589ecadc
-[2016-09-06 08:12:15,505][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62228.jpeg. Progress: 3
-[2016-09-06 08:12:15,550][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  b282edfb-9463-4aa7-bd78-9593ef452fa8
-[2016-09-06 08:12:15,550][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62228.jpeg. Progress: 4
-[2016-09-06 08:12:15,596][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  92e231b6-114f-4cc4-906d-928e4804b2dd
-[2016-09-06 08:12:15,596][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62228.jpeg. Progress: 5
-[2016-09-06 08:12:15,641][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  bc2b1cd0-a8c9-4c34-a378-e8fd12e1ac94
-[2016-09-06 08:12:15,641][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62228.jpeg. Progress: 6
-[2016-09-06 08:12:15,686][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  a1abbdd1-011d-4448-b81a-e8c35322e714
-[2016-09-06 08:12:15,686][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62228.jpeg. Progress: 7
-[2016-09-06 08:12:15,731][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  cb534e92-fd08-453e-b343-c74b8169877f
-[2016-09-06 08:12:15,731][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62228.jpeg. Progress: 8
-[2016-09-06 08:12:15,776][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  3b0c163b-1754-441b-9110-e60db01fc31d
-[2016-09-06 08:12:15,776][INFO][dcm.handler][clojure-agent-send-off-pool-23] Initiating transition between: resources/private/images/11ddc170-0b98-451c-b762-32877133d62227.jpeg and resources/private/images/11ddc170-0b98-451c-b762-32877133d62228.jpeg. Progress: 9
-[2016-09-06 08:12:15,821][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully transitioned image:  8a26e0a4-19a7-44c3-b524-6d76055e5c32
-[2016-09-06 08:12:15,821][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_0
-[2016-09-06 08:12:15,821][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_1
-[2016-09-06 08:12:15,821][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_2
-[2016-09-06 08:12:15,822][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_3
-[2016-09-06 08:12:15,822][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_4
-[2016-09-06 08:12:15,822][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_5
-[2016-09-06 08:12:15,822][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_6
-[2016-09-06 08:12:15,822][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_7
-[2016-09-06 08:12:15,822][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_8
-[2016-09-06 08:12:15,823][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_9
-[2016-09-06 08:12:15,823][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_10
-[2016-09-06 08:12:15,823][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_11
-[2016-09-06 08:12:15,823][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_12
-[2016-09-06 08:12:15,823][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_13
-[2016-09-06 08:12:15,823][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_14
-[2016-09-06 08:12:15,824][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_15
-[2016-09-06 08:12:15,824][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_16
-[2016-09-06 08:12:15,824][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_17
-[2016-09-06 08:12:15,824][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_18
-[2016-09-06 08:12:15,824][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_19
-[2016-09-06 08:12:15,824][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_20
-[2016-09-06 08:12:15,825][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_21
-[2016-09-06 08:12:15,825][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_22
-[2016-09-06 08:12:15,825][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_23
-[2016-09-06 08:12:15,825][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_24
-[2016-09-06 08:12:15,825][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_25
-[2016-09-06 08:12:15,825][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_26
-[2016-09-06 08:12:15,826][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_27
-[2016-09-06 08:12:15,826][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_28
-[2016-09-06 08:12:15,826][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_29
-[2016-09-06 08:12:15,826][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_30
-[2016-09-06 08:12:15,826][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_31
-[2016-09-06 08:12:15,827][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_32
-[2016-09-06 08:12:15,827][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_33
-[2016-09-06 08:12:15,827][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_34
-[2016-09-06 08:12:15,827][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_35
-[2016-09-06 08:12:15,827][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_36
-[2016-09-06 08:12:15,827][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_37
-[2016-09-06 08:12:15,828][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_38
-[2016-09-06 08:12:15,828][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_39
-[2016-09-06 08:12:15,828][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_40
-[2016-09-06 08:12:15,828][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_41
-[2016-09-06 08:12:15,828][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_42
-[2016-09-06 08:12:15,829][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_43
-[2016-09-06 08:12:15,829][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_44
-[2016-09-06 08:12:15,829][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_45
-[2016-09-06 08:12:15,829][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_46
-[2016-09-06 08:12:15,829][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_47
-[2016-09-06 08:12:15,829][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_48
-[2016-09-06 08:12:15,830][INFO][dcm.handler][clojure-agent-send-off-pool-23] Successfully copied image:  11ddc170-0b98-451c-b762-32877133d62227.jpeg_49
-[2016-09-06 08:12:15,830][INFO][dcm.handler][clojure-agent-send-off-pool-21] =====================Begin video transition==================
+[2016-09-24 11:40:50,531][INFO][dcm.handler][qtp30342007-14] pre
+[2016-09-24 11:40:50,532][INFO][dcm.handler][qtp30342007-14] gmart
+[2016-09-24 11:40:50,546][INFO][dcm.handler][qtp30342007-14] {gmart nil, gmart2 {:created-date #inst "2016-09-03T21:25:42.395-00:00", :account-expired false, :userid b3a614b5-7ce4-4521-bf40-85ae89a5e756, :password $2a$10$ozfU1P.6nNa5YIsSvT9ZL.9TtvePZu2SmMrNQXWLJ4vw7JvdtYQg6, :lastname g2, :roles #{:dcm.handler/admin}, :username gmart2, :firstname g2, :account-locked false, :enabled false, :credentials-expired false}, trig {:created-date #inst "2016-09-04T00:22:41.339-00:00", :account-expired false, :email nil, :userid 510df09b-bb8d-4860-a29e-a70d017be94e, :password $2a$10$7kA63MYMRSV26EcLQeZdfeJv8ht9nUyXs.5N.Ikoy9RtULHojPINy, :lastname martin, :roles #{:dcm.handler/admin}, :username trig, :firstname greg, :account-locked false, :enabled false, :credentials-expired false}, nil {:created-date #inst "2016-09-04T12:45:26.521-00:00", :account-expired false, :email nil, :userid d7efa640-cac0-4676-9511-1f7210d8e69d, :password $2a$10$5DqZWrMKQoPOQ2M/P5bkqe08yn9cZniEu7ZgcHWoWrfIyRY7Ra73G, :lastname dfgdfgdfg, :roles #{:dcm.handler/admin}, :username nil, :firstname dgfg, :account-locked false, :enabled false, :credentials-expired false}, trigger {:created-date #inst "2016-09-04T12:52:51.984-00:00", :account-expired false, :email nil, :userid 0971ee06-4abd-46fe-8d8e-75abb0f2b4d0, :password $2a$10$NMPQD1PxPWny.e3GIXeoM.phzIilx/k3cRdwJqJri2lurIjlT1Z52, :lastname martin, :roles #{:dcm.handler/admin}, :username trigger, :firstname greg, :account-locked false, :enabled false, :credentials-expired false}, greg {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled false, :credentials-expired false}}
+[2016-09-24 11:40:50,547][INFO][dcm.handler][qtp30342007-14] post
+[2016-09-24 11:43:07,122][INFO][dcm.handler][qtp30342007-16] Loading database...
+[2016-09-24 11:43:07,125][INFO][dcm.handler][qtp30342007-16] ...done loading database.
+[2016-09-24 11:43:07,126][INFO][dcm.handler][qtp30342007-16] pre
+[2016-09-24 11:43:07,127][INFO][dcm.handler][qtp30342007-16] gmart
+[2016-09-24 11:43:07,127][INFO][dcm.handler][qtp30342007-16] [gmart {:created-date #inst "2016-09-03T21:24:57.926-00:00", :account-expired false, :userid 7bf0c2df-a228-4eb0-8a7c-ecad92fa44a2, :password $2a$10$tNDbz8vGv20z81h9LM6/JecZTEPo.ztoqeqRgSRI206tcF2Eqi8Pe, :lastname g, :roles #{:dcm.handler/admin}, :username gmart, :firstname g, :account-locked false, :enabled true, :credentials-expired false}]
+[2016-09-24 11:43:07,128][INFO][dcm.handler][qtp30342007-16] {gmart nil, gmart2 {:created-date #inst "2016-09-03T21:25:42.395-00:00", :account-expired false, :userid b3a614b5-7ce4-4521-bf40-85ae89a5e756, :password $2a$10$ozfU1P.6nNa5YIsSvT9ZL.9TtvePZu2SmMrNQXWLJ4vw7JvdtYQg6, :lastname g2, :roles #{:dcm.handler/admin}, :username gmart2, :firstname g2, :account-locked false, :enabled false, :credentials-expired false}, trig {:created-date #inst "2016-09-04T00:22:41.339-00:00", :account-expired false, :email nil, :userid 510df09b-bb8d-4860-a29e-a70d017be94e, :password $2a$10$7kA63MYMRSV26EcLQeZdfeJv8ht9nUyXs.5N.Ikoy9RtULHojPINy, :lastname martin, :roles #{:dcm.handler/admin}, :username trig, :firstname greg, :account-locked false, :enabled false, :credentials-expired false}, nil {:created-date #inst "2016-09-04T12:45:26.521-00:00", :account-expired false, :email nil, :userid d7efa640-cac0-4676-9511-1f7210d8e69d, :password $2a$10$5DqZWrMKQoPOQ2M/P5bkqe08yn9cZniEu7ZgcHWoWrfIyRY7Ra73G, :lastname dfgdfgdfg, :roles #{:dcm.handler/admin}, :username nil, :firstname dgfg, :account-locked false, :enabled false, :credentials-expired false}, trigger {:created-date #inst "2016-09-04T12:52:51.984-00:00", :account-expired false, :email nil, :userid 0971ee06-4abd-46fe-8d8e-75abb0f2b4d0, :password $2a$10$NMPQD1PxPWny.e3GIXeoM.phzIilx/k3cRdwJqJri2lurIjlT1Z52, :lastname martin, :roles #{:dcm.handler/admin}, :username trigger, :firstname greg, :account-locked false, :enabled false, :credentials-expired false}, greg {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled false, :credentials-expired false}}
+[2016-09-24 11:43:07,128][INFO][dcm.handler][qtp30342007-16] post
+[2016-09-24 11:44:06,457][INFO][dcm.handler][qtp30342007-14] Loading database...
+[2016-09-24 11:44:06,459][INFO][dcm.handler][qtp30342007-14] ...done loading database.
+[2016-09-24 11:44:06,460][INFO][dcm.handler][qtp30342007-14] pre
+[2016-09-24 11:44:06,461][INFO][dcm.handler][qtp30342007-14] gmart
+[2016-09-24 11:44:06,461][INFO][dcm.handler][qtp30342007-14] {:created-date #inst "2016-09-03T21:24:57.926-00:00", :account-expired false, :userid 7bf0c2df-a228-4eb0-8a7c-ecad92fa44a2, :password $2a$10$tNDbz8vGv20z81h9LM6/JecZTEPo.ztoqeqRgSRI206tcF2Eqi8Pe, :lastname g, :roles #{:dcm.handler/admin}, :username gmart, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-24 11:44:06,462][INFO][dcm.handler][qtp30342007-14] {gmart nil, gmart2 {:created-date #inst "2016-09-03T21:25:42.395-00:00", :account-expired false, :userid b3a614b5-7ce4-4521-bf40-85ae89a5e756, :password $2a$10$ozfU1P.6nNa5YIsSvT9ZL.9TtvePZu2SmMrNQXWLJ4vw7JvdtYQg6, :lastname g2, :roles #{:dcm.handler/admin}, :username gmart2, :firstname g2, :account-locked false, :enabled false, :credentials-expired false}, trig {:created-date #inst "2016-09-04T00:22:41.339-00:00", :account-expired false, :email nil, :userid 510df09b-bb8d-4860-a29e-a70d017be94e, :password $2a$10$7kA63MYMRSV26EcLQeZdfeJv8ht9nUyXs.5N.Ikoy9RtULHojPINy, :lastname martin, :roles #{:dcm.handler/admin}, :username trig, :firstname greg, :account-locked false, :enabled false, :credentials-expired false}, nil {:created-date #inst "2016-09-04T12:45:26.521-00:00", :account-expired false, :email nil, :userid d7efa640-cac0-4676-9511-1f7210d8e69d, :password $2a$10$5DqZWrMKQoPOQ2M/P5bkqe08yn9cZniEu7ZgcHWoWrfIyRY7Ra73G, :lastname dfgdfgdfg, :roles #{:dcm.handler/admin}, :username nil, :firstname dgfg, :account-locked false, :enabled false, :credentials-expired false}, trigger {:created-date #inst "2016-09-04T12:52:51.984-00:00", :account-expired false, :email nil, :userid 0971ee06-4abd-46fe-8d8e-75abb0f2b4d0, :password $2a$10$NMPQD1PxPWny.e3GIXeoM.phzIilx/k3cRdwJqJri2lurIjlT1Z52, :lastname martin, :roles #{:dcm.handler/admin}, :username trigger, :firstname greg, :account-locked false, :enabled false, :credentials-expired false}, greg {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled false, :credentials-expired false}}
+[2016-09-24 11:44:06,462][INFO][dcm.handler][qtp30342007-14] post
+[2016-09-24 11:45:00,609][INFO][dcm.handler][qtp30342007-11] Loading database...
+[2016-09-24 11:45:00,612][INFO][dcm.handler][qtp30342007-11] ...done loading database.
+[2016-09-24 11:45:00,613][INFO][dcm.handler][qtp30342007-11] pre
+[2016-09-24 11:45:00,614][INFO][dcm.handler][qtp30342007-11] gmart
+[2016-09-24 11:45:00,615][INFO][dcm.handler][qtp30342007-11] {:created-date #inst "2016-09-03T21:24:57.926-00:00", :account-expired false, :userid 7bf0c2df-a228-4eb0-8a7c-ecad92fa44a2, :password $2a$10$tNDbz8vGv20z81h9LM6/JecZTEPo.ztoqeqRgSRI206tcF2Eqi8Pe, :lastname g, :roles #{:dcm.handler/admin}, :username gmart, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-24 11:45:00,615][INFO][dcm.handler][qtp30342007-11] {gmart {:created-date #inst "2016-09-03T21:24:57.926-00:00", :account-expired false, :email nil, :userid 7bf0c2df-a228-4eb0-8a7c-ecad92fa44a2, :password $2a$10$tNDbz8vGv20z81h9LM6/JecZTEPo.ztoqeqRgSRI206tcF2Eqi8Pe, :lastname g, :roles #{:dcm.handler/admin}, :username gmart, :firstname g, :account-locked false, :enabled true, :credentials-expired false}, gmart2 {:created-date #inst "2016-09-03T21:25:42.395-00:00", :account-expired false, :userid b3a614b5-7ce4-4521-bf40-85ae89a5e756, :password $2a$10$ozfU1P.6nNa5YIsSvT9ZL.9TtvePZu2SmMrNQXWLJ4vw7JvdtYQg6, :lastname g2, :roles #{:dcm.handler/admin}, :username gmart2, :firstname g2, :account-locked false, :enabled false, :credentials-expired false}, trig {:created-date #inst "2016-09-04T00:22:41.339-00:00", :account-expired false, :email nil, :userid 510df09b-bb8d-4860-a29e-a70d017be94e, :password $2a$10$7kA63MYMRSV26EcLQeZdfeJv8ht9nUyXs.5N.Ikoy9RtULHojPINy, :lastname martin, :roles #{:dcm.handler/admin}, :username trig, :firstname greg, :account-locked false, :enabled false, :credentials-expired false}, nil {:created-date #inst "2016-09-04T12:45:26.521-00:00", :account-expired false, :email nil, :userid d7efa640-cac0-4676-9511-1f7210d8e69d, :password $2a$10$5DqZWrMKQoPOQ2M/P5bkqe08yn9cZniEu7ZgcHWoWrfIyRY7Ra73G, :lastname dfgdfgdfg, :roles #{:dcm.handler/admin}, :username nil, :firstname dgfg, :account-locked false, :enabled false, :credentials-expired false}, trigger {:created-date #inst "2016-09-04T12:52:51.984-00:00", :account-expired false, :email nil, :userid 0971ee06-4abd-46fe-8d8e-75abb0f2b4d0, :password $2a$10$NMPQD1PxPWny.e3GIXeoM.phzIilx/k3cRdwJqJri2lurIjlT1Z52, :lastname martin, :roles #{:dcm.handler/admin}, :username trigger, :firstname greg, :account-locked false, :enabled false, :credentials-expired false}, greg {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled false, :credentials-expired false}}
+[2016-09-24 11:45:00,616][INFO][dcm.handler][qtp30342007-11] post
+[2016-09-24 11:45:25,871][INFO][dcm.handler][qtp30342007-12] pre
+[2016-09-24 11:45:25,874][INFO][dcm.handler][qtp30342007-12] greg
+[2016-09-24 11:45:25,878][INFO][dcm.handler][qtp30342007-12] {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-24 11:45:25,881][INFO][dcm.handler][qtp30342007-12] {gmart {:created-date #inst "2016-09-03T21:24:57.926-00:00", :account-expired false, :email nil, :userid 7bf0c2df-a228-4eb0-8a7c-ecad92fa44a2, :password $2a$10$tNDbz8vGv20z81h9LM6/JecZTEPo.ztoqeqRgSRI206tcF2Eqi8Pe, :lastname g, :roles #{:dcm.handler/admin}, :username gmart, :firstname g, :account-locked false, :enabled true, :credentials-expired false}, gmart2 {:created-date #inst "2016-09-03T21:25:42.395-00:00", :account-expired false, :userid b3a614b5-7ce4-4521-bf40-85ae89a5e756, :password $2a$10$ozfU1P.6nNa5YIsSvT9ZL.9TtvePZu2SmMrNQXWLJ4vw7JvdtYQg6, :lastname g2, :roles #{:dcm.handler/admin}, :username gmart2, :firstname g2, :account-locked false, :enabled false, :credentials-expired false}, trig {:created-date #inst "2016-09-04T00:22:41.339-00:00", :account-expired false, :email nil, :userid 510df09b-bb8d-4860-a29e-a70d017be94e, :password $2a$10$7kA63MYMRSV26EcLQeZdfeJv8ht9nUyXs.5N.Ikoy9RtULHojPINy, :lastname martin, :roles #{:dcm.handler/admin}, :username trig, :firstname greg, :account-locked false, :enabled false, :credentials-expired false}, nil {:created-date #inst "2016-09-04T12:45:26.521-00:00", :account-expired false, :email nil, :userid d7efa640-cac0-4676-9511-1f7210d8e69d, :password $2a$10$5DqZWrMKQoPOQ2M/P5bkqe08yn9cZniEu7ZgcHWoWrfIyRY7Ra73G, :lastname dfgdfgdfg, :roles #{:dcm.handler/admin}, :username nil, :firstname dgfg, :account-locked false, :enabled false, :credentials-expired false}, trigger {:created-date #inst "2016-09-04T12:52:51.984-00:00", :account-expired false, :email nil, :userid 0971ee06-4abd-46fe-8d8e-75abb0f2b4d0, :password $2a$10$NMPQD1PxPWny.e3GIXeoM.phzIilx/k3cRdwJqJri2lurIjlT1Z52, :lastname martin, :roles #{:dcm.handler/admin}, :username trigger, :firstname greg, :account-locked false, :enabled false, :credentials-expired false}, greg {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}}
+[2016-09-24 11:45:25,883][INFO][dcm.handler][qtp30342007-12] post
+[2016-09-25 07:54:24,146][INFO][dcm.handler][qtp30342007-14] Loading database...
+[2016-09-25 07:54:24,149][INFO][dcm.handler][qtp30342007-14] ...done loading database.
+[2016-09-25 07:54:24,150][INFO][dcm.handler][qtp30342007-14] pre
+[2016-09-25 07:54:24,151][INFO][dcm.handler][qtp30342007-14] For real:  greg
+[2016-09-25 07:54:24,152][INFO][dcm.handler][qtp30342007-14] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 07:54:24,152][INFO][dcm.handler][qtp30342007-14] {gmart {:created-date #inst "2016-09-03T21:24:57.926-00:00", :account-expired false, :userid 7bf0c2df-a228-4eb0-8a7c-ecad92fa44a2, :password $2a$10$tNDbz8vGv20z81h9LM6/JecZTEPo.ztoqeqRgSRI206tcF2Eqi8Pe, :lastname g, :roles #{:dcm.handler/admin}, :username gmart, :firstname g, :account-locked false, :enabled false, :credentials-expired false}, gmart2 {:created-date #inst "2016-09-03T21:25:42.395-00:00", :account-expired false, :userid b3a614b5-7ce4-4521-bf40-85ae89a5e756, :password $2a$10$ozfU1P.6nNa5YIsSvT9ZL.9TtvePZu2SmMrNQXWLJ4vw7JvdtYQg6, :lastname g2, :roles #{:dcm.handler/admin}, :username gmart2, :firstname g2, :account-locked false, :enabled false, :credentials-expired false}, trig {:created-date #inst "2016-09-04T00:22:41.339-00:00", :account-expired false, :email nil, :userid 510df09b-bb8d-4860-a29e-a70d017be94e, :password $2a$10$7kA63MYMRSV26EcLQeZdfeJv8ht9nUyXs.5N.Ikoy9RtULHojPINy, :lastname martin, :roles #{:dcm.handler/admin}, :username trig, :firstname greg, :account-locked false, :enabled false, :credentials-expired false}, nil {:created-date #inst "2016-09-04T12:45:26.521-00:00", :account-expired false, :email nil, :userid d7efa640-cac0-4676-9511-1f7210d8e69d, :password $2a$10$5DqZWrMKQoPOQ2M/P5bkqe08yn9cZniEu7ZgcHWoWrfIyRY7Ra73G, :lastname dfgdfgdfg, :roles #{:dcm.handler/admin}, :username nil, :firstname dgfg, :account-locked false, :enabled false, :credentials-expired false}, trigger {:created-date #inst "2016-09-04T12:52:51.984-00:00", :account-expired false, :email nil, :userid 0971ee06-4abd-46fe-8d8e-75abb0f2b4d0, :password $2a$10$NMPQD1PxPWny.e3GIXeoM.phzIilx/k3cRdwJqJri2lurIjlT1Z52, :lastname martin, :roles #{:dcm.handler/admin}, :username trigger, :firstname greg, :account-locked false, :enabled false, :credentials-expired false}, greg {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}}
+[2016-09-25 07:54:24,167][INFO][dcm.handler][qtp30342007-14] post
+[2016-09-25 07:56:50,641][INFO][dcm.handler][qtp30342007-15] Loading database...
+[2016-09-25 07:56:50,643][INFO][dcm.handler][qtp30342007-15] ...done loading database.
+[2016-09-25 07:56:50,645][INFO][dcm.handler][qtp30342007-15] pre
+[2016-09-25 07:56:50,647][INFO][dcm.handler][qtp30342007-15] For real:  greg
+[2016-09-25 07:56:50,648][INFO][dcm.handler][qtp30342007-15] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 07:56:50,649][INFO][dcm.handler][qtp30342007-15] {gmart {:created-date #inst "2016-09-03T21:24:57.926-00:00", :account-expired false, :userid 7bf0c2df-a228-4eb0-8a7c-ecad92fa44a2, :password $2a$10$tNDbz8vGv20z81h9LM6/JecZTEPo.ztoqeqRgSRI206tcF2Eqi8Pe, :lastname g, :roles #{:dcm.handler/admin}, :username gmart, :firstname g, :account-locked false, :enabled false, :credentials-expired false}, gmart2 {:created-date #inst "2016-09-03T21:25:42.395-00:00", :account-expired false, :userid b3a614b5-7ce4-4521-bf40-85ae89a5e756, :password $2a$10$ozfU1P.6nNa5YIsSvT9ZL.9TtvePZu2SmMrNQXWLJ4vw7JvdtYQg6, :lastname g2, :roles #{:dcm.handler/admin}, :username gmart2, :firstname g2, :account-locked false, :enabled false, :credentials-expired false}, trig {:created-date #inst "2016-09-04T00:22:41.339-00:00", :account-expired false, :email nil, :userid 510df09b-bb8d-4860-a29e-a70d017be94e, :password $2a$10$7kA63MYMRSV26EcLQeZdfeJv8ht9nUyXs.5N.Ikoy9RtULHojPINy, :lastname martin, :roles #{:dcm.handler/admin}, :username trig, :firstname greg, :account-locked false, :enabled false, :credentials-expired false}, nil {:created-date #inst "2016-09-04T12:45:26.521-00:00", :account-expired false, :email nil, :userid d7efa640-cac0-4676-9511-1f7210d8e69d, :password $2a$10$5DqZWrMKQoPOQ2M/P5bkqe08yn9cZniEu7ZgcHWoWrfIyRY7Ra73G, :lastname dfgdfgdfg, :roles #{:dcm.handler/admin}, :username nil, :firstname dgfg, :account-locked false, :enabled false, :credentials-expired false}, trigger {:created-date #inst "2016-09-04T12:52:51.984-00:00", :account-expired false, :email nil, :userid 0971ee06-4abd-46fe-8d8e-75abb0f2b4d0, :password $2a$10$NMPQD1PxPWny.e3GIXeoM.phzIilx/k3cRdwJqJri2lurIjlT1Z52, :lastname martin, :roles #{:dcm.handler/admin}, :username trigger, :firstname greg, :account-locked false, :enabled false, :credentials-expired false}, greg {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}}
+[2016-09-25 07:56:50,651][INFO][dcm.handler][qtp30342007-15] post
+[2016-09-25 07:57:41,956][INFO][dcm.handler][qtp30342007-11] Loading database...
+[2016-09-25 07:57:41,959][INFO][dcm.handler][qtp30342007-11] ...done loading database.
+[2016-09-25 07:57:41,960][INFO][dcm.handler][qtp30342007-11] pre
+[2016-09-25 07:57:41,963][INFO][dcm.handler][qtp30342007-11] For real:  greg
+[2016-09-25 07:57:41,964][INFO][dcm.handler][qtp30342007-11] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 07:57:41,964][INFO][dcm.handler][qtp30342007-11] post
+[2016-09-25 08:13:14,830][INFO][dcm.handler][qtp30342007-15] Loading database...
+[2016-09-25 08:13:14,832][INFO][dcm.handler][qtp30342007-15] ...done loading database.
+[2016-09-25 08:13:14,833][INFO][dcm.handler][qtp30342007-15] pre
+[2016-09-25 08:13:14,835][INFO][dcm.handler][qtp30342007-15] For real:  greg
+[2016-09-25 08:13:14,835][INFO][dcm.handler][qtp30342007-15] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 08:13:14,836][INFO][dcm.handler][qtp30342007-15] post
+[2016-09-25 08:13:36,056][INFO][dcm.handler][qtp30342007-15] Loading database...
+[2016-09-25 08:13:36,058][INFO][dcm.handler][qtp30342007-15] ...done loading database.
+[2016-09-25 08:13:36,060][INFO][dcm.handler][qtp30342007-15] pre
+[2016-09-25 08:13:36,063][INFO][dcm.handler][qtp30342007-15] For real:  greg
+[2016-09-25 08:13:36,063][INFO][dcm.handler][qtp30342007-15] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 08:13:36,064][INFO][dcm.handler][qtp30342007-15] post
+[2016-09-25 08:14:59,236][INFO][dcm.handler][qtp30342007-16] Loading database...
+[2016-09-25 08:14:59,238][INFO][dcm.handler][qtp30342007-16] ...done loading database.
+[2016-09-25 08:14:59,239][INFO][dcm.handler][qtp30342007-16] pre
+[2016-09-25 08:14:59,241][INFO][dcm.handler][qtp30342007-16] For real:  greg
+[2016-09-25 08:14:59,241][INFO][dcm.handler][qtp30342007-16] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 08:15:09,754][INFO][dcm.handler][qtp30342007-11] Loading database...
+[2016-09-25 08:15:09,757][INFO][dcm.handler][qtp30342007-11] ...done loading database.
+[2016-09-25 08:15:09,759][INFO][dcm.handler][qtp30342007-11] pre
+[2016-09-25 08:15:09,763][INFO][dcm.handler][qtp30342007-11] For real:  greg
+[2016-09-25 08:15:09,763][INFO][dcm.handler][qtp30342007-11] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 08:15:24,024][INFO][dcm.handler][qtp30342007-13] Loading database...
+[2016-09-25 08:15:24,025][INFO][dcm.handler][qtp30342007-13] ...done loading database.
+[2016-09-25 08:15:24,027][INFO][dcm.handler][qtp30342007-13] pre
+[2016-09-25 08:15:24,029][INFO][dcm.handler][qtp30342007-13] For real:  greg
+[2016-09-25 08:15:24,030][INFO][dcm.handler][qtp30342007-13] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 08:15:47,314][INFO][dcm.handler][qtp30342007-11] Loading database...
+[2016-09-25 08:15:47,316][INFO][dcm.handler][qtp30342007-11] ...done loading database.
+[2016-09-25 08:15:47,317][INFO][dcm.handler][qtp30342007-11] pre
+[2016-09-25 08:15:47,319][INFO][dcm.handler][qtp30342007-11] For real:  greg
+[2016-09-25 08:15:47,319][INFO][dcm.handler][qtp30342007-11] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 08:15:47,319][INFO][dcm.handler][qtp30342007-11] post
+[2016-09-25 08:16:34,565][INFO][dcm.handler][qtp30342007-13] Loading database...
+[2016-09-25 08:16:34,566][INFO][dcm.handler][qtp30342007-13] ...done loading database.
+[2016-09-25 08:16:34,568][INFO][dcm.handler][qtp30342007-13] pre
+[2016-09-25 08:16:34,570][INFO][dcm.handler][qtp30342007-13] For real:  greg
+[2016-09-25 08:16:34,570][INFO][dcm.handler][qtp30342007-13] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 08:16:34,570][INFO][dcm.handler][qtp30342007-13] post
+[2016-09-25 08:17:04,534][INFO][dcm.handler][qtp30342007-12] Loading database...
+[2016-09-25 08:17:04,536][INFO][dcm.handler][qtp30342007-12] ...done loading database.
+[2016-09-25 08:17:04,538][INFO][dcm.handler][qtp30342007-12] pre
+[2016-09-25 08:17:04,541][INFO][dcm.handler][qtp30342007-12] For real:  greg
+[2016-09-25 08:17:04,542][INFO][dcm.handler][qtp30342007-12] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 08:17:46,890][INFO][dcm.handler][qtp30342007-15] Loading database...
+[2016-09-25 08:17:46,891][INFO][dcm.handler][qtp30342007-15] ...done loading database.
+[2016-09-25 08:17:46,893][INFO][dcm.handler][qtp30342007-15] pre
+[2016-09-25 08:17:46,894][INFO][dcm.handler][qtp30342007-15] For real:  greg
+[2016-09-25 08:17:46,895][INFO][dcm.handler][qtp30342007-15] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 08:19:31,972][INFO][dcm.handler][qtp30342007-16] Loading database...
+[2016-09-25 08:19:31,975][INFO][dcm.handler][qtp30342007-16] ...done loading database.
+[2016-09-25 08:19:31,976][INFO][dcm.handler][qtp30342007-16] pre
+[2016-09-25 08:19:31,987][INFO][dcm.handler][qtp30342007-16] For real:  greg
+[2016-09-25 08:19:31,991][INFO][dcm.handler][qtp30342007-16] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 08:36:36,924][INFO][dcm.handler][qtp30342007-15] Loading database...
+[2016-09-25 08:36:36,926][INFO][dcm.handler][qtp30342007-15] ...done loading database.
+[2016-09-25 08:36:36,927][INFO][dcm.handler][qtp30342007-15] pre
+[2016-09-25 08:36:36,929][INFO][dcm.handler][qtp30342007-15] For real:  greg
+[2016-09-25 08:36:36,929][INFO][dcm.handler][qtp30342007-15] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 08:37:16,673][INFO][dcm.handler][qtp30342007-14] Loading database...
+[2016-09-25 08:37:16,674][INFO][dcm.handler][qtp30342007-14] ...done loading database.
+[2016-09-25 08:37:16,675][INFO][dcm.handler][qtp30342007-14] pre
+[2016-09-25 08:37:16,677][INFO][dcm.handler][qtp30342007-14] For real:  greg
+[2016-09-25 08:37:16,677][INFO][dcm.handler][qtp30342007-14] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 08:37:16,677][INFO][dcm.handler][qtp30342007-14] post
+[2016-09-25 08:39:05,226][INFO][dcm.handler][qtp30342007-11] Loading database...
+[2016-09-25 08:39:05,228][INFO][dcm.handler][qtp30342007-11] ...done loading database.
+[2016-09-25 08:39:05,230][INFO][dcm.handler][qtp30342007-11] pre
+[2016-09-25 08:39:05,233][INFO][dcm.handler][qtp30342007-11] For real:  greg
+[2016-09-25 08:39:05,233][INFO][dcm.handler][qtp30342007-11] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 08:39:05,233][INFO][dcm.handler][qtp30342007-11] post
+[2016-09-25 08:40:04,035][INFO][dcm.handler][qtp30342007-14] Loading database...
+[2016-09-25 08:40:04,037][INFO][dcm.handler][qtp30342007-14] ...done loading database.
+[2016-09-25 08:40:04,038][INFO][dcm.handler][qtp30342007-14] pre
+[2016-09-25 08:40:04,040][INFO][dcm.handler][qtp30342007-14] For real:  greg
+[2016-09-25 08:40:04,040][INFO][dcm.handler][qtp30342007-14] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled true, :credentials-expired false}
+[2016-09-25 08:40:04,040][INFO][dcm.handler][qtp30342007-14] post
+[2016-09-25 08:40:22,865][INFO][dcm.handler][qtp30342007-12] Loading database...
+[2016-09-25 08:40:22,866][INFO][dcm.handler][qtp30342007-12] ...done loading database.
+[2016-09-25 08:40:22,868][INFO][dcm.handler][qtp30342007-12] pre
+[2016-09-25 08:40:22,870][INFO][dcm.handler][qtp30342007-12] For real:  greg
+[2016-09-25 08:40:22,870][INFO][dcm.handler][qtp30342007-12] For Real2:  {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled false, :credentials-expired false}
+[2016-09-25 08:40:22,871][INFO][dcm.handler][qtp30342007-12] post
+[2016-09-28 07:30:27,877][INFO][dcm.handler][qtp30342007-15] Loading database...
+[2016-09-28 07:30:27,917][INFO][dcm.handler][qtp30342007-15] ...done loading database.
+[2016-10-14 07:48:48,226][INFO][dcm.handler][main] Loading database...
+[2016-10-14 07:48:48,254][INFO][dcm.handler][main] ...done loading database.
+[2016-10-14 07:48:48,603][INFO][org.eclipse.jetty.server.Server][main] jetty-7.6.13.v20130916
+[2016-10-14 07:48:48,729][INFO][org.eclipse.jetty.server.AbstractConnector][main] Started SelectChannelConnector@0.0.0.0:3000
+[2016-10-14 07:52:39,296][INFO][dcm.handler][clojure-agent-send-off-pool-3] =====================Begin Make Slide Images CLI==================
 
 
-[2016-09-07 07:54:42,606][INFO][dcm.handler][qtp11178463-53] Loading database...
-[2016-09-07 07:54:42,632][INFO][dcm.handler][qtp11178463-53] ...done loading database. Its contents: {:users {gmart {:created-date #inst "2016-09-03T21:24:57.926-00:00", :account-expired false, :userid 7bf0c2df-a228-4eb0-8a7c-ecad92fa44a2, :password $2a$10$tNDbz8vGv20z81h9LM6/JecZTEPo.ztoqeqRgSRI206tcF2Eqi8Pe, :lastname g, :roles #{:dcm.handler/admin}, :username gmart, :firstname g, :account-locked false, :enabled false, :credentials-expired false}, gmart2 {:created-date #inst "2016-09-03T21:25:42.395-00:00", :account-expired false, :userid b3a614b5-7ce4-4521-bf40-85ae89a5e756, :password $2a$10$ozfU1P.6nNa5YIsSvT9ZL.9TtvePZu2SmMrNQXWLJ4vw7JvdtYQg6, :lastname g2, :roles #{:dcm.handler/admin}, :username gmart2, :firstname g2, :account-locked false, :enabled false, :credentials-expired false}, trig {:created-date #inst "2016-09-04T00:22:41.339-00:00", :account-expired false, :email nil, :userid 510df09b-bb8d-4860-a29e-a70d017be94e, :password $2a$10$7kA63MYMRSV26EcLQeZdfeJv8ht9nUyXs.5N.Ikoy9RtULHojPINy, :lastname martin, :roles #{:dcm.handler/admin}, :username trig, :firstname greg, :account-locked false, :enabled false, :credentials-expired false}, nil {:created-date #inst "2016-09-04T12:45:26.521-00:00", :account-expired false, :email nil, :userid d7efa640-cac0-4676-9511-1f7210d8e69d, :password $2a$10$5DqZWrMKQoPOQ2M/P5bkqe08yn9cZniEu7ZgcHWoWrfIyRY7Ra73G, :lastname dfgdfgdfg, :roles #{:dcm.handler/admin}, :username nil, :firstname dgfg, :account-locked false, :enabled false, :credentials-expired false}, trigger {:created-date #inst "2016-09-04T12:52:51.984-00:00", :account-expired false, :email nil, :userid 0971ee06-4abd-46fe-8d8e-75abb0f2b4d0, :password $2a$10$NMPQD1PxPWny.e3GIXeoM.phzIilx/k3cRdwJqJri2lurIjlT1Z52, :lastname martin, :roles #{:dcm.handler/admin}, :username trigger, :firstname greg, :account-locked false, :enabled false, :credentials-expired false}, greg {:created-date #inst "2016-09-04T13:33:55.472-00:00", :account-expired false, :email gemartin@gmail.com, :userid dd857059-78da-4c85-9a57-5e30599ba005, :password $2a$10$SO27yjLmikWXYqOnnT1aF.47AFHu4Gg5aSCdO1sr53hVFnLbzKely, :lastname m, :roles #{:dcm.handler/admin}, :username greg, :firstname g, :account-locked false, :enabled false, :credentials-expired false}}}
-[2016-09-07 07:54:42,693][INFO][dcm.handler][qtp11178463-53] {:ssl-client-cert nil, :cookies {ring-session {:value d1dd4a6e-9e87-4f46-8381-d1afa545217b}}, :remote-addr 127.0.0.1, :params {:upload-deck {:filename Grape Crop Insurance.pptx, :content-type application/ms-powerpoint, :tempfile #object[java.io.File 0x8b1056 /tmp/ring-multipart-5847797257160166032.tmp], :size 2348869}, :upload-audio {:filename slideshow.mp3, :content-type audio/mpeg, :tempfile #object[java.io.File 0x1ddbae7 /tmp/ring-multipart-8818063843493648909.tmp], :size 461679}}, :flash nil, :headers {host localhost:3000, user-agent Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:44.0) Gecko/20100101 Firefox/44.0, content-type multipart/form-data; boundary=---------------------------1756938286503584566864806560, cookie ring-session=d1dd4a6e-9e87-4f46-8381-d1afa545217b, content-length 2810971, referer http://localhost:3000/, connection keep-alive, pragma no-cache, accept text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8, accept-language en-US,en;q=0.5, accept-encoding gzip, deflate, cache-control no-cache}, :server-port 3000, :content-length 2810971, :form-params {}, :session/key nil, :cemerick.friend/authorization-failure {:cemerick.friend/type :unauthorized, :cemerick.friend/identity nil, :cemerick.friend/required-roles #{:dcm.handler/user}, :cemerick.friend/exprs [(future (future-file-uploads tempfile filename audio-tempfile audio-filename)) {:status 200, :headers {Content-Type application/json}, :body (json/write-str {:status OK, :filename filename, :tempfile (str tempfile), :size size})}]}, :query-params {}, :content-type multipart/form-data; boundary=---------------------------1756938286503584566864806560, :character-encoding nil, :uri /upload, :server-name localhost, :query-string nil, :body #object[org.eclipse.jetty.server.HttpInput 0x19a616 org.eclipse.jetty.server.HttpInput@19a616], :multipart-params {upload-deck {:filename Grape Crop Insurance.pptx, :content-type application/ms-powerpoint, :tempfile #object[java.io.File 0x8b1056 /tmp/ring-multipart-5847797257160166032.tmp], :size 2348869}, upload-audio {:filename slideshow.mp3, :content-type audio/mpeg, :tempfile #object[java.io.File 0x1ddbae7 /tmp/ring-multipart-8818063843493648909.tmp], :size 461679}}, :scheme :http, :cemerick.friend/auth-config {:default-landing-uri /, :login-uri /login, :credential-fn #object[clojure.core$partial$fn__4759 0x1e7080c clojure.core$partial$fn__4759@1e7080c], :workflows [#object[cemerick.friend.workflows$interactive_form$fn__6647 0xc1656c cemerick.friend.workflows$interactive_form$fn__6647@c1656c]], :redirect-on-auth? false, :login-failure-handler #object[dcm.handler$fn__8502 0x86c3e5 dcm.handler$fn__8502@86c3e5], :unauthenticated-handler #object[dcm.handler$fn__8504 0xf4c85a dcm.handler$fn__8504@f4c85a], :unauthorized-handler #object[dcm.handler$fn__8507 0x1fa7137 dcm.handler$fn__8507@1fa7137]}, :request-method :post, :session {}}
+[2016-10-14 07:52:39,298][INFO][dcm.handler][clojure-agent-send-off-pool-3] Attempting to convert /home/greg/Projects/dcm/resources/private/uploads/slideshow2.pptx
+[2016-10-14 07:52:39,298][INFO][dcm.handler][clojure-agent-send-off-pool-3] Slide Extension:  .pptx
+[2016-10-14 07:52:39,298][INFO][dcm.handler][clojure-agent-send-off-pool-3] This is NOT a PDF
+[2016-10-14 07:52:43,515][INFO][dcm.handler][clojure-agent-send-off-pool-3] =====================Begin Make Slide Images PDF==================
+
+
+[2016-10-14 07:52:43,689][INFO][dcm.handler][clojure-agent-send-off-pool-3] Received page number  0
+[2016-10-14 07:52:47,840][INFO][dcm.handler][clojure-agent-send-off-pool-3] Received page number  1
+[2016-10-14 07:52:51,674][INFO][dcm.handler][clojure-agent-send-off-pool-3] Final List:  (c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg c644673a-f3dd-4e91-8992-a3fdf3131d9c2.jpeg)
+[2016-10-14 07:52:51,675][INFO][dcm.handler][clojure-agent-send-off-pool-2] =====================Begin image transition==================
+
+
+[2016-10-14 07:52:51,676][INFO][dcm.handler][clojure-agent-send-off-pool-2] Performing image transition between  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg  and  c644673a-f3dd-4e91-8992-a3fdf3131d9c2.jpeg
+[2016-10-14 07:52:51,679][INFO][dcm.handler][clojure-agent-send-off-pool-2] Initiating transition between: resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg and resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c2.jpeg. Progress: 0
+[2016-10-14 07:52:51,688][INFO][dcm.handler][clojure-agent-send-off-pool-3] Successfully made slide images
+[2016-10-14 07:52:51,735][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully transitioned image:  8d18dba6-5e9d-43bc-9d0f-5f02a2aa0c86
+[2016-10-14 07:52:51,735][INFO][dcm.handler][clojure-agent-send-off-pool-2] Initiating transition between: resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg and resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c2.jpeg. Progress: 1
+[2016-10-14 07:52:51,785][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully transitioned image:  d532fff9-bb30-44bc-99a8-48db0668f139
+[2016-10-14 07:52:51,785][INFO][dcm.handler][clojure-agent-send-off-pool-2] Initiating transition between: resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg and resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c2.jpeg. Progress: 2
+[2016-10-14 07:52:51,835][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully transitioned image:  84e525e6-f3e3-4f25-8b6a-695c31ef619b
+[2016-10-14 07:52:51,835][INFO][dcm.handler][clojure-agent-send-off-pool-2] Initiating transition between: resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg and resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c2.jpeg. Progress: 3
+[2016-10-14 07:52:51,887][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully transitioned image:  58253f36-d185-403a-8780-b9e4587fa40f
+[2016-10-14 07:52:51,887][INFO][dcm.handler][clojure-agent-send-off-pool-2] Initiating transition between: resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg and resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c2.jpeg. Progress: 4
+[2016-10-14 07:52:51,937][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully transitioned image:  b5d25368-6e17-40b0-beaa-bc133e1625a7
+[2016-10-14 07:52:51,937][INFO][dcm.handler][clojure-agent-send-off-pool-2] Initiating transition between: resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg and resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c2.jpeg. Progress: 5
+[2016-10-14 07:52:51,986][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully transitioned image:  0b1e8b51-0ce6-4243-a4d0-c4dbeae419a2
+[2016-10-14 07:52:51,987][INFO][dcm.handler][clojure-agent-send-off-pool-2] Initiating transition between: resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg and resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c2.jpeg. Progress: 6
+[2016-10-14 07:52:52,035][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully transitioned image:  d2dc941a-48cf-4716-8012-1032fa1556ea
+[2016-10-14 07:52:52,036][INFO][dcm.handler][clojure-agent-send-off-pool-2] Initiating transition between: resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg and resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c2.jpeg. Progress: 7
+[2016-10-14 07:52:52,100][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully transitioned image:  586b8c49-453a-40e2-bd57-a6c2c80a553a
+[2016-10-14 07:52:52,100][INFO][dcm.handler][clojure-agent-send-off-pool-2] Initiating transition between: resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg and resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c2.jpeg. Progress: 8
+[2016-10-14 07:52:52,152][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully transitioned image:  88238b5a-2fd2-4541-94f5-f190f802eab3
+[2016-10-14 07:52:52,152][INFO][dcm.handler][clojure-agent-send-off-pool-2] Initiating transition between: resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg and resources/private/images/c644673a-f3dd-4e91-8992-a3fdf3131d9c2.jpeg. Progress: 9
+[2016-10-14 07:52:52,204][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully transitioned image:  f1f0a11c-a79e-447e-a0e9-50910ba3e600
+[2016-10-14 07:52:52,210][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_0
+[2016-10-14 07:52:52,210][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_1
+[2016-10-14 07:52:52,210][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_2
+[2016-10-14 07:52:52,211][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_3
+[2016-10-14 07:52:52,212][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_4
+[2016-10-14 07:52:52,213][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_5
+[2016-10-14 07:52:52,213][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_6
+[2016-10-14 07:52:52,213][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_7
+[2016-10-14 07:52:52,215][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_8
+[2016-10-14 07:52:52,215][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_9
+[2016-10-14 07:52:52,215][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_10
+[2016-10-14 07:52:52,216][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_11
+[2016-10-14 07:52:52,216][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_12
+[2016-10-14 07:52:52,217][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_13
+[2016-10-14 07:52:52,217][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_14
+[2016-10-14 07:52:52,218][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_15
+[2016-10-14 07:52:52,218][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_16
+[2016-10-14 07:52:52,218][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_17
+[2016-10-14 07:52:52,219][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_18
+[2016-10-14 07:52:52,219][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_19
+[2016-10-14 07:52:52,220][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_20
+[2016-10-14 07:52:52,220][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_21
+[2016-10-14 07:52:52,220][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_22
+[2016-10-14 07:52:52,221][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_23
+[2016-10-14 07:52:52,222][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_24
+[2016-10-14 07:52:52,222][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_25
+[2016-10-14 07:52:52,223][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_26
+[2016-10-14 07:52:52,223][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_27
+[2016-10-14 07:52:52,224][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_28
+[2016-10-14 07:52:52,225][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_29
+[2016-10-14 07:52:52,225][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_30
+[2016-10-14 07:52:52,226][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_31
+[2016-10-14 07:52:52,226][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_32
+[2016-10-14 07:52:52,227][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_33
+[2016-10-14 07:52:52,227][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_34
+[2016-10-14 07:52:52,230][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_35
+[2016-10-14 07:52:52,231][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_36
+[2016-10-14 07:52:52,231][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_37
+[2016-10-14 07:52:52,231][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_38
+[2016-10-14 07:52:52,231][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_39
+[2016-10-14 07:52:52,232][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_40
+[2016-10-14 07:52:52,232][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_41
+[2016-10-14 07:52:52,232][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_42
+[2016-10-14 07:52:52,235][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_43
+[2016-10-14 07:52:52,236][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_44
+[2016-10-14 07:52:52,238][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_45
+[2016-10-14 07:52:52,238][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_46
+[2016-10-14 07:52:52,239][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_47
+[2016-10-14 07:52:52,240][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_48
+[2016-10-14 07:52:52,240][INFO][dcm.handler][clojure-agent-send-off-pool-2] Successfully copied image:  c644673a-f3dd-4e91-8992-a3fdf3131d9c1.jpeg_49
+[2016-10-14 07:52:52,241][INFO][dcm.handler][clojure-agent-send-off-pool-3] =====================Begin video transition==================
+
+

@@ -1,12 +1,8 @@
 (ns dcm.handler
   (:use compojure.core)
-;  (:use [clamq.activemq])
+
 
   (:import [java.net URI URL])
-;  (:import [org.apache.activemq.broker.BrokerFactory])
-;  (:import [org.apache.activemq.broker.BrokerService])
-;  (:import [org.apache.poi.xslf.usermodel XMLSlideShow XSLFSlide])
-;  (:import [org.apache.poi.util Units])
   (:import [org.apache.pdfbox.pdmodel PDDocument])
   (:import [org.apache.pdfbox.rendering ImageType])
   (:import [org.apache.pdfbox.rendering PDFRenderer])
@@ -29,48 +25,29 @@
                         [ring.middleware.json :refer [wrap-json-response wrap-json-body]]
                         [ring.middleware.keyword-params :refer [wrap-keyword-params]]
                         [ring.util.response :as rr]
-;			[clamq.protocol.connection :as connection]
-;			[clamq.protocol.consumer :as consumer]
-;			[clamq.protocol.seqable :as seqable]
-;			[clamq.protocol.producer :as producer]
-;			[clamq.pipes :as pipes]
                         [dcm.mail :as mail]
                         [dcm.transactional :as trans]
-;                        [dcm.data :as data]
                         (cemerick.friend [workflows :as workflows]
                                          [credentials :as creds])))
 
-;(def users {"admin" {:username "admin"
-;                    :password (creds/hash-bcrypt "password")
-;                    :roles #{::admin}}
-;            "dave" {:username "dave"
-;                    :password (creds/hash-bcrypt "password")
-;                    :roles #{::user}}})
 
 (derive ::admin ::user)
 
 
-;========================== trying to figure out file based db
-
 (def db (atom {}))
-
-;(defn save-data []
-;  (spit "somefile" (prn-str @db)))
 
 (defn load-data [app]
 (try
   (log/info "Loading database...")
   (reset! db (read-string (slurp "somefile")))
-  (log/info "...done loading database. Its contents:" @db)
-  
+  (log/info "...done loading database.")
   (catch Exception e
      (log/info (.getMessage e))))
   app)
 
 (defn write-data []
  (spit "somefile.tmp" (prn-str @db))
- (.renameTo (File. "somefile.tmp") (File. "somefile"))
-)
+ (.renameTo (File. "somefile.tmp") (File. "somefile")))
 
 (def save-agent (agent nil))
 
@@ -80,81 +57,10 @@
       (spit "somefile.tmp" (prn-str @db))
       (.renameTo (File. "somefile.tmp") (File. "somefile")))))
 
-
-;(defn save-data2 []
-;  (log/info "saving data")
-;  (println "try again")
-;   (future (try (write-data)
-;   (catch Exception e
-;       (log/info (.getMessage e)))))
-;)
-
 (defn load-user [username]
- (log/info "user: " username)
- (log/info "DB: " @db)
- (log/info "Users: " (:users @db))
- (log/info "Specific Users: " ((:users @db) username))
  ((:users @db) username))
-;(log/info (doall (filter #(some? (= (:username  %) username))  @db)))
-;(doall (filter #(some? (= (:username %) username)) (:users @db))))
-;(:users @db))
-
-;========================== file based db
-
-
-(comment []
- "COMMENTED OUT CODE"
-(defn init-consumer [queue on-message-receiver]
-(with-open [connection (activemq-connection "tcp://localhost:61616")]
-    (let [consumer (connection/consumer connection {:endpoint queue :on-message on-message-receiver :transacted false})]
-       (consumer/start consumer) )))
-
-(defn sendmessage [queue message]
-    (with-open [connection (activemq-connection "tcp://localhost:61616")]
-       (let [producer (connection/producer connection)]
-                (producer/publish producer queue message) )))
-
-
-(defn save-slide-image [slide]
-(let [
-       slideshow (.getSlideShow slide)
-       dims (.getPageSize slideshow)
-       slidewidth (Units/pointsToPixel (.getWidth dims))
-       slideheight (Units/pointsToPixel (.getHeight dims))
-       img (new BufferedImage slidewidth slideheight BufferedImage/TYPE_INT_RGB)
-       gfx (.createGraphics img)
-       uniquename (.toString (java.util.UUID/randomUUID))
-       fileout (io/output-stream (io/file "resources" "private" "images" uniquename))
-       transx (new AffineTransform)
-       dpisize (/ 96.0 72.0)
-     ] 
-        (.scale transx dpisize dpisize)
-        (.setTransform gfx transx)
-        (.setRenderingHint gfx RenderingHints/KEY_ANTIALIASING RenderingHints/VALUE_ANTIALIAS_ON)
-        (.setRenderingHint gfx RenderingHints/KEY_RENDERING RenderingHints/VALUE_RENDER_QUALITY)
-        (.setRenderingHint gfx RenderingHints/KEY_INTERPOLATION RenderingHints/VALUE_INTERPOLATION_BICUBIC)
-        (.setRenderingHint gfx RenderingHints/KEY_FRACTIONALMETRICS RenderingHints/VALUE_FRACTIONALMETRICS_ON)
-        (.setPaint gfx Color/white)
-        (println (str "The dimensions are: " slidewidth slideheight))
-        (.fillRect gfx 0 0 slidewidth slideheight)
-        (.draw slide gfx)
-        (ImageIO/write img "jpeg" fileout)
-        (log/info "Successfully saved image for slide#: " (.getSlideNumber slide))
-        uniquename))
-
-(defn make-slide-images [filepath]
-(let [
-       filein (io/input-stream (io/file "resources" "private" "uploads" filepath))
-       ppt (new XMLSlideShow filein)
-       slides (into [] (.getSlides ppt))
-       result-map (doall (map save-slide-image slides))
-     ]
-       (log/info "Begin processing " filepath)
-       ; (println result-map) ; update: trying doall instead ;do not remove this, it is needed to force the map
-       (sendmessage "transition-queue" result-map)
-       (log/info "Successfully processed " filepath))) ;map is a lazy function; doall forces it.
-
-);end comment
+(defn get-user-by-id [userid]
+ ((:users @db)))
 
 (defn write-pdf-page-to-image [uniquename pagenum pdRenderer]
     (log/info "Received page number " pagenum)
@@ -180,7 +86,6 @@
             numpages (.getNumberOfPages pdDoc)
             pdRenderer (new PDFRenderer pdDoc)]
 
-; future does not work ?
         (doall (for [n (range numpages)] (write-pdf-page-to-image uniquename n pdRenderer)))
         (.close pdDoc)))
 
@@ -192,8 +97,6 @@
 
 (defn future-video-receiver [message]
       (log/info "=====================Begin video transition==================\n\n")
-      (println (flatten message))
-      ; TODO: Use clojure shell and run FFMPEG.
       (let [
             filelist (distinct (flatten message)) ; how to eliminate duplicates?
             outputfilename (.toString (java.util.UUID/randomUUID))
@@ -202,20 +105,15 @@
             outputOGVvideo (str "/home/greg/Projects/dcm/resources/public/videos/" outputfilename  ".ogv")
             outputWEBMvideo (str "/home/greg/Projects/dcm/resources/public/videos/" outputfilename  ".webm")
            ]
-          (println inc-filelist)
 ; if the person is a free account, use -fs <bytes> to limit the filesize "-fs" "2000000" 
 ; also free accounts get jpg, whereas pro accounts get HQ?
 
 ; TODO: Fix the .wav file hardcoding!!!!
-           (println (shell/sh "avconv" "-y" "-f" "image2" "-i" (str "/home/greg/Projects/dcm/resources/private/images/" outputfilename "_%d.jpg") "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.wav" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" outputMP4video))
-;          (println (shell/sh "ffmpeg" "-y" "-f" "image2" "-loop" "1" "-i" "/home/greg/Projects/dcm/resources/private/images/slide_%d.jpg" "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.wav" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" "-t" "00:00:30" outputMP4video))
-; Note: trying change from wav file to mp3.
-;          (println (shell/sh "ffmpeg" "-y" "-f" "image2" "-i" "/home/greg/Projects/dcm/resources/private/images/slide_%d.jpg" "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.mp3" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" "-x264opts" "keyint=25" outputMP4video))
-
+          (println (shell/sh "avconv" "-y" "-f" "image2" "-i" (str "/home/greg/Projects/dcm/resources/private/images/" outputfilename "_%d.jpg") "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.wav" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" outputMP4video))
           (println "Transforming to OGV")
-          (println (shell/sh "ffmpeg" "-y" "-i" outputMP4video "-vcodec" "libtheora" "-qscale:v" "7" "-acodec" "libvorbis" "-qscale:a" "3" outputOGVvideo))
+          (println (shell/sh "avconv" "-y" "-i" outputMP4video "-vcodec" "libtheora" "-qscale:v" "7" "-acodec" "libvorbis" "-qscale:a" "3" outputOGVvideo))
           (println "Transforming to WEBM")
-          (println (shell/sh "ffmpeg" "-y" "-i" outputMP4video "-acodec" "libvorbis" "-ac" "2" "-ab" "96k" "-ar" "44100" "-b" "345k" "-s" "640x360" outputWEBMvideo))
+          (println (shell/sh "avconv" "-y" "-i" outputMP4video "-acodec" "libvorbis" "-ac" "2" "-ab" "96k" "-ar" "44100" "-b" "345k" "-s" "640x360" outputWEBMvideo))
           (println "Killing temporary image files...")
           (doall (map #(io/delete-file % true) inc-filelist))
           (println "Successfully killed all temporary images files")
@@ -226,7 +124,7 @@
 (let [
        img-start (ImageIO/read startfile)
        img-end (ImageIO/read endfile)
-       img-new (new BufferedImage (.getWidth img-start) (.getHeight img-start) BufferedImage/TYPE_INT_RGB) ;assume img-start and img-end are the same size
+       img-new (new BufferedImage (.getWidth img-start) (.getHeight img-start) BufferedImage/TYPE_INT_RGB) 
        gfx (.createGraphics img-new)
        composite (AlphaComposite/getInstance AlphaComposite/SRC_OVER (/ progress 10.0))
        uniquename (.toString (java.util.UUID/randomUUID))
@@ -245,8 +143,7 @@
        endfile   (io/file "resources" "private" "images" endname)]
      (io/copy startfile endfile)
      (log/info "Successfully copied image: " endname)
-     (str "/home/greg/Projects/dcm/resources/private/images/" endname))
-)
+     (str "/home/greg/Projects/dcm/resources/private/images/" endname)))
 
 (defn make-transition-images [start end]
      (let [startfile (io/file "resources" "private" "images" start)
@@ -257,10 +154,7 @@
          (concat
              (for [n (range 10)] (fade-image startfile endfile n))
              [(str "/home/greg/Projects/dcm/resources/private/images/" end)]
-         )
-     )
-     )
-)
+         ))))
 
 (defn future-transition [message]
       (log/info "=====================Begin image transition==================\n\n")
@@ -269,11 +163,7 @@
              transition-results (doall (for [[a b] (partition 2 1 message)](make-transition-images a b)))
           ]
           (println transition-results)
-          ;(sendmessage "video-queue" transition-results)
-          (future (future-video-receiver transition-results))
-          ;(println transition-results)
-      )
-)
+          (future (future-video-receiver transition-results))))
 
 (defn make-slide-images-cli [filepath]
      (let [ slidedeck (str "/home/greg/Projects/dcm/resources/private/uploads/" filepath)
@@ -286,16 +176,13 @@
      (log/info "Slide Extension: " slideextension)
      (when (not (.contains slideextension "pdf"))
          (log/info "This is NOT a PDF")
+
+         ; Unfortunately, the below fails if libreoffice is running on the same system in non-headless mode.
          (println (shell/sh "soffice" "--headless" "--convert-to" "pdf" "--outdir" "/home/greg/Projects/dcm/resources/private/uploads/" slidedeck)))
 
-;     (.mkdir (io/file (str "/home/greg/Projects/dcm/resources/private/uploads/" uniquename)))
+     (.mkdir (io/file (str "/home/greg/Projects/dcm/resources/private/uploads/" uniquename)))
 (log/info "=====================Begin Make Slide Images PDF==================\n\n")
 (make-pdf-images slidepdf uniquename)
-;(log/info "=====================Begin Ghostscript==================\n\n")
-;     (println (shell/sh "gs" "-sDEVICE=jpeg" "-r300" "-o" imagenames slidepdf))
-;(log/info "=====================Begin FFMPEG Image Scale==================\n\n")
-;     (println (shell/sh "ffmpeg" "-i" imagenames "-vf" "scale=640:-1" "-q:v" "1" imagenames))
-;(log/info "=====================End Scale==================\n\n")
 
      (let[ whole-dir (.list (io/file (str "/home/greg/Projects/dcm/resources/private/images/")))
            filtered-dir (filter #(.contains % uniquename)  whole-dir)
@@ -303,70 +190,11 @@
            final-list (for [l (range 1 (+ 1 filecount))] (str uniquename l ".jpeg"))]
 
      (log/info "Final List: " final-list)
-;     (sendmessage "transition-queue" final-list))
      (future (future-transition final-list))
-     (log/info "Successfully made slide images")
-     )
-)
-)
-
-(comment []
-"COMMENTED OUT CODE"
-(defn rename-image-files [inputfile increment]
-     (let [ newfile (str "/home/greg/Projects/dcm/resources/private/images/slide_" increment ".jpg")]
-     (.renameTo (File. inputfile) (File. newfile))
-     newfile))
-
-);comment
-
-(defn video-message-receiver [message]
-      (log/info "=====================Begin video transition==================\n\n")
-      (println (flatten message))
-      ; TODO: Use clojure shell and run FFMPEG.
-      (let [
-            filelist (distinct (flatten message)) ; how to eliminate duplicates?
-            inc-filelist (doall (map-indexed (fn [i x] (rename-image-files x i)) filelist))
-            outputfilename (.toString (java.util.UUID/randomUUID))
-            outputMP4video (str "/home/greg/Projects/dcm/resources/public/videos/" outputfilename  ".mp4")
-            outputOGVvideo (str "/home/greg/Projects/dcm/resources/public/videos/" outputfilename  ".ogv")
-            outputWEBMvideo (str "/home/greg/Projects/dcm/resources/public/videos/" outputfilename  ".webm")
-           ]
-          (println inc-filelist)
-; if the person is a free account, use -fs <bytes> to limit the filesize "-fs" "2000000" 
-; also free accounts get jpg, whereas pro accounts get HQ?
-
-           (println (shell/sh "avconv" "-y" "-f" "image2" "-i" "/home/greg/Projects/dcm/resources/private/images/slide_%d.jpg" "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.wav" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" outputMP4video))
-;          (println (shell/sh "ffmpeg" "-y" "-f" "image2" "-loop" "1" "-i" "/home/greg/Projects/dcm/resources/private/images/slide_%d.jpg" "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.wav" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" "-t" "00:00:30" outputMP4video))
-; Note: trying change from wav file to mp3.
-;          (println (shell/sh "ffmpeg" "-y" "-f" "image2" "-i" "/home/greg/Projects/dcm/resources/private/images/slide_%d.jpg" "-i" "/home/greg/Projects/dcm/resources/private/audio/slideshow.mp3" "-threads" "1" "-c:v" "libx264" "-vf" "fps=25,format=yuv420p" "-c:a" "aac" "-strict" "experimental" "-b:a" "44k" "-x264opts" "keyint=25" outputMP4video))
-
-          (println "Transforming to OGV")
-          (println (shell/sh "avconv" "-y" "-i" outputMP4video "-vcodec" "libtheora" "-qscale:v" "7" "-acodec" "libvorbis" "-qscale:a" "3" outputOGVvideo))
-          (println "Transforming to WEBM")
-          (println (shell/sh "avconv" "-y" "-i" outputMP4video "-acodec" "libvorbis" "-ac" "2" "-ab" "96k" "-ar" "44100" "-b" "345k" "-s" "640x360" outputWEBMvideo))
-          (println "Killing temporary image files...")
-          (doall (map #(io/delete-file % true) inc-filelist))
-          (println "Successfully killed all temporary images files")
-          )
-)
-(comment []
-"COMMENTED OUT CODE"
-(defn transition-message-receiver [message]
-      (log/info "=====================Begin image transition==================\n\n")
-      (let
-          [
-             transition-results (doall (for [[a b] (partition 2 1 message)](make-transition-images a b)))
-          ]
-          (println transition-results)
-          (sendmessage "video-queue" transition-results)
-          ;(println transition-results)
-      ))
-);comment
-
+     (log/info "Successfully made slide images"))))
 
 (defn upload-message-receiver [message]
-      ;(make-slide-images message))
-       (make-slide-images-cli message))
+      (make-slide-images-cli message))
 
 (defn forgot-password-receiver [message]
  (log/info "Forgot from: " message)
@@ -378,21 +206,12 @@
                             :text "Please click the activation link to proceed",
                             :user "gemartin@gmail.com",
                             :password "hockey"} )))
+
 (defn join-message-receiver [message]
           (log/info "The message is: " message)
- ;         (data/add-item "users" message)
 (log/info "Is DB Swap Working?")
 (log/info @db)
    (try
-; you should get the :users branch of the db, then add to it.
-;          (swap! db concat {(.toString (java.util.UUID/randomUUID)) {:username (:username message)
-;                                                                     :password (creds/hash-bcrypt (:password message))
-;                                                                     :roles #{::admin}}})
-;          (let [dbref @db
-;                users (:users dbref)]
-;                (swap! db update-in [:users] conj {(.toString (java.util.UUID/randomUUID)) {:username (:username message)
-;                                                                     :password (creds/hash-bcrypt (:password message))
-;                                                                     :roles #{::admin}}}))
 
 (swap! db assoc-in [:users (:username message)] {:username (:username message)
                                    :userid (.toString (java.util.UUID/randomUUID))
@@ -406,31 +225,51 @@
                                    :lastname (:lastname message)
                                    :created-date (java.util.Date.)
                                    :roles #{::admin}})
-;(trans/create-user (:firstname message) (:username message))
-(log/info (deref (:state trans/db)))
-(log/info @db)
    (catch Exception e
-         (log/info (.getMessage e))
-         (log/info "Nope")))
-(log/info "Yep way")
-(log/info "SAVING DATA+++++++++++++++++")
+         (log/info (.getMessage e))))
           (save-data)
-(log/info "SAVED DATA+++++++++++++++++")
-
+;shouldn't this be in a future?
           (mail/send-gmail {:from "gemartin@gmail.com", 
                             :to "gemartin@gmail.com",
                             :subject "Welcome to the club",
                             :text "Please click the activation link to proceed",
                             :user "gemartin@gmail.com",
                             :password "hockey"} ))
+(defn do-activation [probably-false]
+; just want to return true here
+true)
 
+(defn get-userid [[username userinfo]]
+ (:userid userinfo))
+
+(defn enable-specific [[[username userinfo]]]
+[username (update-in userinfo [:enabled] do-activation)] 
+)
+(defn enable-user [users code]
+(enable-specific (filter #(= (get-userid %) code) users))
+)
+
+(defn activate-user [code]
+ (log/info "pre")
+; (swap! (:users @db) update-in enable-user (filter #(= (get-userid %) code) (:users @db)))
+; (swap! db update-in [:users] enable-user code)
+(doall (map-indexed #(println (str "\t" %1 ", " %2 "!\n")) (:users @db)))
+
+(let [updated-user-full (enable-user (:users @db) code)
+      username (get updated-user-full 0)
+      updated-user (get updated-user-full 1)]
+(log/info "For real: " username)
+(log/info "For Real2: " updated-user)
+;(swap! db assoc-in [:users username] updated-user))
+(swap! db update-in [:users username :enabled] do-activation))
+ (log/info "post")
+(doall (map-indexed #(println (str "\t" %1 ", " %2 "!\n")) (:users @db)))
+
+)
   (defn future-file-uploads [tempfile filename audio-tempfile audio-filename]
-;  {{{tempfile :tempfile filename :filename size :size} :upload-deck {audio-tempfile :tempfile audio-filename :filename audio-size :size} :upload-audio} :params :as params}
-
-    (io/copy tempfile (io/file "resources" "private" "uploads" filename))
-    (io/copy audio-tempfile (io/file "resources" "private" "uploads" audio-filename))
-    ;(log/info "The params: " params  ". the audio file: " audio-filename)
-    ;(sendmessage "upload-queue" filename) ; I should send a map with other values like id, user, etc.
+    (println (io/copy tempfile (io/file "resources" "private" "uploads" filename)))
+; the code below must be made conditional on whether or not an audio file was supplied.
+    (println (io/copy audio-tempfile (io/file "resources" "private" "uploads" audio-filename)))
     (future (make-slide-images-cli filename))
   )
 
@@ -449,9 +288,16 @@
   (POST "/comments" req "Notimpl")
   (POST "/feedback" req "Notimpl")
   (POST "/people" req "Notimpl")
+  (GET "/activate/:code" [code]
+(activate-user code)
+{
+:status 200
+:body {:h1 "Whachu do to my body"}
+; :status 302
+; :headers {"Location" "/#/login"}
+}) 
   (GET  "/people/:id" [id]
           {:body "todo"})
-;(data/get-single "users" id)})
   (POST "/profile" req "Notimpl")
   (POST "/forgot" req 
        (let [userinfo (get-in req [:body])]
@@ -463,7 +309,6 @@
           (let [userinfo (get-in req [:body])]
           (log/info userinfo)
           (future (join-message-receiver userinfo)))
-;          (sendmessage "join-queue" userinfo))
           (-> "activate.html"
                        (rr/file-response {:root "resources/public"})
                        (rr/content-type "text/html")))
@@ -471,12 +316,8 @@
   (POST "/upload"
    {{{tempfile :tempfile filename :filename size :size} :upload-deck {audio-tempfile :tempfile audio-filename :filename audio-size :size}:upload-audio} :params :as params}
 
-   (friend/authorize #{::user} 
+    (friend/authorize #{::user} 
     (future (future-file-uploads tempfile filename audio-tempfile audio-filename))
-;   (io/copy tempfile (io/file "resources" "private" "uploads" filename))
-;   (io/copy audio-tempfile (io/file "resources" "private" "uploads" audio-filename))
-;   (log/info "The params: " params ". the audio file: " audio-filename)
-;   (sendmessage "upload-queue" filename) ; I should send a map with other values like id, user, etc.
     {:status 200
     :headers {"Content-Type" "application/json"}
     :body (json/write-str  {:status "OK"
@@ -487,15 +328,6 @@
        (friend/authorize #{::user} "This page can only be seen by authenticated users."))
   (GET "/admin" request
        (friend/authorize #{::admin} "This page can only be seen by administrators."))
-;	(GET "/join" [] (-> "join.html"
-;                       (rr/file-response {:root "resources/public"})
-;                       (rr/content-type "text/html")))
-;  (GET "/login" [] (-> "login.html"
-;                       (rr/file-response {:root "resources/public"})
-;                       (rr/content-type "text/html")))
-;  (GET "/upload" [] (-> "upload.html"
-;                       (rr/file-response {:root "resources/public"})
-;                       (rr/content-type "text/html")))
   (friend/logout (ANY "/logout" request (rr/redirect "/")))
  (route/resources "/") 
  (route/not-found "Not Found"))
@@ -506,25 +338,10 @@
            {:credential-fn (partial creds/bcrypt-credential-fn load-user)
             :workflows [(workflows/interactive-form)]
             :redirect-on-auth? false
-;            :login-uri "/api/login"
-;            :default-landing-uri "/"
             :login-failure-handler #(-> (rr/status % 401))
             :unauthenticated-handler #(-> (log/info %) (rr/status 401))
             :unauthorized-handler #(-> (rr/status % 401))}))
-;   (try
-;     (let [
-;	broker (org.apache.activemq.broker.BrokerFactory/createBroker  (URI. "broker:(tcp://localhost:61616)"))]
-;           (.start broker))
-;         (catch Exception e
-;            (log/info (.getMessage e))))
-;   (init-consumer "upload-queue" upload-message-receiver)
-;   (init-consumer "join-queue" join-message-receiver)
-;   (init-consumer "transition-queue" transition-message-receiver)
-;   (init-consumer "video-queue" video-message-receiver))   
    (wrap-keyword-params)
    (wrap-json-body {:keywords? true :bigdecimals? true})
    (wrap-json-response)
-   (load-data)   
-)
-
-)
+   (load-data)))
